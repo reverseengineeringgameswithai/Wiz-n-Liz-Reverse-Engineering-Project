@@ -11,7 +11,15 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from public_mirror import check_push, commit, export, install_hook, scrub
+from public_mirror import check_push, commit, export, install_guards, scrub
+
+FAKE_GH = """#!/bin/sh
+case "$1 $2" in
+  "auth token") echo "token-for-$4" ;;
+  "auth git-credential") cat >/dev/null; printf 'username=x-access-token\\npassword=%s\\n' "$GH_TOKEN" ;;
+  *) exit 1 ;;
+esac
+"""
 
 
 class PublicMirrorTests(unittest.TestCase):
@@ -131,7 +139,7 @@ class PublicMirrorTests(unittest.TestCase):
         self.mirror_identity()
         self.run_export()
         clean = commit(self.dest, "Mirror", root=self.source, home=self.home)
-        self.assertTrue(os.access(install_hook(self.dest, self.source), os.X_OK))
+        self.assertTrue(os.access(install_guards(self.dest, "mirror-account", self.source), os.X_OK))
         push = lambda: subprocess.run(["git", "-C", str(self.dest), "push", "-q", "origin", "HEAD:refs/heads/main"],
                                       capture_output=True, env={**os.environ, "HOME": str(self.home)})
         self.assertEqual(push().returncode, 0)
@@ -142,6 +150,31 @@ class PublicMirrorTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn(b"public-mirror pre-push: refused", result.stderr)
         self.assertEqual(self.git(remote, "rev-parse", "main").decode().strip(), clean)
+
+    def test_credential_gate_survives_skipped_hooks(self):
+        self.mirror_identity()
+        self.run_export()
+        commit(self.dest, "Mirror", root=self.source, home=self.home)
+        install_guards(self.dest, "mirror-account", self.source)
+        helpers = self.git(self.dest, "config", "--local", "--get-all",
+                           "credential.https://github.com.helper").decode().split("\n")
+        self.assertEqual(helpers[0], "")
+        bin_dir = self.dest.parent / "bin"
+        bin_dir.mkdir()
+        (bin_dir / "gh").write_text(FAKE_GH)
+        (bin_dir / "gh").chmod(0o755)
+        env = {**os.environ, "HOME": str(self.home), "PATH": f"{bin_dir}{os.pathsep}{os.environ['PATH']}",
+               "GIT_TERMINAL_PROMPT": "0"}
+        fill = lambda: subprocess.run(["git", "-C", str(self.dest), "credential", "fill"], capture_output=True,
+                                      input=b"protocol=https\nhost=github.com\n\n", env=env)
+        clean = fill()
+        self.assertEqual(clean.returncode, 0, clean.stderr)
+        self.assertIn(b"password=token-for-mirror-account", clean.stdout)
+        self.git(self.dest, "-c", "user.name=Synthuser", "commit", "-q", "--allow-empty", "-m", "x")
+        refused = fill()
+        self.assertNotEqual(refused.returncode, 0)
+        self.assertNotIn(b"password=", refused.stdout)
+        self.assertIn(b"public-mirror credential: refused", refused.stderr)
 
 
 if __name__ == "__main__":

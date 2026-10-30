@@ -13,9 +13,11 @@ import argparse
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import re
 import shlex
+import shutil
 import subprocess
 import sys
 import tarfile
@@ -160,15 +162,43 @@ def check_push(dest: Path, updates: list[str], root: Path = ROOT, home: Path = P
     return errors
 
 
-def install_hook(dest: Path, root: Path = ROOT) -> Path:
-    """Make the mirror run check_push before every push, however it is started."""
+def credential(dest: Path, account: str, action: str, request: str,
+               root: Path = ROOT, home: Path = Path.home()) -> str:
+    """Git credential helper that releases the account's token only for a clean mirror.
+
+    `git push --no-verify` skips the pre-push hook, but an HTTPS push still needs
+    credentials: every unpublished commit and every ref name is scanned first.
+    Answering `quit=1` makes Git fail at once instead of prompting.
+    """
+    if action != "get":
+        return ""
+    terms = identity(root, home)
+    refs = git(dest, "for-each-ref", "--format=%(refname)")
+    pending = git(dest, "rev-list", "--all", "--not", "--remotes").decode().split()
+    if leaks(refs, terms) or any(leaks(published(dest, revision), terms) for revision in pending):
+        print("public-mirror credential: refused: unpublished commits or refs carry an identity term",
+              file=sys.stderr)
+        return "quit=1\n"
+    gh = shutil.which("gh") or str(home / ".local/bin/gh")
+    token = subprocess.run([gh, "auth", "token", "--user", account], capture_output=True, text=True,
+                           check=True).stdout.strip()
+    return subprocess.run([gh, "auth", "git-credential", "get"], input=request, capture_output=True, text=True,
+                          check=True, env={**os.environ, "GH_TOKEN": token}).stdout
+
+
+def install_guards(dest: Path, account: str, root: Path = ROOT) -> Path:
+    """Install the mirror's pre-push hook and its credential gate for `account`."""
+    tool = f"python3 -B {shlex.quote(str(Path(__file__).resolve()))} --source {shlex.quote(str(root))}"
     hook = Path(git(dest, "rev-parse", "--git-path", "hooks/pre-push").decode().strip())
     hook = hook if hook.is_absolute() else dest / hook
     hook.parent.mkdir(parents=True, exist_ok=True)
-    hook.write_text("#!/bin/sh\n# Installed by tools/public_mirror.py --install-hook.\n"
-                    f"exec python3 -B {shlex.quote(str(Path(__file__).resolve()))} --source {shlex.quote(str(root))}"
-                    ' --pre-push "$(git rev-parse --show-toplevel)"\n')
+    hook.write_text("#!/bin/sh\n# Installed by tools/public_mirror.py --install-guards.\n"
+                    f'exec {tool} --pre-push "$(git rev-parse --show-toplevel)"\n')
     hook.chmod(0o755)
+    key = "credential.https://github.com.helper"
+    git(dest, "config", "--local", "--replace-all", key, "")  # Drop global helpers for the mirror only.
+    git(dest, "config", "--local", "--add", key,
+        f"!{tool} --credential {shlex.quote(account)} {shlex.quote(str(dest.resolve()))}")
     return hook
 
 
@@ -178,9 +208,12 @@ def main() -> int:
     parser.add_argument("--revision", default="HEAD", help="committed revision to export (default HEAD)")
     parser.add_argument("--commit", metavar="MESSAGE", help="commit the exported tree in the mirror")
     parser.add_argument("--source", type=Path, default=ROOT, help=argparse.SUPPRESS)
+    parser.add_argument("action", nargs="?", help=argparse.SUPPRESS)  # Appended by Git to credential helpers.
     mode = parser.add_mutually_exclusive_group()
-    mode.add_argument("--install-hook", action="store_true", help="install the mirror's pre-push identity check")
+    mode.add_argument("--install-guards", metavar="ACCOUNT",
+                      help="install the pre-push identity check and credential gate for ACCOUNT")
     mode.add_argument("--pre-push", action="store_true", help="pre-push hook mode: check refs read from stdin")
+    mode.add_argument("--credential", metavar="ACCOUNT", help=argparse.SUPPRESS)
     options = parser.parse_args()
     try:
         if options.pre_push:
@@ -188,8 +221,17 @@ def main() -> int:
             for error in errors:
                 print(f"public-mirror pre-push: refused: {error}", file=sys.stderr)
             return int(bool(errors))
-        if options.install_hook:
-            print(f"installed {install_hook(options.dest, options.source)}")
+        if options.credential:
+            try:
+                answer = credential(options.dest, options.credential, options.action or "",
+                                    sys.stdin.read(), options.source)
+            except (OSError, ValueError, subprocess.CalledProcessError) as exc:  # Fail closed, never prompt.
+                print(f"public-mirror credential: {exc}", file=sys.stderr)
+                answer = "quit=1\n"
+            sys.stdout.write(answer)
+            return 0
+        if options.install_guards:
+            print(f"installed {install_guards(options.dest, options.install_guards, options.source)}")
             return 0
         report = export(options.dest, options.revision, options.source)
         if options.commit:

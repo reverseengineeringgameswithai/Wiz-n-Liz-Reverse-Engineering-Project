@@ -1,0 +1,51 @@
+# Audits the whole published repository for blocked identity terms: every
+# commit's author/committer/message, every path and file version, ref names,
+# and the repository's description, homepage, topics and releases. The terms
+# come from the encrypted IDENTITY_TERMS secret (one per line) and are never
+# printed; only counts reach the public log. See vault/02_Workflow/PUBLIC_MIRROR.md.
+name: Identity guard
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Scan history, paths, contents and repository metadata
+        shell: bash
+        env:
+          TERMS: ${{ secrets.IDENTITY_TERMS }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          terms="$RUNNER_TEMP/terms" data="$RUNNER_TEMP/git-data" meta="$RUNNER_TEMP/metadata"
+          printf '%s\n' "$TERMS" | tr -d '\r' | sed '/^[[:space:]]*$/d' > "$terms"
+          if [ ! -s "$terms" ]; then
+            echo "::error::The IDENTITY_TERMS secret is missing or empty."
+            exit 1
+          fi
+          git cat-file --batch-all-objects --batch > "$data"
+          git for-each-ref --format='%(refname)' >> "$data"
+          gh api "repos/$GITHUB_REPOSITORY" --jq '.description, .homepage, (.topics | join(" "))' > "$meta"
+          gh api "repos/$GITHUB_REPOSITORY/releases" --paginate --jq '.[] | .name, .tag_name, .body' >> "$meta"
+          count() { grep -a -i -c -F -f "$terms" "$1" || [ $? -eq 1 ]; }  # Exit 1 only means no match.
+          history=$(count "$data")
+          metadata=$(count "$meta")
+          objects=$(git cat-file --batch-all-objects --batch-check | wc -l)
+          echo "Scanned $objects Git objects, all refs and repository metadata."
+          if [ "$history" != "0" ] || [ "$metadata" != "0" ]; then
+            echo "::error::Blocked identity term found: $history line(s) in Git data, $metadata in repository metadata."
+            exit 1
+          fi
+          echo "No blocked identity terms found."

@@ -28,7 +28,7 @@ no remote and its private history is never pushed.
 ## The user's name never reaches GitHub
 
 The user requires that their name, handles and email never appear in the
-public repository. Three independent layers enforce it:
+public repository, "no matter what". Four independent layers enforce it:
 
 1. **Export.** The home-directory path becomes `~`; this repository's Git name
    and email become `[author]` and `[email]`; every term in the local,
@@ -39,16 +39,31 @@ public repository. Three independent layers enforce it:
 2. **Pre-push hook.** `local/public-mirror/.git/hooks/pre-push` scans every
    commit a push would add (author, committer, message, every path and blob)
    and refuses the whole push on any term, however the push is started.
-3. **Pinned account.** The mirror's local credential helper always
-   authenticates as `reverseengineeringgameswithai`; the user's personal
-   account is not a collaborator, so it could not push there anyway.
+3. **Credential gate.** The mirror's only credential helper is
+   `public_mirror.py --credential`: before releasing the
+   `reverseengineeringgameswithai` token it scans every unpublished commit and
+   every ref name, and answers `quit=1` (fail at once, no prompt) on any term or
+   error. `git push --no-verify` skips hooks but still needs this login. The
+   user's personal account is not a collaborator, so it cannot push at all.
+4. **GitHub audit.** `.github/workflows/identity-guard.yml` rescans every Git
+   object, ref, the description/homepage/topics and releases on every push,
+   daily and on demand. It reads the terms from the encrypted repository
+   secret `IDENTITY_TERMS` (one per line, never printed; the email need not be
+   listed because it contains the first name) and fails, emailing the
+   account, if the secret is missing or any term is found. This detects what the
+   local layers cannot see: web edits and metadata changes.
 
+Never bypass the layers: no `--no-verify`, no `-c credential.helper=` or token
+overrides in the mirror, no pushing the project from another clone, no `gh`
+writes of descriptions, releases, issues or comments without checking the text.
 Blocked terms live only in this repository's untracked `.git/config`
-(`git config --get-all mirror.forbid`). Never write them in a tracked file,
-commit message or note: an export would redact them, and a substring would
-block the sync. Add a term with `git config --local --add mirror.forbid <term>`.
+(`git config --get-all mirror.forbid`) and the secret. Never write them in a
+tracked file, commit message or note: an export would redact them, and a
+substring would block the sync. To add a term, run
+`git config --local --add mirror.forbid <term>` and add it to the secret.
 The user should not comment, open issues or pull requests, or star the
-repository from their personal GitHub account: that activity is public.
+repository from their personal GitHub account: that activity is public. Text
+other people write in issues or pull requests cannot be blocked, only removed.
 
 ## Sync
 
@@ -77,8 +92,10 @@ git -C local/public-mirror push origin main
 `tools/public_mirror.py` exports with `git archive`, so uncommitted work never
 reaches the mirror; it replaces the mirror's whole tree and stages it with
 `git add --all`, which is safe only because the tool alone writes that tree.
-The pinned helper borrows the account's token per push and never switches the
-active `gh` account. Tests: `tests/test_public_mirror.py`.
+The credential gate borrows the account's token per push and never switches
+the active `gh` account. After pushing, check the audit:
+`gh run list --repo reverseengineeringgameswithai/Wiz-n-Liz-Reverse-Engineering-Project --limit 1`.
+Tests: `tests/test_public_mirror.py`.
 
 ## If the local mirror is missing
 
@@ -89,15 +106,13 @@ git -C local/public-mirror remote add origin \
 git -C local/public-mirror config user.name reverseengineeringgameswithai
 git -C local/public-mirror config user.email \
   350059656+reverseengineeringgameswithai@users.noreply.github.com
-git -C local/public-mirror config credential.https://github.com.helper ''
-git -C local/public-mirror config --add credential.https://github.com.helper \
-  '!f() { GH_TOKEN="$(gh auth token --user reverseengineeringgameswithai)" gh auth git-credential "$@"; }; f'
-python3 -B tools/public_mirror.py local/public-mirror --install-hook
+python3 -B tools/public_mirror.py local/public-mirror --install-guards reverseengineeringgameswithai
 git -C local/public-mirror fetch origin && git -C local/public-mirror reset -q origin/main
 ```
 
-The empty helper clears the global helpers for the mirror only. The final
-`reset` (mixed, in the mirror only) adopts the published history without
-touching files; then run the sync above. If `mirror.forbid` is also missing
+`--install-guards` writes the pre-push hook and makes the gate the mirror's
+only credential helper (an empty entry first clears global helpers for the
+mirror only). The final `reset` (mixed, in the mirror only) adopts the
+published history without touching files; then run the sync above. If `mirror.forbid` is also missing
 (a new clone of this repository), ask the user for the terms to block before
 any push; never guess them.
