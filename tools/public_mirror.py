@@ -40,18 +40,13 @@ def config(root: Path, key: str) -> str | None:
 def identity(root: Path, home: Path) -> dict[str, str]:
     """Terms that must not reach the mirror, mapped to their placeholders.
 
-    Besides the configured Git identity and home directory name, the multi-valued
-    local setting `mirror.forbid` lists further names and handles. It lives only
-    in this repository's untracked `.git/config`, so the list never publishes.
+    The multi-valued local setting `mirror.forbid` (the user's name, handles and
+    email) plus the home directory name. The list lives only in this repository's
+    untracked `.git/config`, so it never publishes. The Git author is not a term:
+    commits here are authored by the public project account.
     """
-    terms = {}
-    if email := config(root, "user.email"):
-        terms[email] = "[email]"
-    if name := config(root, "user.name"):
-        terms[name] = "[author]"
-    terms.setdefault(home.name, "[author]")
-    for term in forbidden(root):
-        terms.setdefault(term, "[redacted]")
+    terms = {term: "[redacted]" for term in forbidden(root)}
+    terms.setdefault(home.name, "[redacted]")
     return terms
 
 

@@ -11,7 +11,9 @@ a term. See vault note `02_Workflow/PUBLIC_MIRROR`.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
+import re
 import shlex
 import subprocess
 import sys
@@ -54,6 +56,48 @@ def message_clean(text: str, root: Path, home: Path = Path.home()) -> bool:
     return not found(body.encode(), blocked(root, home))
 
 
+def agent_text(event: dict, home: Path) -> tuple[str, str]:
+    """Split a PreToolUse call into (text that runs or names paths, text being written).
+
+    Paths in commands and file headers may contain the home directory, so the
+    home prefix is removed from those before checking; written content must not
+    contain it at all. Covers Codex (`Bash`, `apply_patch`, MCP/function tools)
+    and Claude Code (`Bash`, `Write`, `Edit`, `MultiEdit`, `NotebookEdit`).
+    """
+    tool, data = event.get("tool_name", ""), event.get("tool_input") or {}
+    command = data.get("command", "") if isinstance(data, dict) else ""
+    command = " ".join(command) if isinstance(command, list) else str(command)
+    if tool == "apply_patch":
+        headers, added = [], []
+        for line in command.splitlines():
+            if line.startswith("*** "):
+                headers.append(line)
+            elif line.startswith("+"):
+                added.append(line[1:])
+        return "\n".join(headers), "\n".join(added)
+    if tool == "Bash":
+        return command, ""
+    if tool in ("Write", "Edit", "MultiEdit", "NotebookEdit"):
+        edits = data.get("edits") or [data]
+        written = [str(e.get(k, "")) for e in edits for k in ("content", "new_string", "new_source")]
+        return str(data.get("file_path") or data.get("notebook_path") or ""), "\n".join(written)
+    return json.dumps(data, ensure_ascii=False), ""
+
+
+def agent_decision(event: dict, root: Path, home: Path = Path.home()) -> str | None:
+    """A denial reason when the call would write a blocked term, else None."""
+    terms = forbidden(root)
+    located, written = agent_text(event, home)
+    # Commands and paths may name the home directory, also in encoded forms such as -home-<user>-.
+    for prefix in (str(home), str(home).replace("/", "-")):
+        located = re.sub(re.escape(prefix) + r"(?![\w.])", "~", located, flags=re.IGNORECASE)
+    if found(located.encode(), terms) or found(written.encode(), [*terms, str(home)]):
+        return ("Blocked by the identity guard: this would write the user's name, a handle, their email or "
+                "the absolute home path. Say \"the user\", use ~ or repository-relative paths, and to search "
+                "for the terms read them from `git config --get-all mirror.forbid` instead of typing them.")
+    return None
+
+
 def install(root: Path = ROOT) -> list[Path]:
     tool = f"python3 -B {shlex.quote(str(Path(__file__).resolve()))} --root \"$(git rev-parse --show-toplevel)\""
     hooks = []
@@ -76,8 +120,19 @@ def main() -> int:
     mode.add_argument("--check", action="store_true", help="list indexed files that contain a blocked term")
     mode.add_argument("--pre-commit", action="store_true", help=argparse.SUPPRESS)
     mode.add_argument("--commit-msg", type=Path, help=argparse.SUPPRESS)
+    mode.add_argument("--agent-hook", action="store_true",
+                      help="Codex/Claude PreToolUse hook: read the call as JSON on stdin, deny blocked terms")
     options = parser.parse_args()
     try:
+        if options.agent_hook:
+            event = json.load(sys.stdin)
+            root = Path(event.get("cwd") or options.root)
+            root = Path(subprocess.run(["git", "-C", str(root), "rev-parse", "--show-toplevel"],
+                                       capture_output=True, text=True).stdout.strip() or options.root)
+            if reason := agent_decision(event, root):
+                json.dump({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
+                                                  "permissionDecisionReason": reason}}, sys.stdout)
+            return 0
         if options.install:
             for hook in install(options.root):
                 print(f"installed {hook}")

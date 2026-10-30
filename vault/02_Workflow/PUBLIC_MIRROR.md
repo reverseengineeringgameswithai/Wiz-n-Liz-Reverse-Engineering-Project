@@ -30,9 +30,9 @@ no remote and its private history is never pushed.
 The user requires that their name, handles and email never appear in the
 public repository, "no matter what". Four independent layers enforce it:
 
-1. **Export.** The home-directory path becomes `~`; this repository's Git name
-   and email become `[author]` and `[email]`; every term in the local,
-   multi-valued `mirror.forbid` setting becomes `[redacted]`. The export then
+1. **Export.** The home-directory path becomes `~`; every term in the local,
+   multi-valued `mirror.forbid` setting (name, handles, email) and the home
+   directory name become `[redacted]`. The export then
    refuses any remaining occurrence (case-insensitive, even inside a longer
    word, in paths or content), any file whose SHA-256 equals the ROM's and files
    over 2 MiB. Commits refuse an author or message containing a term.

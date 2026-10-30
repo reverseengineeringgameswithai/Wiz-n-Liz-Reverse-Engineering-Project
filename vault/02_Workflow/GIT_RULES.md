@@ -25,6 +25,12 @@ messages or branch names, nor the absolute home path (use repository-relative
 paths or `~`). The blocked terms are `git config --get-all mirror.forbid`.
 `tools/identity_guard.py --install` adds pre-commit and commit-msg hooks that
 refuse them, and `check-hygiene` fails on them; fix the text, never bypass.
+For Codex, `.codex/hooks.json` runs the same guard before every tool call
+(shell commands, file patches, MCP) once the user trusts it with `/hooks`; a
+user-level guard may run too, and any denial wins. Since 2026-10-29 this
+repository's local Git author is the public project account
+(`reverseengineeringgameswithai`, noreply email), at the user's request;
+earlier commits keep their original author. Never change it back.
 
 Track source, synthetic tests, recipes, metadata, meaningful notes, schemas and
 dependency manifests. Keep ROMs, rebuilt ROMs, bulk disassembly/assets/traces/

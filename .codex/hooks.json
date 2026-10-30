@@ -1,0 +1,17 @@
+{
+  "description": "Identity guard for this project: refuse any tool call that would write the user's name, handles, email or absolute home path (tools/identity_guard.py; vault note 02_Workflow/PUBLIC_MIRROR). Runs alongside any user-level guard.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/python3 -B \"$(git rev-parse --show-toplevel)/tools/identity_guard.py\" --agent-hook",
+            "timeout": 15,
+            "statusMessage": "Checking for the user's name"
+          }
+        ]
+      }
+    ]
+  }
+}

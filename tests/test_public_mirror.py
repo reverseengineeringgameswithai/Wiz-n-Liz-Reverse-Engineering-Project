@@ -35,7 +35,8 @@ class PublicMirrorTests(unittest.TestCase):
             self.git(repo, "init", "-q")
         self.git(self.source, "config", "user.name", "Synthuser")
         self.git(self.source, "config", "user.email", "synthuser@example.invalid")
-        self.git(self.source, "config", "mirror.forbid", "synthhandle")
+        for term in ("synthhandle", "Synthuser", "synthuser@example.invalid"):
+            self.git(self.source, "config", "--add", "mirror.forbid", term)
         (self.source / "re").mkdir()
         (self.source / "re/rom_manifest.json").write_text(json.dumps({
             "original": {"sha256": hashlib.sha256(self.rom).hexdigest()}
@@ -58,7 +59,7 @@ class PublicMirrorTests(unittest.TestCase):
         report = self.run_export()
         self.assertEqual(report["files"], 2)
         self.assertEqual((self.dest / "notes.md").read_text(),
-                         "Root `~/Project`, tool ~. Author [author], [email].\n")
+                         "Root `~/Project`, tool ~. Author [redacted], [redacted].\n")
 
     def test_scrub_replaces_longer_terms_first(self):
         terms = {"synthuser": "[author]", "synthuser.x@example.invalid": "[redacted]"}
