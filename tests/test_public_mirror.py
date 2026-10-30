@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -10,7 +11,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from public_mirror import commit, export, scrub
+from public_mirror import check_push, commit, export, install_hook, scrub
 
 
 class PublicMirrorTests(unittest.TestCase):
@@ -26,6 +27,7 @@ class PublicMirrorTests(unittest.TestCase):
             self.git(repo, "init", "-q")
         self.git(self.source, "config", "user.name", "Synthuser")
         self.git(self.source, "config", "user.email", "synthuser@example.invalid")
+        self.git(self.source, "config", "mirror.forbid", "synthhandle")
         (self.source / "re").mkdir()
         (self.source / "re/rom_manifest.json").write_text(json.dumps({
             "original": {"sha256": hashlib.sha256(self.rom).hexdigest()}
@@ -49,6 +51,10 @@ class PublicMirrorTests(unittest.TestCase):
         self.assertEqual(report["files"], 2)
         self.assertEqual((self.dest / "notes.md").read_text(),
                          "Root `~/Project`, tool ~. Author [author], [email].\n")
+
+    def test_scrub_replaces_longer_terms_first(self):
+        terms = {"synthuser": "[author]", "synthuser.x@example.invalid": "[redacted]"}
+        self.assertEqual(scrub("mail synthuser.x@example.invalid", self.home, terms), "mail [redacted]")
 
     def test_scrub_keeps_longer_words(self):
         terms = {"Synthuser": "[author]"}
@@ -92,6 +98,50 @@ class PublicMirrorTests(unittest.TestCase):
         self.assertIsNone(commit(self.dest, "Mirror", root=self.source, home=self.home))
         tracked = self.git(self.dest, "ls-files").decode().split()
         self.assertEqual(tracked, ["notes.md", "re/rom_manifest.json"])
+
+    def test_forbidden_handles_from_local_config(self):
+        (self.source / "handle.md").write_text("Account SynthHandle.\n")
+        self.commit_source("handle.md")
+        self.run_export()
+        self.assertEqual((self.dest / "handle.md").read_text(), "Account [redacted].\n")
+
+    def mirror_identity(self):
+        self.git(self.dest, "config", "user.name", "mirror-account")
+        self.git(self.dest, "config", "user.email", "mirror@example.invalid")
+
+    def test_check_push_scans_metadata_and_every_new_commit(self):
+        self.mirror_identity()
+        self.run_export()
+        clean = commit(self.dest, "Mirror", root=self.source, home=self.home)
+        update = lambda sha: [f"refs/heads/main {sha} refs/heads/main {'0' * 40}"]
+        self.assertEqual(check_push(self.dest, update(clean), self.source, self.home), [])
+        self.git(self.dest, "-c", "user.name=Synthuser", "commit", "-q", "--allow-empty", "-m", "x")
+        named = self.git(self.dest, "rev-parse", "HEAD").decode().strip()
+        self.git(self.dest, "commit", "-q", "--allow-empty", "-m", "later, clean")
+        errors = check_push(self.dest, update(self.git(self.dest, "rev-parse", "HEAD").decode().strip()),
+                            self.source, self.home)
+        self.assertEqual(errors, [f"refs/heads/main: identity in commit {named[:12]}"])
+        self.assertEqual(check_push(self.dest, [f"(delete) {'0' * 40} refs/heads/old {clean}"],
+                                    self.source, self.home), [])
+
+    def test_installed_hook_blocks_a_real_push(self):
+        remote = self.dest.parent / "remote.git"
+        subprocess.run(["git", "init", "-q", "--bare", str(remote)], check=True)
+        self.git(self.dest, "remote", "add", "origin", str(remote))
+        self.mirror_identity()
+        self.run_export()
+        clean = commit(self.dest, "Mirror", root=self.source, home=self.home)
+        self.assertTrue(os.access(install_hook(self.dest, self.source), os.X_OK))
+        push = lambda: subprocess.run(["git", "-C", str(self.dest), "push", "-q", "origin", "HEAD:refs/heads/main"],
+                                      capture_output=True, env={**os.environ, "HOME": str(self.home)})
+        self.assertEqual(push().returncode, 0)
+        (self.dest / "added.md").write_text("thanks synthhandle\n")
+        self.git(self.dest, "add", "added.md")
+        self.git(self.dest, "commit", "-q", "-m", "manual edit")
+        result = push()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(b"public-mirror pre-push: refused", result.stderr)
+        self.assertEqual(self.git(remote, "rev-parse", "main").decode().strip(), clean)
 
 
 if __name__ == "__main__":

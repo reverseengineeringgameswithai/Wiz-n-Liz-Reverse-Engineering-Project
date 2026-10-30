@@ -25,10 +25,30 @@ no remote and its private history is never pushed.
 - Fresh history in the mirror, one commit per sync, authored by the
   `reverseengineeringgameswithai` account's noreply address.
 
-The local identity is scrubbed: the home-directory path becomes `~`, and this
-repository's configured Git name and email become `[author]` and `[email]`.
-The export refuses any remaining occurrence (case-insensitive, in paths or
-content), any file whose SHA-256 equals the ROM's, and files over 2 MiB.
+## The user's name never reaches GitHub
+
+The user requires that their name, handles and email never appear in the
+public repository. Three independent layers enforce it:
+
+1. **Export.** The home-directory path becomes `~`; this repository's Git name
+   and email become `[author]` and `[email]`; every term in the local,
+   multi-valued `mirror.forbid` setting becomes `[redacted]`. The export then
+   refuses any remaining occurrence (case-insensitive, even inside a longer
+   word, in paths or content), any file whose SHA-256 equals the ROM's and files
+   over 2 MiB. Commits refuse an author or message containing a term.
+2. **Pre-push hook.** `local/public-mirror/.git/hooks/pre-push` scans every
+   commit a push would add (author, committer, message, every path and blob)
+   and refuses the whole push on any term, however the push is started.
+3. **Pinned account.** The mirror's local credential helper always
+   authenticates as `reverseengineeringgameswithai`; the user's personal
+   account is not a collaborator, so it could not push there anyway.
+
+Blocked terms live only in this repository's untracked `.git/config`
+(`git config --get-all mirror.forbid`). Never write them in a tracked file,
+commit message or note: an export would redact them, and a substring would
+block the sync. Add a term with `git config --local --add mirror.forbid <term>`.
+The user should not comment, open issues or pull requests, or star the
+repository from their personal GitHub account: that activity is public.
 
 ## Sync
 
@@ -51,15 +71,13 @@ Sync and push:
 ```sh
 python3 -B tools/public_mirror.py local/public-mirror --commit "Sync: <checkpoint subject>"
 git -C local/public-mirror show --stat HEAD
-GH_TOKEN="$(gh auth token --user reverseengineeringgameswithai)" \
-  git -C local/public-mirror -c credential.helper= \
-  -c 'credential.helper=!gh auth git-credential' push origin main
+git -C local/public-mirror push origin main
 ```
 
 `tools/public_mirror.py` exports with `git archive`, so uncommitted work never
 reaches the mirror; it replaces the mirror's whole tree and stages it with
 `git add --all`, which is safe only because the tool alone writes that tree.
-The push borrows the account's token for one command and never switches the
+The pinned helper borrows the account's token per push and never switches the
 active `gh` account. Tests: `tests/test_public_mirror.py`.
 
 ## If the local mirror is missing
@@ -71,8 +89,15 @@ git -C local/public-mirror remote add origin \
 git -C local/public-mirror config user.name reverseengineeringgameswithai
 git -C local/public-mirror config user.email \
   350059656+reverseengineeringgameswithai@users.noreply.github.com
+git -C local/public-mirror config credential.https://github.com.helper ''
+git -C local/public-mirror config --add credential.https://github.com.helper \
+  '!f() { GH_TOKEN="$(gh auth token --user reverseengineeringgameswithai)" gh auth git-credential "$@"; }; f'
+python3 -B tools/public_mirror.py local/public-mirror --install-hook
 git -C local/public-mirror fetch origin && git -C local/public-mirror reset -q origin/main
 ```
 
-The final `reset` (mixed, in the mirror only) adopts the published history
-without touching files; then run the sync above.
+The empty helper clears the global helpers for the mirror only. The final
+`reset` (mixed, in the mirror only) adopts the published history without
+touching files; then run the sync above. If `mirror.forbid` is also missing
+(a new clone of this repository), ask the user for the terms to block before
+any push; never guess them.

@@ -15,7 +15,9 @@ import io
 import json
 from pathlib import Path
 import re
+import shlex
 import subprocess
+import sys
 import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,19 +34,28 @@ def config(root: Path, key: str) -> str | None:
 
 
 def identity(root: Path, home: Path) -> dict[str, str]:
-    """Terms that must not reach the mirror, mapped to their placeholders."""
+    """Terms that must not reach the mirror, mapped to their placeholders.
+
+    Besides the configured Git identity and home directory name, the multi-valued
+    local setting `mirror.forbid` lists further names and handles. It lives only
+    in this repository's untracked `.git/config`, so the list never publishes.
+    """
     terms = {}
     if email := config(root, "user.email"):
         terms[email] = "[email]"
     if name := config(root, "user.name"):
         terms[name] = "[author]"
     terms.setdefault(home.name, "[author]")
+    forbidden = subprocess.run(["git", "-C", str(root), "config", "--get-all", "mirror.forbid"],
+                               capture_output=True, text=True).stdout.split("\n")
+    for term in filter(None, map(str.strip, forbidden)):
+        terms.setdefault(term, "[redacted]")
     return terms
 
 
 def scrub(text: str, home: Path, terms: dict[str, str]) -> str:
     text = re.sub(re.escape(str(home)) + r"(?!\w)", "~", text)
-    for term, placeholder in terms.items():
+    for term, placeholder in sorted(terms.items(), key=lambda item: -len(item[0])):  # Whole email before its name part.
         text = re.sub(rf"(?<!\w){re.escape(term)}(?!\w)", placeholder, text, flags=re.IGNORECASE)
     return text
 
@@ -125,16 +136,64 @@ def commit(dest: Path, message: str, root: Path = ROOT, home: Path = Path.home()
     return git(dest, "rev-parse", "HEAD").decode().strip()
 
 
+def published(repo: Path, revision: str) -> bytes:
+    """Everything a commit publishes: raw metadata, every path and every blob."""
+    entries = [e for e in git(repo, "ls-tree", "-r", "-z", "--full-tree", revision).split(b"\0") if e]
+    blobs = subprocess.run(["git", "-C", str(repo), "cat-file", "--batch"], capture_output=True, check=True,
+                           input=b"".join(e.split(b"\t", 1)[0].split()[2] + b"\n" for e in entries)).stdout
+    return git(repo, "cat-file", "-p", revision) + b"\0".join(e.split(b"\t", 1)[1] for e in entries) + blobs
+
+
+def check_push(dest: Path, updates: list[str], root: Path = ROOT, home: Path = Path.home()) -> list[str]:
+    """Refuse any pushed ref whose new commits carry an identity term anywhere."""
+    terms = identity(root, home)
+    errors = []
+    for update in filter(None, updates):
+        local_ref, local_sha, remote_ref, _ = update.split()
+        if set(local_sha) == {"0"}:
+            continue
+        if leaks(f"{local_ref} {remote_ref}".encode() + git(dest, "cat-file", "-p", local_sha), terms):
+            errors.append(f"{remote_ref}: identity in the ref or its object")
+        for revision in git(dest, "rev-list", local_sha, "--not", "--remotes").decode().split():
+            if leaks(published(dest, revision), terms):
+                errors.append(f"{remote_ref}: identity in commit {revision[:12]}")
+    return errors
+
+
+def install_hook(dest: Path, root: Path = ROOT) -> Path:
+    """Make the mirror run check_push before every push, however it is started."""
+    hook = Path(git(dest, "rev-parse", "--git-path", "hooks/pre-push").decode().strip())
+    hook = hook if hook.is_absolute() else dest / hook
+    hook.parent.mkdir(parents=True, exist_ok=True)
+    hook.write_text("#!/bin/sh\n# Installed by tools/public_mirror.py --install-hook.\n"
+                    f"exec python3 -B {shlex.quote(str(Path(__file__).resolve()))} --source {shlex.quote(str(root))}"
+                    ' --pre-push "$(git rev-parse --show-toplevel)"\n')
+    hook.chmod(0o755)
+    return hook
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("dest", type=Path, help="the mirror repository's working tree")
     parser.add_argument("--revision", default="HEAD", help="committed revision to export (default HEAD)")
     parser.add_argument("--commit", metavar="MESSAGE", help="commit the exported tree in the mirror")
+    parser.add_argument("--source", type=Path, default=ROOT, help=argparse.SUPPRESS)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--install-hook", action="store_true", help="install the mirror's pre-push identity check")
+    mode.add_argument("--pre-push", action="store_true", help="pre-push hook mode: check refs read from stdin")
     options = parser.parse_args()
     try:
-        report = export(options.dest, options.revision)
+        if options.pre_push:
+            errors = check_push(options.dest, sys.stdin.read().splitlines(), options.source)
+            for error in errors:
+                print(f"public-mirror pre-push: refused: {error}", file=sys.stderr)
+            return int(bool(errors))
+        if options.install_hook:
+            print(f"installed {install_hook(options.dest, options.source)}")
+            return 0
+        report = export(options.dest, options.revision, options.source)
         if options.commit:
-            report["mirror_commit"] = commit(options.dest, options.commit)
+            report["mirror_commit"] = commit(options.dest, options.commit, options.source)
     except (OSError, ValueError, subprocess.CalledProcessError) as exc:
         print(f"public-mirror: {exc}")
         return 1
