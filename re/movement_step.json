@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "damping_loop",
+      "start": 39518,
+      "end_exclusive": 39532,
+      "sha256": "f0eb048bf8fd9fb347368903a3420927443a49a24006b0e49f373192578baf95",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "damp_once",
+      "start": 39532,
+      "end_exclusive": 39552,
+      "sha256": "33155e8435552fe248aa4537e1b4a85ea7f690dd5a1e08e82f0835bb682cc1ff",
+      "instruction_count": 7,
+      "execution_compared": true
+    },
+    {
+      "id": "horizontal_dispatch",
+      "start": 39598,
+      "end_exclusive": 39624,
+      "sha256": "8ae3cc3905a94988eef40b1ce193ec2a1b05d8d564e073f1515cbeadc839182c",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "left_step",
+      "start": 39624,
+      "end_exclusive": 39672,
+      "sha256": "390f0a3e401c58717e48427d9595d458b85c9f7b002f928aa30ae5ff2686ba0b",
+      "instruction_count": 15,
+      "execution_compared": true
+    },
+    {
+      "id": "positive_dispatch",
+      "start": 39672,
+      "end_exclusive": 39684,
+      "sha256": "92109e012872fdfbe89b679dfcb45447c9fb264b359b5ad880aa31953f237576",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "right_step",
+      "start": 39684,
+      "end_exclusive": 39732,
+      "sha256": "22607681667d911dfd89a71d49a462cbb4c7fdc8b06934696892b15ca50cf76b",
+      "instruction_count": 15,
+      "execution_compared": true
+    },
+    {
+      "id": "enter_airborne",
+      "start": 43600,
+      "end_exclusive": 43656,
+      "sha256": "d89dfb4b98643c15dec80961d817c24332dc0a0e8a0709143ab75157119abdd4",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "clamp_positive",
+      "start": 44246,
+      "end_exclusive": 44264,
+      "sha256": "33e1ec68c3dd59bc2109eb3bd1097939f31f7192bf42b20d6c3d51042281cb5e",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "clamp_negative",
+      "start": 44264,
+      "end_exclusive": 44282,
+      "sha256": "919f404f827c42838ce24e8f97e54c05d5caade66e33d9e32384d2498ce1ec81",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "actor_bindings",
+      "start": 63808,
+      "end_exclusive": 63850,
+      "sha256": "5dac508ddc38f5cf011dd1957fd71b6b9cae5062f1fec5be3ea46da5e08b3561",
+      "instruction_count": 9,
+      "execution_compared": false
+    },
+    {
+      "id": "control_pair_setup",
+      "start": 39040,
+      "end_exclusive": 39134,
+      "sha256": "6ce9fe2a7e07b28bf73baf4e5b813c26ab805e5c6d1712604d6abc1208e0b787",
+      "instruction_count": 17,
+      "execution_compared": false
+    },
+    {
+      "id": "initialize_actor_call",
+      "start": 39134,
+      "end_exclusive": 39142,
+      "sha256": "299c6b49a677de1c3bdd5018a1ac7f3fee7b6361f7803c4ae523eec8ce134cbd",
+      "instruction_count": 2,
+      "execution_compared": false
+    },
+    {
+      "id": "motion_parameters",
+      "start": 39250,
+      "end_exclusive": 39380,
+      "sha256": "d050eb1c00961e87e3c0772c5617e238e05cb5bd7bbf3fae6e9cb92e771e56d5",
+      "instruction_count": 26,
+      "execution_compared": false
+    },
+    {
+      "id": "right_idle_caller",
+      "start": 41406,
+      "end_exclusive": 41466,
+      "sha256": "7cde475ff77c8b7edc2123acb617ab6b2ad45a4723964a39ca879491e1da7feb",
+      "instruction_count": 15,
+      "execution_compared": false
+    },
+    {
+      "id": "left_idle_caller",
+      "start": 41542,
+      "end_exclusive": 41598,
+      "sha256": "e7ab943a22d428a61cecda249a123d5fa7310bb5978796765ccdc89556520160",
+      "instruction_count": 15,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 39522,
+      "target": 39532,
+      "execution_compared": true
+    },
+    {
+      "pc": 39526,
+      "target": 39522,
+      "execution_compared": true
+    },
+    {
+      "pc": 39536,
+      "target": 39544,
+      "execution_compared": true
+    },
+    {
+      "pc": 39538,
+      "target": 39546,
+      "execution_compared": true
+    },
+    {
+      "pc": 39602,
+      "target": 39622,
+      "execution_compared": true
+    },
+    {
+      "pc": 39604,
+      "target": 39672,
+      "execution_compared": true
+    },
+    {
+      "pc": 39612,
+      "target": 39624,
+      "execution_compared": true
+    },
+    {
+      "pc": 39616,
+      "target": 39612,
+      "execution_compared": true
+    },
+    {
+      "pc": 39622,
+      "target": 39552,
+      "execution_compared": true
+    },
+    {
+      "pc": 39628,
+      "target": 39772,
+      "execution_compared": true
+    },
+    {
+      "pc": 39632,
+      "target": 39636,
+      "execution_compared": true
+    },
+    {
+      "pc": 39636,
+      "target": 39732,
+      "execution_compared": true
+    },
+    {
+      "pc": 39640,
+      "target": 39648,
+      "execution_compared": true
+    },
+    {
+      "pc": 39652,
+      "target": 39772,
+      "execution_compared": true
+    },
+    {
+      "pc": 39656,
+      "target": 39660,
+      "execution_compared": true
+    },
+    {
+      "pc": 39664,
+      "target": 44264,
+      "execution_compared": true
+    },
+    {
+      "pc": 39668,
+      "target": 43600,
+      "execution_compared": true
+    },
+    {
+      "pc": 39674,
+      "target": 39684,
+      "execution_compared": true
+    },
+    {
+      "pc": 39678,
+      "target": 39674,
+      "execution_compared": true
+    },
+    {
+      "pc": 39688,
+      "target": 39772,
+      "execution_compared": true
+    },
+    {
+      "pc": 39692,
+      "target": 39696,
+      "execution_compared": true
+    },
+    {
+      "pc": 39696,
+      "target": 39732,
+      "execution_compared": true
+    },
+    {
+      "pc": 39700,
+      "target": 39708,
+      "execution_compared": true
+    },
+    {
+      "pc": 39712,
+      "target": 39772,
+      "execution_compared": true
+    },
+    {
+      "pc": 39716,
+      "target": 39720,
+      "execution_compared": true
+    },
+    {
+      "pc": 39724,
+      "target": 44246,
+      "execution_compared": true
+    },
+    {
+      "pc": 39728,
+      "target": 43600,
+      "execution_compared": true
+    },
+    {
+      "pc": 44254,
+      "target": 44262,
+      "execution_compared": true
+    },
+    {
+      "pc": 44272,
+      "target": 44280,
+      "execution_compared": true
+    },
+    {
+      "pc": 39074,
+      "target": 39082,
+      "execution_compared": false
+    },
+    {
+      "pc": 39082,
+      "target": 39134,
+      "execution_compared": false
+    },
+    {
+      "pc": 39120,
+      "target": 39128,
+      "execution_compared": false
+    },
+    {
+      "pc": 39128,
+      "target": 39134,
+      "execution_compared": false
+    },
+    {
+      "pc": 39138,
+      "target": 39250,
+      "execution_compared": false
+    },
+    {
+      "pc": 39330,
+      "target": 39344,
+      "execution_compared": false
+    },
+    {
+      "pc": 39350,
+      "target": 39360,
+      "execution_compared": false
+    },
+    {
+      "pc": 39358,
+      "target": 39366,
+      "execution_compared": false
+    },
+    {
+      "pc": 41406,
+      "target": 41466,
+      "execution_compared": false
+    },
+    {
+      "pc": 41414,
+      "target": 41940,
+      "execution_compared": false
+    },
+    {
+      "pc": 41422,
+      "target": 41790,
+      "execution_compared": false
+    },
+    {
+      "pc": 41430,
+      "target": 41598,
+      "execution_compared": false
+    },
+    {
+      "pc": 41434,
+      "target": 39518,
+      "execution_compared": false
+    },
+    {
+      "pc": 41442,
+      "target": 39598,
+      "execution_compared": false
+    },
+    {
+      "pc": 41450,
+      "target": 40022,
+      "execution_compared": false
+    },
+    {
+      "pc": 41458,
+      "target": 40270,
+      "execution_compared": false
+    },
+    {
+      "pc": 41462,
+      "target": 39598,
+      "execution_compared": false
+    },
+    {
+      "pc": 41542,
+      "target": 41466,
+      "execution_compared": false
+    },
+    {
+      "pc": 41548,
+      "target": 42258,
+      "execution_compared": false
+    },
+    {
+      "pc": 41556,
+      "target": 41638,
+      "execution_compared": false
+    },
+    {
+      "pc": 41564,
+      "target": 41598,
+      "execution_compared": false
+    },
+    {
+      "pc": 41566,
+      "target": 39518,
+      "execution_compared": false
+    },
+    {
+      "pc": 41574,
+      "target": 39598,
+      "execution_compared": false
+    },
+    {
+      "pc": 41582,
+      "target": 40022,
+      "execution_compared": false
+    },
+    {
+      "pc": 41590,
+      "target": 40270,
+      "execution_compared": false
+    },
+    {
+      "pc": 41594,
+      "target": 39598,
+      "execution_compared": false
+    }
+  ],
+  "control_actor_pairs": [
+    [
+      "0xFFFF0690",
+      "0xFFFF1AB4"
+    ],
+    [
+      "0xFFFF0838",
+      "0xFFFF1B02"
+    ]
+  ],
+  "actor_extent": 78,
+  "ownership": "Static explicit pair bindings and actor backlink; physical input/player identity remains unverified",
+  "state_fields": {
+    "x": 2,
+    "y": 4,
+    "horizontal_speed": 34,
+    "vertical_motion": 38,
+    "airborne_delay": 42,
+    "update_handler": 22,
+    "mode_byte": 0,
+    "presentation_words": [
+      6,
+      8,
+      10
+    ],
+    "presentation_counters": [
+      12,
+      13
+    ]
+  },
+  "control_fields": {
+    "positive_limit": 90,
+    "negative_limit": 92,
+    "damping_count_minus_one": 102
+  },
+  "handler_event": {
+    "original_address": 43754,
+    "native": "MotionUpdate::airborne",
+    "handler_executed": false
+  }
+}

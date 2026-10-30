@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "setup_message_fragment",
+      "start": 26812,
+      "end_exclusive": 26820,
+      "sha256": "8d84c6b00d4c2440bf2b44cad8a11ed3eb8f720724927b0a7f7ae51f96186782",
+      "instruction_count": 2,
+      "execution_compared": true
+    },
+    {
+      "id": "message_selection",
+      "start": 32184,
+      "end_exclusive": 32280,
+      "sha256": "f708db0a9e8b4b06fb5b0bbbccee780589045adab8fa227f7e4427e684340bb5",
+      "instruction_count": 23,
+      "execution_compared": true
+    },
+    {
+      "id": "message_request",
+      "start": 52082,
+      "end_exclusive": 52122,
+      "sha256": "14b0512e9f63c7d48601d1ba797ff359fb6f0891c6ac97d35e1d43860f3d7ded",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "message_row_clear",
+      "start": 52122,
+      "end_exclusive": 52248,
+      "sha256": "0eee2db7c94e66a0c75950fd7430bde717fd670116be9db02c4302bf9760a3e9",
+      "instruction_count": 32,
+      "execution_compared": true
+    },
+    {
+      "id": "pair_gate",
+      "start": 28400,
+      "end_exclusive": 28418,
+      "sha256": "5bc13423488ad8229750bf723658ca9863664c8bc12b8c1cc2ab5a33158b9ede",
+      "instruction_count": 5,
+      "execution_compared": true
+    }
+  ],
+  "data": [
+    {
+      "id": "message_mix_those_fruit",
+      "start": 53900,
+      "end_exclusive": 53922,
+      "sha256": "6abc23af001b74ec2ce198756fdf92a20fa17b91293685ef9edb7439b3f2b887",
+      "bytes": 22
+    },
+    {
+      "id": "message_fruit_returned",
+      "start": 53922,
+      "end_exclusive": 53943,
+      "sha256": "6168cdf37b43d4b2b3c32bcf7b805793605f93683523486e2b74621022076174",
+      "bytes": 21
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 26812,
+      "target": 32184
+    },
+    {
+      "pc": 26816,
+      "target": 28400
+    },
+    {
+      "pc": 32244,
+      "target": 52082
+    },
+    {
+      "pc": 32272,
+      "target": 52082
+    },
+    {
+      "pc": 52102,
+      "target": 52122
+    }
+  ],
+  "dependencies": [
+    "setup_tail_step",
+    "setup_prefix_step"
+  ],
+  "contract": "[68BC,68C4) is the next level-setup fragment: BSR 7DB8, BSR 6EF0. 7DB8 returns at once when FF33E2 (two players) is set. Otherwise, when FF31AA is set it clears it and stores D2A2 (\"FRUIT RETURNED!\") in FF0690+46; else it counts FF312C words other than FFFF and, if at least two, stores D28C (\"MIX THOSE FRUIT!\"); either store then calls CB72. CB72 compares the message's leading byte (0x64 for both) with +53 as signed bytes: below it, +46 becomes FFFFFFFF; otherwise +53 takes it and CB9A clears the message row (sets FF010C to 1 for the VDP writes and restores it, register 8004, a VRAM write command for (FF0D60 + 14 + (+56 << 7)) low word, 26 words of 1, register 8014). 6EF0 returns at once unless FF33E2 or FF316C is set; its allocating path (E918 RNG, F9E2 pair) is not reconstructed and rejects natively. CB9A's VDP writes are a logical native request and research-only device effects."
+}

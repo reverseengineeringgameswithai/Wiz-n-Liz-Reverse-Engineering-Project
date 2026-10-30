@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "return_only_pair_initializer",
+      "start": 31644,
+      "end_exclusive": 31782,
+      "sha256": "c6b1385515d833c9dd77c2a63118511551cc1b152e64e638f040086879819be7",
+      "instruction_count": 23,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 31644,
+      "target": 63970
+    },
+    {
+      "pc": 31706,
+      "target": 63970
+    },
+    {
+      "pc": 63980,
+      "target": 64030
+    },
+    {
+      "pc": 64046,
+      "target": 64030
+    }
+  ],
+  "dependencies": [
+    "return_only_step",
+    "mixed_session",
+    "reversal_step"
+  ],
+  "contract": "7B9C performs two ordered F9E2 pops from the shared FF311C LIFO stack and stores the second A6 in FF31C0. F9E2 returns its object in A6, replacing the caller's register, and initializes only +00/+06/+12/+14/+16/+46; 7B9C then writes mode, position, frame words and counter/reload, plus flags 0800 on the second. +01, +0E, +10, +1A..+45 and +4A are inherited from previous slot contents. Native initialization requires verified inherited fields and zero unrepresented bytes, else rejects. Exhaustion enters the never-returning FA1E VDP loop; restricted execution stops at that boundary and native rejection allocates nothing. F994 is the separate A5 allocator. No activation (7AD6/callback79B6), release or level-setup caller is reconstructed."
+}

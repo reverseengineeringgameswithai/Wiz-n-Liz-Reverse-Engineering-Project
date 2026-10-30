@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "rom_id": "ROM-LOCAL-0001",
+  "rom_manifest": "re/rom_manifest.json",
+  "finding_id": "FIND-0007",
+  "address_space": "rom_file_offset",
+  "interval": "[start,end)",
+  "regions": [
+    {
+      "id": "rnc2_decoder",
+      "start": 103522,
+      "end_exclusive": 103838,
+      "sha256": "fb0098c6a57232317c4cfc895801527b72eaf801ac29e24ae5c748192935976a"
+    },
+    {
+      "id": "bank_selector",
+      "start": 4312,
+      "end_exclusive": 4344,
+      "sha256": "6f48692d99cc8015f7ef1d9dec520a5dd3f965250108586f1b15fcff4521ed44"
+    },
+    {
+      "id": "bank_dispatch",
+      "start": 6294,
+      "end_exclusive": 6382,
+      "sha256": "f3a736b0e0241e191e1c73b57bf417de71a0c40f14f51d39c3950c732e9c3ae6"
+    },
+    {
+      "id": "unpack_bank_pair",
+      "start": 15542,
+      "end_exclusive": 15686,
+      "sha256": "e08b08d46d301adcfe0bd03cdb6e73734cc1a04e212191824295e0f7f85548a5"
+    },
+    {
+      "id": "bank_consumer",
+      "start": 15686,
+      "end_exclusive": 15892,
+      "sha256": "a644c3cc97fb84b32664a5a22962de6aaadc2490aad56220aca270c1a4b77348"
+    },
+    {
+      "id": "palette16_loader",
+      "start": 79700,
+      "end_exclusive": 79776,
+      "sha256": "5ad59bee69f671b0c1ba2ef8cc2a0ff1abcb8f0d01e344a6ea422f416b466ea0"
+    }
+  ],
+  "decoder_entry": 103522,
+  "descriptor_table": 209920,
+  "descriptor_stride": 34,
+  "validated_descriptor_index": 0,
+  "bank_pointer_field": 28,
+  "wrapper_offset": 215214,
+  "wrapper_size": 4,
+  "block_id": "rnc.unclassified.0001",
+  "scratch_effective_address": 4294936644,
+  "decoded_format": "pattern_bank_v1",
+  "native_equivalence": "format cases only; original routine not executed",
+  "runtime_observed": false
+}

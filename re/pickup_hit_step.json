@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "pickup_hit_entry",
+      "start": 27648,
+      "end_exclusive": 27728,
+      "sha256": "1eff9679e46c7fafcad433f083d7a156ba31db87c14b15fd661649af13efa6eb",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_exchange",
+      "start": 27728,
+      "end_exclusive": 27866,
+      "sha256": "cda3833d3a2ba523e3f3b1c9d8c1e3add95ad90ad9614638f60105f9fd4752e3",
+      "instruction_count": 34,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_swap_out_callback",
+      "start": 27866,
+      "end_exclusive": 27892,
+      "sha256": "a41fa27edce84e3fac2a40c19a92e20e237ee835a69ea6ec9b79967fd2a4b0c7",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_swap_in_callback",
+      "start": 27892,
+      "end_exclusive": 27938,
+      "sha256": "a0c81ffe7d268c285126b18ad66f17ae5230a12c5c9e66a5e20af091195aa0c4",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_carry_initializer",
+      "start": 27938,
+      "end_exclusive": 28044,
+      "sha256": "2ded2b8a8493fbc3c3538eacd99e8631bbbd1adc5a5786278fe31ba3252f328c",
+      "instruction_count": 20,
+      "execution_compared": true
+    },
+    {
+      "id": "vanish_object",
+      "start": 22972,
+      "end_exclusive": 23046,
+      "sha256": "8089f1fb7833a663f1f9f1bdee82033622ec4c583339d13d6b00356d35a5bec2",
+      "instruction_count": 12,
+      "execution_compared": true
+    },
+    {
+      "id": "reappear_object",
+      "start": 22884,
+      "end_exclusive": 22958,
+      "sha256": "23d775552aae445f0c3a2922fd7dc3c262843ac557bfb623ed84e52f767e940d",
+      "instruction_count": 12,
+      "execution_compared": true
+    },
+    {
+      "id": "copy_object",
+      "start": 64262,
+      "end_exclusive": 64282,
+      "sha256": "7d79780bfc7ae330261bbbb50eab88c1aba7cf0879588d652c08f48356eadffd",
+      "instruction_count": 8,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 27680,
+      "target": 1035058
+    },
+    {
+      "pc": 27692,
+      "target": 28210
+    },
+    {
+      "pc": 27702,
+      "target": 28298
+    },
+    {
+      "pc": 27712,
+      "target": 28254
+    },
+    {
+      "pc": 27724,
+      "target": 27938
+    },
+    {
+      "pc": 27908,
+      "target": 27460
+    },
+    {
+      "pc": 27916,
+      "target": 27570
+    },
+    {
+      "pc": 27938,
+      "target": 64262
+    }
+  ],
+  "dependencies": [
+    "pickup_service_step",
+    "collision_step",
+    "setup_tail_step",
+    "trail_step",
+    "presentation_step"
+  ],
+  "contract": "6C00, the 6BD6 pickup hit, with A5 = the touching control (FF0690, or FF0838 behind FF33E2) and A6 = the pickup: FF0A9E..FF0AA4 = 0089/0006/00C0/0001 and JSR FCB32 (a sound request); frame word +08 of 020D, 0205 or 01FD branches to 6E32, 6E8A or 6E5E (not reconstructed). Otherwise A4 = the control's +1A2 link. A zero mode byte selects 6D22: FB06 copies all 78 pickup bytes into the link, the pickup's FF447A record names the link, the link gets handler 6D8C, service 12646, +36 = 0, +4A = A5 and ten FF80 history words; the pickup then takes X - 8 and 59BC (mode 85, frames 021E/021E/0227, target 0227, 3/3, both selectors 12646, callback FAA4 release, +12 AND 9FFF). A nonzero link swaps +06, +10, +08, +0A, +0D and +42 with the pickup, each record names its new holder (the pickup's write last), and the pickup takes X - 8, 59BC, 3/3 and callback 6CDA. 6CDA calls 5964 (mode 87, frames 0227/021E/0227, target 021E, 3/3, both selectors 12646, callback FAA4, +12 AND 9FFF) then sets 2/2 and callback 6CF4. 6CF4 sets mode 81, re-dresses frames through 6B44 from the FF312C word its record's +4 names, adds 8 to X, sets cadence through 6BB2 from +10 and restores service 6BD6 and handler 12646; the walk's later service reads +46 after presentation, so the re-dressed pickup is tested in the same walk. 6CC0, 6CDA and 6D86 use JSR (xxx).W to 59BC/5964. Natively the hit belongs to MixedPool::walk_pickup with an explicit PickupWorld; the family branches reject."
+}

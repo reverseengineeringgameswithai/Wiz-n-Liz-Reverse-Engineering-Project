@@ -1,0 +1,302 @@
+{
+  "schema": 1,
+  "purpose": "Pre-labelled local diagnostic, not a held-out accuracy claim or native validation.",
+  "expected_model_run": "kev27b-af0e6d55-lh2048-w4a4-cutlass-20261003",
+  "protocol": {
+    "registered_before_inference": true,
+    "unique_claims": 36,
+    "class_counts": {
+      "supported": 12,
+      "contradicted": 12,
+      "insufficient": 12
+    },
+    "variants": [
+      "three cyclic answer orders",
+      "baseline answer order with questions requested separately"
+    ],
+    "decision_rule": "Any false-supported claim or label flip prevents unattended acceptance. Even zero errors supports only an advisory pilot; unknown game behavior still requires original execution and native comparison.",
+    "do_not_tune": "Preserve first-run errors and labels; any changed prompt, label or evidence is a new version."
+  },
+  "packets": [
+    {
+      "id": "allocator",
+      "source": "vault/03_Reverse_Engineering/findings/FIND-0034-pair-initializer.md",
+      "sections": [
+        {
+          "start": "## F9E2 allocator semantics",
+          "end": "## 7B9C pair initializer"
+        },
+        {
+          "start": "## Native implementation",
+          "end": "## Restricted original comparison"
+        }
+      ],
+      "evidence_sha256": "2463c874abb7540d90184d71642f08a045978e1acb7c691e8e79f0929152936a",
+      "cases": [
+        {
+          "id": "allocator_01",
+          "claim": "F9E2 places the popped object in A6.",
+          "expected": "supported",
+          "rationale": "Allocator paragraph specifies A6; F994 instead uses A5."
+        },
+        {
+          "id": "allocator_02",
+          "claim": "F9E2 leaves the previous contents of object +10 untouched.",
+          "expected": "supported",
+          "rationale": "+10 countdown is explicitly inherited."
+        },
+        {
+          "id": "allocator_03",
+          "claim": "If the second native pair allocation cannot proceed, the native pair operation preserves the free order and generations.",
+          "expected": "supported",
+          "rationale": "Transactional rejection covers exhaustion at either pop."
+        },
+        {
+          "id": "allocator_04",
+          "claim": "F9E2 returns the allocated object in A5 while preserving A6.",
+          "expected": "contradicted",
+          "rationale": "This is the documented F994 contract, not F9E2."
+        },
+        {
+          "id": "allocator_05",
+          "claim": "Original F9E2 returns a failure result when the free stack is empty.",
+          "expected": "contradicted",
+          "rationale": "Original exhaustion loops forever at FA1E and does not return."
+        },
+        {
+          "id": "allocator_06",
+          "claim": "A slot released by the native pool can immediately be reused by the pair initializer without verifying its inherited fields.",
+          "expected": "contradicted",
+          "rationale": "Natively released inheritance is unknown and rejects."
+        },
+        {
+          "id": "allocator_07",
+          "claim": "Every F9E2 call in the entire game occurs during level setup.",
+          "expected": "insufficient",
+          "rationale": "No whole-game caller survey is supplied."
+        },
+        {
+          "id": "allocator_08",
+          "claim": "One successful F9E2 call takes exactly 132 processor cycles.",
+          "expected": "insufficient",
+          "rationale": "No cycle count is supplied."
+        },
+        {
+          "id": "allocator_09",
+          "claim": "The slot allocated immediately after frame 1200 is slot 17.",
+          "expected": "insufficient",
+          "rationale": "No frame-1200 trace is supplied."
+        }
+      ]
+    },
+    {
+      "id": "rising",
+      "source": "vault/03_Reverse_Engineering/findings/FIND-0036-rising-pair.md",
+      "sections": [
+        {
+          "start": "## Static range and contract",
+          "end": "## Native implementation"
+        },
+        {
+          "start": "## Ordinary recording evidence",
+          "end": "## Limits and next validation"
+        }
+      ],
+      "evidence_sha256": "a31fd529295a8409f8093f65e43c77523bb21f250c83097a37778b6e21b56c13",
+      "cases": [
+        {
+          "id": "rising_01",
+          "claim": "The second 7772 member receives the first member X plus 0x20 using word arithmetic, and copies its Y.",
+          "expected": "supported",
+          "rationale": "Static table specifies the two coordinate operations."
+        },
+        {
+          "id": "rising_02",
+          "claim": "Both 7772 members get caller A5 in +4A and a zero countdown during initialization.",
+          "expected": "supported",
+          "rationale": "Both stores are explicit in the table."
+        },
+        {
+          "id": "rising_03",
+          "claim": "The observed frame-629 7772 call allocates slot 65 before slot 64.",
+          "expected": "supported",
+          "rationale": "Ordinary evidence states 65 then 64."
+        },
+        {
+          "id": "rising_04",
+          "claim": "7772 stores the second member object address in FF31C0.",
+          "expected": "contradicted",
+          "rationale": "Static contract explicitly states no FF31C0 store."
+        },
+        {
+          "id": "rising_05",
+          "claim": "On return from 7772, A4 names the second member and A6 names the first.",
+          "expected": "contradicted",
+          "rationale": "Static contract states the opposite register ownership."
+        },
+        {
+          "id": "rising_06",
+          "claim": "All 436 frames in the reported write capture have complete write traces.",
+          "expected": "contradicted",
+          "rationale": "Only 435/436; frame 632 dropped."
+        },
+        {
+          "id": "rising_07",
+          "claim": "FF31B0 remains zero throughout every level of the full game.",
+          "expected": "insufficient",
+          "rationale": "Zero gate observations are scoped to these slots and phase entries."
+        },
+        {
+          "id": "rising_08",
+          "claim": "7772 executes exactly once on every possible playthrough.",
+          "expected": "insufficient",
+          "rationale": "One observed recording does not establish every playthrough."
+        },
+        {
+          "id": "rising_09",
+          "claim": "The first 7772 member uses a blue sprite palette.",
+          "expected": "insufficient",
+          "rationale": "No palette color evidence is supplied."
+        }
+      ]
+    },
+    {
+      "id": "collision",
+      "source": "vault/03_Reverse_Engineering/findings/FIND-0032-collision-miss.md",
+      "sections": [
+        {
+          "start": "## Instruction-derived behavior",
+          "end": "## Retained pool and movie evidence"
+        }
+      ],
+      "evidence_sha256": "7dd29d8ea81df2e9c88bab423ba5734daee71b88b0980a9ec0367d271dfdf3e7",
+      "cases": [
+        {
+          "id": "collision_01",
+          "claim": "AC5E treats equality with a distance limit as inside that axis, using unsigned comparisons.",
+          "expected": "supported",
+          "rationale": "Miss is greater-than and the prose says unsigned inclusive."
+        },
+        {
+          "id": "collision_02",
+          "claim": "78EE checks the secondary control only after a primary miss and a nonzero FF33E2 word.",
+          "expected": "supported",
+          "rationale": "Service paragraph describes the short circuit and gate."
+        },
+        {
+          "id": "collision_03",
+          "claim": "An x_extent of 0xFFF0 produces an x_limit of zero after word truncation.",
+          "expected": "supported",
+          "rationale": "Overflow example explicitly states FFF0+16 becomes zero."
+        },
+        {
+          "id": "collision_04",
+          "claim": "AC5E applies x_mask to both X and Y distances.",
+          "expected": "contradicted",
+          "rationale": "Only X is masked in prose and formula."
+        },
+        {
+          "id": "collision_05",
+          "claim": "Object +4A determines which primary control 78EE tests.",
+          "expected": "contradicted",
+          "rationale": "Primary is fixed FFFF0690, not selected by +4A."
+        },
+        {
+          "id": "collision_06",
+          "claim": "Collision-hit7910 has a supported native implementation in this evidence.",
+          "expected": "contradicted",
+          "rationale": "Hit7910 is explicitly unsupported."
+        },
+        {
+          "id": "collision_07",
+          "claim": "An original overlap at 7910 always awards exactly 100 points.",
+          "expected": "insufficient",
+          "rationale": "Hit behavior is not reconstructed here."
+        },
+        {
+          "id": "collision_08",
+          "claim": "FF33E2 is nonzero at frame 1500 of this recording.",
+          "expected": "insufficient",
+          "rationale": "Gate observation only covers [1066,1100)."
+        },
+        {
+          "id": "collision_09",
+          "claim": "The original game plays sound number 7 whenever the secondary control overlaps.",
+          "expected": "insufficient",
+          "rationale": "No hit sound behavior is supplied."
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "source": "vault/01_Project/PROJECT_STATUS.md",
+      "sections": [
+        {
+          "start": "## Current native behavior",
+          "end": "## Fresh validation"
+        },
+        {
+          "start": "## Exact next task",
+          "end": null
+        }
+      ],
+      "evidence_sha256": "ee5cf396fdd390e79860c94577f2c59656c90fe56302af7fb6b892b94099e7ff",
+      "cases": [
+        {
+          "id": "scope_01",
+          "claim": "The 7772, 7B9C and 7C26 pair initializers share a transactional native two-pop template.",
+          "expected": "supported",
+          "rationale": "Current native behavior directly states this."
+        },
+        {
+          "id": "scope_02",
+          "claim": "The next scheduled native task is the 783A four-object initializer.",
+          "expected": "supported",
+          "rationale": "Exact next task names 783A."
+        },
+        {
+          "id": "scope_03",
+          "claim": "The project has no native playability at this checkpoint.",
+          "expected": "supported",
+          "rationale": "Current native behavior says native playability none."
+        },
+        {
+          "id": "scope_04",
+          "claim": "Callback79B6 is already supported by the native runtime.",
+          "expected": "contradicted",
+          "rationale": "Explicitly listed unsupported."
+        },
+        {
+          "id": "scope_05",
+          "claim": "All 121 indexed routines are fully reconstructed native mappings.",
+          "expected": "contradicted",
+          "rationale": "Only 110 bounded plus two partial mappings; remaining work is named."
+        },
+        {
+          "id": "scope_06",
+          "claim": "project.py run currently starts a playable native game.",
+          "expected": "contradicted",
+          "rationale": "run is unimplemented and native playability none."
+        },
+        {
+          "id": "scope_07",
+          "claim": "The final audio mixer will output exactly 48000 samples per second.",
+          "expected": "insufficient",
+          "rationale": "No final mixer rate decision is supplied."
+        },
+        {
+          "id": "scope_08",
+          "claim": "Completing 783A will take exactly two hours.",
+          "expected": "insufficient",
+          "rationale": "No measured completion time is supplied."
+        },
+        {
+          "id": "scope_09",
+          "claim": "The original 783A call at frame 629 has already been verified to perform exactly 81 memory writes.",
+          "expected": "insufficient",
+          "rationale": "No exact 783A write count is supplied; this is the next task."
+        }
+      ]
+    }
+  ]
+}

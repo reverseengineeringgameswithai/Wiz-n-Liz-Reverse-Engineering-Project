@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "ingredient_callback",
+      "start": 31158,
+      "end_exclusive": 31232,
+      "sha256": "9afa307d0cf58f06c091c16c086dec40a08c767bc74f5df8f7cbd6a6eb87c5a2",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "first_ingredient_tail",
+      "start": 31270,
+      "end_exclusive": 31302,
+      "sha256": "1bdf6d86e4992f47c89975202a1bad074f9fa243adcc6809c00f7908738ccd8b",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "activation_gate",
+      "start": 31446,
+      "end_exclusive": 31462,
+      "sha256": "9e3b94cc8877af38ec17c87b8cfaa10f2637d5ca962887a2e5a9e2de71acf162",
+      "instruction_count": 3,
+      "execution_compared": true
+    },
+    {
+      "id": "first_activation",
+      "start": 31522,
+      "end_exclusive": 31554,
+      "sha256": "52439d3fdab2968e00141f06515694b3015d59c93b37e903e120d64c4d8aff0b",
+      "instruction_count": 7,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 31230,
+      "target": 31270
+    },
+    {
+      "pc": 31278,
+      "target": 52082
+    },
+    {
+      "pc": 31296,
+      "target": 31446
+    },
+    {
+      "pc": 31458,
+      "target": 31522
+    },
+    {
+      "pc": 31534,
+      "target": 64262
+    },
+    {
+      "pc": 31546,
+      "target": 64164
+    }
+  ],
+  "dependencies": [
+    "delivery_step",
+    "table_motion_step",
+    "setup_message_step",
+    "pickup_hit_step",
+    "presentation_step",
+    "setup_prefix_step"
+  ],
+  "contract": "callback79B6, a 7910 copy's presentation callback (through F84E's JMP (A0), A6 = the copy), on its first-ingredient path, then 7AD6's matching path. 79B6: X + 8, Y + 4; +06 = +08 = +22, +0A = +26; mode 81; JSR 6BB2 (cadence from +10, still the carried count); handler +16 = 7A88, +2E = 7A58 (table cursor 0), +36 = 0; A5 = +4A; A0 = FF31AC; nonzero continues at 7A00 (D22F, the negated +32 of the FF31AC object, 7AD6's FF31B8 path; not reconstructed). Zero: +46(A5) = D20E (\"FIRST INGREDIENT COLLECTED!\", priority byte 01) and JSR CB72; +32 = FFFF; +10 = 000E; JSR 7AD6; then the already classified [7A46,7A58) tail: FF31BE = 0050, FF31BC = 0000, RTS. 7AD6: A4 = FF31AC; zero branches to 7B22: A4 = FF31B4, FF31AC = A4, FB06 copies the 78 copy bytes into it, the copy's +42 record names A4, JSR FAA4 releases the copy (A6), RTS. The walk then reads the released copy's handler, now 7A88, and its 12646 service. Natively MixedPool::walk_delivered and MixedPool::step with a PickupWorld and mutable PrivateGlobals: the FF31B4 object becomes a TableMotion, the released copy a mode-0 TableMotion after one 7A88 run, CB72 is post_message and CB9A a MessageRowClear request; FF31AC present rejects."
+}

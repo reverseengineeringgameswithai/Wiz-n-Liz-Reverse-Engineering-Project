@@ -1,0 +1,356 @@
+{
+ "schema_version": 1,
+ "address_space": "rom_file_offset",
+ "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+ "regions": [
+  {
+   "id": "anchor_store",
+   "start": 31566,
+   "end_exclusive": 31574,
+   "sha256": "de784d5e8a004baf727519e3d6b4ee3395746c15e849bb6051f85c691b5379dd",
+   "instruction_count": 1,
+   "execution_compared": true
+  },
+  {
+   "id": "completion_handler",
+   "start": 31576,
+   "end_exclusive": 31626,
+   "sha256": "152a93ed5340d94c175f42a89a096808ead6150654131053b94e10ba11da7342",
+   "instruction_count": 11,
+   "execution_compared": true
+  },
+  {
+   "id": "reveal_handler",
+   "start": 31626,
+   "end_exclusive": 31644,
+   "sha256": "9cc54efff08ba507793f45c023735ec0a512081a7853a333572189807ada437a",
+   "instruction_count": 4,
+   "execution_compared": true
+  },
+  {
+   "id": "spell_fade_out",
+   "start": 78484,
+   "end_exclusive": 78546,
+   "sha256": "5d4f0101f9493f21f6f2439ed9c81d318510ffab8d10ea9222b9c5dd772771ed",
+   "instruction_count": 8,
+   "execution_compared": true
+  },
+  {
+   "id": "recipe_lookup",
+   "start": 32280,
+   "end_exclusive": 32470,
+   "sha256": "95da9fac252d5c823680bc1ea73035c37bdeac7758b50e12034887ae0579e96e",
+   "instruction_count": 49,
+   "execution_compared": true
+  },
+  {
+   "id": "consume_ingredient",
+   "start": 32470,
+   "end_exclusive": 32500,
+   "sha256": "8c07dece3e3063c27e3fc00b057f02eca4e8d3a8c3d33a2c989d1ef30feb67f7",
+   "instruction_count": 8,
+   "execution_compared": true
+  },
+  {
+   "id": "sparkle_spawn",
+   "start": 32520,
+   "end_exclusive": 32618,
+   "sha256": "2f92155689f49c757f712e89067ce67aabbf0560f8ba3131c1457314ef978e3f",
+   "instruction_count": 18,
+   "execution_compared": true
+  },
+  {
+   "id": "sparkle_handler",
+   "start": 32618,
+   "end_exclusive": 32702,
+   "sha256": "3e03f0f121035c278f2d958512dbb108fd17c9c8f5abe34243b02a858a9976a4",
+   "instruction_count": 22,
+   "execution_compared": true
+  },
+  {
+   "id": "recipe_8652",
+   "start": 34386,
+   "end_exclusive": 34430,
+   "sha256": "8810050b10d9cfa9b6fbef4cd23db5889a9606416da148d3945e0c1c7be2545c",
+   "instruction_count": 9,
+   "execution_compared": true
+  },
+  {
+   "id": "door_allocation",
+   "start": 28418,
+   "end_exclusive": 28484,
+   "sha256": "b77b09e60297c26be1a8e2d631ad9b0d952ed0be5a75a6dd38473789c4b0dd7a",
+   "instruction_count": 15,
+   "execution_compared": true
+  },
+  {
+   "id": "door_position",
+   "start": 28538,
+   "end_exclusive": 28598,
+   "sha256": "eda0878509daf85fb85518105ad023db9537b6783c608f7fa6ccdb56eb0bd220",
+   "instruction_count": 11,
+   "execution_compared": true
+  },
+  {
+   "id": "door_countdown",
+   "start": 28598,
+   "end_exclusive": 28618,
+   "sha256": "7bf0d73a7279f69fb2ad58a3e296e55f322a12254a004e31a48392468017747b",
+   "instruction_count": 5,
+   "execution_compared": true
+  },
+  {
+   "id": "door_dress",
+   "start": 28618,
+   "end_exclusive": 28764,
+   "sha256": "b753999255a13737d10f12dd37acfaa60cca5f29d37775b28e98efc5442d4db0",
+   "instruction_count": 27,
+   "execution_compared": true
+  },
+  {
+   "id": "door_service",
+   "start": 28764,
+   "end_exclusive": 28786,
+   "sha256": "10f89a5b1f8437a14a3b95e3290b1c1281326e0943157f2865a17acc55cac222",
+   "instruction_count": 5,
+   "execution_compared": true
+  },
+  {
+   "id": "door_service_return",
+   "start": 28800,
+   "end_exclusive": 28802,
+   "sha256": "1ceeabf0c6a5a30bad12cdac0e3ab015a7188a42e6aebb556aad00bb9cd693ad",
+   "instruction_count": 1,
+   "execution_compared": true
+  },
+  {
+   "id": "sign_raise",
+   "start": 19464,
+   "end_exclusive": 19508,
+   "sha256": "5f9df8b2c5906c2164d1d4326dcc021b8f8cd2493d29948e664fe5acdba76ee7",
+   "instruction_count": 8,
+   "execution_compared": true
+  },
+  {
+   "id": "sign_bob",
+   "start": 19508,
+   "end_exclusive": 19538,
+   "sha256": "2b9e64218e8f0147aa13c155f099baf91b6c0687d4924c75c6c9b7eb3117e090",
+   "instruction_count": 8,
+   "execution_compared": true
+  },
+  {
+   "id": "spell_gates",
+   "start": 38382,
+   "end_exclusive": 38420,
+   "sha256": "3b32a2cc923568c2fd5eed3a8af5fa11bdf64e0620da9a1e01993edb550803cc",
+   "instruction_count": 9,
+   "execution_compared": true
+  }
+ ],
+ "data": [
+  {
+   "id": "recipes",
+   "start": 33754,
+   "end_exclusive": 34385,
+   "sha256": "920317b1ff3ff26de51689ad28a92d3b0a29e3021cd3df69357b21e18522562b",
+   "bytes": 631
+  },
+  {
+   "id": "sign_bob_table",
+   "start": 19538,
+   "end_exclusive": 19566,
+   "sha256": "86fb4b1b188f7be60f419372fe7a8c2fefca8df501bb7aaa6025aff31bc1ded4",
+   "bytes": 28
+  }
+ ],
+ "transfers": [
+  {
+   "pc": 31582,
+   "target": 31574
+  },
+  {
+   "pc": 31596,
+   "target": 52082
+  },
+  {
+   "pc": 31604,
+   "target": 32280
+  },
+  {
+   "pc": 31610,
+   "target": 78414
+  },
+  {
+   "pc": 31632,
+   "target": 31574
+  },
+  {
+   "pc": 32342,
+   "target": 32470
+  },
+  {
+   "pc": 32352,
+   "target": 32470
+  },
+  {
+   "pc": 32398,
+   "target": 32466
+  },
+  {
+   "pc": 32402,
+   "target": 32456
+  },
+  {
+   "pc": 32406,
+   "target": 32456
+  },
+  {
+   "pc": 32440,
+   "target": 1035058
+  },
+  {
+   "pc": 32448,
+   "target": 38382
+  },
+  {
+   "pc": 32458,
+   "target": 32464
+  },
+  {
+   "pc": 32462,
+   "target": 32408
+  },
+  {
+   "pc": 32464,
+   "target": 32384
+  },
+  {
+   "pc": 32466,
+   "target": 37512
+  },
+  {
+   "pc": 32482,
+   "target": 32500
+  },
+  {
+   "pc": 32522,
+   "target": 63970
+  },
+  {
+   "pc": 32608,
+   "target": 1035058
+  },
+  {
+   "pc": 32622,
+   "target": 32630
+  },
+  {
+   "pc": 32624,
+   "target": 64164
+  },
+  {
+   "pc": 32630,
+   "target": 59672
+  },
+  {
+   "pc": 32644,
+   "target": 32700
+  },
+  {
+   "pc": 32646,
+   "target": 59672
+  },
+  {
+   "pc": 32664,
+   "target": 59672
+  },
+  {
+   "pc": 32684,
+   "target": 59672
+  },
+  {
+   "pc": 32692,
+   "target": 32700
+  },
+  {
+   "pc": 34392,
+   "target": 37250
+  },
+  {
+   "pc": 34414,
+   "target": 32520
+  },
+  {
+   "pc": 34426,
+   "target": 28418
+  },
+  {
+   "pc": 28418,
+   "target": 63970
+  },
+  {
+   "pc": 28426,
+   "target": 63970
+  },
+  {
+   "pc": 28434,
+   "target": 28438
+  },
+  {
+   "pc": 28482,
+   "target": 28538
+  },
+  {
+   "pc": 28602,
+   "target": 28596
+  },
+  {
+   "pc": 28650,
+   "target": 1035058
+  },
+  {
+   "pc": 28770,
+   "target": 44126
+  },
+  {
+   "pc": 28776,
+   "target": 28802
+  },
+  {
+   "pc": 28784,
+   "target": 28800
+  },
+  {
+   "pc": 19524,
+   "target": 19532
+  },
+  {
+   "pc": 38392,
+   "target": 38400
+  },
+  {
+   "pc": 38394,
+   "target": 38530
+  },
+  {
+   "pc": 38406,
+   "target": 38414
+  },
+  {
+   "pc": 38408,
+   "target": 38420
+  }
+ ],
+ "dependencies": [
+  "spell_step",
+  "setup_message_step",
+  "palette_step",
+  "pair_initializer_step",
+  "delivery_step",
+  "trail_step",
+  "collision_step",
+  "presentation_step"
+ ],
+ "contract": "The spell's completion. The FF31C0 anchor: 7B42 (SUBQ.W #1,+10; BPL) with 13294 on a negative result (FF0B90 = 0001, FF0B92 = 0006, FF0B94 = 0000, FF0EDE cleared, FF0B98/9C/A0 = 135EA; FF0B96 kept) and the 7B4E store +16 = 7B58; 7B58 returns while FF0B90 is nonzero, else +46(A5) = D269 (\"SPELL COMPLETED! / DOOR OPEN!\", priority 01) through CB72, A6 saved around BSR 7E18, JSR 1324E and +16 = 7B8A; 7B8A returns while FF0B90 is nonzero, else +16 = 12646. 7E18: the FF31AC and FF31B0 objects' fruit (+08 - 0260) / 6 (DIVU.W quotient) stored in FF31C4/FF31C6; 7ED6 on each (mode 0; with FF31A8 zero the +42 record's object is cleared and its FF312C entry set to FFFF; the FF31A8 path at 7EF4 is outside scope); FF31A8, FF31B0 and FF31AC cleared; the first 83DA entry naming the pair in either order selects sound 9C (FCB32), JSR (A2) and JSR 95EE; no entry branches to 9288. Only recipe 8652 (fruits 6 and 5) is reconstructed: FF316C nonzero branches to 9182; otherwise 7F08 allocates the sparkle (F9E2: mode 80, frame 021D, (FF0690+3C, +3E + 28), extents 0010/0010, handler 7F6A, +10 = 0040, sound 90), FF316C = FFFF and 6F02 allocates two objects (the lower: F9E2 defaults at (0,0); the higher, the door: +36 the lower, (FF0690+3C - 8, +3E + 24), frame 021D, +10 = 001E, handler 6FB6, +4A = FF0690; FF316E = the door; FF33E2 set branches to 6F44). 95EE with FF31A6 or FF31A4 set calls 9682 or 9614. 7F6A: +10 - 1; negative releases (JMP FAA4); else E918, and when its low byte is at most 73 two E918 offsets ((r & 1F) - 10, Y then X), 5A9A and a fourth E918 whose bit 0 sets the particle's +12 = 4000. 6FB6: +10 - 1; negative runs 5964 and +1A = 6FCA. 6FCA: sound 95, +2 + 8, +4 - 8, frames 00B0/00A8/00B7, +0C/+0D = 3, extents 0010/0020, mode 81, +46 = 705C, +16 = 12646, then 4C08 on the +36 object (mode 80, (x, y - 24), +6 = FF0690+3A, handler 4C34, +22 = 4C52), door +3A = it and its +6 = 00D2. 4C34 adds the next 4C52 word to +4, wrapping after fourteen. 705C: AC5E with FF0690; a contact (7082) and FF33E2 set (7072) are outside scope. Natively SpellCountdown/step_spell_countdown, MixedPool::complete_spell, SpellSparkle, ExitDoor and DoorSign (src/sim/spell.*) and start_spell_fade_out."
+}

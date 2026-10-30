@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "reserved_y_handler",
+      "start": 30728,
+      "end_exclusive": 30778,
+      "sha256": "1dbea92b54aff295abdccbe4f439028fe166cd4f44db7fee61cf35fff9daba60",
+      "instruction_count": 12,
+      "execution_compared": false
+    },
+    {
+      "id": "reserved_collision_miss_service",
+      "start": 30958,
+      "end_exclusive": 30992,
+      "sha256": "95e9bc65c657f81874371b7be7951cdc1476d9d18675527f593b03f44299e3e4",
+      "instruction_count": 9,
+      "execution_compared": false
+    },
+    {
+      "id": "reserved_table_motion",
+      "start": 31368,
+      "end_exclusive": 31446,
+      "sha256": "dfc28d1551910b15a10ba4cac61e4c0c4a2f91ee01fa608dba137af13e867f7d",
+      "instruction_count": 19,
+      "execution_compared": false
+    },
+    {
+      "id": "reserved_visibility_handler",
+      "start": 31908,
+      "end_exclusive": 31944,
+      "sha256": "24e07a6a4338bf9a2e286a91f7ebebc2674e216f39bbad5609832f177b8fa981",
+      "instruction_count": 8,
+      "execution_compared": false
+    },
+    {
+      "id": "reserved_overlap_query",
+      "start": 44126,
+      "end_exclusive": 44188,
+      "sha256": "58ffa2555e60ef372127318bebe4e1b25f3b8c576966013d90e8385120ab2acc",
+      "instruction_count": 19,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 30742,
+      "target": 30764
+    },
+    {
+      "pc": 30750,
+      "target": 30776
+    },
+    {
+      "pc": 30756,
+      "target": 30776
+    },
+    {
+      "pc": 30762,
+      "target": 30770
+    },
+    {
+      "pc": 30964,
+      "target": 44126
+    },
+    {
+      "pc": 30968,
+      "target": 30992
+    },
+    {
+      "pc": 30976,
+      "target": 30990
+    },
+    {
+      "pc": 30984,
+      "target": 44126
+    },
+    {
+      "pc": 30988,
+      "target": 30992
+    },
+    {
+      "pc": 31384,
+      "target": 31440
+    },
+    {
+      "pc": 31402,
+      "target": 31410
+    },
+    {
+      "pc": 31426,
+      "target": 31440
+    },
+    {
+      "pc": 31440,
+      "target": 31378
+    },
+    {
+      "pc": 31914,
+      "target": 31922
+    },
+    {
+      "pc": 31928,
+      "target": 31942
+    },
+    {
+      "pc": 44152,
+      "target": 44182
+    },
+    {
+      "pc": 44174,
+      "target": 44182
+    }
+  ],
+  "data": [
+    {
+      "id": "private_vertical_motion_table",
+      "start": 31320,
+      "end_exclusive": 31368,
+      "sha256": "0e2aaab37cb0ff67cffc26c626c7cf7e94ee9abcb759e533d64d4d3e2d629a88"
+    }
+  ],
+  "dependencies": [
+    "effect_session",
+    "trail_step",
+    "reversal_step",
+    "dispatch_step"
+  ],
+  "contract": "Static audit of explicitly omitted reservations, not new native replacements or restricted-original instruction coverage. 78EE is limited to the no-overlap return at 790E; 7910 rejects in the capture. All reservation writes and shared pool/RNG/P1 noninterference are separately checked from full machine evidence. Native mixed session composes previously verified routines and the forward slot walk."
+}

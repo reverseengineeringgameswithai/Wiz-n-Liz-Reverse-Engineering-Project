@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "tally_entry_gate",
+      "start": 20936,
+      "end_exclusive": 20944,
+      "sha256": "8c09bece2a2ef1dcdf06518d639fb5a650d5b447d5e93691fa31f7157833a45a",
+      "instruction_count": 2,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_common",
+      "start": 21026,
+      "end_exclusive": 21094,
+      "sha256": "e5e7cb82888e9735d675ee62c3fb85ebcbed901dfac5a680b7d898f78a5c2c5b",
+      "instruction_count": 17,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_complete",
+      "start": 21158,
+      "end_exclusive": 21168,
+      "sha256": "7eb0a1dbecd1bec220f373aa0833c395e658e57f8be74f3c6cd28aa7f99119d6",
+      "instruction_count": 2,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_countdown",
+      "start": 21372,
+      "end_exclusive": 21470,
+      "sha256": "452edacf0e83e093c3cb6b2a6839332b6cb244ae354116ae5a91bdb8c2186f24",
+      "instruction_count": 20,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_credit",
+      "start": 44952,
+      "end_exclusive": 44976,
+      "sha256": "25755cc851e95622ff97ca96733892c64ece75e68ba63fa47f539679ca9e0344",
+      "instruction_count": 6,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_return",
+      "start": 20364,
+      "end_exclusive": 20366,
+      "sha256": "1ceeabf0c6a5a30bad12cdac0e3ab015a7188a42e6aebb556aad00bb9cd693ad",
+      "instruction_count": 1,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 20942,
+      "target": 21026
+    },
+    {
+      "pc": 21030,
+      "target": 41288
+    },
+    {
+      "pc": 21040,
+      "target": 21046
+    },
+    {
+      "pc": 21042,
+      "target": 21372
+    },
+    {
+      "pc": 21052,
+      "target": 21158
+    },
+    {
+      "pc": 21058,
+      "target": 20364
+    },
+    {
+      "pc": 21068,
+      "target": 21158
+    },
+    {
+      "pc": 21076,
+      "target": 21158
+    },
+    {
+      "pc": 21084,
+      "target": 21158
+    },
+    {
+      "pc": 21092,
+      "target": 21158
+    },
+    {
+      "pc": 21378,
+      "target": 21396
+    },
+    {
+      "pc": 21384,
+      "target": 21396
+    },
+    {
+      "pc": 21394,
+      "target": 21412
+    },
+    {
+      "pc": 21402,
+      "target": 21412
+    },
+    {
+      "pc": 21418,
+      "target": 44952
+    },
+    {
+      "pc": 21454,
+      "target": 1035058
+    },
+    {
+      "pc": 44962,
+      "target": 44968
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step",
+    "actions_step",
+    "dispatch_step",
+    "transition_step",
+    "coasting_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366,
+        43600
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396,
+        75334,
+        28942,
+        28966,
+        25386,
+        20936,
+        21026
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 63754,
+      "opcode": 20112,
+      "selector": "actor +46 AFTER handler; only verified RTS service",
+      "targets": [
+        75334,
+        51966
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074,
+    20944,
+    21094
+  ],
+  "contract": "51C8 zero palette gate branches immediately to 5222 without replacing handler; coast, bounded countdown/unit credit and Start completion. Palette path 51D0 and bonus allocation 5266 reject transactionally; no whole world or audio playback parity."
+}

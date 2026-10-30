@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "reserved_y_handler",
+      "start": 30728,
+      "end_exclusive": 30778,
+      "sha256": "1dbea92b54aff295abdccbe4f439028fe166cd4f44db7fee61cf35fff9daba60",
+      "instruction_count": 12,
+      "execution_compared": true
+    },
+    {
+      "id": "reserved_visibility_handler",
+      "start": 31908,
+      "end_exclusive": 31944,
+      "sha256": "24e07a6a4338bf9a2e286a91f7ebebc2674e216f39bbad5609832f177b8fa981",
+      "instruction_count": 8,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [],
+  "dependencies": [
+    "presentation_step",
+    "mixed_session"
+  ],
+  "contract": "7808 rising and 7CA4 gated visibility handlers, active/presentation and fixed return-only service. Opaque logical control identity is retained, never dereferenced. Any invoked callback rejects. Explicit FF31B0 long and FF31A6/FF31A4 word inputs; their producers and initializers are not reconstructed. Word/byte wrap and same-invocation presentation precede private work."
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "starting_commit": "b7c28375c2e87e6279759f10ddc188ed9f79c590",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "Zero-gate 51C8 and bounded 5222 tally paths through the actor wrapper. Nonzero palette path 51D0 and bonus allocation 5266 reject. Countdown, remaining units, wrapped/capped credit and Start completion included; no world/frame/audio-playback parity.",
+  "tally_presets": {
+    "debug": {
+      "report": "local/generated/tally-comparison/run-kcy5245h/report.json",
+      "report_sha256": "33ba05f29598627eaafd7af9accf9b010a261ab8aa5bdaf96a3f3ab50eb8cabe",
+      "cases": 231475,
+      "new_instructions_visited": 48,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 216115,
+          "independent_goldens": 19,
+          "native_output_sha256": "656e1885c09937c58293bf9747607636268f60fe1f470c3a259c60ed75b98b59"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "eff089c8079bfe42578294f0501dc4344a37caa80c6ef592c43e8f71e535a54d"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "1b9e121d6637277dd4678aee9c0559b945a96b01ea85b2aa4c09a19b5a674657"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/tally-comparison/run-mncj6dnu/report.json",
+      "report_sha256": "b1ab98cd0220ab3bb7c78f22e9c4de4d211c4d4bac4e062c0324adb8d81b8ec2",
+      "cases": 231475,
+      "new_instructions_visited": 48,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 216115,
+          "independent_goldens": 19,
+          "native_output_sha256": "656e1885c09937c58293bf9747607636268f60fe1f470c3a259c60ed75b98b59"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "eff089c8079bfe42578294f0501dc4344a37caa80c6ef592c43e8f71e535a54d"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "1b9e121d6637277dd4678aee9c0559b945a96b01ea85b2aa4c09a19b5a674657"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/tally-comparison/run-lyejwjbp/report.json",
+      "report_sha256": "cb861a49c1ce59cc61b10b0cbe4faa33ead4ab776af44b8bcb39ad7649441e5e",
+      "cases": 231475,
+      "new_instructions_visited": 48,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 216115,
+          "independent_goldens": 19,
+          "native_output_sha256": "656e1885c09937c58293bf9747607636268f60fe1f470c3a259c60ed75b98b59"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "eff089c8079bfe42578294f0501dc4344a37caa80c6ef592c43e8f71e535a54d"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "1b9e121d6637277dd4678aee9c0559b945a96b01ea85b2aa4c09a19b5a674657"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "coasting": {
+      "report": "local/generated/coasting-comparison/run-gf15qctn/report.json",
+      "report_sha256": "2c2631924f5cf78a0ba5726a3281d733f85133b0eb5dba44021a0a4d097bf412",
+      "cases": 87571
+    },
+    "transition": {
+      "report": "local/generated/transition-comparison/run-bf0kmihj/report.json",
+      "report_sha256": "81c2008736a4eef0a71a902ff695507b634153ddf11e9038fbe0be1de0934027",
+      "cases": 306528
+    },
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-lu1wweiq/report.json",
+      "report_sha256": "816cee38066ff578ea83503471f5c0f091e4e108f61f9bddb95eeec78b497433",
+      "cases": 138149
+    },
+    "actions": {
+      "report": "local/generated/actions-comparison/run-8w2_41vt/report.json",
+      "report_sha256": "24482dfbf6c1f2f54549f3b7b194048eb1181de6b4561bde0ac3022ab66dfed3",
+      "cases": 146638
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-b_9oqv8a/report.json",
+      "report_sha256": "eb5bf4aec8d26f976d5cf26bfb0efc95f870ffa266dcd8e5993132c1b0f577f9",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-6pu9ce1p/report.json",
+      "report_sha256": "d962ff18946d30eef78e43e89ec9394f915071afe18194c9a2570f4079ee1d2b",
+      "cases": 152093
+    },
+    "reversal": {
+      "report": "local/generated/reversal-comparison/run-s2lswpgm/report.json",
+      "report_sha256": "c7854df103a6e14edd627d3593c6ed3ba1140a32d89d1e2159f288f19bb1ee8a",
+      "cases": 203586
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-oln482q6/report.json",
+      "report_sha256": "bf76e90bf0992a02585437057bb1ca0ac6df7642ad5979d2fff77acc3a05db42",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-e4vjx3io/report.json",
+      "report_sha256": "771ee5d6e412c5e0a504978a739aeb79c1a679d77d2a72ac98bfd5476f445ac4",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-x071373u/report.json",
+      "report_sha256": "a2e817dac4be681b70768e7afac3016cd2dabf1d96e7e9ff5fb551b64fb74bba",
+      "cases": 614436
+    }
+  },
+  "scoped_instruction_union": 1076,
+  "static_probe": {
+    "report": "local/generated/tally-probe/run-qnhb2bl0/report.json",
+    "report_sha256": "a67059474178e646f72ce4125ffb40d681c64da09939f7f501a8a3d02e7c2d87",
+    "instructions": 1076,
+    "gnu_checks": 5,
+    "gnu_limit": "installed m68k.gnu rejects immediate BCHG 086e; not claimed as corroborated by this decoder",
+    "new_instructions": 48,
+    "new_gnu_checks": 4,
+    "new_gnu_limit": "No new decoder limitation; inherited presentation BCHG limitation remains."
+  },
+  "ordinary_movie": {
+    "report": "local/generated/tally-movie/run-0x1impxc/report.json",
+    "report_sha256": "0ca5bf01e0f3f0e9c926c7bee119df4de7aeda76c8e3c3a5a8f76f74ecb7e06a",
+    "start": 3403,
+    "end": 3578,
+    "comparison": {
+      "ok": true,
+      "continuous_wrapper_calls": 175,
+      "sound_requests": 5,
+      "completion_frames": [
+        3577
+      ],
+      "command": [
+        "~/WizNLizPC/build/debug/wiznliz-actor",
+        "movie.scene",
+        "~/WizNLizPC/local/generated/tally-movie/run-0x1impxc/scene.bin",
+        "movie.bank",
+        "~/WizNLizPC/local/generated/tally-movie/run-0x1impxc/bank.bin",
+        "--tally-sequence"
+      ],
+      "output_sha256": "a666e8c2e65e06a1efc97f0b3bf104d6f7e9baebef3df7a639757e34c1760541"
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "449648bfbd44b47c5286af285242c6b56fa61a4ed8df52f82ae9ffec062a970a",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "coasting_movie_regression": {
+    "report": "local/generated/coasting-movie/run-h_ur4nxv/report.json",
+    "report_sha256": "91ba177a87eb0f25a7394d744cdc26a9fba66ec55009e5247a910dd1a3384085",
+    "start": 1742,
+    "end": 1759,
+    "comparison": {
+      "ok": true,
+      "initializers": 1,
+      "continuous_wrapper_calls": 16,
+      "first_update_frame": 1743,
+      "command": [
+        "~/WizNLizPC/build/debug/wiznliz-actor",
+        "movie.scene",
+        "~/WizNLizPC/local/generated/coasting-movie/run-h_ur4nxv/scene.bin",
+        "movie.bank",
+        "~/WizNLizPC/local/generated/coasting-movie/run-h_ur4nxv/bank.bin",
+        "--coast-sequence"
+      ],
+      "output_sha256": "e47a74270be8f2eec2b0d5b2d400f7590b84e1732d41874a5c1f5a556df50c7b",
+      "scope": "one P1 initializer and its next 16 P1 updates; P2 initializer observed but not compared; shared transition and other world objects excluded"
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "transition_movie_regression": {
+    "report": "local/generated/transition-movie/run-5bl5s6yh/report.json",
+    "report_sha256": "c6e502f8856296a9e6b15dfbdce492befb23778f0f6ce1b7267ad121cdaf11f4",
+    "start": 1516,
+    "end": 1533,
+    "comparison": {
+      "ok": true,
+      "comparisons": {
+        "continuous-wrapper": {
+          "calls": 17,
+          "command": [
+            "~/WizNLizPC/build/debug/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/transition-movie/run-5bl5s6yh/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/transition-movie/run-5bl5s6yh/bank.bin",
+            "--transition-sequence"
+          ],
+          "output_sha256": "31a584d8af294cc28d9d3af62e29e804a988b6373fbb036092b072d08590a21e"
+        },
+        "timer": {
+          "calls": 17,
+          "command": [
+            "~/WizNLizPC/build/debug/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/transition-movie/run-5bl5s6yh/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/transition-movie/run-5bl5s6yh/bank.bin",
+            "--transition-timer"
+          ],
+          "output_sha256": "5f3bebbc57de5e120f74ee8c2a1773f4b28927fc869a74570ec01a1d6e770ddb"
+        }
+      },
+      "handlers": {
+        "0x710e": 1,
+        "0x7126": 16
+      },
+      "completion_frame": 1532
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "wrapper_movie_regression": {
+    "report": "local/generated/dispatch-movie/run-yc1mh17u/report.json",
+    "report_sha256": "ab31325ca68f3a1fca06fbcea1dc50471a8db0dc5fe988595c1d7853f4d85e0a",
+    "ordinary_calls": 191,
+    "branch_calls": 72,
+    "independent_unhooked_matches": 4
+  },
+  "tests": {
+    "debug": {
+      "python_tests": 154,
+      "skips": 0,
+      "ctest_targets": 24,
+      "log": "local/generated/recovery-research/test-debug.log",
+      "sha256": "9841cd9ee0d64cca746f4515fc3eddd3d90009bab8123a0eb734a2f213341c06"
+    },
+    "release": {
+      "python_tests": 154,
+      "skips": 0,
+      "ctest_targets": 24,
+      "log": "local/generated/recovery-research/test-release.log",
+      "sha256": "cbdaeee0b4c8332b49235689c1d2d07f181bb9a63bfcc8ee7f00eddabd4c7a68"
+    },
+    "sanitize": {
+      "python_tests": 154,
+      "skips": 0,
+      "ctest_targets": 24,
+      "log": "local/generated/recovery-research/test-sanitize.log",
+      "sha256": "fff031df6ebfd2be75e568ef99e5cf1136a525e13309b36c208942e3f1f6674b"
+    }
+  },
+  "build_logs": {
+    "debug": {
+      "path": "local/generated/recovery-research/build-debug.log",
+      "sha256": "b2c2ede246ce5ad71c142515b17deaa5f7e555961d9e9992b21229ab1be7ef39"
+    },
+    "release": {
+      "path": "local/generated/recovery-research/build-release.log",
+      "sha256": "61d18c9a23321d7498625c6705a6a0a96fa42ac656e9fb7f549af1052acba1bb"
+    },
+    "sanitize": {
+      "path": "local/generated/recovery-research/build-sanitize.log",
+      "sha256": "c01dd3d3b4350dbe0eef0472bbf130fb99450d76f34db08704e90839f863d0af"
+    }
+  },
+  "preservation": {
+    "report": "local/generated/recovery-research/preservation.json",
+    "report_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf",
+    "verified_runtime_binaries": 104,
+    "worker_verified": true,
+    "rom_verified": true,
+    "movie_verified": true
+  },
+  "contract_sources": {
+    "tools/genesis_tally_capture.py": "5ee3476640da1c86e685d1ba2effd17522b53ed99ea9f7a9760bb6fff9f3593c",
+    "tools/genesis_actions_capture.py": "42c1e2097f8c55c6477f7db74aecfe2ee71fa271a3254675373624f06ad40b7a",
+    "tools/genesis_dispatch_capture.py": "f2228cce9e0608b611d16dca6fc5b56318359910d75a69c026841b94e21d0dff",
+    "tools/genesis_movie_actor_capture.py": "0aea303a01e546efdfd7c8933e3bb1bebdf5a7dd5127e5c5b7edec66dd5ab240",
+    "tools/genesis_transition_capture.py": "013bf6162d74f3bf7fe6e0a01d8c37053c8bcf5e674d1d7452612f752f7ddefa",
+    "tests/actor_cases.py": "50bcfbf043530363a2d38aa9021ce0d7551fd780a38e74e3dc76424ddfc10a42",
+    "tests/tally_cases.py": "1de0a0498b67c960da29ec8022c150be000b87ad0a699d17bd72b0c7d1dd1fc9",
+    "re/tally_step.json": "886ca75a17add37bab80587f784d4555d0da91e15e70df61e41852a8f24065b8"
+  },
+  "limitations": [
+    "51C8 and 5222 remain partial handlers. 51D0 palette and 5266 bonus allocation paths are explicit unsupported exits.",
+    "Separate exhaustive word sweeps are not a Cartesian proof of all state combinations.",
+    "Ordinary movie comparison covers 175 P1 calls, five sound requests and completion at frame 3577; no P2 scheduling claim.",
+    "Native actor/service/tracking and remaining/skip/countdown/credit persist; controls, scratch and other world state are explicit feeds.",
+    "ROM/movie/input/build identities are fixed; no RAM/register/ROM/input edits in the new capture.",
+    "Four new GNU checks pass; inherited presentation BCHG secondary-decoder limitation remains.",
+    "Earlier 507 actor/presentation and 92 actor / 24 effect movie contracts and full survey were not rerun.",
+    "TASK-0010 remains in progress; native playability none. Next: 51D0 nonzero-gate path and deferred 5204 with palette helpers."
+  ]
+}

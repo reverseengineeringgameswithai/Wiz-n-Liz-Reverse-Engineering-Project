@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "level_banner",
+      "start": 25570,
+      "end_exclusive": 25676,
+      "sha256": "fb2e9efc17a7409fe7740a0ae9f6e24639bcc781904b2417fb67a83944eedf4c",
+      "instruction_count": 25,
+      "execution_compared": true
+    },
+    {
+      "id": "centered_text_reference",
+      "start": 95538,
+      "end_exclusive": 95576,
+      "sha256": "ccc81dd65ed4e6c3e2c6379cfd0612ded4e53ae6a1c48d1c36e02c8fa6b77459",
+      "instruction_count": 15,
+      "execution_compared": false
+    },
+    {
+      "id": "glyph_and_number_reference",
+      "start": 95592,
+      "end_exclusive": 95720,
+      "sha256": "131cedf663ec0e7604dd90457324032188d0031757b1e50c82c05acf9041a0b3",
+      "instruction_count": 31,
+      "execution_compared": false
+    },
+    {
+      "id": "banner_tables_and_labels",
+      "start": 25676,
+      "end_exclusive": 25940,
+      "sha256": "a2139321c2a9c442e5be7436c7cf8cac56cb0ae1d72003bd1a4eda275d1f39e6",
+      "execution_compared": false
+    },
+    {
+      "id": "font_map_reference",
+      "start": 47658,
+      "end_exclusive": 47914,
+      "sha256": "38974d2061ad7459f56e1c5b5fd17fd3e1955a5485921f6cfd8f369676f76cd2",
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 25612,
+      "target": 25624
+    },
+    {
+      "pc": 25618,
+      "target": 95538
+    },
+    {
+      "pc": 25628,
+      "target": 95538
+    },
+    {
+      "pc": 25670,
+      "target": 95696
+    },
+    {
+      "pc": 95546,
+      "target": 95552
+    },
+    {
+      "pc": 95550,
+      "target": 95544
+    },
+    {
+      "pc": 95566,
+      "target": 95574
+    },
+    {
+      "pc": 95568,
+      "target": 95592
+    },
+    {
+      "pc": 95572,
+      "target": 95564
+    },
+    {
+      "pc": 95710,
+      "target": 95592
+    },
+    {
+      "pc": 95718,
+      "target": 95592
+    }
+  ],
+  "contract": {
+    "input": "Difficulty word 0..3 at FF13E2; stage word FF33C4; row D1.W; persistent scratch FF4442/4.",
+    "output": "Scratch Y=row. Ordered centered-label request and optional two-glyph number request. Destinations normalized to low 16 bits used by renderer. Labels logical difficulty*2 + final flag; stage+1 wraps.",
+    "retained": "Scratch X and all other shared inputs. Difficulty outside 0..3 fails transactionally.",
+    "not_implemented": "Native text/glyph/number rendering or VDP. Original callees execute in research with declared ROM tables, bounded write sink and lock restoration; their request arguments and scratch are compared, not pixels."
+  },
+  "native": "src/sim/banner.cpp",
+  "finding": "FIND-0026"
+}

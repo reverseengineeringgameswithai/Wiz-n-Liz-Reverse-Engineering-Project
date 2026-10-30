@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "starting_commit": "a68f1fa54a2ecb9b8bb287040d458596e5df5d8d",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "51D0 nonzero gate and 5204 deferred wait, fixed bank-2 palette conversion and 1324E initialization; explicit world feeds, transactionally rejected 5266; no palette rendering, world/frame or audio-playback parity.",
+  "palette_presets": {
+    "debug": {
+      "report": "local/generated/palette-comparison/run-xk9xcb62/report.json",
+      "report_sha256": "345e0501b97c04bbb1c8f8ce0c21cae6d4245391de55ad1b400c42ba17f4b18d",
+      "cases": 214448,
+      "new_instructions_visited": 56,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 199088,
+          "independent_goldens": 16,
+          "native_output_sha256": "5a75d1d198cfa7fe62e922b7556d440554e15128af1d5e63f23a44c0dde455eb"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "3a06e099e6832eb1c044e5f1bc4a4c651256bd96edfb9c7fea6a6add59ab5a4c"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "a77b3857e432e2b615f5fe7c7ab39eddf8728c30c423f70edb7a8b9220da3253"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/palette-comparison/run-sh4kak01/report.json",
+      "report_sha256": "ff2368e75f853f99b8dfd241b5532f047b65283a828a8733b9638a0a2579b4e5",
+      "cases": 214448,
+      "new_instructions_visited": 56,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 199088,
+          "independent_goldens": 16,
+          "native_output_sha256": "5a75d1d198cfa7fe62e922b7556d440554e15128af1d5e63f23a44c0dde455eb"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "3a06e099e6832eb1c044e5f1bc4a4c651256bd96edfb9c7fea6a6add59ab5a4c"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "a77b3857e432e2b615f5fe7c7ab39eddf8728c30c423f70edb7a8b9220da3253"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/palette-comparison/run-q0o3gqtx/report.json",
+      "report_sha256": "6303056294a8dff3504867cb2f60a2805f8173757205a7bd1381fb47ab6ed963",
+      "cases": 214448,
+      "new_instructions_visited": 56,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 199088,
+          "independent_goldens": 16,
+          "native_output_sha256": "5a75d1d198cfa7fe62e922b7556d440554e15128af1d5e63f23a44c0dde455eb"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "3a06e099e6832eb1c044e5f1bc4a4c651256bd96edfb9c7fea6a6add59ab5a4c"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "a77b3857e432e2b615f5fe7c7ab39eddf8728c30c423f70edb7a8b9220da3253"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "tally": {
+      "report": "local/generated/tally-comparison/run-n3y6c2to/report.json",
+      "report_sha256": "5104c9979ceb6530938b6e996e7bc6ada04ebf3cd2628765679db2c17edb7f48",
+      "cases": 231475
+    },
+    "coasting": {
+      "report": "local/generated/coasting-comparison/run-9k7enyrg/report.json",
+      "report_sha256": "a7dcdeebb492970c3e725f4165977a41fc686d8fd52e618293dd2ce580e6fa98",
+      "cases": 87571
+    },
+    "transition": {
+      "report": "local/generated/transition-comparison/run-jeuon_tr/report.json",
+      "report_sha256": "3024a735abb60c404bac134e5ac0dd5e3df4e103a6a0c2172a9037cc3ec8ac4d",
+      "cases": 306528
+    },
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-k13n853s/report.json",
+      "report_sha256": "ecb99ac4ab27e6f807fc53c5a310766f0a24e845a5454adca2abeb6878a18b0b",
+      "cases": 138149
+    },
+    "actions": {
+      "report": "local/generated/actions-comparison/run-_wquo4k5/report.json",
+      "report_sha256": "712a65d23558b227e578f3701d217e384571ca1fef4d4a52dd7f5b5b8776d689",
+      "cases": 146638
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-tqm7_xew/report.json",
+      "report_sha256": "130eee2d9c4b1609c737f3a8fb3784b34d19f77e390ca08d1c4d405509fbf755",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-v_l078dj/report.json",
+      "report_sha256": "ef219d652fd6598faab26aab098a7a0527fa77936ee9f73d1838a51a5ee3e3de",
+      "cases": 152093
+    },
+    "reversal": {
+      "report": "local/generated/reversal-comparison/run-pn_ls5r9/report.json",
+      "report_sha256": "8ec1dd15bf758f9bbabebfa0a8c1a669c551c50f79e06284d0ce7591c3a43ed4",
+      "cases": 203586
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-g4dzsxip/report.json",
+      "report_sha256": "ab2fe87f1ad6f2ed797ff63619b2a11b4077f14389e04584e90b75fda927b9f7",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-xz_yjsar/report.json",
+      "report_sha256": "422ff41358fa550021a78daaffccb1a65e387028d53f1347dc9dc7bfee09b7b2",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-g3fjocj9/report.json",
+      "report_sha256": "a5f95cd4535048bbd28d6cef6e7d9fe66bfd7bc61476748de538630636c38fb4",
+      "cases": 614436
+    }
+  },
+  "scoped_instruction_union": 1132,
+  "static_probe": {
+    "report": "local/generated/palette-probe/run-ks9pr2x8/report.json",
+    "report_sha256": "97a467487b2f0a0cf3ec8cdea77e54ca18b3cc24541b2d9e5573a8f2d6324171",
+    "instructions": 1132,
+    "gnu_checks": 5,
+    "gnu_limit": "installed m68k.gnu rejects immediate BCHG 086e; not claimed as corroborated by this decoder",
+    "new_instructions": 56,
+    "new_gnu_checks": 4,
+    "new_gnu_limit": "No new decoder limitation; inherited presentation BCHG limitation remains."
+  },
+  "ordinary_tally_regression": {
+    "report": "local/generated/tally-movie/run-zsdbn4zm/report.json",
+    "report_sha256": "52354367c47379a72e08635ca25a522960889befa92c5222898871e71d485276",
+    "start": 3403,
+    "end": 3578,
+    "comparison": {
+      "ok": true,
+      "continuous_wrapper_calls": 175,
+      "sound_requests": 5,
+      "completion_frames": [
+        3577
+      ],
+      "command": [
+        "~/WizNLizPC/build/sanitize/wiznliz-actor",
+        "movie.scene",
+        "~/WizNLizPC/local/generated/tally-movie/run-zsdbn4zm/scene.bin",
+        "movie.bank",
+        "~/WizNLizPC/local/generated/tally-movie/run-zsdbn4zm/bank.bin",
+        "--tally-sequence"
+      ],
+      "output_sha256": "a666e8c2e65e06a1efc97f0b3bf104d6f7e9baebef3df7a639757e34c1760541"
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "449648bfbd44b47c5286af285242c6b56fa61a4ed8df52f82ae9ffec062a970a",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "coasting_movie_regression": {
+    "report": "local/generated/coasting-movie/run-n45r8o6n/report.json",
+    "report_sha256": "8eb461ca8d6cce1b5a09532be6529400b349037ed0a88cb408fe92c118922fc5",
+    "start": 1742,
+    "end": 1759,
+    "comparison": {
+      "ok": true,
+      "initializers": 1,
+      "continuous_wrapper_calls": 16,
+      "first_update_frame": 1743,
+      "command": [
+        "~/WizNLizPC/build/sanitize/wiznliz-actor",
+        "movie.scene",
+        "~/WizNLizPC/local/generated/coasting-movie/run-n45r8o6n/scene.bin",
+        "movie.bank",
+        "~/WizNLizPC/local/generated/coasting-movie/run-n45r8o6n/bank.bin",
+        "--coast-sequence"
+      ],
+      "output_sha256": "e47a74270be8f2eec2b0d5b2d400f7590b84e1732d41874a5c1f5a556df50c7b",
+      "scope": "one P1 initializer and its next 16 P1 updates; P2 initializer observed but not compared; shared transition and other world objects excluded"
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "transition_movie_regression": {
+    "report": "local/generated/transition-movie/run-g_k4qpo3/report.json",
+    "report_sha256": "57c2cf39d5f83d831b5a7ffe493dfad2889d3e4177a3d8e8c016147962583af7",
+    "start": 1516,
+    "end": 1533,
+    "comparison": {
+      "ok": true,
+      "comparisons": {
+        "continuous-wrapper": {
+          "calls": 17,
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/transition-movie/run-g_k4qpo3/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/transition-movie/run-g_k4qpo3/bank.bin",
+            "--transition-sequence"
+          ],
+          "output_sha256": "31a584d8af294cc28d9d3af62e29e804a988b6373fbb036092b072d08590a21e"
+        },
+        "timer": {
+          "calls": 17,
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/transition-movie/run-g_k4qpo3/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/transition-movie/run-g_k4qpo3/bank.bin",
+            "--transition-timer"
+          ],
+          "output_sha256": "f319fceb39ef1d5413b4729cc0bc0ab2da046ec6f171829964f9606e7c911bbf"
+        }
+      },
+      "handlers": {
+        "0x710e": 1,
+        "0x7126": 16
+      },
+      "completion_frame": 1532
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "controlled_experiments": {
+    "report": "local/generated/palette-experiments/run-ode22uh0/report.json",
+    "report_sha256": "9e0b5d56e81bcc04d37ae209d85877c9bcc10cfb2d68bff1ba589a504c11ca34",
+    "classification": "controlled RAM-edit experiments branching from the user movie; not ordinary gameplay",
+    "experiments": [
+      {
+        "name": "ready",
+        "start": 3403,
+        "end": 3420,
+        "edits": {
+          "expectedFrame": 3403,
+          "writes": [
+            {
+              "domain": "68K RAM",
+              "offset": 13262,
+              "expectedHex": "0000",
+              "hex": "0001"
+            }
+          ]
+        },
+        "comparison": {
+          "ok": true,
+          "continuous_wrapper_calls": 17,
+          "handlers": {
+            "0x51c8": 1,
+            "0x5204": 14,
+            "0x5222": 2
+          },
+          "initialized_frames": [
+            3403
+          ],
+          "completed_wait_frames": [
+            3417
+          ],
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/palette-experiments/run-ode22uh0/ready/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/palette-experiments/run-ode22uh0/ready/bank.bin",
+            "--palette-sequence"
+          ],
+          "output_sha256": "e06f6276c621674fe62c4e15f0936aa8042c3744f2e99c329a286d1dd0afd52d"
+        },
+        "hooked_unhooked_equal": true,
+        "final_hash": "f9f557e9ed573c3abea9a6b1acf8a630507a6476b865526720821c536c89c9f5",
+        "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      },
+      {
+        "name": "initial-wait",
+        "start": 3403,
+        "end": 3423,
+        "edits": {
+          "expectedFrame": 3403,
+          "writes": [
+            {
+              "domain": "68K RAM",
+              "offset": 13262,
+              "expectedHex": "0000",
+              "hex": "0001"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 2960,
+              "expectedHex": "0000",
+              "hex": "0001"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 2962,
+              "expectedHex": "0000",
+              "hex": "0003"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 2966,
+              "expectedHex": "000e",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3528,
+              "expectedHex": "080000202820182018101810081008000800000000000810000818001020001828082030302820282018201810181008",
+              "hex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+            }
+          ]
+        },
+        "comparison": {
+          "ok": true,
+          "continuous_wrapper_calls": 20,
+          "handlers": {
+            "0x51c8": 4,
+            "0x5204": 14,
+            "0x5222": 2
+          },
+          "initialized_frames": [
+            3406
+          ],
+          "completed_wait_frames": [
+            3420
+          ],
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/palette-experiments/run-ode22uh0/initial-wait/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/palette-experiments/run-ode22uh0/initial-wait/bank.bin",
+            "--palette-sequence"
+          ],
+          "output_sha256": "7aae34d792342c1275fd5a685d524a04a2c5d37c9916db88af01c4be60795e15"
+        },
+        "hooked_unhooked_equal": true,
+        "final_hash": "5fb16d59d1ea6823191422bc9604c417abf787f88134537ec68ad56d13a24b2a",
+        "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      }
+    ]
+  },
+  "tests": {
+    "debug": {
+      "python_tests": 159,
+      "skips": 0,
+      "ctest_targets": 26,
+      "log": "local/generated/palette-research/test-debug.log",
+      "sha256": "c06c4e193af817c356a5a118594ee6f153aa8509b6c40b23ab155a660f745e3c"
+    },
+    "release": {
+      "python_tests": 159,
+      "skips": 0,
+      "ctest_targets": 26,
+      "log": "local/generated/palette-research/test-release.log",
+      "sha256": "2742e060437901557ff3a68851078860d081db57f37b1c4b852ff72541f8bdb0"
+    },
+    "sanitize": {
+      "python_tests": 159,
+      "skips": 0,
+      "ctest_targets": 26,
+      "log": "local/generated/palette-research/test-sanitize.log",
+      "sha256": "53b81c6ec1cc685b5dc7c29593ed9c49597147d8b86ec01c458e531e17802ae5"
+    }
+  },
+  "build_logs": {
+    "debug": {
+      "path": "local/generated/palette-research/build-debug.log",
+      "sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794"
+    },
+    "release": {
+      "path": "local/generated/palette-research/build-release.log",
+      "sha256": "3f320724108e83f4b2ed95d9a1111bd5ec2b90272e32a341e9b08278deca688f"
+    },
+    "sanitize": {
+      "path": "local/generated/palette-research/build-sanitize.log",
+      "sha256": "48876868a7f4b152a9e16180ef95a1a522533829b0110698d6acbe7a44f59fd3"
+    }
+  },
+  "preservation": {
+    "report": "local/generated/palette-research/preservation.json",
+    "report_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf",
+    "verified_runtime_binaries": 104,
+    "worker_verified": true,
+    "rom_verified": true,
+    "movie_verified": true
+  },
+  "contract_sources": {
+    "tools/genesis_palette_capture.py": "4137839909ff4ae818fff4d3d811da114fceef34a08180bfb5c2b9c0dcfe4090",
+    "tools/genesis_tally_capture.py": "5ee3476640da1c86e685d1ba2effd17522b53ed99ea9f7a9760bb6fff9f3593c",
+    "tools/genesis_actions_capture.py": "42c1e2097f8c55c6477f7db74aecfe2ee71fa271a3254675373624f06ad40b7a",
+    "tools/genesis_dispatch_capture.py": "f2228cce9e0608b611d16dca6fc5b56318359910d75a69c026841b94e21d0dff",
+    "tools/genesis_movie_actor_capture.py": "0aea303a01e546efdfd7c8933e3bb1bebdf5a7dd5127e5c5b7edec66dd5ab240",
+    "tools/genesis_transition_capture.py": "0a62b320d992e6484785449225abc6e2932c64f4fe35d3f805a9ae6fa748821c",
+    "tests/actor_cases.py": "05dbce90965559021132fe60bb85ecf3cd59cd0dad39afc2524cf2a22a93604e",
+    "tests/tally_cases.py": "1de0a0498b67c960da29ec8022c150be000b87ad0a699d17bd72b0c7d1dd1fc9",
+    "tests/palette_cases.py": "1e6f8a6918051147e9f12478f317d9bc6214729792a9d246e5ea67b0166fa70c",
+    "re/palette_step.json": "3321faefa5367daa9f144e156bf704758c1ceacc90a4494386c415a201fb374b"
+  },
+  "limitations": [
+    "51C8 and 5222 remain partial handlers because bonus allocation 5266 still rejects; 5204 is a bounded handler.",
+    "Fixed palette bank 2, sixteen disjoint source colors and destination triplets only; arbitrary bank/count/alias behavior excluded.",
+    "Separate exhaustive color/direction sweeps are not a Cartesian proof of all combinations.",
+    "37 controlled RAM-edit wrapper calls are distinct from ordinary movie observations; two independent unhooked endpoints match.",
+    "Ordinary tally supplies 175 calls/five sound requests; coasting and transition regressions retain their own contracts.",
+    "Native actor/service/tracking, tally counters and prepared destination persist; transition timer, source colors, controls and scratch are world feeds.",
+    "Palette curve evaluation, consumer/rendering, P2/world scheduling and audio playback are unimplemented.",
+    "Earlier 507 actor/presentation, 92 actor/24 effect, 191 ordinary/72 input-branch wrapper contracts and full survey were not rerun.",
+    "Four new GNU checks pass; inherited presentation BCHG limitation remains.",
+    "TASK-0010 remains in progress; native playability none. Next: 5266 bonus path and 451A/4770 allocation dependencies."
+  ],
+  "initial_failures_resolved": [
+    "Authored timer expectation was one call too late; negative drift test accidentally selected invalid 27; old curve-negative used now-valid 3.",
+    "Synthetic trace lacked A1/D1 after adding restored-register assertions; completed fixture and reran suite.",
+    "Build provenance rejected a comparator invocation after unit-source edit; rebuilt and reran.",
+    "Intermediate vault check flagged incomplete finding metadata/session link while documentation was being written; final checks pass."
+  ]
+}

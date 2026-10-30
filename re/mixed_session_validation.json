@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-05-029",
+  "starting_commit": "b24cabf3fd3801bf2c0593eeee79149e9bd2e5f4",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "Retained native P1, emitter/RNG, initial/new particles, reversals and full shared free-stack order. Thirteen explicitly audited external reservations omit private object state; not whole-world/frame/render/audio parity.",
+  "mixed_comparisons": [
+    {
+      "path": "local/generated/mixed-session/run-p7s7sxdx/report.json",
+      "sha256": "63a34a28c635516dc51ea48dbdc04b11d2072ce13483a1719cb33407ae2c036f",
+      "preset": "debug",
+      "native_executable_sha256": "2e0912636c8920c8920e7f85e55c2429ee81b7b9c6d1ba084a61bbf8c8e73f40",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 191,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "f246cb7eb93697ab3389ae3be07e0a663e0f1782e095917fde7a92a8045a51be"
+      },
+      "reference_report": "local/generated/mixed-session/run-vt8017re/report.json",
+      "reference_report_sha256": "777bff165bb42a4fde6d92c195e6d3af9b408b0ee0c07bca5af1ffae5104661e"
+    },
+    {
+      "path": "local/generated/mixed-session/run-gc97wb5x/report.json",
+      "sha256": "f67ae88c0ecc4b3d423ce271c327ae345daaf1725f47b72adac198bb7ad0aa07",
+      "preset": "release",
+      "native_executable_sha256": "88ec867677e9db448f63a03307296a81cb21dde5cb9be8bfdda827d2ccc3345c",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 191,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "f246cb7eb93697ab3389ae3be07e0a663e0f1782e095917fde7a92a8045a51be"
+      },
+      "reference_report": "local/generated/mixed-session/run-vt8017re/report.json",
+      "reference_report_sha256": "777bff165bb42a4fde6d92c195e6d3af9b408b0ee0c07bca5af1ffae5104661e"
+    },
+    {
+      "path": "local/generated/mixed-session/run-ygdhgb8w/report.json",
+      "sha256": "fad97a54f480446e0ff286c53e75bb89d93b373918c22f64263237a4c4bc5bd5",
+      "preset": "sanitize",
+      "native_executable_sha256": "84d8212b72a1267494d3fd6a996e8b880b20da103fffad0786cc50bef38e2d00",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 191,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "f246cb7eb93697ab3389ae3be07e0a663e0f1782e095917fde7a92a8045a51be"
+      },
+      "reference_report": "local/generated/mixed-session/run-vt8017re/report.json",
+      "reference_report_sha256": "777bff165bb42a4fde6d92c195e6d3af9b408b0ee0c07bca5af1ffae5104661e"
+    }
+  ],
+  "component_comparisons": [
+    {
+      "component": "trail",
+      "path": "local/generated/trail-comparison/run-9s09g4d4/report.json",
+      "sha256": "c58a5d25b46c926a0db083a9b300d7dbb49652c299197d505d92cf9151984dee",
+      "preset": "debug",
+      "cases": 209082,
+      "native_executable_sha256": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+      "output_sha256": {
+        "emitter": "9e469bd1d12845d1f9825d413a8590fa8f864237816dc9239ee1171b3f655aee",
+        "scheduled": "36ce4f45619a11daac18da008359e4b205599b93b99bb2ab3dcdb3116453eef1",
+        "particle": "c9fe27ee762e40e5449d9b2dfba0ae60baff26842df71a88f9c1b00018e07fa0",
+        "rng": "35be2926c255881974d5231713814ec0731c230b25bbd1ffce836f8c4fe8e3a3",
+        "spawn": "0a3f8def7440f614ad7ffd4f426631efdacde01c2019cd96db718925cec87d37"
+      }
+    },
+    {
+      "component": "reversal",
+      "path": "local/generated/reversal-comparison/run-7_x5arx9/report.json",
+      "sha256": "80cead3cb8c14a6053601bbae38ffd0141c046fa39f09271728d34c2b2fe5522",
+      "preset": "debug",
+      "cases": 203586,
+      "native_executable_sha256": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+      "output_sha256": {
+        "actor-flat": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5",
+        "scheduled-flat": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254",
+        "effects": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7",
+        "authored-terrain": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169",
+        "cataloged-terrain": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+      }
+    },
+    {
+      "component": "trail",
+      "path": "local/generated/trail-comparison/run-fg_o8mrx/report.json",
+      "sha256": "22f6665c09a2aab70042647484af1b003d6a2441c1719f6146bbe5e0715382f1",
+      "preset": "release",
+      "cases": 209082,
+      "native_executable_sha256": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+      "output_sha256": {
+        "emitter": "9e469bd1d12845d1f9825d413a8590fa8f864237816dc9239ee1171b3f655aee",
+        "scheduled": "36ce4f45619a11daac18da008359e4b205599b93b99bb2ab3dcdb3116453eef1",
+        "particle": "c9fe27ee762e40e5449d9b2dfba0ae60baff26842df71a88f9c1b00018e07fa0",
+        "rng": "35be2926c255881974d5231713814ec0731c230b25bbd1ffce836f8c4fe8e3a3",
+        "spawn": "0a3f8def7440f614ad7ffd4f426631efdacde01c2019cd96db718925cec87d37"
+      }
+    },
+    {
+      "component": "reversal",
+      "path": "local/generated/reversal-comparison/run-0qeqzbvf/report.json",
+      "sha256": "51a67e451b21e9acf5ac71c8eadc826f67abf024907785f9791c6863e89d3646",
+      "preset": "release",
+      "cases": 203586,
+      "native_executable_sha256": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+      "output_sha256": {
+        "actor-flat": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5",
+        "scheduled-flat": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254",
+        "effects": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7",
+        "authored-terrain": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169",
+        "cataloged-terrain": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+      }
+    },
+    {
+      "component": "trail",
+      "path": "local/generated/trail-comparison/run-0_m_abet/report.json",
+      "sha256": "bc67888da526c6a9de22d6fdfe820dd4c196a85ebd53f3452101603e6d54eb91",
+      "preset": "sanitize",
+      "cases": 209082,
+      "native_executable_sha256": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+      "output_sha256": {
+        "emitter": "9e469bd1d12845d1f9825d413a8590fa8f864237816dc9239ee1171b3f655aee",
+        "scheduled": "36ce4f45619a11daac18da008359e4b205599b93b99bb2ab3dcdb3116453eef1",
+        "particle": "c9fe27ee762e40e5449d9b2dfba0ae60baff26842df71a88f9c1b00018e07fa0",
+        "rng": "35be2926c255881974d5231713814ec0731c230b25bbd1ffce836f8c4fe8e3a3",
+        "spawn": "0a3f8def7440f614ad7ffd4f426631efdacde01c2019cd96db718925cec87d37"
+      }
+    },
+    {
+      "component": "reversal",
+      "path": "local/generated/reversal-comparison/run-dwcos0v4/report.json",
+      "sha256": "f875104b786de12b96406547dd21c54e587bfdd203b859f81d5af5577777665c",
+      "preset": "sanitize",
+      "cases": 203586,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+      "output_sha256": {
+        "actor-flat": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5",
+        "scheduled-flat": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254",
+        "effects": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7",
+        "authored-terrain": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169",
+        "cataloged-terrain": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+      }
+    }
+  ],
+  "p1_regressions": [
+    {
+      "path": "local/generated/effect-session/run-6q0v8fvi/report.json",
+      "sha256": "028fde4715b6efd7f36606ea1996199228bbb57f45cceebea4e43cc1801164be",
+      "preset": "debug",
+      "native_executable_sha256": "2e0912636c8920c8920e7f85e55c2429ee81b7b9c6d1ba084a61bbf8c8e73f40",
+      "calls": 390,
+      "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b",
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-asn1v1gt/report.json",
+      "sha256": "c4c9ff4323e17043042969b2e924aa0758b392219c0746d1930ecb5323782c90",
+      "preset": "release",
+      "native_executable_sha256": "88ec867677e9db448f63a03307296a81cb21dde5cb9be8bfdda827d2ccc3345c",
+      "calls": 390,
+      "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b",
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-kcu1c3mo/report.json",
+      "sha256": "9cd335a031138311dd11d0e2339b90343cd69cdbfb5def9f520de1588c64348b",
+      "preset": "sanitize",
+      "native_executable_sha256": "84d8212b72a1267494d3fd6a996e8b880b20da103fffad0786cc50bef38e2d00",
+      "calls": 390,
+      "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b",
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    }
+  ],
+  "sanitized_regressions": [
+    {
+      "component": "input",
+      "path": "local/generated/input-comparison/run-b1nzizsd/report.json",
+      "sha256": "b3fbb79e03c5124f29756cab2f6a6d212798f08472691319e40a72df7da6143d",
+      "preset": "sanitize",
+      "cases": 1024,
+      "native_executable_sha256": "84d8212b72a1267494d3fd6a996e8b880b20da103fffad0786cc50bef38e2d00"
+    },
+    {
+      "component": "banner",
+      "path": "local/generated/banner-comparison/run-e0gswt_r/report.json",
+      "sha256": "fee2cd1714bf21e70244da90522fbffa2ad0a52d9777de5f5a34a760354eaa34",
+      "preset": "sanitize",
+      "cases": 66880,
+      "native_executable_sha256": "84d8212b72a1267494d3fd6a996e8b880b20da103fffad0786cc50bef38e2d00"
+    },
+    {
+      "component": "presentation",
+      "path": "local/generated/presentation-comparison/run-9lyzwz48/report.json",
+      "sha256": "7588b3a9bfc8d3edc664ec96bf9a9a84fc49b67c67a52cfb6d4e488ad66e0b4a",
+      "preset": "sanitize",
+      "cases": 347320,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "component": "actor",
+      "path": "local/generated/actor-comparison/run-hxr0ljvl/report.json",
+      "sha256": "1e9474438867acc810cdf5266459f2f4c72ebe215caff31ffd87d54c5b6aa1ce",
+      "preset": "sanitize",
+      "cases": 152093,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "component": "dispatch",
+      "path": "local/generated/dispatch-comparison/run-c6skavxp/report.json",
+      "sha256": "96bec28e1cc909a601ee6c580d9517bf02939521ef498f09194d8f3b19d911e0",
+      "preset": "sanitize",
+      "cases": 138149,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "component": "airborne",
+      "path": "local/generated/airborne-comparison/run-fdzfr8kk/report.json",
+      "sha256": "6970f230125b55928d9abbd7cb939c3b64d66560a9450ab8a4222490258abad6",
+      "preset": "sanitize",
+      "cases": 415940,
+      "native_executable_sha256": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1"
+    },
+    {
+      "component": "movement",
+      "path": "local/generated/movement-comparison/run-n3ist20e/report.json",
+      "sha256": "5d612855e9e63d26520bea92109a32c5c60ab6cd66dc161c021520d358b30bca",
+      "preset": "sanitize",
+      "cases": 282233,
+      "native_executable_sha256": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b"
+    },
+    {
+      "component": "terrain",
+      "path": "local/generated/terrain-comparison/run-wfj2qn53/report.json",
+      "sha256": "e0d9329dd41883be804d1578b204ca516dc82c34ca4ad98a6777338ffa5ca493",
+      "preset": "sanitize",
+      "cases": 614436,
+      "native_executable_sha256": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4"
+    }
+  ],
+  "ordinary_reference": {
+    "path": "local/generated/mixed-session/run-vt8017re/report.json",
+    "sha256": "777bff165bb42a4fde6d92c195e6d3af9b408b0ee0c07bca5af1ffae5104661e",
+    "start": 1066,
+    "end": 1100,
+    "classification": "fresh ordinary unchanged movie; no edits; owned workers",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "sources": {
+      "tools/genesis_mixed_session.py": "7a429a944169e7cadfe42a1aa27c635fb0e0012acedd47223ffe558552bff19d",
+      "tools/genesis_effect_session.py": "dd43812339aae16c363bd589fdeb0d827eee7e64a1c286e753b4e22218b9ff09",
+      "tools/genesis_trail_capture.py": "5c258a44e9119ad7df47970d8ffdb39984c5e664a19ceb9585222de1febd82d6",
+      "tools/genesis_session_capture.py": "262bb5a667b1f932383247ba515c89413e45db5176c2ab690e76de698123bd01",
+      "tools/genesis_reversal_capture.py": "b79549cb30ca920a59f5309cb17a4388f1c944e2fea6fa6176ca7bda494285c0",
+      "tools/genesis_dispatch_capture.py": "fde2ec9eaacb2134473adf8035f11e25c857904a1639c85b1a4ad8ac57e129a1",
+      "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+      "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c",
+      "tools/genesis_actor_capture.py": "f5ff283c1c74b64ed2ade670ef649107052840e5af9b1bf4f35e674933855206"
+    },
+    "observation": {
+      "particle_updates": 136,
+      "emitter_updates": 34,
+      "allocations": 9,
+      "reversal_updates": 12,
+      "releases": 9,
+      "managed_writes": 1205,
+      "reserved_writes": 906,
+      "free_writes": 27,
+      "slots": 68,
+      "initial_free": 50,
+      "reservations": 13,
+      "initial_particles": 4,
+      "initial_state_scope": "Native P1, emitter/RNG, live trail/reversal objects and ordered shared free stack; thirteen audited external reservations omit private state.",
+      "actor_calls": 34,
+      "scratch_writes": 214,
+      "routine_events": 9767,
+      "native_events": 52895,
+      "producer_calls": 102,
+      "input_polls": 136,
+      "inactive_timers": 34,
+      "newborn_particle_updates": 97
+    },
+    "endpoint": {
+      "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "identity": {
+      "romSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "effectiveRomSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "romPatches": [],
+      "romBytes": 1048576,
+      "settings": {
+        "DrawBGA": true,
+        "DrawBGB": true,
+        "DrawBGW": true,
+        "DrawObj": true,
+        "PadScreen320": false,
+        "Backdrop": false,
+        "NoSpriteLimit": false
+      },
+      "syncSettings": {
+        "UseSixButton": false,
+        "ControlTypeLeft": 1,
+        "ControlTypeRight": 1,
+        "Region": 1,
+        "ForceVDP": 0,
+        "LoadBIOS": false,
+        "Overscan": 0,
+        "GGExtra": false,
+        "SMSFMSoundChip": 1,
+        "GenesisFMSoundChip": 0,
+        "Filter": 1,
+        "LowPassRange": 26214,
+        "LowFreq": 880,
+        "HighFreq": 5000,
+        "LowGain": 1.0,
+        "MidGain": 1.0,
+        "HighGain": 1.0,
+        "BackdropColor": 4294902015,
+        "SpritesAlwaysOnTop": false
+      },
+      "canonical_json_sha256": "6e80664b506a41e894ec483e595f6f82ec49822a14b7fd92d2a3f8a21f7b644a",
+      "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+      "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414"
+    }
+  },
+  "static_audit": {
+    "path": "local/generated/mixed-session-probe/run-nkezz_b_/report.json",
+    "sha256": "84fe429492c023462067d4d7ff4c50e4b904cafd49068f4bd662fa437f1a3c98",
+    "context_instructions": 67,
+    "context_code_bytes": 260,
+    "context_data_bytes": 48,
+    "gnu_checks": 5,
+    "unsupported_exit": "0x7910",
+    "scope": "Static audit of explicitly omitted reservations, not new native replacements or restricted-original instruction coverage. 78EE is limited to the no-overlap return at 790E; 7910 rejects in the capture. All reservation writes and shared pool/RNG/P1 noninterference are separately checked from full machine evidence. Native mixed session composes previously verified routines and the forward slot walk.",
+    "metadata": {
+      "path": "re/mixed_session.json",
+      "sha256": "64d65ad5e1675014619db8c9eef04b74859a5ce9e91108d3f3e58252ba2c91a5"
+    }
+  },
+  "coverage": {
+    "new_native_function_mappings": 0,
+    "new_static_code_bytes": 260,
+    "new_static_instructions": 67,
+    "new_static_data_bytes": 48,
+    "classified_bytes": 26205,
+    "unclassified_bytes": 1022371,
+    "bounded_simulation_mappings": 102,
+    "partial_mappings": 1,
+    "indexed_functions": 112,
+    "fresh_ten_corpus_union": 1118,
+    "historical_cumulative_union": 1467
+  },
+  "tests": [
+    {
+      "preset": "debug",
+      "python_passed": 190,
+      "python_skipped": 0,
+      "ctest_passed": 38,
+      "ctest_failed": 0,
+      "log": {
+        "path": "local/generated/mixed-pool-research/test-debug.log",
+        "sha256": "1cd376e3e65a2dac8914e7f215b8cc6e9809794e8cb085c46f62e6149a726e09"
+      },
+      "build_log": {
+        "path": "local/generated/mixed-pool-research/build-debug.log",
+        "sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794"
+      }
+    },
+    {
+      "preset": "release",
+      "python_passed": 190,
+      "python_skipped": 0,
+      "ctest_passed": 38,
+      "ctest_failed": 0,
+      "log": {
+        "path": "local/generated/mixed-pool-research/test-release.log",
+        "sha256": "e801da7bc10a2f4b9a1d88dc3eef6ea019c859ead7c6cb1cde57f49fb88150e6"
+      },
+      "build_log": {
+        "path": "local/generated/mixed-pool-research/build-release.log",
+        "sha256": "8bf55f78078bb563e753719721a7edb494939527a5f22a2536c15763fc112ddd"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python_passed": 190,
+      "python_skipped": 0,
+      "ctest_passed": 38,
+      "ctest_failed": 0,
+      "log": {
+        "path": "local/generated/mixed-pool-research/test-sanitize.log",
+        "sha256": "875f7f33871fff600286a5e85f2c3b93a3e2e1cf708dab0a1627d681298e7e37"
+      },
+      "build_log": {
+        "path": "local/generated/mixed-pool-research/build-sanitize.log",
+        "sha256": "8ad779dc26706d55f03fd88f8ecc71bfe3203c93e59feb099dc6cf8eb5a12cb7"
+      }
+    }
+  ],
+  "source_hashes": {
+    "CMakeLists.txt": "b1204589db0bb05f75ff828839a10fead79f0f69a35492ccc42998c2f5b4c29b",
+    "src/sim/mixed_pool.hpp": "511f7f196ea1ff465d7afa2b1dfbcb27828e5cd52db3de4ad1e555a631e71ea2",
+    "src/sim/mixed_pool.cpp": "e9769aec80f493095be5c44628a04484515d21856a25b3ed4ed06d66fc54933c",
+    "tools/native/mixed_transport.hpp": "5e904022e9190f8d5362745ee5645c253710750631d933ef989bf24c9eec1475",
+    "tools/native/session_main.cpp": "735046000e5a9b1c762489adf1e15151f1dd22709fda2c95553c5886f4d10146",
+    "tools/genesis_mixed_session.py": "7a429a944169e7cadfe42a1aa27c635fb0e0012acedd47223ffe558552bff19d",
+    "tools/mixed_session_probe.py": "78f78eb39a3f82a19a8c1972ab77d138731d72eabc5c36dc89b210a89a1e09b5",
+    "tests/unit/mixed_pool_test.cpp": "e4c66cbc227ef79f774c597a65a43f6d4e1b3f93589d5b37952b369eb240251e",
+    "tests/native_mixed_pool.py": "e5c992fd802dbe0026576b483c58172dd76dbfa361a665236793f0c7a2e58072",
+    "tests/test_mixed_pool.py": "de9103bb9392d5ee49ce698509a84595759c421c55396628ba95f2b972d23673",
+    "re/mixed_session.json": "64d65ad5e1675014619db8c9eef04b74859a5ce9e91108d3f3e58252ba2c91a5"
+  },
+  "failures_and_corrections": [
+    "Initial debug build warned about misleading indentation in the new transport; corrected before final builds and tests. No native/reference semantic mismatch or failed final check."
+  ],
+  "not_rerun": [
+    "Actions, transition, coasting, tally, palette, bonus, exit-tally and score corpora",
+    "Other historical/controlled movie captures and whole-movie selector survey",
+    "SDL3 development availability"
+  ],
+  "limitations": [
+    "Thirteen occupied external reservations omit their private native behavior; the capture guards their noninterference only in this interval",
+    "The 34-invocation mixed capture does not replace the older 390-invocation dedicated P1 scope",
+    "No initializer 6D22, alternate RNG E948, collision hit 7910, callback 79B6, arbitrary allocator clients, multiplayer or world services",
+    "No native boot, rendering/audio or playable game",
+    "Canonical hashes cover declared exposed state, not every hidden device bit",
+    "No reference runtime or Musashi harness rebuild; native targets remain emulator-free"
+  ],
+  "preservation": {
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "ok": true,
+    "runtime_binaries_verified": 104,
+    "owned_workers_remaining": 0,
+    "initial_manifest": {
+      "path": "local/generated/mixed-pool-research/preservation.json",
+      "sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf"
+    },
+    "final_manifest": {
+      "path": "local/generated/mixed-pool-research/preservation-final.json",
+      "sha256": "f113c80a871073912a31bc32144f3cb52857c81e9e0b6a1193be3c8a7f21107b"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "up_entry",
+      "start": 40022,
+      "end_exclusive": 40080,
+      "sha256": "1accded60148cffd9692477e01d6ab18c119028a2f4da9236c28e1ec653f8880",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "up_hold",
+      "start": 40080,
+      "end_exclusive": 40186,
+      "sha256": "438aa2d96cd64a4ad56066c361a7e432b7ffb5997f0423475a6f8329d8280ec5",
+      "instruction_count": 22,
+      "execution_compared": true
+    },
+    {
+      "id": "up_release",
+      "start": 40186,
+      "end_exclusive": 40232,
+      "sha256": "ea453553509a79a895ae31da5816813ba40a3f633607d57a88ad3ab32a6ad4a2",
+      "instruction_count": 8,
+      "execution_compared": true
+    },
+    {
+      "id": "up_jump_deferred",
+      "start": 40260,
+      "end_exclusive": 40270,
+      "sha256": "d14d0e9886fa65b877791570046e6ef6011e9072580bda30c1926405dc28b8a2",
+      "instruction_count": 2,
+      "execution_compared": true
+    },
+    {
+      "id": "down_entry",
+      "start": 40270,
+      "end_exclusive": 40328,
+      "sha256": "655b92e3079040d06c4fce88ccb457ad725bed47a0c4a00305cb7efb56ff5537",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "down_hold",
+      "start": 40328,
+      "end_exclusive": 40342,
+      "sha256": "9cb579745ba9529c20e6fe887ad1b4962000625aceec23806dacd319ddad35f7",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "down_release",
+      "start": 40342,
+      "end_exclusive": 40388,
+      "sha256": "d7ae1020af2510137b4562a5f7b481a88ecad000cf05b0030d33eabdaaecf5fc",
+      "instruction_count": 8,
+      "execution_compared": true
+    },
+    {
+      "id": "down_jump_deferred",
+      "start": 40388,
+      "end_exclusive": 40396,
+      "sha256": "01b4d532262f81938031fcf4d2f27618bf722d5f0da43a90135615aceed50059",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "down_wait",
+      "start": 40396,
+      "end_exclusive": 40398,
+      "sha256": "1ceeabf0c6a5a30bad12cdac0e3ab015a7188a42e6aebb556aad00bb9cd693ad",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "action_idle_callback",
+      "start": 41366,
+      "end_exclusive": 41380,
+      "sha256": "f78bfea5625a7e5c8aad773d241eccffec08ba9056c2fc1bd5b86b294e245b0a",
+      "instruction_count": 3,
+      "execution_compared": true
+    },
+    {
+      "id": "action_hold_callback",
+      "start": 63800,
+      "end_exclusive": 63808,
+      "sha256": "16c928579b41f8d6b38a8c9c246bc828bfd60af41cba71f62cebfd853552007e",
+      "instruction_count": 2,
+      "execution_compared": true
+    },
+    {
+      "id": "sample_request_address",
+      "start": 972518,
+      "end_exclusive": 972534,
+      "sha256": "572da4325824df066e37752c0959c07dd85813df465ac0f2d9cf9241e83f9349",
+      "instruction_count": 6,
+      "execution_compared": true
+    },
+    {
+      "id": "sample_request_mailbox",
+      "start": 972540,
+      "end_exclusive": 972566,
+      "sha256": "79a6248a3d8ded7912829c98c2237b4a8b6368e775083d1cb0d04879ab558943",
+      "instruction_count": 5,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 40084,
+      "target": 40260
+    },
+    {
+      "pc": 40096,
+      "target": 40178
+    },
+    {
+      "pc": 40104,
+      "target": 40178
+    },
+    {
+      "pc": 40112,
+      "target": 40178
+    },
+    {
+      "pc": 40132,
+      "target": 40140
+    },
+    {
+      "pc": 40162,
+      "target": 972518
+    },
+    {
+      "pc": 40182,
+      "target": 40186
+    },
+    {
+      "pc": 40332,
+      "target": 40388
+    },
+    {
+      "pc": 40338,
+      "target": 40342
+    },
+    {
+      "pc": 41372,
+      "target": 41516
+    },
+    {
+      "pc": 41376,
+      "target": 41380
+    },
+    {
+      "pc": 972532,
+      "target": 972540
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    63750,
+    63756,
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074
+  ],
+  "contract": "Up/down hold/release/deferred jump; contextual A196 callback falls through idle before later scheduled handler. Shared action gates and logical sample request; ED6E6 mailbox writes fully executed, consumption/playback excluded. Unreached 9D28 initializer and ED6F6 alternate entry excluded."
+}

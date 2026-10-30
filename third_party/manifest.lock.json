@@ -1,0 +1,36 @@
+{
+  "terrain_reference_lock": "third_party/terrain_reference.lock.json",
+  "schema_version": 1,
+  "accessed": "2026-10-02",
+  "research_reference_manifests": ["third_party/rnc_reference.lock.json", "third_party/vdp_reference.lock.json"],
+  "sega2asm": {
+    "source": "https://github.com/hansbonini/sega2asm",
+    "revision": "78f37b0d71d27b43b960e24c01c5437bbef55404",
+    "license": "MIT",
+    "license_path": "local/tools/sega2asm-src/LICENSE",
+    "source_path": "local/tools/sega2asm-src",
+    "executable": "local/tools/sega2asm",
+    "executable_sha256": "1b53f26764c1a117033d035431a5e22b2f9806a5b477c2eab4e4b8304b5d9ea4",
+    "version_output": "sega2asm v1.0.0",
+    "build_command": "GOTOOLCHAIN=local GOCACHE=\"$PWD/local/tools/go-cache\" GOPATH=\"$PWD/local/tools/go-work\" GOMODCACHE=\"$PWD/local/tools/go-modcache\" local/tools/go/bin/go -C local/tools/sega2asm-src build -trimpath -o ../sega2asm .",
+    "build_platform": "linux/amd64",
+    "patches": [],
+    "dependencies": [
+      {"module": "github.com/spf13/cobra", "version": "v1.10.2", "license": "Apache-2.0", "source": "https://github.com/spf13/cobra", "sum": "h1:DMTTonx5m65Ic0GOoRY2c16WCbHxOOw6xxezuLaBpcU="},
+      {"module": "github.com/spf13/pflag", "version": "v1.0.9", "license": "BSD-3-Clause", "source": "https://github.com/spf13/pflag", "sum": "h1:9exaQaMOCwffKiiiYk6/BndUBv+iRViNW+4lEMi0PvY="},
+      {"module": "gopkg.in/yaml.v3", "version": "v3.0.1", "license": "MIT AND Apache-2.0", "source": "https://gopkg.in/yaml.v3", "sum": "h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA="}
+    ],
+    "dependency_lock_source": "Pinned upstream go.mod and go.sum also list test/platform-only modules; no third-party source copied into tracked project source."
+  },
+  "go": {
+    "version": "go1.27.1",
+    "platform": "linux/amd64",
+    "source": "https://go.dev/dl/?mode=json",
+    "archive_url": "https://dl.google.com/go/go1.27.1.linux-amd64.tar.gz",
+    "archive_size": 70553950,
+    "archive_sha256": "63d339f0da5ab53635a56f2490a7984dfe12dfcff22ad749f63edaf590168445",
+    "executable": "local/tools/go/bin/go",
+    "license": "BSD-3-Clause",
+    "license_path": "local/tools/go/LICENSE"
+  }
+}

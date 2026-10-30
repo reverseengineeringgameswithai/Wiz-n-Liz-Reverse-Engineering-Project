@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "collision_quad_initializer",
+      "start": 30778,
+      "end_exclusive": 30958,
+      "sha256": "9f1792ab66ff01b0baa8d0c907d1f77d12562e8b369b8317e41706f6fbeb9357",
+      "instruction_count": 31,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 30778,
+      "target": 63970
+    },
+    {
+      "pc": 30842,
+      "target": 63970
+    },
+    {
+      "pc": 30878,
+      "target": 63970
+    },
+    {
+      "pc": 30914,
+      "target": 63970
+    },
+    {
+      "pc": 63980,
+      "target": 64030
+    },
+    {
+      "pc": 64046,
+      "target": 64030
+    }
+  ],
+  "dependencies": [
+    "pair_initializer_step",
+    "rising_pair_step",
+    "collision_step",
+    "return_only_step",
+    "mixed_session"
+  ],
+  "contract": "783A performs four ordered F9E2 pops. The first becomes a 78EE collision probe: mode 80, +4A = caller A5, X/Y 150/262, frame +06 = 912, handler 12646, service +46 = 78EE, extents +1E/+20 = 0038/0008; A4 is then set to it. The next three are return-only objects (mode 80, 12646/12646 from F9E2) with frames 913/914/915 at (X+32,Y), (X,Y+32) and (X+32,Y+32) copied from A4 with word adds. No member writes +08/+0A, +0C/+0D, +0E target or +10 countdown, and the last three keep +4A, so those are inherited; mode 80 never advances the frame. No flags or FF31C0 store; A4/A6 are left on the probe/last member, A5 preserved. Native requires verified inherited fields including +08..+0D and zero unrepresented bytes (+01, +1A..+45), else rejects. Exhaustion enters the never-returning FA1E loop. The rest of level setup, 7910 hits and other F9E2 callers are not reconstructed."
+}

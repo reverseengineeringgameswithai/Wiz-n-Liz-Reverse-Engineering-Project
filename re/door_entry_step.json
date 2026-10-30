@@ -1,0 +1,50 @@
+{
+ "schema_version": 1,
+ "address_space": "rom_file_offset",
+ "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+ "regions": [
+  {
+   "id": "door_entry",
+   "start": 28802,
+   "end_exclusive": 28926,
+   "sha256": "874f20dc80af1b512bfd85e81bb78c8d0c82290a5ff3f0af770c9387498bfe5b",
+   "instruction_count": 21,
+   "execution_compared": true
+  },
+  {
+   "id": "door_vanish",
+   "start": 19618,
+   "end_exclusive": 19646,
+   "sha256": "1859a9ff9cb6d8149ac37084e22a0f62f57e4ef9a615e416ebf8cc848745c0d6",
+   "instruction_count": 8,
+   "execution_compared": true
+  }
+ ],
+ "data": [],
+ "transfers": [
+  {
+   "pc": 28832,
+   "target": 28882
+  },
+  {
+   "pc": 28924,
+   "target": 29010
+  },
+  {
+   "pc": 19624,
+   "target": 64164
+  },
+  {
+   "pc": 19632,
+   "target": 22972
+  }
+ ],
+ "dependencies": [
+  "completion_step",
+  "transition_step",
+  "pickup_hit_step",
+  "reversal_step",
+  "collision_step"
+ ],
+ "contract": "705C's contact path, P1 entering the exit door. [7082,70FE): FF0F00 = A5 (the control); the FF31C0 object's +16 = 12646; JSR 4CA2; with FF33E2 clear FF444A/FF444C = the door's +2/+4 - 010C/00E0, each AND FFF8; the control's +00 actor gets +4A = A5, mode 80, +6 = 021D and +16 = 710E; the control's +1A6 = FFFF; the +1A2 object's mode tested: zero returns through the RTS at 7152 (already classified with 7126), nonzero continues at 70FE (outside scope: X - 8 and 59BC on it). [4CA2,4CBE): A6 saved; FAA4 on the door's +3A object (the sign); A6 restored; BSR 59BC (the vanish); +2 - 8, +4 + 8; RTS. Natively ExitDoor's DoorStep::entered, MixedPool::enter_exit_door, vanish_exit_door and begin_exit_transition (applied to the session's P1 by step_world_phase)."
+}

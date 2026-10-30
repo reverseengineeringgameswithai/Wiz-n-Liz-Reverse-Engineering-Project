@@ -1,0 +1,250 @@
+{
+  "schema": 1,
+  "session": "2026-10-07-038",
+  "task": "TASK-0012",
+  "starting_commit": "77344706e0f7002827373a1ad63c4b5594b686f8",
+  "kind": "local model evidence-reading diagnostic, not native coverage",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "recipe": "python3 -B tools/kev_evidence_pilot.py --run",
+  "artifact_directory": "local/generated/kev-evidence-pilot/run-lrr6ldqg",
+  "hashes": {
+    "tools/kev_evidence_pilot.py": "bd5d80eba1293e386ced426b7e5b8bce2275b8c8eab4114f3574118db32e4e75",
+    "re/kev_evidence_pilot.json": "94e03d8c970983372282c32308d0b7e08ed0c8179bdd4989f1779c73ca94678f",
+    "local/generated/kev-evidence-pilot/run-lrr6ldqg/rows.json": "38fa5ec06a4895cc61af2aa89fa93ab811ac675b27c0cd35a319fbc1ffb02874",
+    "local/generated/kev-evidence-pilot/run-lrr6ldqg/summary.json": "4ba065b0e9b3064cbc3abe6159c99d7ef56f6726b93d8fabc01e7c9acae2477e",
+    "local/generated/kev-evidence-pilot/run-lrr6ldqg/provenance.json": "09ac3a519eb1897b7e7b928aba52635b3ff793e33216197ded2b9f9f2383411c",
+    "local/generated/kev-evidence-pilot/run-lrr6ldqg/models-before.json": "8d8fe18fa40163d3c2c0e82397953f3287f89e8329ca28aa210b937f8def0a8f",
+    "local/generated/kev-evidence-pilot/run-lrr6ldqg/models-after.json": "de7b5ae4d85c13e733a33292c9a4e320bd563e60672345b23a2920087bce22ae"
+  },
+  "kev_source_commit": "84847f0a883d900f7de5b7a57eaa341ca7f9a6b4",
+  "model_repo": "SVPG-Labs/kev-27b-NVFP4",
+  "model_revision": "ba00fe3c9b43fa59ab3e76199f2292d5ca47e0c7",
+  "server": {
+    "run": "kev27b-af0e6d55-lh2048-w4a4-cutlass-20261003",
+    "base": "Qwen/Qwen3.8-27B",
+    "device": "cuda",
+    "backend": "torch",
+    "dtype": "bfloat16",
+    "temperature": 1.319507910772894,
+    "max_state_tokens": 32768,
+    "truncate_states": false
+  },
+  "result": {
+    "unique_claims": 36,
+    "variants": {
+      "order0": {
+        "correct": 35,
+        "total": 36,
+        "confusion": {
+          "supported": {
+            "supported": 12
+          },
+          "contradicted": {
+            "contradicted": 12
+          },
+          "insufficient": {
+            "insufficient": 11,
+            "contradicted": 1
+          }
+        },
+        "false_supported": [],
+        "errors": [
+          {
+            "packet": "collision",
+            "id": "collision_08",
+            "variant": "order0",
+            "expected": "insufficient",
+            "choice": "contradicted",
+            "correct": false,
+            "top_probability": 0.5952610373497009,
+            "probabilities": {
+              "supported": 0.013030893169343472,
+              "contradicted": 0.5952610373497009,
+              "insufficient": 0.39170804619789124
+            }
+          }
+        ],
+        "flips_from_order0": [],
+        "max_probability_delta_from_order0": 0.0
+      },
+      "order1": {
+        "correct": 36,
+        "total": 36,
+        "confusion": {
+          "supported": {
+            "supported": 12
+          },
+          "contradicted": {
+            "contradicted": 12
+          },
+          "insufficient": {
+            "insufficient": 12
+          }
+        },
+        "false_supported": [],
+        "errors": [],
+        "flips_from_order0": [
+          "collision_08"
+        ],
+        "max_probability_delta_from_order0": 0.1450919806957245
+      },
+      "order2": {
+        "correct": 35,
+        "total": 36,
+        "confusion": {
+          "supported": {
+            "supported": 12
+          },
+          "contradicted": {
+            "contradicted": 12
+          },
+          "insufficient": {
+            "insufficient": 11,
+            "contradicted": 1
+          }
+        },
+        "false_supported": [],
+        "errors": [
+          {
+            "packet": "collision",
+            "id": "collision_08",
+            "variant": "order2",
+            "expected": "insufficient",
+            "choice": "contradicted",
+            "correct": false,
+            "top_probability": 0.5333055853843689,
+            "probabilities": {
+              "insufficient": 0.4531552195549011,
+              "supported": 0.013539205305278301,
+              "contradicted": 0.5333055853843689
+            }
+          }
+        ],
+        "flips_from_order0": [],
+        "max_probability_delta_from_order0": 0.17056113481521606
+      },
+      "separate": {
+        "correct": 35,
+        "total": 36,
+        "confusion": {
+          "supported": {
+            "supported": 12
+          },
+          "contradicted": {
+            "contradicted": 12
+          },
+          "insufficient": {
+            "insufficient": 11,
+            "contradicted": 1
+          }
+        },
+        "false_supported": [],
+        "errors": [
+          {
+            "packet": "collision",
+            "id": "collision_08",
+            "variant": "separate",
+            "expected": "insufficient",
+            "choice": "contradicted",
+            "correct": false,
+            "top_probability": 0.5560389161109924,
+            "probabilities": {
+              "supported": 0.013373743742704391,
+              "contradicted": 0.5560389161109924,
+              "insufficient": 0.4305872917175293
+            }
+          }
+        ],
+        "flips_from_order0": [],
+        "max_probability_delta_from_order0": 0.054323017597198486
+      }
+    },
+    "latency_ms": {
+      "order0": {
+        "wall_median": 753.0550000000001,
+        "server_median": 747.95
+      },
+      "order1": {
+        "wall_median": 575.125,
+        "server_median": 570.75
+      },
+      "order2": {
+        "wall_median": 569.5550000000001,
+        "server_median": 565.2
+      },
+      "separate": {
+        "wall_median": 1027.655,
+        "server_median": 1015.55
+      }
+    },
+    "limits": [
+      "Hand-authored diagnostic with known labels, not a random or held-out workload sample.",
+      "Repeated option orders and separate requests are not independent test cases.",
+      "No model probability is a proof or a calibrated WizNLiz correctness probability.",
+      "Timing measures this already-running server; not model load or end-to-end research time."
+    ]
+  },
+  "checks": {
+    "vault": {
+      "command": [
+        "python3",
+        "-B",
+        "tools/project.py",
+        "check-vault"
+      ],
+      "exit_code": 0
+    },
+    "hygiene": {
+      "command": [
+        "python3",
+        "-B",
+        "tools/project.py",
+        "check-hygiene"
+      ],
+      "exit_code": 0
+    },
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    "python": {
+      "command": [
+        "python3",
+        "-B",
+        "tools/project.py",
+        "test"
+      ],
+      "exit_code": 0,
+      "tests": 208,
+      "skips": 0,
+      "log": "local/generated/kev-evidence-pilot/run-lrr6ldqg/python-check.log"
+    },
+    "rom": {
+      "command": [
+        "python3",
+        "-B",
+        "tools/project.py",
+        "rom-identify",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "log": "local/generated/kev-evidence-pilot/run-lrr6ldqg/rom-check.log"
+    }
+  },
+  "decision": {
+    "advisory_pilot": "promising on this hand-authored sample; no productivity measurement",
+    "unattended_acceptance": "failed predeclared stability condition",
+    "native_runtime_integration": false,
+    "training_performed": false,
+    "native_coverage_change": 0
+  },
+  "skips": [
+    "No native rebuilds or CTests: no native source changed.",
+    "No fresh emulation or ROM-dependent differential comparisons.",
+    "No workload calibration, fine-tuning, arithmetic inference or unseen-routine discovery evaluation."
+  ]
+}

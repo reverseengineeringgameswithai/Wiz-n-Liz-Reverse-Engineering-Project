@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "rom_id": "ROM-LOCAL-0001",
+  "rom_manifest": "re/rom_manifest.json",
+  "address_space": "rom_file_offset",
+  "interval_convention": "[start,end)",
+  "blocks": [
+    {
+      "id": "rnc.unclassified.0001",
+      "file_offset": 215218,
+      "end_exclusive": 226039,
+      "method": 2,
+      "packed_size": 10803,
+      "unpacked_size": 17714,
+      "packed_crc16": 13939,
+      "unpacked_crc16": 44915,
+      "block_sha256": "a005c823ca9749f3ffffffe310832fcb4de5896828e2b8a0e868757787f2a505",
+      "decoded_sha256": "048aec81ffb0e5463029b931c2716e5aaa818539b5f72c078f7a19cc195a9ac7",
+      "resource_role": "pattern_bank_with_palette_and_opaque_records",
+      "dimensions": {
+        "pattern_width": 8,
+        "pattern_height": 8,
+        "scene_dimensions": null
+      },
+      "palette": {
+        "range": [
+          0,
+          32
+        ],
+        "entries": 16,
+        "entry_bytes": 2,
+        "encoding": "input [a,b] to CRAM [b & 15, (b & 240) | (a & 15)]; normal RGB bits 1..3, 5..7, 9..11",
+        "diagnostic_policy": "normal-rgb3-rounded-v1",
+        "transparent_pattern_index": 0,
+        "display_fidelity": "diagnostic full-range RGB3; analog response, fades and scene context unverified"
+      },
+      "confidence": "integrity_and_reference_decode_verified",
+      "evidence": "FIND-0004",
+      "decoder_reference": "third_party/rnc_reference.lock.json",
+      "structure": {
+        "format": "pattern_bank_v1",
+        "record_count": 442,
+        "palette_range": [
+          0,
+          32
+        ],
+        "count_minus_one_range": [
+          32,
+          34
+        ],
+        "pattern_range": [
+          34,
+          14178
+        ],
+        "opaque_records_range": [
+          14178,
+          17714
+        ],
+        "pattern_bytes_per_record": 32,
+        "opaque_bytes_per_record": 8,
+        "pixel_layout": "row-major 8x8, 4-bit indexed, high nibble then low nibble, four bytes per row",
+        "opaque_record_meaning": null,
+        "confidence": "static_consumer_and_exact_extent_verified",
+        "evidence": "FIND-0007",
+        "loader_metadata": "re/rnc_loader.json",
+        "pixel_layout_evidence": "FIND-0008"
+      }
+    },
+    {
+      "id": "scene.companion.0001",
+      "file_offset": 298968,
+      "end_exclusive": 304644,
+      "method": 2,
+      "packed_size": 5658,
+      "unpacked_size": 13700,
+      "packed_crc16": 39681,
+      "unpacked_crc16": 3595,
+      "block_sha256": "7fe064883f2dda127a3b522cc034e82a9c3ab1e00c8933b4765c133c080b799d",
+      "decoded_sha256": "4f043e8a070b98053fa84b7af8c773c6d447994458e0440fdd6c73036f1452c4",
+      "resource_role": "companion_coordinates_patterns_map_opaque_records",
+      "dimensions": {
+        "map_columns": 128,
+        "map_rows": 32
+      },
+      "palette": {
+        "source_bank_id": "rnc.unclassified.0001",
+        "selector": 2,
+        "diagnostic_policy": "normal-rgb3-rounded-v1"
+      },
+      "confidence": "integrity_and_reference_decode_verified",
+      "evidence": "FIND-0009",
+      "decoder_reference": "third_party/rnc_reference.lock.json",
+      "structure": {
+        "format": "companion_scene_v1",
+        "base_bank_id": "rnc.unclassified.0001",
+        "coordinate_count": 13,
+        "additional_pattern_count": 136,
+        "map_word_count": 4096,
+        "coordinate_count_range": [
+          0,
+          2
+        ],
+        "coordinates_range": [
+          2,
+          54
+        ],
+        "state_starts_range": [
+          54,
+          62
+        ],
+        "pattern_count_range": [
+          62,
+          64
+        ],
+        "patterns_range": [
+          64,
+          4416
+        ],
+        "map_header_range": [
+          4416,
+          4420
+        ],
+        "map_range": [
+          4420,
+          12612
+        ],
+        "opaque_records_range": [
+          12612,
+          13700
+        ],
+        "opaque_record_meaning": null,
+        "coordinate_purpose": null,
+        "evidence": "FIND-0009"
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "secondary_transfer",
+      "start": 20838,
+      "end_exclusive": 20842,
+      "sha256": "8e2718f855bfac74fd822f636a798102b9770ef7a0ced4f1b634c4d56f876b6b",
+      "instruction_count": 1,
+      "execution_compared": true,
+      "previously_classified": true
+    },
+    {
+      "id": "secondary_tally",
+      "start": 21490,
+      "end_exclusive": 21592,
+      "sha256": "466063f332589a0a26383f432e8182f87e9de427199050c76fc614ec8f169323",
+      "instruction_count": 20,
+      "execution_compared": true
+    },
+    {
+      "id": "add_score_digits",
+      "start": 44532,
+      "end_exclusive": 44570,
+      "sha256": "c5f547baaa127a61beb8724c69644a87ffe08c9e24163dc27531635775ec950a",
+      "instruction_count": 13,
+      "execution_compared": true
+    },
+    {
+      "id": "add_score_reward",
+      "start": 44570,
+      "end_exclusive": 44620,
+      "sha256": "1aebf60af367023c8bfbf5ea83c90e91392573c471bfc885dfc2eccd703b7195",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "advance_score_threshold",
+      "start": 44620,
+      "end_exclusive": 44658,
+      "sha256": "353f04d5dd7e09310883cac86b614e2759afce005621763f085a69b53f857d49",
+      "instruction_count": 13,
+      "execution_compared": true
+    },
+    {
+      "id": "score_reward_request",
+      "start": 44840,
+      "end_exclusive": 44892,
+      "sha256": "9acc5db15aa6ab3d9ff785b26ce682c5c1282c0a3cc62c8bd73c70340af0f811",
+      "instruction_count": 11,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 20838,
+      "target": 21490
+    },
+    {
+      "pc": 21496,
+      "target": 21514
+    },
+    {
+      "pc": 21502,
+      "target": 21514
+    },
+    {
+      "pc": 21512,
+      "target": 21530
+    },
+    {
+      "pc": 21520,
+      "target": 21530
+    },
+    {
+      "pc": 21540,
+      "target": 44570
+    },
+    {
+      "pc": 21576,
+      "target": 1035058
+    },
+    {
+      "pc": 44572,
+      "target": 44532
+    },
+    {
+      "pc": 44584,
+      "target": 44592
+    },
+    {
+      "pc": 44592,
+      "target": 44840
+    },
+    {
+      "pc": 44602,
+      "target": 44620
+    },
+    {
+      "pc": 44616,
+      "target": 44598
+    },
+    {
+      "pc": 44618,
+      "target": 44588
+    },
+    {
+      "pc": 44862,
+      "target": 972518
+    },
+    {
+      "pc": 44878,
+      "target": 44890
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step",
+    "actions_step",
+    "dispatch_step",
+    "transition_step",
+    "coasting_step",
+    "tally_step",
+    "palette_step",
+    "bonus_step",
+    "exit_tally_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366,
+        43600
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396,
+        75334,
+        28942,
+        28966,
+        25386,
+        20936,
+        21026,
+        20996,
+        20786,
+        20872
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 63754,
+      "opcode": 20112,
+      "selector": "actor +46 AFTER handler; only verified RTS service",
+      "targets": [
+        75334,
+        51966
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074,
+    18362
+  ],
+  "contract": "Secondary tally tail, valid eight-digit packed-decimal addition/wrap, strict threshold comparison, one reward request, bounded threshold advancement and persistent arithmetic scratch. Invalid consumed decimal digits and nontermination reject atomically; audio playback/world scheduling excluded."
+}

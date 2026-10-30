@@ -1,0 +1,1724 @@
+{
+  "schema_version": 1,
+  "starting_commit": "187f43ed769c6bdb30aa5b6928e3a10704e861a5",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "53F2 valid packed-decimal secondary tally, one reward decision, bounded threshold advance, retained scratch and exact actor-wrapper requests. Invalid consumed digits explicitly outside domain; no world/frame or audio playback parity.",
+  "score_presets": {
+    "debug": {
+      "report": "local/generated/score-comparison/run-e4visxhf/report.json",
+      "report_sha256": "4cefcf3f1a9bb9373c8996652cda9a8ac833ec8cfc91906d6ac82dc32916a0d1",
+      "cases": 328916,
+      "scoped_instructions_visited": 72,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 313556,
+          "goldens": 20,
+          "output_sha256": "d08302d4e83540c0a1865c4e165d4c011e43de011da3f2786672c3af14e86a81"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "goldens": 0,
+          "output_sha256": "c39914b3d6704530caaf3a4ae053ffbb610ca968cc347d61dbd4644955db826a"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "goldens": 0,
+          "output_sha256": "976d6db692b319e333d9b16b4de561123508c004fc80914da66da5769d51d201"
+        }
+      ],
+      "expected_rejections": [
+        {
+          "name": "invalid-score",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-score",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-threshold",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-threshold",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-increment",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-increment",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "zero-increment",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "zero-increment",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "threshold-cycle",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "threshold-cycle",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/score-comparison/run-11xd01f_/report.json",
+      "report_sha256": "9ee47d42bafee48ec2c8fff78709ea22db2a5c7543bdc5ae9387890081f7a829",
+      "cases": 328916,
+      "scoped_instructions_visited": 72,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 313556,
+          "goldens": 20,
+          "output_sha256": "d08302d4e83540c0a1865c4e165d4c011e43de011da3f2786672c3af14e86a81"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "goldens": 0,
+          "output_sha256": "c39914b3d6704530caaf3a4ae053ffbb610ca968cc347d61dbd4644955db826a"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "goldens": 0,
+          "output_sha256": "976d6db692b319e333d9b16b4de561123508c004fc80914da66da5769d51d201"
+        }
+      ],
+      "expected_rejections": [
+        {
+          "name": "invalid-score",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-score",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-threshold",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-threshold",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-increment",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-increment",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "zero-increment",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "zero-increment",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "threshold-cycle",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "threshold-cycle",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/score-comparison/run-egu5b2ei/report.json",
+      "report_sha256": "763b56ff7e7e67aae37faa182195aa9558d74998b4b6fd1838f6229db50cb646",
+      "cases": 328916,
+      "scoped_instructions_visited": 72,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 313556,
+          "goldens": 20,
+          "output_sha256": "d08302d4e83540c0a1865c4e165d4c011e43de011da3f2786672c3af14e86a81"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "goldens": 0,
+          "output_sha256": "c39914b3d6704530caaf3a4ae053ffbb610ca968cc347d61dbd4644955db826a"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "goldens": 0,
+          "output_sha256": "976d6db692b319e333d9b16b4de561123508c004fc80914da66da5769d51d201"
+        }
+      ],
+      "expected_rejections": [
+        {
+          "name": "invalid-score",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-score",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-threshold",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-threshold",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-increment",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "invalid-increment",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "unsupported packed score digit"
+        },
+        {
+          "name": "zero-increment",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "zero-increment",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "threshold-cycle",
+          "kind": "native",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        },
+        {
+          "name": "threshold-cycle",
+          "kind": "reference",
+          "exit_status": 2,
+          "error": "score threshold budget exhausted"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "exit-tally": {
+      "report": "local/generated/exit-tally-comparison/run-3cd3cu0k/report.json",
+      "report_sha256": "78a856ab7964e734308a322dad40eb15633f24bdf05fb51731f3df9bdef40063",
+      "cases": 348668
+    },
+    "bonus": {
+      "report": "local/generated/bonus-comparison/run-ra_w_w5f/report.json",
+      "report_sha256": "d404e2c205969a5a7794c5299121c774c490cb1152cd7bb018b4e178c006f908",
+      "cases": 160680
+    },
+    "palette": {
+      "report": "local/generated/palette-comparison/run-5hz1ck5t/report.json",
+      "report_sha256": "7aa38a3a28314a5a0abbbcc3eed7ce6685964c8dfa015e73df7fc39be93f1d5d",
+      "cases": 214448
+    },
+    "tally": {
+      "report": "local/generated/tally-comparison/run-u43n284t/report.json",
+      "report_sha256": "c4e3c9c90178706c41e0ede0037c64ca13598131d62bc352d1cd69a582300692",
+      "cases": 231475
+    },
+    "coasting": {
+      "report": "local/generated/coasting-comparison/run-qfpdmkr4/report.json",
+      "report_sha256": "49291845930562e64b4d6283c845ebeffacaaba33614ed156abf460e08b6e370",
+      "cases": 87571
+    },
+    "transition": {
+      "report": "local/generated/transition-comparison/run-lm_61w9r/report.json",
+      "report_sha256": "013aeb67a5993a44cd91c0bcf971e6f2af5060dfda7624e09f517d81ad3d651e",
+      "cases": 306528
+    },
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-eo5xsd_4/report.json",
+      "report_sha256": "3be9b10c985bc1b3a18c2793b6385ab2ffb7a10d2bedeb0642d15d0d9ab82673",
+      "cases": 138149
+    },
+    "actions": {
+      "report": "local/generated/actions-comparison/run-2xxj87y2/report.json",
+      "report_sha256": "a930eeb4762ec9901a04a9d2c0224f76d9c2d833eec9437da4ed218bd8b64206",
+      "cases": 146638
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-ir6rp5ez/report.json",
+      "report_sha256": "0656e57c0cc212179aea3ad69ab7726f01b5112c2426293708f871cce0d63d5b",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-vdyfxf4x/report.json",
+      "report_sha256": "15ba222a69e73872ed0724c8cb9afcd731b22a5d0347c0e93dbd197bdc2d8a87",
+      "cases": 152093
+    },
+    "reversal": {
+      "report": "local/generated/reversal-comparison/run-thq_xkp0/report.json",
+      "report_sha256": "0f9f08117bbb17091c397b50becfd0d8812e620ee0a2bfa0ac855336d7dc6886",
+      "cases": 203586
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-12yutqls/report.json",
+      "report_sha256": "4f214168fc475509c383e3356b976446944f5f3064df077cb347f5ed1b6e82a2",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-s0w5dp9_/report.json",
+      "report_sha256": "580c0d8be7b13bc13a7eafe40edb9665c5d63157ff51b414bcf3b56044d94576",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-fc19_lcz/report.json",
+      "report_sha256": "9a97f07df3eb2609e65702a73e6b3b369ea43d07df771f7f0f3be90c1f94b2d6",
+      "cases": 614436
+    }
+  },
+  "scoped_successful_instruction_union": 1278,
+  "static_probe": {
+    "report": "local/generated/score-probe/run-gc0sjj5c/report.json",
+    "report_sha256": "13ce4a321ba57879de849841ad9c7409c84de93b0761609806d399ed6fd2f7ed",
+    "instructions": 1278,
+    "gnu_checks": 5,
+    "gnu_limit": "installed m68k.gnu rejects immediate BCHG 086e; not claimed as corroborated by this decoder",
+    "new_instructions": 72,
+    "new_gnu_checks": 4,
+    "new_gnu_limit": "No new decoder limitation; inherited presentation BCHG limitation remains."
+  },
+  "instruction_scope": {
+    "new_disjoint_bytes": 280,
+    "new_instructions": 71,
+    "previously_classified_now_compared_bytes": 4,
+    "previously_rejected_transfer": "0x5166",
+    "scoped_successful_instructions": 72
+  },
+  "controlled_score": {
+    "report": "local/generated/score-experiments/run-00x74dfm/report.json",
+    "report_sha256": "218e3ef6ef6d24cbe2a7db6fc5b5f2591fbff8bb3af258402ea98c3aae773904",
+    "classification": "controlled RAM edits and neutral input branch from user movie; not ordinary gameplay",
+    "scope": "P1 5132/53F2 wrapper, score arithmetic and ordered reward request/threshold loop; no world/frame parity",
+    "identity": {
+      "schemaVersion": 1,
+      "romSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "effectiveRomSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "romPatches": [],
+      "romBytes": 1048576,
+      "runtimePath": "~/BizHawkOpenSource/Tools/GenesisDebug/local/runtime",
+      "binaries": {
+        "BizHawk.Emulation.Cores.dll": "c66e34d56d11b00eb6d09016ef08eef34597c5c49abc32dc00cf5f8c078a050d",
+        "BizHawk.Emulation.Common.dll": "9c2e38a87d77b179abc3664e25d2dadf9be2463d91f29855b59f73763c067a5a",
+        "GenesisWorker.exe": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+        "gpgx.wbx": "501946f3512831a0d0cb3f154fcf5a5a4a5bde432acce740c4ec810eb54bf66e",
+        "libwaterboxhost.so": "d3abe2dac8df6a9ec266ccf03c0646d20d14bdf84f60e962e416ab7bc2aa72b9"
+      },
+      "settings": {
+        "DrawBGA": true,
+        "DrawBGB": true,
+        "DrawBGW": true,
+        "DrawObj": true,
+        "PadScreen320": false,
+        "Backdrop": false,
+        "NoSpriteLimit": false
+      },
+      "syncSettings": {
+        "UseSixButton": false,
+        "ControlTypeLeft": 1,
+        "ControlTypeRight": 1,
+        "Region": 1,
+        "ForceVDP": 0,
+        "LoadBIOS": false,
+        "Overscan": 0,
+        "GGExtra": false,
+        "SMSFMSoundChip": 1,
+        "GenesisFMSoundChip": 0,
+        "Filter": 1,
+        "LowPassRange": 26214,
+        "LowFreq": 880,
+        "HighFreq": 5000,
+        "LowGain": 1.0,
+        "MidGain": 1.0,
+        "HighGain": 1.0,
+        "BackdropColor": 4294902015,
+        "SpritesAlwaysOnTop": false
+      },
+      "firmware": [],
+      "soundEmulated": true,
+      "deterministicRequested": true,
+      "build": {
+        "schema": "genesis-build-v1",
+        "sourceRevision": "2ce75ef9a5913bc4b6d784d963a7ce40cc0f3140",
+        "nativeRevision": "051d430d3d1b54625f9900c8f152d7f232e06daf",
+        "muslRevision": "2063abc4e16c84218757b1db10d3cdf9f36ef3f8",
+        "toolchain": {
+          "clang": "clang version 22.1.7 (Fedora 22.1.7-1.fc44)",
+          "dotnet": "10.0.401",
+          "mono": "Mono JIT compiler version 6.14.1 (tarball Tue Jun  9 00:00:00 UTC 2026)"
+        },
+        "sourceFiles": {
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.ICodeDataLogger.cs": "d99340613994157760555516beaed61592c5d4c4d4371483cd753b46596a930b",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IDebuggable.cs": "6a8c45e6c5b69e27eca9fd656a5a80cf9318e0e53a57183b522577976fcdc29c",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IDisassembler.cs": "fe42eef0770cb754a9fb43da3f3d61a1ae373e02e61ce5d3cdf159522ee84744",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IDriveLight.cs": "f0be06c5427b5ee794b6afded2070b5fb49b00b3d07d1a1b2861320342b9ceea",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IEmulator.cs": "cd3389e77b2aa58cc128e20f3a7eef44b22c18ae7d3b8d413fd0cfe590c524cb",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IInputPollable.cs": "3547fd07185ee0e09dfd778901a46dcdabf492b214243828892509a5c7d0e23e",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IMemoryDomains.cs": "57f6246d4c22e016dca9009b7aaffaf7d74b91d2a3a3051616f642bd461773e9",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.ISaveRam.cs": "7fc84b2bc58e8db68c83d8d91b26b78d34c0b6b9ea63825be16e4c9c6543130f",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.ISettable.cs": "ec75e8e3138703f1d7c165c364ee469c890832882cbacb747eb00ac4198ac665",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.ISoundProvider.cs": "60994a0f0a912373b6a9b4141f8b28757f1c772febbda58d74d6bd60130375f3",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IStatable.cs": "6ef9cac6254a520a281468a509c11693ecc38226f9bfc9e02ed4fbc7e72bb5e0",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.ITraceable.cs": "d8a81a7fc50a1ef65f520051b0e3457ff1b0aa63208d31690a433578de3d542b",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.IVideoProvider.cs": "b7180f0a39f5d0af9052d9eed454ed18232d547e4bfede029a080c9114a8921b",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.cs": "891cdc49a23722860fc0c2031e63f59fc5de0be40e31bc2b62d034d4efc0aaf8",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGXControlConverter.cs": "6641826acd050dc8a30a16d6f89e96dae3edb7b4afe461557d47e481f3f2583a",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/LibGPGX.cs": "0905704f6a6e6185cf40c9621e0db306b257279f26a3950b026a53ce7b53d2a5",
+          "src/BizHawk.Emulation.Cores/Consoles/Sega/gpgx64/GPGX.Debugger.cs": "462b4fbe6b623e3dd080c8859c10cf8707c2868577d2d01175923595f98996ab",
+          "waterbox/gpgx/cinterface/callbacks.h": "aceccceb03079adf602a2f56807df1f388e5e7a5e0d2a1408a627511b2e2af64",
+          "waterbox/gpgx/cinterface/cdStreamImpl.c": "8d13ea79e78e5861182baca2b7023eda2385b182d5ca948fdbcf54fe7e030a81",
+          "waterbox/gpgx/cinterface/cinterface.c": "f63b1387b731b399ea4c3a497e0ebcd3d24bc49c4b50f4fe33dce5c408a7a22d",
+          "waterbox/gpgx/cinterface/debugger.h": "59e8f9587423ddef248c9934027195af5261880adc2db705de776ea8350e90ea",
+          "waterbox/gpgx/cinterface/debugger.c": "34a3b9ec2ee0ea88c84505fb385860ee0fd16c7818f4fea59a72bc3e1d1ef032",
+          "Tools/GenesisDebug/native/gpgx-z80-debug.patch": "721164a093573126db69f8fb3c0e582e7bcb344c99c3c3d58480728a1aae1cc2",
+          "waterbox/gpgx/Makefile": "f64be1f2b5b900a0b67db0325c5ded798d1f295fe2ed3d92612c142b7696f828",
+          "Tools/GenesisDebug/managed/GenesisWorker.cs": "4960c7d5598aa06c47d1914d899917573db53e786bf934d9a9c8df8703c6e66e",
+          "Tools/GenesisDebug/managed/GenesisBridge.cs": "6117d823a87cd854a0823e0c5a7bd6729a4ec08bb97aaff3b31ed94c29e183b5",
+          "Tools/GenesisDebug/managed/test_worker.py": "4ccdc94fa879d00ab06301aa44b2c0c74af499845fdffb0e7798c2e4844aecf2",
+          "Tools/GenesisDebug/managed/install_gui.py": "4d9835cd3db93755930fdaa5d171950fb8e12ee498a67879e7066d8d8b2f7189",
+          "Tools/GenesisDebug/managed/test_gui.py": "6454b7cd5ddddb145cd50d1ef37dbd70f783dbaba9e7878fc7ea5108a881ee25",
+          "Tools/GenesisDebug/python/genesis_debug/__init__.py": "83fa9c23eaf01188be6ed34b331b9e137c7b122ccdadbdd1894a6c37d1b6b8d3",
+          "Tools/GenesisDebug/python/genesis_debug/client.py": "d7d68c389ecd2e5241c35ac009e2d7bd6506cc0818a0ea3a65a3e32daf484fdf",
+          "Tools/GenesisDebug/python/genesis_debug/replay.py": "5ada562522bd90750177325739efe638092ed106afde64d38e82a92d9724fc87",
+          "Tools/GenesisDebug/python/genesis_debug/movie.py": "65485ff8c629db91a5f5d485291ba3d73b6929ccff1ae2ada2468e6b361924ea",
+          "Tools/GenesisDebug/python/genesis_debug/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "Tools/GenesisDebug/python/genesis_debug/cli.py": "638b95cca1b91d488e40100ca17371bb2b95ff3d3b038bc6a3314bc97af6e3d3",
+          "Tools/GenesisDebug/python/genesis_debug/mcp.py": "986ef90c2079a6636eb36c6d15a800bc1b7108f8f2db94581b3264bfc592e34f",
+          "Tools/GenesisDebug/python/genesis_debug/integration.py": "cd96eb7e72b1ab5e7ab3ef41ceb242950beb1be97f1046fa26737c9004557fb0",
+          "Tools/GenesisDebug/python/genesis_debug/memory.py": "e357f9a4f9d03c4b31347555e5b5988e1f2b1576786bc9da84b0b4c306a1a763",
+          "Tools/GenesisDebug/python/genesis_debug/video.py": "969c0430482b2d18ea5bfa2d0ff05cca9cb21bb797a6ff5d931ce89f2369eb26",
+          "Tools/GenesisDebug/python/tests/mock_worker.py": "833cc8310eb7f816c3d9be800d32091014a170d20c60c71455dba2dd42ac944a",
+          "Tools/GenesisDebug/python/tests/test_debug.py": "e8889643a4585ec28fc57b3c2085bfc7cbde090a1578037ab6402027260d804a",
+          "Tools/GenesisDebug/python/schemas/protocol-v1.schema.json": "74724304bdf0c0236740b66f56bce3dad055f8ed104bd0d4197098585753c641",
+          "Tools/GenesisDebug/python/schemas/recording-v1.schema.json": "529d1aa70567295effe3503ac899c9913033dc10b378fff328dc5a5e73a768ae",
+          "Tools/GenesisDebug/python/schemas/movie-import-v1.schema.json": "1a45650caa20c6a58804f08269f2c067bdfd6763d6cd9c969fae7257f29b4d1e",
+          "Tools/GenesisDebug/wiz/compare.py": "7b3a730fff5af2e4f4f527a249fd139dcb74b11ee0bea9fc8bf8f883ab8c1045",
+          "Tools/GenesisDebug/wiz/test_compare.py": "1fef9b6d91c3eccfa15c2ca9b0524045863c1814763e8908fc6a4d1fed622326",
+          "Tools/GenesisDebug/wiz/verify_profile.py": "e059b80a3ac484e2638562f81b5def4fe7d50eb5536c40bb22441e859c39f0c7",
+          "Tools/GenesisDebug/wiz/export_fixture.py": "945f00517870161fc562a4f1bbd1ac90082994ffdbbcb1a2eeafd5d75e241507",
+          "Tools/GenesisDebug/wiz/capture_scenarios.py": "d8630e27a6d0163aee4d9d07f3f1bc3a6dfd03221be2d22043989da79c3b7178",
+          "Tools/GenesisDebug/profiles/wiznliz-usa-v1.json": "888eface1691b3a24190a8346b250e253888ae1bca0daba05931f7606df3a6fc",
+          "Tools/GenesisDebug/build-isolated.py": "d2e3d71a59cdfcef39276e8480ea97a7e9934fad91e48e375585c0144d29d4ba",
+          "Tools/GenesisDebug/stop-gui.py": "bb8e075ab9334553761bfb6044f9abb913aacc42bcea4620d8e92187672504dc",
+          "Tools/GenesisDebug/build-worker.sh": "fe8395223de5d55b6e03791124fb289794719dffcedd53b9f8c017cb06e6a8de",
+          "Tools/GenesisDebug/run-worker.sh": "8722ebdf524532804c67602c3e8a6561ea66189349668177ff40f35aee07497d",
+          "Tools/GenesisDebug/build-bridge.sh": "2aa91df21322ac3e6f085c431868b721fda2ce1cd45d86e8f1e50011e3fb7828",
+          "Tools/GenesisDebug/launch-gui.sh": "9febf42884d8b714915d6eb6859f878bc956a6c4d7908f73b97686ecc97123b7",
+          "Tools/GenesisDebug/native/synthetic.py": "4779894859f4240e8eac8aca75b9d8396c73abf90cc748390e85f94b39601d8b",
+          "Tools/GenesisDebug/native/test_debugger.py": "62b33e8a0ef78285674ef513736a914d3ceddcbe0cf706b7766bda12cfb40230",
+          "Tools/GenesisDebug/native/test_video.py": "17dc234e172a446ef706486ea53582a377fdeaf42ba27b410516220ed31e0ade"
+        },
+        "runtime": "~/BizHawkOpenSource/Tools/GenesisDebug/local/runtime",
+        "originalRuntimeReadOnly": "~/BizHawk-2.11.1-linux-x64",
+        "binaries": {
+          "EmuHawk.exe": "763a2364db00059c36b931de18e794d4b1708c85d6f6e8c576ffc760c06a4d3a",
+          "dll/libcimgui.so": "34ac1a5f70e6c764295efeadce8682341119d597d745041130cc99309195667b",
+          "dll/libbizlynx.dll.so": "2fc89b8e289d42c949d7761ff4419d1ce92633103119dc0aa7f29df98102c40e",
+          "dll/libstdc++-6.dll": "a7571d46f42cdee8c276d6a4645caeb829d76186c4b3f239781f4d2ba9201f48",
+          "dll/libpng16.dll": "8c1ce6c8bedb1be183a2b489ea1d29a483a11887fcdb2e1ca76225f72b1fbe32",
+          "dll/libe_sqlite3.so": "c4e33557343ed8e87b29bb28dae82edf00e9f35d34558c8b72ba78f63b02c897",
+          "dll/Silk.NET.Core.dll": "4a314c8059ee891fb071e378c117a7a605c82a009f3f0d23f9280517c5a82b95",
+          "dll/System.Collections.Immutable.dll": "d5ec0837bb176abf13dcd52c658c4e84c5264f67065b9c19679b6643f7d21564",
+          "dll/libsameboy.so": "7dc9ecb02b71ac812439596a2831abda04cc9115c2f6e2f1827739d7ec5d90c5",
+          "dll/libMSXHawk.so": "800ace6c64b7302ef2f11c7605afafdd58871b6f62ad1b67cddc0d4c4a4ada53",
+          "dll/BizHawk.WinForms.Controls.dll": "54dd61e5101ec4250fdfde5e463a50d1696a2dbec959fa84148a32f246406bdf",
+          "dll/Microsoft.DotNet.PlatformAbstractions.dll": "f0f60c9257297d67d8436868a4dc60a0cb3be2e6cb9fa48322a2125a05e697a3",
+          "dll/libFlooohZ80.so": "9e4c522fa7550d6940b719872a61ea0048d80a6f2c1515833e6296fb42101079",
+          "dll/FlooohZ80.dll": "1dba09a5a8e63edbeeabf0e89c1f2e31ee80c689e7823bb12d3f2f909d0c5bf4",
+          "dll/Vortice.DirectX.dll": "b1fb2528c1cd1f981e997287eff74d4ea75828637bd5b20393d19a7461b6c682",
+          "dll/Silk.NET.OpenAL.dll": "ed7042e21c498a3c716e5fea817fc06cc556170b62a45de610903d93f8bfc9b6",
+          "dll/Virtu.dll": "d8c246a485444bb8a86ea123d260852751df1b62c7d5479e11dbe7a37e73e79a",
+          "dll/libbizabiadapter_msabi_sysv.dll": "2f9dc4a48060e6b6677dcbdc07bd697a6b3fa8346c079bd804898fb5d1a02ed4",
+          "dll/System.ValueTuple.dll": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+          "dll/System.Security.Principal.Windows.dll": "b4d8e15adc235d0e858e39b5133e5d00a4baa8c94f4f39e3b5e791b0f9c0c806",
+          "dll/libLibretroBridge.so": "18529b9e50a4ef6f880e75b2ef7bae83226839b4d89dd61d6c0f4b793dcf33a5",
+          "dll/System.Threading.Tasks.Extensions.dll": "692c324c02a922f890aaf5948c54ec9758f5ab7019b8e8ab169c106ddd3231f4",
+          "dll/System.Text.Json.dll": "51bdfd754cb827a3724d1f9974836f34b493fca0059751d9c87669a8f2f96a4c",
+          "dll/BizHawk.Bizware.Input.dll": "7e395e1577cb83891fa1a04c91490c721cb62cb0fb1cef3981c8cf65a005c3f3",
+          "dll/Microsoft.Extensions.DependencyModel.dll": "aaf2127ba1ba380cfa8f27c1b24ae3ad0a1bc052c2fb427ba99f7cb3b439503d",
+          "dll/NLua.dll": "f413017bfc7a37dfcaeb6e6c24812fd12ceb2b4b107a066512ed28c13010b234",
+          "dll/Vortice.Direct3D11.dll": "3d63daa15ab084e18000a87b641f1d978163b428b1fb285767c66e327aeae3d0",
+          "dll/SDL2-CS.dll": "4f76e81fb76e14ef14bcb700ee7d902ac7d819d227d341d46110d564006cc29c",
+          "dll/libbizswan.dll.so": "03bdff9a36234ae88e915d1636cc181ddc65eeec07c2b1c4cbf0bf49e13c6c0b",
+          "dll/Silk.NET.OpenAL.Extensions.EXT.dll": "cec6132c3727ac1e026fce9d1ff35efeef2ac4c19f052976efec631adc381625",
+          "dll/SharpGen.Runtime.COM.dll": "9c060f8b746a4f14168a0df30326683081b849e271993039b67ac9a6cfa800f4",
+          "dll/Microsoft.Bcl.HashCode.dll": "3a4e851ee5fc0f6182aa5a3d65dc56fcd6979b65334b5c3b92fbdc791457c0ab",
+          "dll/System.Drawing.Common.dll": "ca18383a2070518ae8c3e96cbd1705da283c8ada4ddf396217d2bcb7dcd03103",
+          "dll/Silk.NET.WGL.dll": "d55d964ed358bddf32c7724aa9d3a24a330f1b90b6d8f595fd5bdb0bd1f08a17",
+          "dll/Vortice.Mathematics.dll": "0991938bf81512da3530ab26b860393a714d2cb74e897af258b4f9bb82bee7b2",
+          "dll/libzstd.dll": "fd57937ca9bbf5837af21e44d0f3017cf3f8a718205756c8e2441abc50afded4",
+          "dll/System.CommandLine.dll": "13e05bb6b19aca82a556ae4f0c82ce638069cd03278c875315083a724d95bca9",
+          "dll/FlatBuffers.GenOutput.dll": "0f779a78a6e8612f6411b1b12a392892952c2a8585fca7635ac291f5721cb8d2",
+          "dll/zlib.dll": "3585a252dc2251af0f9e85c317b8a6a8e318311443db0a174b9722b0dfe2b348",
+          "dll/SharpCompress.dll": "f770e48105267eb91f3f44560a54a9368c9825d85da2863a8b85d3acc4a5fe45",
+          "dll/libemu83.so": "69bcd3fb43625827ab6053824b4f7e01337c9170f75b9411599c166bc1c1eb88",
+          "dll/System.Runtime.CompilerServices.Unsafe.dll": "08cbd7278b66f1e68425a82d4b97181a4130d93e3dd91831407aba7212ccdacf",
+          "dll/Microsoft.Data.Sqlite.dll": "e5baa59e213e86750660c6e4b741bcfb3e2d3d1203214c146a1f1d11696f8cd7",
+          "dll/libgambatte.so": "69d1c4e016ed4fe5b96e1769c974fc80bb1855ad3cdeef07ce30632461290479",
+          "dll/libquicknes.so": "68f8c6cfccda6792f7d2e6d5105d599e69a333a222b70889fa2745a66a1f925e",
+          "dll/libSDL2.so": "222a5a4e8d3bc277867081095ea4a54ff4d4dac68cc18357461b77201de212fd",
+          "dll/librcheevos.so": "cbd7ef1779fb275eae253f200b19073c73b5817d96ad959541263a029a396b34",
+          "dll/Cyotek.Drawing.BitmapFont.dll": "2f7d03179758592e02c62c77840473b01da5eaf7bbe3d1f629c9a4311a562950",
+          "dll/Vortice.D3DCompiler.dll": "d1b2cda60de0d251f5d418fc03395fce4cb7bf0c86fc2d24b06ae6d891f5ed4e",
+          "dll/Newtonsoft.Json.dll": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d",
+          "dll/SharpGen.Runtime.dll": "b3c90a9aea284bb2a002b6a4125d67709cbe87af195c1d1c424699fad485ebe7",
+          "dll/libdarm.so": "de6f9fed65b7607e319b3fe4a2cc66e49305d2eb7e95b292ab8301b89c577ba9",
+          "dll/BizHawk.Bizware.Audio.dll": "2e9541544f48d1d0e5b5ad8d1c767fbefce3b486211aecae2ddad9ff298915f0",
+          "dll/Silk.NET.OpenGL.dll": "5c479c95c11efe31949a7444c72fbf058e385c073ef096aab6bb901119ffd8b7",
+          "dll/Microsoft.Bcl.Numerics.dll": "442ca693b1cdf71163998984781d58f21e348a58f96ca7b56a18dcb5bb73abd3",
+          "dll/Silk.NET.OpenAL.Extensions.Creative.dll": "93ff59912ee4175c60a3494eade8c0b1b2f4b63f2541c13fe376e0b92ef1131d",
+          "dll/System.Text.Encodings.Web.dll": "7bea336a8d3c9a3c9fb6af280391ce2abc4724efeb098a747b24026995fa31c3",
+          "dll/OpenAL32.dll": "c43f9a13bce950a1fd2324a3296256b5353cb54e2e3e54f294aa80ad61bba819",
+          "dll/ImGui.NET.dll": "dc49716ca9d5de780676ed4a430db1627a354c6fb74ce8a371dea43a8a27a933",
+          "dll/freetype.dll": "7016700010f4bcb933c7aea4e3e9d6d01fab737f491a37f240adfeb96411f5be",
+          "dll/PcxFileTypePlugin.HawkQuantizer.dll": "3f1e5f92cd00305e0cdedfaaea6e283d3e18fefa579fe4aabf84e3f2adad8e2f",
+          "dll/libblip_buf.so": "0da7cdbc2f421c1cbe9881cad944a4ae71921f4bfc1cdd7466abcbbd96229b6c",
+          "dll/Google.FlatBuffers.dll": "3ea40d2a8b0e6fbc442656d9b573c57854ae5029889987c249e3e29610b281fe",
+          "dll/libgcc_s_seh-1.dll": "1e806611bc0803261556c82253284e6f8954c310e8f17f6f8c8a2d37a86a3d50",
+          "dll/Vortice.XAudio2.dll": "8b07464f8412c1943dafad7c2ca5eef027f769fa08aff899132a8d059a0db20c",
+          "dll/Silk.NET.Maths.dll": "b32a53ae216152d4c8131917d6902ea9b1c7cca3d17e9fec131ae7a9bea6311d",
+          "dll/CommunityToolkit.HighPerformance.dll": "b9be225063940c935bec68f65835c053915a41d21758bdf0dfccf9457b96a6c8",
+          "dll/libfwunpack.so": "14331f2465e5c26eaf4af0e4198a2ce873f43a4127bf7461ddd2bd937081bb4e",
+          "dll/Ultz.Bcl.Half.dll": "21893285bc94e006a7792d4317daa72664ba6878ce3d6171f0c05e151cdf4ebe",
+          "dll/SQLitePCLRaw.provider.e_sqlite3.dll": "0c9610041d99b06c12582fd7454f4531fe67fb0d411a9ae8be7e40b7e695dbdb",
+          "dll/System.Buffers.dll": "2d78d770c9cb997199154ae8c018b9f1d1efbc86729f7264dde6dbad2a12cac3",
+          "dll/System.Security.AccessControl.dll": "1fda491eebdb19ea0a83cf6c16ab5dd004a1bfdfc845ede017ebe0945beb927f",
+          "dll/libwinpthread-1.dll": "cc7ed05f8b7f92dfaffc0d44a7d432e77ada81a3b92bd612ecefef1c7baea02c",
+          "dll/ISOParser.dll": "ab956365db76eed31cdc12ac025ae0386215ae6b0b6900db1e458dbcd8578af5",
+          "dll/libppsspp.so": "a2ec1907901bd992aef4dfb6956362eddef2614ef3e6f9c3e0169d78fbcb004a",
+          "dll/libencore.so": "6aedffb3ecf7c5a05e971768d80639ea43776d633f6c4289ee41fc8d83c6788a",
+          "dll/libchd_capi.so": "52ea845a594f2df402db8b5ad04e645b938a79f0b29f580fcfb852d4860140e3",
+          "dll/System.Memory.dll": "d5e8e4866f9cfa66f7765660f84b210198893e55335487afe5ebda342c0e913d",
+          "dll/Microsoft.Bcl.AsyncInterfaces.dll": "23fa57d17ffa074869331bd25ecac07b234523124690476e24e0885884e65467",
+          "dll/Vortice.MediaFoundation.dll": "99aed0b8328a238968cbe025503f9d136fad4e8f84868e598514edfe77d89c42",
+          "dll/System.Resources.Extensions.dll": "fa11c08a622261c28aee318be8157d8a3e90fcd75383ffc3315ae5b9c748281a",
+          "dll/libbizhash.so": "8076578da0060231f2180306e1c034296219efb9bbbf915c66e85dcc6b900446",
+          "dll/System.ComponentModel.Annotations.dll": "04113c8549185519f3202790ceb23df609644872b9c249a56d2bcf59566102c4",
+          "dll/Silk.NET.WGL.Extensions.NV.dll": "e7ba610382fda08e027618198cc3c973a46916a400f4eaf46d62813a8247adfb",
+          "dll/Silk.NET.OpenAL.Extensions.Enumeration.dll": "9bc91dad14614b53e4d5d2db3a3e71695577da7cef0a2b1e28f9337dcbb31cb6",
+          "dll/Vortice.DXGI.dll": "8696dcfc767f1459430b8eae992dc19ea082381eecbacc746274ab788c7558bd",
+          "dll/System.IO.Pipelines.dll": "ac7b789ebb910cce0947550136cb6aca39e0b803df9ea9c0d80daee12ab80cc6",
+          "dll/libmgba.dll.so": "26d67d3b904103cf2ecf716f246137ed24bf3c0cc33e03a23c3e74f9c2e4183e",
+          "dll/Microsoft.Win32.Registry.dll": "e9a9d281c1a708aaae366f82fd6a1742f65da2918cc4fa5eaaaada0be24277d9",
+          "dll/BizHawk.Bizware.Graphics.Controls.dll": "abad620e42e837a89be33ee6459d0fa22dd8469482a5fe282702e4fb6fdca501",
+          "dll/System.Numerics.Vectors.dll": "20c2fa81b8c70d651099d762954f285fd4f942e63b2d7217c145dab8d4b2f4c9",
+          "dll/SQLitePCLRaw.core.dll": "fcf544781f2fedd2c12a1604baea91185ff1fd63ece1a1701bc2833a2e818fcf",
+          "dll/ZstdSharp.dll": "e69baa507daa5fb47ebcfdd3325eb3f47ccf652eaa63e6181252e7a990e9b10a",
+          "dll/BizHawk.Bizware.Graphics.dll": "e684809c344bd158c5445d787d0105e815c55594b3989c856e6b49eb13982aec",
+          "dll/libwaterboxhost.so": "d3abe2dac8df6a9ec266ccf03c0646d20d14bdf84f60e962e416ab7bc2aa72b9",
+          "dll/BizHawk.Client.Common.dll": "f8e548203f43a209344ebeef4aefc189f66f7131eda5e399e78c5e290bfb05ac",
+          "dll/BizHawk.TAStudioPlayerMove.dll": "b784460977dd130a32392d05e2e2b00040114c6d39a9f57b78286fecbd28284a",
+          "dll/BizHawk.Common.dll": "409588b6c36e819909b4b90198ee462031637818270973211a8dc0594debbe17",
+          "dll/BizHawk.BizInvoke.dll": "e4e9c23728199948d104e039f71ca7d0e10da2562889cb2329b41cfadf4e8e2c",
+          "dll/BizHawk.Emulation.Common.dll": "9c2e38a87d77b179abc3664e25d2dadf9be2463d91f29855b59f73763c067a5a",
+          "dll/BizHawk.Emulation.DiscSystem.dll": "f759a8d4e2bf8e50d4aa9526d9eb90e5889a34842480f62d4db1013e987c0127",
+          "dll/BizHawk.Emulation.Cores.dll": "c66e34d56d11b00eb6d09016ef08eef34597c5c49abc32dc00cf5f8c078a050d",
+          "dll/gpgx.wbx": "501946f3512831a0d0cb3f154fcf5a5a4a5bde432acce740c4ec810eb54bf66e",
+          "ExternalTools/GenesisDebugBridge.dll": "42ae99a804b1b44c9711d02a80a87f18b1c7810b30ea43442880d5630753707d"
+        },
+        "workerSha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+        "settingsPolicy": "fresh data/config; settings recorded per run; no firmware supplied",
+        "buildId": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6"
+      }
+    },
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "experiments": [
+      {
+        "name": "cross-many",
+        "start": 4934,
+        "end": 4942,
+        "inputs": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "hooked_edits": {
+          "expectedFrame": 4934,
+          "writes": [
+            {
+              "domain": "68K RAM",
+              "offset": 1812,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3838,
+              "expectedHex": "0000",
+              "hex": "0001"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1806,
+              "expectedHex": "0000",
+              "hex": "0002"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 13322,
+              "expectedHex": "003c",
+              "hex": "ffff"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3854,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1713,
+              "expectedHex": "00",
+              "hex": "00"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1790,
+              "expectedHex": "00009450",
+              "hex": "00080000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1794,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1730,
+              "expectedHex": "00500000",
+              "hex": "00020000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1798,
+              "expectedHex": "0003",
+              "hex": "0008"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 17470,
+              "expectedHex": "00000400",
+              "hex": "deadbeef"
+            }
+          ]
+        },
+        "comparison": {
+          "ok": true,
+          "continuous_wrapper_calls": 8,
+          "sample_requests": 2,
+          "sound_requests": 2,
+          "threshold_advances": 5,
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/cross-many/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/cross-many/bank.bin",
+            "--score-sequence"
+          ],
+          "output_sha256": "73e6d0e00fe2b3cc637891888871a66e75624c08fd875c8e6edf8d15e067014a"
+        },
+        "final_hash": "5597a152255859b43a0e9579b45a736463e36a8a2cea634db49356f348d05456",
+        "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state",
+        "hooked_unhooked_equal": true
+      },
+      {
+        "name": "equal",
+        "start": 4934,
+        "end": 4935,
+        "inputs": [
+          []
+        ],
+        "hooked_edits": {
+          "expectedFrame": 4934,
+          "writes": [
+            {
+              "domain": "68K RAM",
+              "offset": 1812,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3838,
+              "expectedHex": "0000",
+              "hex": "0001"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1806,
+              "expectedHex": "0000",
+              "hex": "0002"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 13322,
+              "expectedHex": "003c",
+              "hex": "ffff"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3854,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1713,
+              "expectedHex": "00",
+              "hex": "00"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1790,
+              "expectedHex": "00009450",
+              "hex": "00000000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1794,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1730,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1798,
+              "expectedHex": "0003",
+              "hex": "0008"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 17470,
+              "expectedHex": "00000400",
+              "hex": "deadbeef"
+            }
+          ]
+        },
+        "comparison": {
+          "ok": true,
+          "continuous_wrapper_calls": 1,
+          "sample_requests": 0,
+          "sound_requests": 1,
+          "threshold_advances": 0,
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/equal/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/equal/bank.bin",
+            "--score-sequence"
+          ],
+          "output_sha256": "3884e944ccc4a251dea8b4445ab8fa9e1a3938913ba18eacf7fcb2b084b649cd"
+        },
+        "final_hash": "b6431f69820a1e944c9e84ffbf96aeb413e4145c60f009c63ff99f237a184ab0",
+        "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state",
+        "hooked_unhooked_equal": true
+      },
+      {
+        "name": "score-wrap",
+        "start": 4934,
+        "end": 4935,
+        "inputs": [
+          []
+        ],
+        "hooked_edits": {
+          "expectedFrame": 4934,
+          "writes": [
+            {
+              "domain": "68K RAM",
+              "offset": 1812,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3838,
+              "expectedHex": "0000",
+              "hex": "0001"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1806,
+              "expectedHex": "0000",
+              "hex": "0002"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 13322,
+              "expectedHex": "003c",
+              "hex": "ffff"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3854,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1713,
+              "expectedHex": "00",
+              "hex": "00"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1790,
+              "expectedHex": "00009450",
+              "hex": "99999999"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1794,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1730,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1798,
+              "expectedHex": "0003",
+              "hex": "0008"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 17470,
+              "expectedHex": "00000400",
+              "hex": "deadbeef"
+            }
+          ]
+        },
+        "comparison": {
+          "ok": true,
+          "continuous_wrapper_calls": 1,
+          "sample_requests": 0,
+          "sound_requests": 1,
+          "threshold_advances": 0,
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/score-wrap/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/score-wrap/bank.bin",
+            "--score-sequence"
+          ],
+          "output_sha256": "8d4568503d97cbc219d2abebe5e92007af5bfe3fc7648d00f1a4fd76fc30e59e"
+        },
+        "final_hash": "504c2df0ab500248c1c590dab27c767fd94d31d9586177f836e79d8ef040a98d",
+        "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state",
+        "hooked_unhooked_equal": true
+      },
+      {
+        "name": "reward-wrap",
+        "start": 4934,
+        "end": 4935,
+        "inputs": [
+          []
+        ],
+        "hooked_edits": {
+          "expectedFrame": 4934,
+          "writes": [
+            {
+              "domain": "68K RAM",
+              "offset": 1812,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3838,
+              "expectedHex": "0000",
+              "hex": "0001"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1806,
+              "expectedHex": "0000",
+              "hex": "0002"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 13322,
+              "expectedHex": "003c",
+              "hex": "ffff"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 3854,
+              "expectedHex": "0000",
+              "hex": "0000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1713,
+              "expectedHex": "00",
+              "hex": "00"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1790,
+              "expectedHex": "00009450",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1794,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1730,
+              "expectedHex": "00500000",
+              "hex": "00010000"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 1798,
+              "expectedHex": "0003",
+              "hex": "ffff"
+            },
+            {
+              "domain": "68K RAM",
+              "offset": 17470,
+              "expectedHex": "00000400",
+              "hex": "deadbeef"
+            }
+          ]
+        },
+        "comparison": {
+          "ok": true,
+          "continuous_wrapper_calls": 1,
+          "sample_requests": 1,
+          "sound_requests": 1,
+          "threshold_advances": 1,
+          "command": [
+            "~/WizNLizPC/build/sanitize/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/reward-wrap/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/score-experiments/run-00x74dfm/reward-wrap/bank.bin",
+            "--score-sequence"
+          ],
+          "output_sha256": "a292a49607ab12f5bd6f996d0c0d3a49b24feac71d623766f2ad4f0619d61d9e"
+        },
+        "final_hash": "8c218f1cdd3523a761d9841600a7300c135065d9ebab6c20897a10dab00839ff",
+        "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state",
+        "hooked_unhooked_equal": true
+      }
+    ]
+  },
+  "replay_regressions": {
+    "exit-tally": {
+      "report": "local/generated/exit-tally-movie/run-xzvt5cf2/report.json",
+      "report_sha256": "24f82b55d51a3c9b9d065abaaafd5a41d78ecdee6f7eb45d93561be3712a8215",
+      "start": 4807,
+      "end": 5038,
+      "classification": "ordinary unedited user movie; no RAM/register/ROM edits",
+      "comparison": {
+        "ok": true,
+        "continuous_wrapper_calls": 231,
+        "handlers": {
+          "0x5132": 215,
+          "0x5188": 16
+        },
+        "sound_requests": 2,
+        "transition_frames": [
+          5021
+        ],
+        "completion_frames": [
+          5037
+        ],
+        "command": [
+          "~/WizNLizPC/build/sanitize/wiznliz-actor",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/exit-tally-movie/run-xzvt5cf2/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/exit-tally-movie/run-xzvt5cf2/bank.bin",
+          "--exit-tally-sequence"
+        ],
+        "output_sha256": "670bbef3f38f6bc132264f9c76f25197d0a44908ab781b9b9e11644ee601aea4"
+      },
+      "hooked_unhooked_equal": true,
+      "final_hash": "49fe4a959d4ebd8139e8bd485ec151cda31a9926dac92fdb7adac10f6e5758e0",
+      "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "equality": {
+      "report": "local/generated/exit-tally-experiment/run-tw5f_8yh/report.json",
+      "report_sha256": "7c91feea39c05b5733bc23fcc6334e73e0f052681bf17df88339198f3c5c1602",
+      "start": 5037,
+      "end": 5038,
+      "classification": "controlled RAM equality/marker edits from user movie; not ordinary gameplay",
+      "comparison": {
+        "ok": true,
+        "continuous_wrapper_calls": 1,
+        "handlers": {
+          "0x5188": 1
+        },
+        "sound_requests": 0,
+        "transition_frames": [],
+        "completion_frames": [
+          5037
+        ],
+        "command": [
+          "~/WizNLizPC/build/sanitize/wiznliz-actor",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/exit-tally-experiment/run-tw5f_8yh/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/exit-tally-experiment/run-tw5f_8yh/bank.bin",
+          "--exit-tally-sequence"
+        ],
+        "output_sha256": "a4a67496b73516a70e420bd77fe401da2f029c1e29e95504bb42892af9747dcb"
+      },
+      "hooked_unhooked_equal": true,
+      "final_hash": "ed2615b532ffca7ee501d0c9c12ff787a5b1049eed257f8918e10301b1b21d86",
+      "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "tally": {
+      "report": "local/generated/tally-movie/run-y2bx2ot9/report.json",
+      "report_sha256": "23fa27815aa8908636f61e861ee54bdb7a12178d7745d4dd0ebb82fdf1241f22",
+      "start": 3403,
+      "end": 3578,
+      "classification": "ordinary unedited user movie; no RAM/register/ROM edits",
+      "comparison": {
+        "ok": true,
+        "continuous_wrapper_calls": 175,
+        "sound_requests": 5,
+        "completion_frames": [
+          3577
+        ],
+        "command": [
+          "~/WizNLizPC/build/sanitize/wiznliz-actor",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/tally-movie/run-y2bx2ot9/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/tally-movie/run-y2bx2ot9/bank.bin",
+          "--tally-sequence"
+        ],
+        "output_sha256": "a666e8c2e65e06a1efc97f0b3bf104d6f7e9baebef3df7a639757e34c1760541"
+      },
+      "hooked_unhooked_equal": true,
+      "final_hash": "449648bfbd44b47c5286af285242c6b56fa61a4ed8df52f82ae9ffec062a970a",
+      "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "transition": {
+      "report": "local/generated/transition-movie/run-he5mp49l/report.json",
+      "report_sha256": "78b4962d72b8fe3423198518c845e90e02962e46014a287390759dbbbcf41441",
+      "start": 1516,
+      "end": 1533,
+      "classification": "ordinary unedited user movie; no RAM/register/ROM edits",
+      "comparison": {
+        "ok": true,
+        "comparisons": {
+          "continuous-wrapper": {
+            "calls": 17,
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/transition-movie/run-he5mp49l/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/transition-movie/run-he5mp49l/bank.bin",
+              "--transition-sequence"
+            ],
+            "output_sha256": "31a584d8af294cc28d9d3af62e29e804a988b6373fbb036092b072d08590a21e"
+          },
+          "timer": {
+            "calls": 17,
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/transition-movie/run-he5mp49l/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/transition-movie/run-he5mp49l/bank.bin",
+              "--transition-timer"
+            ],
+            "output_sha256": "f319fceb39ef1d5413b4729cc0bc0ab2da046ec6f171829964f9606e7c911bbf"
+          }
+        },
+        "handlers": {
+          "0x710e": 1,
+          "0x7126": 16
+        },
+        "completion_frame": 1532
+      },
+      "hooked_unhooked_equal": true,
+      "final_hash": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+      "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "coasting": {
+      "report": "local/generated/coasting-movie/run-7k3rn2xy/report.json",
+      "report_sha256": "8e9d64187edbdc9215edad4b787fcb009b061e44b40e9006733e255bc0bfc77d",
+      "start": 1742,
+      "end": 1759,
+      "classification": "ordinary unedited user movie; no RAM/register/ROM edits",
+      "comparison": {
+        "ok": true,
+        "initializers": 1,
+        "continuous_wrapper_calls": 16,
+        "first_update_frame": 1743,
+        "command": [
+          "~/WizNLizPC/build/sanitize/wiznliz-actor",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/coasting-movie/run-7k3rn2xy/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/coasting-movie/run-7k3rn2xy/bank.bin",
+          "--coast-sequence"
+        ],
+        "output_sha256": "e47a74270be8f2eec2b0d5b2d400f7590b84e1732d41874a5c1f5a556df50c7b",
+        "scope": "one P1 initializer and its next 16 P1 updates; P2 initializer observed but not compared; shared transition and other world objects excluded"
+      },
+      "hooked_unhooked_equal": true,
+      "final_hash": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+      "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "dispatch": {
+      "report": "local/generated/dispatch-movie/run-mc0w8ftg/report.json",
+      "report_sha256": "c969c170c81068f573a512cd5337118d236c5eba5ce50276faf8933a87a0e004",
+      "ordinary_calls": 191,
+      "branch_calls": 72,
+      "windows": [
+        {
+          "start": 1608,
+          "end": 1690,
+          "classification": "ordinary unedited user movie",
+          "comparison": {
+            "ok": true,
+            "calls": 82,
+            "comparisons": {
+              "presentation": {
+                "calls": 82,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/1608-1690/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/1608-1690/bank.bin",
+                  "--actions-presentation"
+                ],
+                "output_sha256": "a750777569cdebb822ba9940390c563c582565499899682f77007adcec7f1629"
+              },
+              "selected-handler": {
+                "calls": 82,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/1608-1690/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/1608-1690/bank.bin",
+                  "--actions-sequence"
+                ],
+                "output_sha256": "bfb5a4f15c6c44e2e5017e8be287ff11762b57aa313e261d1fc7d706666e2751"
+              },
+              "continuous-wrapper": {
+                "calls": 82,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/1608-1690/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/1608-1690/bank.bin",
+                  "--dispatch-sequence"
+                ],
+                "output_sha256": "24aeb9eda79114a55103b4c4acb6519995cd2e94f372fc72b4dadb8db2c2bcf1"
+              }
+            },
+            "service_calls": 82,
+            "callbacks": {
+              "0xaa50": 1,
+              "0xa196": 2,
+              "0xf938": 2
+            },
+            "handlers": {
+              "0x12646": 6,
+              "0xaaea": 1,
+              "0xab04": 3,
+              "0xa1be": 1,
+              "0x9d88": 24,
+              "0x9dcc": 11,
+              "0x9c90": 30,
+              "0x9d26": 10
+            },
+            "sound_requests": 0,
+            "sample_requests": 0,
+            "action_boundaries": [
+              {
+                "frame": 1616,
+                "pc": "0x9d4e"
+              },
+              {
+                "frame": 1629,
+                "pc": "0x9c56"
+              },
+              {
+                "frame": 1668,
+                "pc": "0x9d4e"
+              }
+            ]
+          },
+          "hooked_hash": "1baf0e12950348021cfa0a44d71a70728f9c9a324532058198a141fb1791db2f",
+          "unhooked_hash": "1baf0e12950348021cfa0a44d71a70728f9c9a324532058198a141fb1791db2f",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        {
+          "start": 3230,
+          "end": 3339,
+          "classification": "ordinary unedited user movie",
+          "comparison": {
+            "ok": true,
+            "calls": 109,
+            "comparisons": {
+              "presentation": {
+                "calls": 109,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/3230-3339/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/3230-3339/bank.bin",
+                  "--actions-presentation"
+                ],
+                "output_sha256": "1d01b46a579881fcbf43baa7becadafb951ae20807b8d4eab0706cc6b8c586b0"
+              },
+              "selected-handler": {
+                "calls": 109,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/3230-3339/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/3230-3339/bank.bin",
+                  "--actions-sequence"
+                ],
+                "output_sha256": "60af79e342c343612de730035ace5260a071f650e8cb60e8507169ae732a9894"
+              },
+              "continuous-wrapper": {
+                "calls": 109,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/3230-3339/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/3230-3339/bank.bin",
+                  "--dispatch-sequence"
+                ],
+                "output_sha256": "286965b67acde749ccc61ecc67c48119dc039b41ba6a5791b9a1e19eaf5d6cff"
+              }
+            },
+            "service_calls": 109,
+            "callbacks": {
+              "0xf938": 2,
+              "0xa196": 2
+            },
+            "handlers": {
+              "0xa408": 16,
+              "0xa1be": 1,
+              "0x9c90": 30,
+              "0x9d26": 10,
+              "0x9d88": 17,
+              "0x9dcc": 9,
+              "0xaaea": 11,
+              "0xab04": 24,
+              "0xa6c8": 6
+            },
+            "sound_requests": 2,
+            "sample_requests": 0,
+            "action_boundaries": [
+              {
+                "frame": 3243,
+                "pc": "0x9c56"
+              },
+              {
+                "frame": 3282,
+                "pc": "0x9d4e"
+              }
+            ]
+          },
+          "hooked_hash": "0b457909f71de875506844ea091199f66492e77c5767b8af272683a365008fbb",
+          "unhooked_hash": "0b457909f71de875506844ea091199f66492e77c5767b8af272683a365008fbb",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        {
+          "start": 3258,
+          "end": 3318,
+          "classification": "ordinary gameplay input branch; explicit replacement inputs, zero RAM/register/ROM edits",
+          "comparison": {
+            "ok": true,
+            "calls": 60,
+            "comparisons": {
+              "presentation": {
+                "calls": 60,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/sample-and-down-jump/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/sample-and-down-jump/bank.bin",
+                  "--actions-presentation"
+                ],
+                "output_sha256": "ed22406d1600ffe7b7c4fbba276b57db49130df4de2b6dca40c6a1718e217952"
+              },
+              "selected-handler": {
+                "calls": 60,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/sample-and-down-jump/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/sample-and-down-jump/bank.bin",
+                  "--actions-sequence"
+                ],
+                "output_sha256": "c10ae3ce676989ec4a328ae2af37b141947735c1c9546e6b67fe83928d32b2ca"
+              },
+              "continuous-wrapper": {
+                "calls": 60,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/sample-and-down-jump/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/sample-and-down-jump/bank.bin",
+                  "--dispatch-sequence"
+                ],
+                "output_sha256": "777cec6c97a8b6e3d254257362bb037288678dd35ea81cb0f770745d30155384"
+              }
+            },
+            "service_calls": 60,
+            "callbacks": {
+              "0xf938": 2,
+              "0xa196": 1
+            },
+            "handlers": {
+              "0x9c90": 17,
+              "0x9d26": 10,
+              "0xa1be": 5,
+              "0x9d88": 19,
+              "0x9dcc": 1,
+              "0xa27e": 1,
+              "0xaaea": 11,
+              "0xab04": 11
+            },
+            "sound_requests": 2,
+            "sample_requests": 1,
+            "action_boundaries": [
+              {
+                "frame": 3258,
+                "pc": "0xed6e6"
+              },
+              {
+                "frame": 3258,
+                "pc": "0xed714"
+              },
+              {
+                "frame": 3288,
+                "pc": "0x9d4e"
+              },
+              {
+                "frame": 3306,
+                "pc": "0x9dc4"
+              }
+            ]
+          },
+          "hooked_hash": "f2aaba7fd7ab1459b42deb9433b5cc616e38c3f2adedc26696e6747abb2114a0",
+          "unhooked_hash": "f2aaba7fd7ab1459b42deb9433b5cc616e38c3f2adedc26696e6747abb2114a0",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        {
+          "start": 3258,
+          "end": 3270,
+          "classification": "ordinary gameplay input branch; explicit replacement inputs, zero RAM/register/ROM edits",
+          "comparison": {
+            "ok": true,
+            "calls": 12,
+            "comparisons": {
+              "presentation": {
+                "calls": 12,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/up-jump/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/up-jump/bank.bin",
+                  "--actions-presentation"
+                ],
+                "output_sha256": "bc59a93de18b041ebf99cd27e42a69fec357b0ccf50f431726275def01da62ed"
+              },
+              "selected-handler": {
+                "calls": 12,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/up-jump/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/up-jump/bank.bin",
+                  "--actions-sequence"
+                ],
+                "output_sha256": "bb2047185038ec6cdb6c4f6dd412f8cdf2b0b2ad74aee228652c70ec68a41f4b"
+              },
+              "continuous-wrapper": {
+                "calls": 12,
+                "command": [
+                  "~/WizNLizPC/build/sanitize/wiznliz-actor",
+                  "movie.scene",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/up-jump/scene.bin",
+                  "movie.bank",
+                  "~/WizNLizPC/local/generated/dispatch-movie/run-mc0w8ftg/up-jump/bank.bin",
+                  "--dispatch-sequence"
+                ],
+                "output_sha256": "3bb809715f9c2f939d37ea7f35926a6d25d9d01df344eeffcac1a988e8789a30"
+              }
+            },
+            "service_calls": 12,
+            "callbacks": {
+              "0xf938": 1
+            },
+            "handlers": {
+              "0x9c90": 1,
+              "0xa27e": 1,
+              "0xaaea": 11,
+              "0xab04": 11
+            },
+            "sound_requests": 2,
+            "sample_requests": 0,
+            "action_boundaries": [
+              {
+                "frame": 3258,
+                "pc": "0x9d44"
+              }
+            ]
+          },
+          "hooked_hash": "4fe1d86467ef6a156f342ebf710912e94787adbef3ec609952d276dc22941737",
+          "unhooked_hash": "4fe1d86467ef6a156f342ebf710912e94787adbef3ec609952d276dc22941737",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      ]
+    },
+    "bonus": {
+      "report": "local/generated/bonus-experiments/run-uzt8wzlb/report.json",
+      "report_sha256": "8e6b10e19f4003cab92a3621a597cca6b943e52c686e4db89f068a1b37f47319",
+      "classification": "controlled RAM edits and explicit A+C+Start input branch from user movie; not ordinary gameplay",
+      "experiments": [
+        {
+          "name": "five",
+          "start": 3403,
+          "end": 3404,
+          "comparison": {
+            "ok": true,
+            "wrapper_calls": 1,
+            "assignments": [
+              [
+                4,
+                83
+              ],
+              [
+                3,
+                85
+              ],
+              [
+                2,
+                78
+              ],
+              [
+                1,
+                79
+              ],
+              [
+                0,
+                66
+              ]
+            ],
+            "probes": 10,
+            "sample_requests": 1,
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/bonus-experiments/run-uzt8wzlb/five/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/bonus-experiments/run-uzt8wzlb/five/bank.bin",
+              "--bonus-sequence"
+            ],
+            "output_sha256": "6ccc9e5fbb5ff9f2bf4aaef3c533653bb04933d2a0d9fbb422570f0348d8d9bb"
+          },
+          "hooked_unhooked_equal": true,
+          "final_hash": "f2bb394546e575629b5314522e05dbe6405379507c57ff5cb110c5deeed31a90",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        {
+          "name": "partial-reset",
+          "start": 3403,
+          "end": 3404,
+          "comparison": {
+            "ok": true,
+            "wrapper_calls": 1,
+            "assignments": [
+              [
+                4,
+                83
+              ],
+              [
+                3,
+                85
+              ]
+            ],
+            "probes": 18,
+            "sample_requests": 1,
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/bonus-experiments/run-uzt8wzlb/partial-reset/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/bonus-experiments/run-uzt8wzlb/partial-reset/bank.bin",
+              "--bonus-sequence"
+            ],
+            "output_sha256": "c907562618630bf344da16f8cfbfe39d5e6718cb961cc165d56e67aa5d5ff5c2"
+          },
+          "hooked_unhooked_equal": true,
+          "final_hash": "49380c19bba5dd23f5c0a2a7de880824598609200191f6bd78ae736cc0758617",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        {
+          "name": "exhausted",
+          "start": 3403,
+          "end": 3404,
+          "comparison": {
+            "ok": true,
+            "wrapper_calls": 1,
+            "assignments": [],
+            "probes": 6,
+            "sample_requests": 1,
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/bonus-experiments/run-uzt8wzlb/exhausted/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/bonus-experiments/run-uzt8wzlb/exhausted/bank.bin",
+              "--bonus-sequence"
+            ],
+            "output_sha256": "8bbe7551e7a49e6c4999529c4c5cb0cf33397cb225fd4e4b391200a5fa95f7b6"
+          },
+          "hooked_unhooked_equal": true,
+          "final_hash": "26b352116036e2cbac291ca9a5e778cb287f3822e74ae84d7b496ae9848e6f1d",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      ]
+    },
+    "palette": {
+      "report": "local/generated/palette-experiments/run-j0lap57o/report.json",
+      "report_sha256": "7b3a2ebff6ed7e2f5ebdc1d957628afb13a292781f144952ce5dec08a9ea1b7a",
+      "classification": "controlled RAM-edit experiments branching from the user movie; not ordinary gameplay",
+      "experiments": [
+        {
+          "name": "ready",
+          "start": 3403,
+          "end": 3420,
+          "comparison": {
+            "ok": true,
+            "continuous_wrapper_calls": 17,
+            "handlers": {
+              "0x51c8": 1,
+              "0x5204": 14,
+              "0x5222": 2
+            },
+            "initialized_frames": [
+              3403
+            ],
+            "completed_wait_frames": [
+              3417
+            ],
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/palette-experiments/run-j0lap57o/ready/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/palette-experiments/run-j0lap57o/ready/bank.bin",
+              "--palette-sequence"
+            ],
+            "output_sha256": "e06f6276c621674fe62c4e15f0936aa8042c3744f2e99c329a286d1dd0afd52d"
+          },
+          "hooked_unhooked_equal": true,
+          "final_hash": "f9f557e9ed573c3abea9a6b1acf8a630507a6476b865526720821c536c89c9f5",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        {
+          "name": "initial-wait",
+          "start": 3403,
+          "end": 3423,
+          "comparison": {
+            "ok": true,
+            "continuous_wrapper_calls": 20,
+            "handlers": {
+              "0x51c8": 4,
+              "0x5204": 14,
+              "0x5222": 2
+            },
+            "initialized_frames": [
+              3406
+            ],
+            "completed_wait_frames": [
+              3420
+            ],
+            "command": [
+              "~/WizNLizPC/build/sanitize/wiznliz-actor",
+              "movie.scene",
+              "~/WizNLizPC/local/generated/palette-experiments/run-j0lap57o/initial-wait/scene.bin",
+              "movie.bank",
+              "~/WizNLizPC/local/generated/palette-experiments/run-j0lap57o/initial-wait/bank.bin",
+              "--palette-sequence"
+            ],
+            "output_sha256": "7aae34d792342c1275fd5a685d524a04a2c5d37c9916db88af01c4be60795e15"
+          },
+          "hooked_unhooked_equal": true,
+          "final_hash": "5fb16d59d1ea6823191422bc9604c417abf787f88134537ec68ad56d13a24b2a",
+          "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      ]
+    }
+  },
+  "tests": {
+    "debug": {
+      "report": "local/generated/score-research/test-debug.log",
+      "report_sha256": "a5bb5e82f7cb654c9a8574c92c4d5412e166778aa0f0f25d50bd3c33dec7867c",
+      "python_tests": 174,
+      "skips": 0,
+      "ctest_targets": 32
+    },
+    "release": {
+      "report": "local/generated/score-research/test-release.log",
+      "report_sha256": "e2ac5939f910c22411d8785cfeb60ffd4fe160356d6706d332c9f67e0636d8bc",
+      "python_tests": 174,
+      "skips": 0,
+      "ctest_targets": 32
+    },
+    "sanitize": {
+      "report": "local/generated/score-research/test-sanitize.log",
+      "report_sha256": "e726734aab39f715d83b2cf4762ce005a9d0218bea7c75031c9eb8e7ff7adf5a",
+      "python_tests": 174,
+      "skips": 0,
+      "ctest_targets": 32
+    }
+  },
+  "preservation": {
+    "report": "local/generated/score-research/preservation.json",
+    "report_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf",
+    "rom_verified": true,
+    "movie_verified": true,
+    "worker_verified": true,
+    "verified_runtime_binaries": 104
+  },
+  "contract_sources": {
+    "tools/score_compare.py": "62696368f1f272adcd70fd38b2f0111dfbbdeb790b72a790362f1cb90a7770aa",
+    "tools/score_probe.py": "d3ba35c1b6fbc79057ae9193a32d1df02df9e8b84c728f5f96759feb7ca57b44",
+    "tools/genesis_score_capture.py": "7caa56c3744deaf9865b2c8c35d408b1dc6fd0b55c2c70fba7d7ed27709147b1",
+    "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+    "tools/genesis_dispatch_capture.py": "0989d233832bbe1a60abc51b4e3668d25e557f782c8fbf3a1728dcb509c1e1d8",
+    "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c",
+    "tests/score_cases.py": "712d902c612b20861bdd32ce5e1feef0009ee6d73b88d169fda866efe992d9eb",
+    "tests/test_score.py": "951fc947d41763808641a4f9f3b5a6a9f78dbadabea45f638a140d24706683c7",
+    "tests/native_score.py": "150ce62be2c65dca1ef505778f64047fb0de56d9404b25aae72a12e4b53bdcf8",
+    "re/score_step.json": "704873b9875cf01d8113aa8db4eb5caaab571ad32417a796a0277c9118d9ffcb"
+  },
+  "limitations": [
+    "Consumed addition operands must have valid decimal digits; native and research harness reject other encodings. These guards are not original-game validation.",
+    "ADF4 original comparisons here use fixed source 00010000; broader native helper amounts have authored tests only.",
+    "Separate exhaustive sweeps are not Cartesian coverage. Work budgets deliberately reject nontermination.",
+    "Four controlled RAM/input branches compare eleven wrappers; no ordinary secondary-score hit is claimed.",
+    "Mutable native actor/service/tracking/tally/score/arithmetic scratch persist; shared gates, controls, transition context and terrain scratch remain explicit world feeds.",
+    "Fourteen prior corpora and relevant captures pass freshly. Full movie survey and older 507 actor/presentation and 92 actor/24 effect captures were not rerun.",
+    "Existing decoder limitations remain; no new GNU limitation in this scope. No external runtime rebuild.",
+    "No native world/P2 scheduling, rendering, audio playback or playability. TASK-0010 remains in progress; next is bounded P1 session/input scheduling integration."
+  ],
+  "review_notes": [
+    "No original/native semantic mismatch or final test failure. Review restored strict snapshot extent equality when introducing scoped control writes; affected captures and tests were rerun afterward. Earlier capture/provenance artifacts are superseded by this index."
+  ]
+}

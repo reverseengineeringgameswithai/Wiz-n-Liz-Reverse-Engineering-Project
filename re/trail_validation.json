@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-05-028",
+  "starting_commit": "15c1df21cb5e5207322672ca3d83e1258f4b91a3",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "6D8C emitter, successful 5A9A initializer, E918 RNG and spawned particle lifetime. Retained emitter/RNG/particle components; owner position and capacity are per-call context. No shared pool/world integration or whole-frame parity.",
+  "comparisons": [
+    {
+      "path": "local/generated/trail-comparison/run-mar8ijth/report.json",
+      "sha256": "1428c475887fee2074686fa2643749579fab5c98b9ff45945ed7c4840ca39430",
+      "preset": "debug",
+      "cases": 209082,
+      "native_executable_sha256": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+      "new_instructions_visited": 62,
+      "total_instructions_visited": 144,
+      "groups": [
+        {
+          "name": "emitter",
+          "cases": 69638,
+          "output_sha256": "9e469bd1d12845d1f9825d413a8590fa8f864237816dc9239ee1171b3f655aee"
+        },
+        {
+          "name": "scheduled",
+          "cases": 69766,
+          "output_sha256": "36ce4f45619a11daac18da008359e4b205599b93b99bb2ab3dcdb3116453eef1"
+        },
+        {
+          "name": "particle",
+          "cases": 4102,
+          "output_sha256": "c9fe27ee762e40e5449d9b2dfba0ae60baff26842df71a88f9c1b00018e07fa0"
+        },
+        {
+          "name": "rng",
+          "cases": 65551,
+          "output_sha256": "35be2926c255881974d5231713814ec0731c230b25bbd1ffce836f8c4fe8e3a3"
+        },
+        {
+          "name": "spawn",
+          "cases": 25,
+          "output_sha256": "0a3f8def7440f614ad7ffd4f426631efdacde01c2019cd96db718925cec87d37"
+        }
+      ],
+      "static_report": {
+        "path": "local/generated/trail-comparison/run-mar8ijth/static.json",
+        "sha256": "4a79e1c03f2e6e0db3ef4ac0aed045bc226e886ffd83d41a05e3b3f5f536a657"
+      }
+    },
+    {
+      "path": "local/generated/trail-comparison/run-kjv6c9vg/report.json",
+      "sha256": "6d2c69a41fd222e6015c8cce528a4ff8c351926ce535207bf3a0c8ae724f200e",
+      "preset": "release",
+      "cases": 209082,
+      "native_executable_sha256": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+      "new_instructions_visited": 62,
+      "total_instructions_visited": 144,
+      "groups": [
+        {
+          "name": "emitter",
+          "cases": 69638,
+          "output_sha256": "9e469bd1d12845d1f9825d413a8590fa8f864237816dc9239ee1171b3f655aee"
+        },
+        {
+          "name": "scheduled",
+          "cases": 69766,
+          "output_sha256": "36ce4f45619a11daac18da008359e4b205599b93b99bb2ab3dcdb3116453eef1"
+        },
+        {
+          "name": "particle",
+          "cases": 4102,
+          "output_sha256": "c9fe27ee762e40e5449d9b2dfba0ae60baff26842df71a88f9c1b00018e07fa0"
+        },
+        {
+          "name": "rng",
+          "cases": 65551,
+          "output_sha256": "35be2926c255881974d5231713814ec0731c230b25bbd1ffce836f8c4fe8e3a3"
+        },
+        {
+          "name": "spawn",
+          "cases": 25,
+          "output_sha256": "0a3f8def7440f614ad7ffd4f426631efdacde01c2019cd96db718925cec87d37"
+        }
+      ],
+      "static_report": {
+        "path": "local/generated/trail-comparison/run-kjv6c9vg/static.json",
+        "sha256": "4a79e1c03f2e6e0db3ef4ac0aed045bc226e886ffd83d41a05e3b3f5f536a657"
+      }
+    },
+    {
+      "path": "local/generated/trail-comparison/run-qpo7l72d/report.json",
+      "sha256": "a62f1b51696849a0b3b318d35145a0a5bd49449433cef994ce06bb6a21fdc8a0",
+      "preset": "sanitize",
+      "cases": 209082,
+      "native_executable_sha256": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+      "new_instructions_visited": 62,
+      "total_instructions_visited": 144,
+      "groups": [
+        {
+          "name": "emitter",
+          "cases": 69638,
+          "output_sha256": "9e469bd1d12845d1f9825d413a8590fa8f864237816dc9239ee1171b3f655aee"
+        },
+        {
+          "name": "scheduled",
+          "cases": 69766,
+          "output_sha256": "36ce4f45619a11daac18da008359e4b205599b93b99bb2ab3dcdb3116453eef1"
+        },
+        {
+          "name": "particle",
+          "cases": 4102,
+          "output_sha256": "c9fe27ee762e40e5449d9b2dfba0ae60baff26842df71a88f9c1b00018e07fa0"
+        },
+        {
+          "name": "rng",
+          "cases": 65551,
+          "output_sha256": "35be2926c255881974d5231713814ec0731c230b25bbd1ffce836f8c4fe8e3a3"
+        },
+        {
+          "name": "spawn",
+          "cases": 25,
+          "output_sha256": "0a3f8def7440f614ad7ffd4f426631efdacde01c2019cd96db718925cec87d37"
+        }
+      ],
+      "static_report": {
+        "path": "local/generated/trail-comparison/run-qpo7l72d/static.json",
+        "sha256": "4a79e1c03f2e6e0db3ef4ac0aed045bc226e886ffd83d41a05e3b3f5f536a657"
+      }
+    }
+  ],
+  "movie_comparisons": [
+    {
+      "path": "local/generated/trail-movie/run-ri_gn_48/report.json",
+      "sha256": "3dd3aa95880e5b4c882f5ca1173ab9322740f3091efa33d418a42b8b512aa1ce",
+      "preset": "debug",
+      "native_executable_sha256": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+      "emitter_output_sha256": "2ca2a3d92480146e87f519a3397053121800a1ec59786d83d6f78b136965d4ce",
+      "particles": [
+        {
+          "birth_frame": 1069,
+          "first_frame": 1070,
+          "last_frame": 1085,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "fc14236385243ffd0ef00a9a41524333d6f102c3b6307a2b241937458277ddb8"
+        },
+        {
+          "birth_frame": 1073,
+          "first_frame": 1074,
+          "last_frame": 1089,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "d53b6535340ba1946b67fba2d4a4354c79a12cd3fe82c332788f66983b5408bc"
+        },
+        {
+          "birth_frame": 1077,
+          "first_frame": 1078,
+          "last_frame": 1093,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "2602348fe89872bde904e9db8d7abe7c94f7171bb4d12b9bd3e38abfa91cefa1"
+        },
+        {
+          "birth_frame": 1081,
+          "first_frame": 1081,
+          "last_frame": 1096,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "98c9be24ca87eaa4d8cfabc99a1ab08d9dca508322011f9df26a73bc814bbf30"
+        },
+        {
+          "birth_frame": 1085,
+          "first_frame": 1086,
+          "last_frame": 1099,
+          "calls": 14,
+          "released": false,
+          "output_sha256": "5f80846b711f67683a6e4f47c8d4ca5eaa3bf57831ce366a7512639b666ebf06"
+        },
+        {
+          "birth_frame": 1089,
+          "first_frame": 1090,
+          "last_frame": 1099,
+          "calls": 10,
+          "released": false,
+          "output_sha256": "40359ac02c52c61cb41d1b50f0d10651ff854a6adebb99cb1f036936a35371eb"
+        },
+        {
+          "birth_frame": 1093,
+          "first_frame": 1094,
+          "last_frame": 1099,
+          "calls": 6,
+          "released": false,
+          "output_sha256": "aee8e85f14318107088689de56ef89dbf9f55ec25e14f76ad746c0e889af49d0"
+        },
+        {
+          "birth_frame": 1097,
+          "first_frame": 1097,
+          "last_frame": 1099,
+          "calls": 3,
+          "released": false,
+          "output_sha256": "9105a772d070b9608dd81b92874c2c91e146aa93d45524467f418f19610548dc"
+        }
+      ]
+    },
+    {
+      "path": "local/generated/trail-movie/run-wlxo2irw/report.json",
+      "sha256": "81e21fa0899964a64ab63f40dfb7890e265ee35b42a1302f3f9928f23bb9d9d5",
+      "preset": "release",
+      "native_executable_sha256": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+      "emitter_output_sha256": "2ca2a3d92480146e87f519a3397053121800a1ec59786d83d6f78b136965d4ce",
+      "particles": [
+        {
+          "birth_frame": 1069,
+          "first_frame": 1070,
+          "last_frame": 1085,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "fc14236385243ffd0ef00a9a41524333d6f102c3b6307a2b241937458277ddb8"
+        },
+        {
+          "birth_frame": 1073,
+          "first_frame": 1074,
+          "last_frame": 1089,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "d53b6535340ba1946b67fba2d4a4354c79a12cd3fe82c332788f66983b5408bc"
+        },
+        {
+          "birth_frame": 1077,
+          "first_frame": 1078,
+          "last_frame": 1093,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "2602348fe89872bde904e9db8d7abe7c94f7171bb4d12b9bd3e38abfa91cefa1"
+        },
+        {
+          "birth_frame": 1081,
+          "first_frame": 1081,
+          "last_frame": 1096,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "98c9be24ca87eaa4d8cfabc99a1ab08d9dca508322011f9df26a73bc814bbf30"
+        },
+        {
+          "birth_frame": 1085,
+          "first_frame": 1086,
+          "last_frame": 1099,
+          "calls": 14,
+          "released": false,
+          "output_sha256": "5f80846b711f67683a6e4f47c8d4ca5eaa3bf57831ce366a7512639b666ebf06"
+        },
+        {
+          "birth_frame": 1089,
+          "first_frame": 1090,
+          "last_frame": 1099,
+          "calls": 10,
+          "released": false,
+          "output_sha256": "40359ac02c52c61cb41d1b50f0d10651ff854a6adebb99cb1f036936a35371eb"
+        },
+        {
+          "birth_frame": 1093,
+          "first_frame": 1094,
+          "last_frame": 1099,
+          "calls": 6,
+          "released": false,
+          "output_sha256": "aee8e85f14318107088689de56ef89dbf9f55ec25e14f76ad746c0e889af49d0"
+        },
+        {
+          "birth_frame": 1097,
+          "first_frame": 1097,
+          "last_frame": 1099,
+          "calls": 3,
+          "released": false,
+          "output_sha256": "9105a772d070b9608dd81b92874c2c91e146aa93d45524467f418f19610548dc"
+        }
+      ]
+    },
+    {
+      "path": "local/generated/trail-movie/run-hrmamzhi/report.json",
+      "sha256": "abd0e3b314c2a15e7becf366b60f2d583372ac9e5b5c48f39fc14ccfcf8ad8fc",
+      "preset": "sanitize",
+      "native_executable_sha256": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+      "emitter_output_sha256": "2ca2a3d92480146e87f519a3397053121800a1ec59786d83d6f78b136965d4ce",
+      "particles": [
+        {
+          "birth_frame": 1069,
+          "first_frame": 1070,
+          "last_frame": 1085,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "fc14236385243ffd0ef00a9a41524333d6f102c3b6307a2b241937458277ddb8"
+        },
+        {
+          "birth_frame": 1073,
+          "first_frame": 1074,
+          "last_frame": 1089,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "d53b6535340ba1946b67fba2d4a4354c79a12cd3fe82c332788f66983b5408bc"
+        },
+        {
+          "birth_frame": 1077,
+          "first_frame": 1078,
+          "last_frame": 1093,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "2602348fe89872bde904e9db8d7abe7c94f7171bb4d12b9bd3e38abfa91cefa1"
+        },
+        {
+          "birth_frame": 1081,
+          "first_frame": 1081,
+          "last_frame": 1096,
+          "calls": 16,
+          "released": true,
+          "output_sha256": "98c9be24ca87eaa4d8cfabc99a1ab08d9dca508322011f9df26a73bc814bbf30"
+        },
+        {
+          "birth_frame": 1085,
+          "first_frame": 1086,
+          "last_frame": 1099,
+          "calls": 14,
+          "released": false,
+          "output_sha256": "5f80846b711f67683a6e4f47c8d4ca5eaa3bf57831ce366a7512639b666ebf06"
+        },
+        {
+          "birth_frame": 1089,
+          "first_frame": 1090,
+          "last_frame": 1099,
+          "calls": 10,
+          "released": false,
+          "output_sha256": "40359ac02c52c61cb41d1b50f0d10651ff854a6adebb99cb1f036936a35371eb"
+        },
+        {
+          "birth_frame": 1093,
+          "first_frame": 1094,
+          "last_frame": 1099,
+          "calls": 6,
+          "released": false,
+          "output_sha256": "aee8e85f14318107088689de56ef89dbf9f55ec25e14f76ad746c0e889af49d0"
+        },
+        {
+          "birth_frame": 1097,
+          "first_frame": 1097,
+          "last_frame": 1099,
+          "calls": 3,
+          "released": false,
+          "output_sha256": "9105a772d070b9608dd81b92874c2c91e146aa93d45524467f418f19610548dc"
+        }
+      ]
+    }
+  ],
+  "p1_session_regressions": [
+    {
+      "path": "local/generated/effect-session/run-avyvw4yp/report.json",
+      "sha256": "d84089c19209216e9b8840350dba6044d9ca4521325b2b1b63a1de9804c4117f",
+      "preset": "debug",
+      "native_executable_sha256": "26a2d71c5d3e68ae0247508ff63f7612dc1a098f8f568658cae7930e44bacdea",
+      "calls": 390,
+      "effect_calls": 12,
+      "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b",
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-pw2r5y9e/report.json",
+      "sha256": "ccba24b80ee0a399a035cb7022c9f2a3be45cd28d4c2014c373c0b7dc554571d",
+      "preset": "release",
+      "native_executable_sha256": "cc6b8b044b7ed7ecb7dcde1134e1bd15a3fc9d1f53f09d5412c42981e439c14c",
+      "calls": 390,
+      "effect_calls": 12,
+      "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b",
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-1ix8gwf4/report.json",
+      "sha256": "fe72edf8ded2f5acddde2c1858621cfcc6a148bceae4f1ad72bbee559ccf989f",
+      "preset": "sanitize",
+      "native_executable_sha256": "2df9a4feac29dce7320af968b91e9ceb1cbfe48269d148f88c4432859284299b",
+      "calls": 390,
+      "effect_calls": 12,
+      "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b",
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    }
+  ],
+  "sanitized_regressions": [
+    {
+      "name": "input",
+      "path": "local/generated/input-comparison/run-n5vped86/report.json",
+      "sha256": "aa74bc79d3ee929b4c66bfd142f2e2685e57e046826ca7b71a78d8a046b43ea0",
+      "preset": "sanitize",
+      "cases": 1024,
+      "native_executable_sha256": "2df9a4feac29dce7320af968b91e9ceb1cbfe48269d148f88c4432859284299b"
+    },
+    {
+      "name": "banner",
+      "path": "local/generated/banner-comparison/run-l1fr18cx/report.json",
+      "sha256": "e875b7cee13df7ed7dac1bbc4e0c77071b88fd72108157abf988139e42370b3a",
+      "preset": "sanitize",
+      "cases": 66880,
+      "native_executable_sha256": "2df9a4feac29dce7320af968b91e9ceb1cbfe48269d148f88c4432859284299b"
+    },
+    {
+      "name": "reversal",
+      "path": "local/generated/reversal-comparison/run-ryy0b9gn/report.json",
+      "sha256": "039c4cf19e9855b4b3b6355f18ce999e640b2b63aecc7becac4143fae13f5120",
+      "preset": "sanitize",
+      "cases": 203586,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "name": "presentation",
+      "path": "local/generated/presentation-comparison/run-60u9z_u9/report.json",
+      "sha256": "c610d87cd79274471d4bf0f77a5601f2a979de985da7cb78a28e3030f4cde668",
+      "preset": "sanitize",
+      "cases": 347320,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "name": "actor",
+      "path": "local/generated/actor-comparison/run-z7em8_3h/report.json",
+      "sha256": "b6a17848f5ada56b97a518df909ea75d16c4bf8c2191a96f524af6e39514f113",
+      "preset": "sanitize",
+      "cases": 152093,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "name": "dispatch",
+      "path": "local/generated/dispatch-comparison/run-rnh2l9do/report.json",
+      "sha256": "2ee3333d8d5c93024d360229443b1246dbfba267ddec4fa8780a0ba18e142e90",
+      "preset": "sanitize",
+      "cases": 138149,
+      "native_executable_sha256": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d"
+    },
+    {
+      "name": "airborne",
+      "path": "local/generated/airborne-comparison/run-9wgvnozc/report.json",
+      "sha256": "7cef3a5940911fa79e08c19be48125521a96b880fe46298a8f18ab8920706c74",
+      "preset": "sanitize",
+      "cases": 415940,
+      "native_executable_sha256": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1"
+    },
+    {
+      "name": "movement",
+      "path": "local/generated/movement-comparison/run-ab0d5wr6/report.json",
+      "sha256": "3d1260e1ca3fafea777d75788dab6d2c358fc27dcf47d864a9f43db32fc57dca",
+      "preset": "sanitize",
+      "cases": 282233,
+      "native_executable_sha256": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b"
+    },
+    {
+      "name": "terrain",
+      "path": "local/generated/terrain-comparison/run-migrqjxc/report.json",
+      "sha256": "195b236df8843026bf8348a4e23de6e4018eac521d01e027f219c288fb9e2b7e",
+      "preset": "sanitize",
+      "cases": 614436,
+      "native_executable_sha256": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4"
+    }
+  ],
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "reference_build": {
+    "revision": "313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd",
+    "cpu": "68000",
+    "harness_sha256": "2979ad2da7849747f0052e7e70eb2533015fe44e91821a8c50abf336ddf3ab8e",
+    "builder_sha256": "737052db72a40265d370cb5cbb426846f2f1fdc8c1a17c72bd20e52499e765f5",
+    "lock_sha256": "735faf479622036ebd6f5f4975664cfa7114f27147fac5dc22af3cc8fb0574d9",
+    "executable_sha256": "8bbcf9db6be2639a22c66edec05334445787ce843dfa61409b56c39759099d50"
+  },
+  "rejections": [
+    {
+      "kind": "native",
+      "reason": "capacity",
+      "stderr": "trail allocation exhausted\n"
+    },
+    {
+      "kind": "reference",
+      "reason": "capacity",
+      "stderr": "reference unsupported code boundary 00f9d0\n"
+    },
+    {
+      "kind": "native",
+      "reason": "owner",
+      "stderr": "trail owner unavailable\n"
+    },
+    {
+      "kind": "reference",
+      "reason": "owner",
+      "stderr": "reference read outside declared fixture\n"
+    },
+    {
+      "kind": "native",
+      "reason": "callback",
+      "stderr": "unsupported trail emitter callback\n"
+    },
+    {
+      "kind": "reference",
+      "reason": "callback",
+      "stderr": "reference unsupported code boundary 00cafe\n"
+    }
+  ],
+  "coverage": {
+    "new_bytes": 288,
+    "new_instructions": 62,
+    "previously_classified_instructions_now_executed": [
+      "0x69bc",
+      "0x69c0"
+    ],
+    "fresh_ten_corpus_union": 1118,
+    "historical_cumulative_union": 1467,
+    "bounded_simulation_mappings": 102,
+    "partial_simulation_mappings": 1,
+    "indexed_functions": 112,
+    "classified_bytes": 25897,
+    "unclassified_bytes": 1022679
+  },
+  "ordinary_reference": {
+    "path": "local/generated/trail-movie/run-_gh9gmsm/report.json",
+    "sha256": "9190f5539c4d6c7b3ba4b312a1b64346693e2f5d4ee3dc663ac4fce96d88d53e",
+    "start": 1066,
+    "end": 1100,
+    "classification": "fresh ordinary unchanged movie; no edits; owned workers",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "sources": {
+      "tools/genesis_trail_capture.py": "5c258a44e9119ad7df47970d8ffdb39984c5e664a19ceb9585222de1febd82d6",
+      "tools/genesis_actor_capture.py": "f5ff283c1c74b64ed2ade670ef649107052840e5af9b1bf4f35e674933855206",
+      "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+      "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c"
+    },
+    "observation": {
+      "emitter_calls": 34,
+      "spawns": 8,
+      "random_calls": 16,
+      "random_writes": 64,
+      "emitter_writes": 533,
+      "particle_calls": 97,
+      "complete_lifetimes": 4,
+      "partial_lifetimes": 4,
+      "same_frame_births": 2,
+      "routine_events": 8183,
+      "native_events": 52895
+    },
+    "endpoint": {
+      "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "identity": {
+      "romSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "effectiveRomSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "romPatches": [],
+      "romBytes": 1048576,
+      "settings": {
+        "DrawBGA": true,
+        "DrawBGB": true,
+        "DrawBGW": true,
+        "DrawObj": true,
+        "PadScreen320": false,
+        "Backdrop": false,
+        "NoSpriteLimit": false
+      },
+      "syncSettings": {
+        "UseSixButton": false,
+        "ControlTypeLeft": 1,
+        "ControlTypeRight": 1,
+        "Region": 1,
+        "ForceVDP": 0,
+        "LoadBIOS": false,
+        "Overscan": 0,
+        "GGExtra": false,
+        "SMSFMSoundChip": 1,
+        "GenesisFMSoundChip": 0,
+        "Filter": 1,
+        "LowPassRange": 26214,
+        "LowFreq": 880,
+        "HighFreq": 5000,
+        "LowGain": 1.0,
+        "MidGain": 1.0,
+        "HighGain": 1.0,
+        "BackdropColor": 4294902015,
+        "SpritesAlwaysOnTop": false
+      },
+      "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+      "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+      "full_identity_canonical_json_sha256": "6e80664b506a41e894ec483e595f6f82ec49822a14b7fd92d2a3f8a21f7b644a"
+    }
+  },
+  "source_hashes": {
+    "CMakeLists.txt": "2fdea3863c3941b443ec5261473be8f2f261099a1e61b6399e74b86ff13c112d",
+    "src/sim/trail.hpp": "40b46a347ea8ed62bdb6a152ee0c0426b601b6fb0552f2077fd765e8124e298f",
+    "src/sim/trail.cpp": "7dcecf48fc29a5c3b1e72a906cd05ec742eafa3abdefcd410e403f846fa45500",
+    "tools/native/trail_main.cpp": "8fdf6cf97491767788f209b2fd155c62f7384b3aac75684a16c510ff206e26ce",
+    "tools/trail_compare.py": "51eb14de6101831621fe2b064c1f2d941e11b5478152bc0f5dce58b3ee3a2c84",
+    "tools/genesis_trail_capture.py": "5c258a44e9119ad7df47970d8ffdb39984c5e664a19ceb9585222de1febd82d6",
+    "tests/unit/trail_test.cpp": "6a0f8b24248376163d632390eca75a7b85ada1d8c5ac703445a7f6981202a012",
+    "tests/native_trail.py": "82b88c617a6c5b703fe70fd3c5aaee08a1e0dd6847fb2829f46511c13e4cb19a",
+    "tests/trail_cases.py": "edc5087d5b406856827db2fddeb411dbd48fc4296a2e4b8a1c8961e01bb9fad1",
+    "tests/test_trail.py": "0a3be4be00f3e0fc5eb65b62f0f9079cde47f8655b8c72840472a6591c7a6deb",
+    "re/trail_step.json": "4a3d8cddc38386da49378a68e0c9088dc3fe0532c592b056262988c360f6e394",
+    "re/reference_scripts/terrain_reference.c": "2979ad2da7849747f0052e7e70eb2533015fe44e91821a8c50abf336ddf3ab8e"
+  },
+  "tests": [
+    {
+      "preset": "debug",
+      "python_passed": 187,
+      "python_skipped": 0,
+      "ctest_passed": 36,
+      "ctest_failed": 0,
+      "log": {
+        "path": "local/generated/allocator-client-research/test-debug.log",
+        "sha256": "44652692d59f1db685e51adff5acaac6d041d0553216b9c2a6ac638dcb7c4bdf"
+      }
+    },
+    {
+      "preset": "release",
+      "python_passed": 187,
+      "python_skipped": 0,
+      "ctest_passed": 36,
+      "ctest_failed": 0,
+      "log": {
+        "path": "local/generated/allocator-client-research/test-release.log",
+        "sha256": "13eddb3ced28b791c78061d0c42f94fdbe24195821bf909f65ac6134beb36840"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python_passed": 187,
+      "python_skipped": 0,
+      "ctest_passed": 36,
+      "ctest_failed": 0,
+      "log": {
+        "path": "local/generated/allocator-client-research/test-sanitize.log",
+        "sha256": "88900dcfa48b03f80b367931673c5f9570752c0dde90a5ed9b79354744412ac9"
+      }
+    }
+  ],
+  "discovery_failures": [
+    "First hook request supplied registers as an array; protocol requires Boolean. Rejected before trace; corrected final capture passes.",
+    "Static probe initially expected 52 F76C instructions; primary decoding establishes 59. Corrected closed graph passes.",
+    "GNU decoder rejects absolute EOR.W at E932. Five compatible GNU checks pass; primary decoding and original execution cover E932."
+  ],
+  "not_rerun": [
+    "Actions, transition, coasting, tally, palette, bonus, exit-tally and score corpora",
+    "Other historical/controlled captures and whole-movie selector survey",
+    "SDL3 development availability"
+  ],
+  "limitations": [
+    "Initializer 6D22 and alternate RNG E948 unimplemented",
+    "Only newly spawned trail particle lifetimes compared; existing live particles require initial seeding in future integration",
+    "Other active handlers 7CA4/7808/7A88 and service 78EE require audit before mixed-pool replay",
+    "Canonical endpoint hashes cover declared exposed state, not every hidden device bit",
+    "Movie native comparisons reuse one final original capture; older P1 regressions reuse historical original evidence",
+    "No native boot, renderer or audio driver; no full playability"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "runtime_binaries_verified": 104,
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "owned_workers_remaining": 0,
+    "initial_manifest": {
+      "path": "local/generated/allocator-client-research/preservation.json",
+      "sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf"
+    },
+    "final_manifest": {
+      "path": "local/generated/allocator-client-research/preservation-final.json",
+      "sha256": "116a3422126c4ade48e97cba6e943cd8d36a744456ee7689a94ad8613f414874"
+    }
+  }
+}

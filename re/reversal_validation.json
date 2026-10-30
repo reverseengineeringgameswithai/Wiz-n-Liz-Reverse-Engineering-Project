@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "starting_commit": "f8ce9e423c2131216e2f2abc83c1075c33797a59",
+  "reversal_presets": {
+    "debug": {
+      "report": "local/generated/reversal-comparison/run-i82od91y/report.json",
+      "report_sha256": "df2ca8b27546aa6bf04e96e12168127700a4d32d8a724b273e6d8fa51e3a86d6",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "independent_goldens": 10,
+      "rejection_checks": 4,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 1670,
+          "invocations": 1670,
+          "native_output_sha256": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5"
+        },
+        {
+          "name": "scheduled-flat",
+          "cases": 192,
+          "invocations": 2592,
+          "native_output_sha256": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254"
+        },
+        {
+          "name": "effects",
+          "cases": 197372,
+          "invocations": 265438,
+          "native_output_sha256": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 768,
+          "invocations": 768,
+          "native_output_sha256": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 3584,
+          "invocations": 3584,
+          "native_output_sha256": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/reversal-comparison/run-wr79knfa/report.json",
+      "report_sha256": "1d5d2a1968be557b265aabbf5f79949d80967dffdeba45ffc678741d43e5b62e",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "independent_goldens": 10,
+      "rejection_checks": 4,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 1670,
+          "invocations": 1670,
+          "native_output_sha256": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5"
+        },
+        {
+          "name": "scheduled-flat",
+          "cases": 192,
+          "invocations": 2592,
+          "native_output_sha256": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254"
+        },
+        {
+          "name": "effects",
+          "cases": 197372,
+          "invocations": 265438,
+          "native_output_sha256": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 768,
+          "invocations": 768,
+          "native_output_sha256": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 3584,
+          "invocations": 3584,
+          "native_output_sha256": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/reversal-comparison/run-v9osn6nw/report.json",
+      "report_sha256": "4aa80625a96c3d39339b97fa6d7c7917f4f94ad597f8cc9a673426fd55866354",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "independent_goldens": 10,
+      "rejection_checks": 4,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 1670,
+          "invocations": 1670,
+          "native_output_sha256": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5"
+        },
+        {
+          "name": "scheduled-flat",
+          "cases": 192,
+          "invocations": 2592,
+          "native_output_sha256": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254"
+        },
+        {
+          "name": "effects",
+          "cases": 197372,
+          "invocations": 265438,
+          "native_output_sha256": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 768,
+          "invocations": 768,
+          "native_output_sha256": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 3584,
+          "invocations": 3584,
+          "native_output_sha256": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-5etw9syh/report.json",
+      "report_sha256": "b11e93b06469d5509708bb72f12ffae1a1d98afe224aad4c68d4e85196419d6e",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-hrv0mo8n/report.json",
+      "report_sha256": "ddb452b5bbfea0d422c6b5e421492c6375130be359392a3e48e866822674a6ff",
+      "cases": 152093
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-zc7dyj0p/report.json",
+      "report_sha256": "72e0189ef13b6de7c43abbe350330b4e29039f251463187bdef914a77e83d280",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-a2dzjlqw/report.json",
+      "report_sha256": "a444ec09be45c027abb9fcdd247ff4156c80baea710e84b0a1ec9a0435938c29",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-9c7q_630/report.json",
+      "report_sha256": "9fb207d97aaf8e6e3a4d9d7a01dd89dcb9a8af69e56b1f90a28430204079416a",
+      "cases": 614436
+    }
+  },
+  "combined_instructions_visited": 856,
+  "ordinary_movie": {
+    "report": "local/generated/reversal-movie/run-llim31lv/report.json",
+    "report_sha256": "b2c8c61137d2f90d5be62428bd254deeb3b0435ec2168200b60d0584fa3f541e",
+    "actor_calls": 92,
+    "effect_calls": 24,
+    "windows": [
+      {
+        "start": 1048,
+        "end": 1090,
+        "hooked_hash": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+        "unhooked_hash": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+        "comparison": {
+          "ok": true,
+          "actor_calls": 42,
+          "effect_calls": 12,
+          "allocations": 1,
+          "effects": [
+            {
+              "address": "0xffff2c12",
+              "birth_frame": 1067,
+              "release_frame": 1078,
+              "calls": 12,
+              "command": [
+                "~/WizNLizPC/build/debug/wiznliz-actor",
+                "movie.scene",
+                "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/1048-1090/scene.bin",
+                "movie.bank",
+                "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/1048-1090/bank.bin",
+                "--effect-sequence"
+              ],
+              "output_sha256": "4cd6b12797f36f7f5bf4344bdb80dff2cbf1cf28b3eef580279adb3e7f5c885d"
+            }
+          ],
+          "actor_command": [
+            "~/WizNLizPC/build/debug/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/1048-1090/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/1048-1090/bank.bin",
+            "--reversal-sequence"
+          ],
+          "actor_output_sha256": "6ebd1812e0e834fabdbf93d848a666492f08514906cbcc9a1b3ae3af69a622a1",
+          "handler_hits": {
+            "0xa88e": 5,
+            "0xaaea": 11,
+            "0xab04": 15,
+            "0xa546": 1,
+            "0xa9b2": 18,
+            "0xa408": 5
+          },
+          "callback_hits": {
+            "0xa93a": 2,
+            "0xa9da": 1
+          },
+          "sound_requests": 2
+        }
+      },
+      {
+        "start": 2170,
+        "end": 2220,
+        "hooked_hash": "8fb37f99c7e2874cd0d17e656be8fa49cb1644833d99dddd5aa9d7cd7ee0c4b9",
+        "unhooked_hash": "8fb37f99c7e2874cd0d17e656be8fa49cb1644833d99dddd5aa9d7cd7ee0c4b9",
+        "comparison": {
+          "ok": true,
+          "actor_calls": 50,
+          "effect_calls": 12,
+          "allocations": 1,
+          "effects": [
+            {
+              "address": "0xffff2a3e",
+              "birth_frame": 2189,
+              "release_frame": 2200,
+              "calls": 12,
+              "command": [
+                "~/WizNLizPC/build/debug/wiznliz-actor",
+                "movie.scene",
+                "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/2170-2220/scene.bin",
+                "movie.bank",
+                "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/2170-2220/bank.bin",
+                "--effect-sequence"
+              ],
+              "output_sha256": "50d6003c58b7875ff5e18d53636384d8f00b8ff3dc577ac865b504a7bf75c0c8"
+            }
+          ],
+          "actor_command": [
+            "~/WizNLizPC/build/debug/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/2170-2220/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/reversal-movie/run-llim31lv/2170-2220/bank.bin",
+            "--reversal-sequence"
+          ],
+          "actor_output_sha256": "18e16a185c09d36396c5cb72418cb6ec6ba83772fa8ef6047dc2914410091674",
+          "handler_hits": {
+            "0xa6c8": 20,
+            "0xa7ec": 4,
+            "0xaaea": 1,
+            "0xab04": 11,
+            "0xa546": 16
+          },
+          "callback_hits": {},
+          "sound_requests": 0
+        }
+      }
+    ]
+  },
+  "movie_regression": {
+    "report": "local/generated/movie-actor/run-0yo4xcu0/report.json",
+    "report_sha256": "3c2706c02f4bd4cd11c4a59f050aedf86e7f909326180b69e263775bf088a239",
+    "actor_calls": 507,
+    "presentation_calls": 507
+  },
+  "static_probe": {
+    "report": "local/generated/reversal-probe/run-oosmm8zi/report.json",
+    "report_sha256": "6e7eb5f2f979fb583190a2d14354be3fd138988dea1045b457e3b4d15c273cee",
+    "instructions": 856,
+    "gnu_checks": 5,
+    "gnu_limit": "installed m68k.gnu rejects immediate BCHG 086e; not claimed as corroborated by this decoder",
+    "new_instructions": 119,
+    "new_gnu_checks": 5,
+    "additional_gnu_limit": "Installed plugin misdecodes absolute MOVE.L opcode 23c8 at F9A0; this instruction is not GNU-corroborated."
+  },
+  "tests": {
+    "python": 129,
+    "skipped": 0,
+    "ctest_per_preset": 16,
+    "logs": {
+      "test-debug.log": {
+        "path": "local/generated/reversal-research/test-debug.log",
+        "sha256": "84546c2c49775c1689d30c097455e37a0fe00e857b910cfd2a5ef29088b91e05"
+      },
+      "test-release.log": {
+        "path": "local/generated/reversal-research/test-release.log",
+        "sha256": "04841e444558195e497efb05c58c1540a005fa63318f252488c2d46b1018e0b4"
+      },
+      "test-sanitize.log": {
+        "path": "local/generated/reversal-research/test-sanitize.log",
+        "sha256": "e7ad098f44c588aee61af2cb0251dac95adf5fe43562e8f7f0e3fa90c3ee030c"
+      }
+    }
+  },
+  "preservation": {
+    "path": "local/generated/reversal-research/preservation.json",
+    "sha256": "f92d9e4dc1e7aa64f31c046f6b338a7dc296a553fc75590086b897ca67ee1b7a"
+  },
+  "limits": [
+    "Reversal-only native store; no complete shared world allocation or owner destruction",
+    "Actor and effect calls, not whole frames; controls/parameters/scratch supplied by environment",
+    "No later +46 service, rendering or audio parity",
+    "A814 ordinary completion not observed in these movie windows; covered by authored/Musashi cases",
+    "No trace overflow accepted; declared covered-state hashes do not cover hidden device state",
+    "Native playability none; TASK-0010 remains in progress"
+  ]
+}

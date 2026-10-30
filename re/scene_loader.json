@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "rom_id": "ROM-LOCAL-0001",
+  "address_space": "rom_file_offset",
+  "interval": "[start,end)",
+  "finding_id": "FIND-0009",
+  "regions": [
+    {
+      "id": "companion_consumer",
+      "start": 15892,
+      "end_exclusive": 16180,
+      "sha256": "3eb22a7131b0d2cc45f610884938309a6b18433b75f96972531f0afc576529d7"
+    },
+    {
+      "id": "map_initializer",
+      "start": 16180,
+      "end_exclusive": 16224,
+      "sha256": "fcb1679ac2b0e4ff5d1456ecdb930f6ba32610508758a27ba0e824eb2a354b8e"
+    },
+    {
+      "id": "column_reader_fragment",
+      "start": 16492,
+      "end_exclusive": 16632,
+      "sha256": "4c244114b948f385e4e2373250d97eb700271c5481d6fbe069df269515a8dbb5"
+    }
+  ],
+  "descriptor_index": 0,
+  "companion_slot": 0,
+  "pointer_field": 209920,
+  "wrapper_offset": 298964,
+  "block_id": "scene.companion.0001",
+  "base_bank_id": "rnc.unclassified.0001",
+  "map_shape": [
+    128,
+    32
+  ],
+  "runtime_observed": false
+}

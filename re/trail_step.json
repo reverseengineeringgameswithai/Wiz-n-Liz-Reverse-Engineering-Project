@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "trail_emitter",
+      "start": 28044,
+      "end_exclusive": 28210,
+      "sha256": "673184827f521ef5a071c1de89c41132d96d90e50d49bc1c087dfb03ccfaea7a",
+      "instruction_count": 39,
+      "execution_compared": true
+    },
+    {
+      "id": "trail_spawn_and_return",
+      "start": 23194,
+      "end_exclusive": 23268,
+      "sha256": "3c77ceefaad51530d70df8dcfe73054b800ec26c6cfe8f02e5d4f1109165d919",
+      "instruction_count": 13,
+      "execution_compared": true
+    },
+    {
+      "id": "random_e918",
+      "start": 59672,
+      "end_exclusive": 59720,
+      "sha256": "a0bf5eac4985940adb59f558590f9f0baa3ade92b878e24c8a89b8f1a1c8965b",
+      "instruction_count": 10,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 28052,
+      "target": 28126
+    },
+    {
+      "pc": 28068,
+      "target": 28126
+    },
+    {
+      "pc": 28080,
+      "target": 23194
+    },
+    {
+      "pc": 28084,
+      "target": 59672
+    },
+    {
+      "pc": 28098,
+      "target": 59672
+    },
+    {
+      "pc": 23194,
+      "target": 63892
+    }
+  ],
+  "dependencies": [
+    "presentation_step",
+    "reversal_step",
+    "effect_session"
+  ],
+  "contract": "6D8C handler and bounded scheduled phase; successful 5A9A allocation/init; E918 state/mirror recurrence; particle active/presentation/release and return-only handler/service. Typed owner resolution and explicit capacity input; no shared-pool order/capacity, initializer 6D22, general world/RNG scheduling or whole-frame parity. Exhaustion F9D0 and unknown emitter callback reject."
+}

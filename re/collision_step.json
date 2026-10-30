@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "collision_miss_service",
+      "start": 30958,
+      "end_exclusive": 30992,
+      "sha256": "95e9bc65c657f81874371b7be7951cdc1476d9d18675527f593b03f44299e3e4",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "control_overlap",
+      "start": 44126,
+      "end_exclusive": 44188,
+      "sha256": "58ffa2555e60ef372127318bebe4e1b25f3b8c576966013d90e8385120ab2acc",
+      "instruction_count": 19,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [],
+  "dependencies": [
+    "presentation_step",
+    "mixed_session",
+    "actor_dispatch"
+  ],
+  "contract": "AC5E unsigned inclusive overlap after word wrap and X mask. 78EE selects P1 control tracking first, then P2 only after a miss and a nonzero full-word FF33E2 gate. Fixed RTS handler and optional active/presentation dispatch. Hit7910, invoked callbacks and missing consumed secondary input reject transactionally. No P2 producer or hit implementation."
+}

@@ -1,0 +1,886 @@
+{
+  "schema_version": 1,
+  "starting_commit": "7e6d7fa1030ceccba044858cab1c01edc885ee71",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "Stateless three-button conversion and one-seed P1 movement session in movie [3100,3200); physical held sets only after seed; no whole-world/frame/render/audio claim.",
+  "input_presets": {
+    "debug": {
+      "report": "local/generated/input-comparison/run-02dzxjsb/report.json",
+      "report_sha256": "966dd42a0d6a0360b55c145f8c943df0ddbb81351ec7db3aa3f45da06e804505",
+      "cases": 1024,
+      "raw_bytes": 256,
+      "fills": [
+        0,
+        85,
+        170,
+        255
+      ],
+      "visited": [
+        85582,
+        85584,
+        85588,
+        85592,
+        85598,
+        85600,
+        85606,
+        85608,
+        85612,
+        85618,
+        85620,
+        85624,
+        85630,
+        85632,
+        85638,
+        85640,
+        85644,
+        85650,
+        85652,
+        85656,
+        85662,
+        85664,
+        85668,
+        85674,
+        85676,
+        85680,
+        85686,
+        85688,
+        85692,
+        85698,
+        85700,
+        85704,
+        85708,
+        85712,
+        85716,
+        85720,
+        85724,
+        85728,
+        85732,
+        85736,
+        85740,
+        85744,
+        85748,
+        85752,
+        85756,
+        85760,
+        85764,
+        85768,
+        85774,
+        85778,
+        85782,
+        85786,
+        85790,
+        85794
+      ],
+      "output_sha256": "024b856a815c4c21045c87903e34b1b6acd161b50cdf64195ba334c3b860a9ca",
+      "static_sha256": "ffc4bc8a8eb2a67b580dc0ed5d7a7bd3e906a6fd59866edbd7ea3f59cf95a0cd"
+    },
+    "release": {
+      "report": "local/generated/input-comparison/run-x4u6xw5j/report.json",
+      "report_sha256": "c41cfd3ebd5864e855854c99ca1a5334bd67cd14d2ddeb68e669167dbfc72c94",
+      "cases": 1024,
+      "raw_bytes": 256,
+      "fills": [
+        0,
+        85,
+        170,
+        255
+      ],
+      "visited": [
+        85582,
+        85584,
+        85588,
+        85592,
+        85598,
+        85600,
+        85606,
+        85608,
+        85612,
+        85618,
+        85620,
+        85624,
+        85630,
+        85632,
+        85638,
+        85640,
+        85644,
+        85650,
+        85652,
+        85656,
+        85662,
+        85664,
+        85668,
+        85674,
+        85676,
+        85680,
+        85686,
+        85688,
+        85692,
+        85698,
+        85700,
+        85704,
+        85708,
+        85712,
+        85716,
+        85720,
+        85724,
+        85728,
+        85732,
+        85736,
+        85740,
+        85744,
+        85748,
+        85752,
+        85756,
+        85760,
+        85764,
+        85768,
+        85774,
+        85778,
+        85782,
+        85786,
+        85790,
+        85794
+      ],
+      "output_sha256": "024b856a815c4c21045c87903e34b1b6acd161b50cdf64195ba334c3b860a9ca",
+      "static_sha256": "ffc4bc8a8eb2a67b580dc0ed5d7a7bd3e906a6fd59866edbd7ea3f59cf95a0cd"
+    },
+    "sanitize": {
+      "report": "local/generated/input-comparison/run-bnzduuhb/report.json",
+      "report_sha256": "3ab94eecc9493adf2e652ba834c1f69acc084441135daa666c70ae44730dd1dc",
+      "cases": 1024,
+      "raw_bytes": 256,
+      "fills": [
+        0,
+        85,
+        170,
+        255
+      ],
+      "visited": [
+        85582,
+        85584,
+        85588,
+        85592,
+        85598,
+        85600,
+        85606,
+        85608,
+        85612,
+        85618,
+        85620,
+        85624,
+        85630,
+        85632,
+        85638,
+        85640,
+        85644,
+        85650,
+        85652,
+        85656,
+        85662,
+        85664,
+        85668,
+        85674,
+        85676,
+        85680,
+        85686,
+        85688,
+        85692,
+        85698,
+        85700,
+        85704,
+        85708,
+        85712,
+        85716,
+        85720,
+        85724,
+        85728,
+        85732,
+        85736,
+        85740,
+        85744,
+        85748,
+        85752,
+        85756,
+        85760,
+        85764,
+        85768,
+        85774,
+        85778,
+        85782,
+        85786,
+        85790,
+        85794
+      ],
+      "output_sha256": "024b856a815c4c21045c87903e34b1b6acd161b50cdf64195ba334c3b860a9ca",
+      "static_sha256": "ffc4bc8a8eb2a67b580dc0ed5d7a7bd3e906a6fd59866edbd7ea3f59cf95a0cd"
+    }
+  },
+  "session_presets": {
+    "debug": {
+      "report": "local/generated/session-movie/run-p4li2_j4/report.json",
+      "report_sha256": "19c881730f37043e629e4b4a0e130cf6bb3cec95013db6f41d2f4752151aef13",
+      "cadence": {
+        "video_frames": 100,
+        "actor_invocations": 100,
+        "producer_invocations": 600,
+        "input_polls": 800,
+        "inactive_timer_invocations": 100,
+        "scratch_writes": 892
+      },
+      "comparison": {
+        "calls": 100,
+        "command": [
+          "~/WizNLizPC/build/debug/wiznliz-session",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/session-movie/run-p4li2_j4/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/session-movie/run-p4li2_j4/bank.bin"
+        ],
+        "seed_fields": 32,
+        "button_rows": 100,
+        "per_call_environment_feeds": 0,
+        "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+        "sound_requests": 4,
+        "handlers": {
+          "0xa408": 25,
+          "0xaaea": 22,
+          "0xab04": 56,
+          "0xa4ec": 15,
+          "0xa546": 7
+        }
+      },
+      "endpoint": {
+        "hooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+        "unhooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      },
+      "recipe": {
+        "pcs": [
+          63740,
+          63744,
+          63748,
+          63750,
+          1035058,
+          41704,
+          41856,
+          42254,
+          42580,
+          42868,
+          43322,
+          43028,
+          43482,
+          63800,
+          41366,
+          43600,
+          43754,
+          43780,
+          41992,
+          42310,
+          42696,
+          43150,
+          41406,
+          41542,
+          41708,
+          41860,
+          42220,
+          42548,
+          41598,
+          42988,
+          43442,
+          40080,
+          40230,
+          40328,
+          40396,
+          75334,
+          28942,
+          28966,
+          25386,
+          20936,
+          21026,
+          20996,
+          20786,
+          20872,
+          40022,
+          40270,
+          40260,
+          40388,
+          972518,
+          972564,
+          63734,
+          63754,
+          63756,
+          63784,
+          63798,
+          24378,
+          2028,
+          85582,
+          85794,
+          85564,
+          78938,
+          79024,
+          60402,
+          39390,
+          39396,
+          39402
+        ],
+        "returns": false,
+        "registers": true,
+        "maxEvents": 20000,
+        "ranges": [
+          {
+            "label": "actor",
+            "domain": "68K RAM",
+            "offset": 6836,
+            "length": 78
+          },
+          {
+            "label": "control",
+            "domain": "68K RAM",
+            "offset": 1680,
+            "length": 112
+          },
+          {
+            "label": "scratch",
+            "domain": "68K RAM",
+            "offset": 17474,
+            "length": 4
+          },
+          {
+            "label": "gate",
+            "domain": "68K RAM",
+            "offset": 3862,
+            "length": 2
+          },
+          {
+            "label": "sound",
+            "domain": "68K RAM",
+            "offset": 2718,
+            "length": 8
+          },
+          {
+            "label": "stack",
+            "domain": "68K RAM",
+            "register": "M68K A7",
+            "offset": 0,
+            "length": 4
+          },
+          {
+            "label": "action_globals",
+            "domain": "68K RAM",
+            "offset": 13272,
+            "length": 10
+          },
+          {
+            "label": "mailbox",
+            "domain": "68K RAM",
+            "offset": 2774,
+            "length": 8
+          },
+          {
+            "label": "tracking_selector",
+            "domain": "68K RAM",
+            "offset": 2102,
+            "length": 2
+          },
+          {
+            "label": "control2",
+            "domain": "68K RAM",
+            "offset": 2104,
+            "length": 112
+          },
+          {
+            "label": "transition",
+            "domain": "68K RAM",
+            "offset": 2960,
+            "length": 20
+          }
+        ]
+      },
+      "sources": {
+        "tools/genesis_session_capture.py": "518458363eedfdb059d773641706c0126d806d95d670b7ecfc56d739cddd26e4",
+        "tools/genesis_dispatch_capture.py": "0989d233832bbe1a60abc51b4e3668d25e557f782c8fbf3a1728dcb509c1e1d8",
+        "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c",
+        "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8"
+      }
+    },
+    "release": {
+      "report": "local/generated/session-movie/run-mz7fb16k/report.json",
+      "report_sha256": "38f0fc96d13b7783a9f7929ae3c6b89a7c267d67cb458f2215147a0803abf729",
+      "cadence": {
+        "video_frames": 100,
+        "actor_invocations": 100,
+        "producer_invocations": 600,
+        "input_polls": 800,
+        "inactive_timer_invocations": 100,
+        "scratch_writes": 892
+      },
+      "comparison": {
+        "calls": 100,
+        "command": [
+          "~/WizNLizPC/build/release/wiznliz-session",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/session-movie/run-mz7fb16k/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/session-movie/run-mz7fb16k/bank.bin"
+        ],
+        "seed_fields": 32,
+        "button_rows": 100,
+        "per_call_environment_feeds": 0,
+        "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+        "sound_requests": 4,
+        "handlers": {
+          "0xa408": 25,
+          "0xaaea": 22,
+          "0xab04": 56,
+          "0xa4ec": 15,
+          "0xa546": 7
+        }
+      },
+      "endpoint": {
+        "hooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+        "unhooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      },
+      "recipe": {
+        "pcs": [
+          63740,
+          63744,
+          63748,
+          63750,
+          1035058,
+          41704,
+          41856,
+          42254,
+          42580,
+          42868,
+          43322,
+          43028,
+          43482,
+          63800,
+          41366,
+          43600,
+          43754,
+          43780,
+          41992,
+          42310,
+          42696,
+          43150,
+          41406,
+          41542,
+          41708,
+          41860,
+          42220,
+          42548,
+          41598,
+          42988,
+          43442,
+          40080,
+          40230,
+          40328,
+          40396,
+          75334,
+          28942,
+          28966,
+          25386,
+          20936,
+          21026,
+          20996,
+          20786,
+          20872,
+          40022,
+          40270,
+          40260,
+          40388,
+          972518,
+          972564,
+          63734,
+          63754,
+          63756,
+          63784,
+          63798,
+          24378,
+          2028,
+          85582,
+          85794,
+          85564,
+          78938,
+          79024,
+          60402,
+          39390,
+          39396,
+          39402
+        ],
+        "returns": false,
+        "registers": true,
+        "maxEvents": 20000,
+        "ranges": [
+          {
+            "label": "actor",
+            "domain": "68K RAM",
+            "offset": 6836,
+            "length": 78
+          },
+          {
+            "label": "control",
+            "domain": "68K RAM",
+            "offset": 1680,
+            "length": 112
+          },
+          {
+            "label": "scratch",
+            "domain": "68K RAM",
+            "offset": 17474,
+            "length": 4
+          },
+          {
+            "label": "gate",
+            "domain": "68K RAM",
+            "offset": 3862,
+            "length": 2
+          },
+          {
+            "label": "sound",
+            "domain": "68K RAM",
+            "offset": 2718,
+            "length": 8
+          },
+          {
+            "label": "stack",
+            "domain": "68K RAM",
+            "register": "M68K A7",
+            "offset": 0,
+            "length": 4
+          },
+          {
+            "label": "action_globals",
+            "domain": "68K RAM",
+            "offset": 13272,
+            "length": 10
+          },
+          {
+            "label": "mailbox",
+            "domain": "68K RAM",
+            "offset": 2774,
+            "length": 8
+          },
+          {
+            "label": "tracking_selector",
+            "domain": "68K RAM",
+            "offset": 2102,
+            "length": 2
+          },
+          {
+            "label": "control2",
+            "domain": "68K RAM",
+            "offset": 2104,
+            "length": 112
+          },
+          {
+            "label": "transition",
+            "domain": "68K RAM",
+            "offset": 2960,
+            "length": 20
+          }
+        ]
+      },
+      "sources": {
+        "tools/genesis_session_capture.py": "518458363eedfdb059d773641706c0126d806d95d670b7ecfc56d739cddd26e4",
+        "tools/genesis_dispatch_capture.py": "0989d233832bbe1a60abc51b4e3668d25e557f782c8fbf3a1728dcb509c1e1d8",
+        "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c",
+        "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8"
+      }
+    },
+    "sanitize": {
+      "report": "local/generated/session-movie/run-ez0yj708/report.json",
+      "report_sha256": "462a4a39764359da0a1b985ec3c2184dd21996115b5099e3c51aa6c246d4c1c2",
+      "cadence": {
+        "video_frames": 100,
+        "actor_invocations": 100,
+        "producer_invocations": 600,
+        "input_polls": 800,
+        "inactive_timer_invocations": 100,
+        "scratch_writes": 892
+      },
+      "comparison": {
+        "calls": 100,
+        "command": [
+          "~/WizNLizPC/build/sanitize/wiznliz-session",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/session-movie/run-ez0yj708/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/session-movie/run-ez0yj708/bank.bin"
+        ],
+        "seed_fields": 32,
+        "button_rows": 100,
+        "per_call_environment_feeds": 0,
+        "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+        "sound_requests": 4,
+        "handlers": {
+          "0xa408": 25,
+          "0xaaea": 22,
+          "0xab04": 56,
+          "0xa4ec": 15,
+          "0xa546": 7
+        }
+      },
+      "endpoint": {
+        "hooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+        "unhooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      },
+      "recipe": {
+        "pcs": [
+          63740,
+          63744,
+          63748,
+          63750,
+          1035058,
+          41704,
+          41856,
+          42254,
+          42580,
+          42868,
+          43322,
+          43028,
+          43482,
+          63800,
+          41366,
+          43600,
+          43754,
+          43780,
+          41992,
+          42310,
+          42696,
+          43150,
+          41406,
+          41542,
+          41708,
+          41860,
+          42220,
+          42548,
+          41598,
+          42988,
+          43442,
+          40080,
+          40230,
+          40328,
+          40396,
+          75334,
+          28942,
+          28966,
+          25386,
+          20936,
+          21026,
+          20996,
+          20786,
+          20872,
+          40022,
+          40270,
+          40260,
+          40388,
+          972518,
+          972564,
+          63734,
+          63754,
+          63756,
+          63784,
+          63798,
+          24378,
+          2028,
+          85582,
+          85794,
+          85564,
+          78938,
+          79024,
+          60402,
+          39390,
+          39396,
+          39402
+        ],
+        "returns": false,
+        "registers": true,
+        "maxEvents": 20000,
+        "ranges": [
+          {
+            "label": "actor",
+            "domain": "68K RAM",
+            "offset": 6836,
+            "length": 78
+          },
+          {
+            "label": "control",
+            "domain": "68K RAM",
+            "offset": 1680,
+            "length": 112
+          },
+          {
+            "label": "scratch",
+            "domain": "68K RAM",
+            "offset": 17474,
+            "length": 4
+          },
+          {
+            "label": "gate",
+            "domain": "68K RAM",
+            "offset": 3862,
+            "length": 2
+          },
+          {
+            "label": "sound",
+            "domain": "68K RAM",
+            "offset": 2718,
+            "length": 8
+          },
+          {
+            "label": "stack",
+            "domain": "68K RAM",
+            "register": "M68K A7",
+            "offset": 0,
+            "length": 4
+          },
+          {
+            "label": "action_globals",
+            "domain": "68K RAM",
+            "offset": 13272,
+            "length": 10
+          },
+          {
+            "label": "mailbox",
+            "domain": "68K RAM",
+            "offset": 2774,
+            "length": 8
+          },
+          {
+            "label": "tracking_selector",
+            "domain": "68K RAM",
+            "offset": 2102,
+            "length": 2
+          },
+          {
+            "label": "control2",
+            "domain": "68K RAM",
+            "offset": 2104,
+            "length": 112
+          },
+          {
+            "label": "transition",
+            "domain": "68K RAM",
+            "offset": 2960,
+            "length": 20
+          }
+        ]
+      },
+      "sources": {
+        "tools/genesis_session_capture.py": "518458363eedfdb059d773641706c0126d806d95d670b7ecfc56d739cddd26e4",
+        "tools/genesis_dispatch_capture.py": "0989d233832bbe1a60abc51b4e3668d25e557f782c8fbf3a1728dcb509c1e1d8",
+        "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c",
+        "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8"
+      }
+    }
+  },
+  "sanitized_regressions": {
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-95hjxodl/report.json",
+      "report_sha256": "82684c8cda673865a39ff7e1ab52bad7caa88cd752ec92911c994832ec18a664",
+      "cases": 138149,
+      "visited_count": 422
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-o6vuingw/report.json",
+      "report_sha256": "ab16fd0dfe8acacd21707b7eee8e71164ebe7d35f8152816d70162d7e164de2c",
+      "cases": 347320,
+      "visited_count": 710
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-szs3zari/report.json",
+      "report_sha256": "f0a77636c2ca806b782afba603364aca610c8cbe0108da32b682fdcd91b1749c",
+      "cases": 152093,
+      "visited_count": 628
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-q27v_ng0/report.json",
+      "report_sha256": "19639b793645aa4f7a8563e5a668e67b5c3f8e04f88001dad7177e87a714a00e",
+      "cases": 415940,
+      "visited_count": 246
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-bh1on1jl/report.json",
+      "report_sha256": "a2a4b782b933df9c35910e0667b9b22ad3886fb0f3fb86fc593803cf2c68d351",
+      "cases": 282233,
+      "visited_count": 149
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-cx192xcq/report.json",
+      "report_sha256": "81997dff519280d959cc49332a41db13f3bb2a55ca1951f9a960cad6957d1146",
+      "cases": 614436,
+      "visited_count": 86
+    }
+  },
+  "fresh_successful_instruction_union": 864,
+  "historical_instruction_union_plus_new": 1332,
+  "historical_union_scope": "15 corpora from session 024 plus 54 new instructions; only six prior corpora rerun this pass.",
+  "not_rerun": [
+    "score/exit-tally/bonus/palette/tally/coasting/transition/actions/reversal full differential corpora",
+    "older full-machine replay/controlled captures",
+    "full movie selector survey",
+    "SDL3 platform availability"
+  ],
+  "decoder_limitation": "GNU plugin rejects immediate memory BTST at 14E58 and ignores CPU-model selection; 54 primary-decoded instructions are executed in pinned original 68000 reference; three other GNU checks pass.",
+  "preservation": {
+    "manifest": "local/generated/session-research/preservation.json",
+    "sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf",
+    "final_manifest": "local/generated/session-research/preservation-final.json",
+    "final_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf"
+  },
+  "test_suites": {
+    "debug": {
+      "log": "local/generated/session-research/tests-debug-final.log",
+      "sha256": "e336bfa4ea37a613dd327edc511aec863b7658f0c955fed4f2540531bb0476aa",
+      "python_tests": 179,
+      "python_skipped": 0,
+      "ctest_passed": 34,
+      "failures": 0
+    },
+    "release": {
+      "log": "local/generated/session-research/tests-release-final.log",
+      "sha256": "e4552f2881430db2c093bf6ce2a49babcd48205765551854a0ccfb47651f26fb",
+      "python_tests": 179,
+      "python_skipped": 0,
+      "ctest_passed": 34,
+      "failures": 0
+    },
+    "sanitize": {
+      "log": "local/generated/session-research/tests-sanitize-final.log",
+      "sha256": "e4bb77b3854fcee81006faa0f8c93864149a6a5ddcd04facf4f7cf8d68f360e4",
+      "python_tests": 179,
+      "python_skipped": 0,
+      "ctest_passed": 34,
+      "failures": 0
+    }
+  },
+  "owned_research_build": {
+    "report": "local/tools/terrain-reference/build.json",
+    "sha256": "7030029c9d4f45d349084359e4abe730490c5e5077d066ad16aa6718c67ec5a6"
+  },
+  "decoder_version": "rasm2 5.9.8 0 @ linux-x86-64\nbirth: git.5.9.8 2026-01-17__00:00:00\noptions: gpl release -O1 cs:5 cl:2 meson",
+  "workspace_checks": {
+    "vault": {
+      "report": "local/generated/session-research/vault-final.json",
+      "sha256": "c4e7111049ed5151bafccb4204ebca787973582d0ef3235bea20537dd08a197e",
+      "result": {
+        "notes_checked": 82,
+        "errors": [],
+        "ok": true
+      }
+    },
+    "hygiene": {
+      "report": "local/generated/session-research/hygiene-final.json",
+      "sha256": "af0f7a5f9e7352a1478ba3f9b3a7337083e9f7bec9896aea379caec772c44e13",
+      "result": {
+        "indexed_files_checked": 317,
+        "ok": true,
+        "errors": []
+      }
+    }
+  }
+}

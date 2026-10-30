@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "starting_commit": "7cdf6e9bf7aa006affe53ec432288f8e8903b16a",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "One-seed banner/input/P1 plus owned reversal pool and measured effect phase [700,1090); no whole shared-pool, world/frame, render/audio or boot equivalence.",
+  "original_capture": {
+    "report": "local/generated/effect-session/run-6gklchzd/report.json",
+    "report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f",
+    "endpoint": {
+      "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+      "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "cadence": {
+      "actor_calls": 390,
+      "producer_calls": 1170,
+      "input_polls": 1560,
+      "inactive_timers": 390,
+      "scratch_writes": 5350,
+      "native_events": 610828,
+      "routine_events": 102510
+    },
+    "sources": {
+      "tools/genesis_effect_session.py": "d8bf9c07be314cc25e4ace22d5061a77d44f675d21589908d6352755f0ee77d6",
+      "tools/genesis_session_capture.py": "262bb5a667b1f932383247ba515c89413e45db5176c2ab690e76de698123bd01",
+      "tools/genesis_reversal_capture.py": "b79549cb30ca920a59f5309cb17a4388f1c944e2fea6fa6176ca7bda494285c0",
+      "tools/genesis_dispatch_capture.py": "fde2ec9eaacb2134473adf8035f11e25c857904a1639c85b1a4ad8ac57e129a1",
+      "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+      "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c"
+    },
+    "loaded_identity_summary": {
+      "schemaVersion": 1,
+      "romSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "effectiveRomSha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+      "romPatches": [],
+      "romBytes": 1048576,
+      "runtimePath": "~/BizHawkOpenSource/Tools/GenesisDebug/local/runtime",
+      "binaries": {
+        "BizHawk.Emulation.Cores.dll": "c66e34d56d11b00eb6d09016ef08eef34597c5c49abc32dc00cf5f8c078a050d",
+        "BizHawk.Emulation.Common.dll": "9c2e38a87d77b179abc3664e25d2dadf9be2463d91f29855b59f73763c067a5a",
+        "GenesisWorker.exe": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+        "gpgx.wbx": "501946f3512831a0d0cb3f154fcf5a5a4a5bde432acce740c4ec810eb54bf66e",
+        "libwaterboxhost.so": "d3abe2dac8df6a9ec266ccf03c0646d20d14bdf84f60e962e416ab7bc2aa72b9"
+      },
+      "settings": {
+        "DrawBGA": true,
+        "DrawBGB": true,
+        "DrawBGW": true,
+        "DrawObj": true,
+        "PadScreen320": false,
+        "Backdrop": false,
+        "NoSpriteLimit": false
+      },
+      "syncSettings": {
+        "UseSixButton": false,
+        "ControlTypeLeft": 1,
+        "ControlTypeRight": 1,
+        "Region": 1,
+        "ForceVDP": 0,
+        "LoadBIOS": false,
+        "Overscan": 0,
+        "GGExtra": false,
+        "SMSFMSoundChip": 1,
+        "GenesisFMSoundChip": 0,
+        "Filter": 1,
+        "LowPassRange": 26214,
+        "LowFreq": 880,
+        "HighFreq": 5000,
+        "LowGain": 1.0,
+        "MidGain": 1.0,
+        "HighGain": 1.0,
+        "BackdropColor": 4294902015,
+        "SpritesAlwaysOnTop": false
+      },
+      "firmware": [],
+      "soundEmulated": true,
+      "deterministicRequested": true,
+      "build": {
+        "buildId": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+        "workerSha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414"
+      }
+    }
+  },
+  "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+  "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+  "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+  "native_sessions": {
+    "debug": {
+      "report": "local/generated/effect-session/run-fhe51vb6/report.json",
+      "report_sha256": "0696b173a1d59696af853f5050f11de7a07c18e0c583443352ffd6f05ee024b7",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "command": [
+          "~/WizNLizPC/build/debug/wiznliz-session",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/effect-session/run-fhe51vb6/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/effect-session/run-fhe51vb6/bank.bin",
+          "--reversal-session"
+        ],
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "observation": {
+        "owned_address": "0xffff2c12",
+        "birth_frame": 1067,
+        "release_frame": 1078,
+        "allocations": 1,
+        "effect_calls": 12,
+        "return_only_services": 12,
+        "owned_writes": 82,
+        "foreign_allocations": 38,
+        "foreign_releases": 36,
+        "observed_free_min": 47,
+        "observed_free_max": 53,
+        "allocation_scope": "One dedicated native P1 slot. Foreign shared-pool activity observed, not reproduced; no global capacity/order parity."
+      },
+      "sources": {
+        "tools/genesis_effect_session.py": "dd43812339aae16c363bd589fdeb0d827eee7e64a1c286e753b4e22218b9ff09",
+        "tools/genesis_session_capture.py": "262bb5a667b1f932383247ba515c89413e45db5176c2ab690e76de698123bd01",
+        "tools/genesis_reversal_capture.py": "b79549cb30ca920a59f5309cb17a4388f1c944e2fea6fa6176ca7bda494285c0",
+        "tools/genesis_dispatch_capture.py": "fde2ec9eaacb2134473adf8035f11e25c857904a1639c85b1a4ad8ac57e129a1",
+        "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+        "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c"
+      },
+      "native_session_sha256": "26a2d71c5d3e68ae0247508ff63f7612dc1a098f8f568658cae7930e44bacdea",
+      "native_provenance_sha256": "291051daa9b324cd91631fcee97f91cf1e6d44dd55c3b029dfa1c5eb96f99662"
+    },
+    "release": {
+      "report": "local/generated/effect-session/run-s1rdwy4b/report.json",
+      "report_sha256": "14c0f6bfebb7eb8f83f68566b7c3f5294a62602320ebed627b3a07dc585ceb72",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "command": [
+          "~/WizNLizPC/build/release/wiznliz-session",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/effect-session/run-s1rdwy4b/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/effect-session/run-s1rdwy4b/bank.bin",
+          "--reversal-session"
+        ],
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "observation": {
+        "owned_address": "0xffff2c12",
+        "birth_frame": 1067,
+        "release_frame": 1078,
+        "allocations": 1,
+        "effect_calls": 12,
+        "return_only_services": 12,
+        "owned_writes": 82,
+        "foreign_allocations": 38,
+        "foreign_releases": 36,
+        "observed_free_min": 47,
+        "observed_free_max": 53,
+        "allocation_scope": "One dedicated native P1 slot. Foreign shared-pool activity observed, not reproduced; no global capacity/order parity."
+      },
+      "sources": {
+        "tools/genesis_effect_session.py": "dd43812339aae16c363bd589fdeb0d827eee7e64a1c286e753b4e22218b9ff09",
+        "tools/genesis_session_capture.py": "262bb5a667b1f932383247ba515c89413e45db5176c2ab690e76de698123bd01",
+        "tools/genesis_reversal_capture.py": "b79549cb30ca920a59f5309cb17a4388f1c944e2fea6fa6176ca7bda494285c0",
+        "tools/genesis_dispatch_capture.py": "fde2ec9eaacb2134473adf8035f11e25c857904a1639c85b1a4ad8ac57e129a1",
+        "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+        "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c"
+      },
+      "native_session_sha256": "cc6b8b044b7ed7ecb7dcde1134e1bd15a3fc9d1f53f09d5412c42981e439c14c",
+      "native_provenance_sha256": "75fbd4e4514bec33c99e70516a7cd351611876c077f4248ed8fb9755460d42e5"
+    },
+    "sanitize": {
+      "report": "local/generated/effect-session/run-ra6yk38i/report.json",
+      "report_sha256": "a09a579bfd3a03153f5d58fd37cfe343bf5e35fce6412cb18b47b8db75e5e6e7",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "command": [
+          "~/WizNLizPC/build/sanitize/wiznliz-session",
+          "movie.scene",
+          "~/WizNLizPC/local/generated/effect-session/run-ra6yk38i/scene.bin",
+          "movie.bank",
+          "~/WizNLizPC/local/generated/effect-session/run-ra6yk38i/bank.bin",
+          "--reversal-session"
+        ],
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "observation": {
+        "owned_address": "0xffff2c12",
+        "birth_frame": 1067,
+        "release_frame": 1078,
+        "allocations": 1,
+        "effect_calls": 12,
+        "return_only_services": 12,
+        "owned_writes": 82,
+        "foreign_allocations": 38,
+        "foreign_releases": 36,
+        "observed_free_min": 47,
+        "observed_free_max": 53,
+        "allocation_scope": "One dedicated native P1 slot. Foreign shared-pool activity observed, not reproduced; no global capacity/order parity."
+      },
+      "sources": {
+        "tools/genesis_effect_session.py": "dd43812339aae16c363bd589fdeb0d827eee7e64a1c286e753b4e22218b9ff09",
+        "tools/genesis_session_capture.py": "262bb5a667b1f932383247ba515c89413e45db5176c2ab690e76de698123bd01",
+        "tools/genesis_reversal_capture.py": "b79549cb30ca920a59f5309cb17a4388f1c944e2fea6fa6176ca7bda494285c0",
+        "tools/genesis_dispatch_capture.py": "fde2ec9eaacb2134473adf8035f11e25c857904a1639c85b1a4ad8ac57e129a1",
+        "tools/genesis_actions_capture.py": "759feb8f93027b5e54a87ae2acf6e781ebcf4a0c661623ade360095f19bcd6a8",
+        "tools/genesis_movie_actor_capture.py": "6ab7ccc15055abf0b79171bba66d9e0ea4ee0ac5e42d48153eec3609963e040c"
+      },
+      "native_session_sha256": "2df9a4feac29dce7320af968b91e9ceb1cbfe48269d148f88c4432859284299b",
+      "native_provenance_sha256": "14d609ce339f4e6248d6b13efb118a52d4a669c71b7920e96a566a5b2b87cf53"
+    }
+  },
+  "reversal_presets": {
+    "debug": {
+      "report": "local/generated/reversal-comparison/run-ko8_ht7w/report.json",
+      "report_sha256": "6e2d553c486ef92282a8563859b1f66ac8df850920abe35b44fa25d2140d7c01",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "reference_build": {
+        "revision": "313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd",
+        "cpu": "68000",
+        "commands": [
+          {
+            "argv": [
+              "/usr/bin/clang",
+              "-O2",
+              "m68kmake.c",
+              "-o",
+              "m68kmake"
+            ],
+            "exit_status": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "~/WizNLizPC/local/tools/terrain-reference/build-2wfce8ss/m68kmake"
+            ],
+            "exit_status": 0,
+            "stdout": "\n\tMusashi v4.60 68000, 68008, 68010, 68EC020, 68020, 68EC030, 68030, 68EC040, 68040 emulator\n\t\tCopyright Karl Stenerud (kstenerud@gmail.com)\n\nGenerated 1967 opcode handlers from 518 primitives\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/usr/bin/clang",
+              "-O1",
+              "-g",
+              "-fsanitize=address,undefined",
+              "-fno-sanitize-recover=all",
+              "-fno-omit-frame-pointer",
+              "-DM68K_EMULATE_010=0",
+              "-DM68K_EMULATE_EC020=0",
+              "-DM68K_EMULATE_020=0",
+              "-DM68K_EMULATE_030=0",
+              "-DM68K_EMULATE_040=0",
+              "-DM68K_EMULATE_PMMU=0",
+              "-DM68K_INSTRUCTION_HOOK=1",
+              "-I.",
+              "m68kcpu.c",
+              "m68kops.c",
+              "softfloat/softfloat.c",
+              "~/WizNLizPC/re/reference_scripts/terrain_reference.c",
+              "-lm",
+              "-o",
+              "terrain-reference"
+            ],
+            "exit_status": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "compiler": "clang version 22.1.7 (Fedora 22.1.7-1.fc44)\nTarget: x86_64-redhat-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\nConfiguration file: /etc/clang/x86_64-redhat-linux-gnu-clang.cfg\n",
+        "harness_sha256": "83abaf3871bf19219282643e10975b921de2de6c52ac6bc55253e6f6ccc2240d",
+        "builder_sha256": "737052db72a40265d370cb5cbb426846f2f1fdc8c1a17c72bd20e52499e765f5",
+        "lock_sha256": "735faf479622036ebd6f5f4975664cfa7114f27147fac5dc22af3cc8fb0574d9",
+        "executable_sha256": "fd8200580206343bca64f1bb2a55523c173374740689af73d9f77bb406f11903"
+      },
+      "sources": {
+        "tools/reversal_compare.py": "38761b4a304b3f261c64de7eb57ca29ad360d390f20923cde805f6555fa6446c",
+        "tests/reversal_cases.py": "52370aa22c8b02172b992914c12e8af9455bea79474d7bc86ab896fa90ed1abd",
+        "re/reversal_step.json": "d877115df133db2e8a4a7921a7d4b46a1a019cf03ec6b52a72db834cef0449f8"
+      },
+      "groups": [
+        {
+          "name": "actor-flat",
+          "mode": "--reversal",
+          "cases": 1670,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "4dddf50b493ef493a61df4df73acf1aace3bfe6d17a3416fae9b06fa70c99f2e"
+          },
+          "independent_goldens": 2,
+          "outputs": {
+            "reference": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5",
+            "native": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5"
+          }
+        },
+        {
+          "name": "scheduled-flat",
+          "mode": "--reversal-scheduled",
+          "cases": 192,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "374fc56faf75ed6d73df87b8d67e4f05c90ff6df9884fa4d88efa3fcaa88b416"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254",
+            "native": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254"
+          }
+        },
+        {
+          "name": "effects",
+          "mode": "--effect",
+          "cases": 197372,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "834dee8b42371e48c95e08d301595560fb7077ca0e7c812e6323b7d597ac5181"
+          },
+          "independent_goldens": 8,
+          "outputs": {
+            "reference": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7",
+            "native": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7"
+          }
+        },
+        {
+          "name": "authored-terrain",
+          "mode": "--reversal-scheduled",
+          "cases": 768,
+          "inputs": {
+            "scene.bin": "c64b361fc9b1e7143829a93b55f9d92f34bd6085a95db757397a03352584ae5b",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "917bbdb069e3514ff54333874c5ec7948a96c98cb407e8be83a587c250627084",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "07616af96d66b15e8ca56c82f01e9547580472ea225c1ddd98160fd98bf6552d"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169",
+            "native": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169"
+          }
+        },
+        {
+          "name": "cataloged-terrain",
+          "mode": "--reversal-scheduled",
+          "cases": 3584,
+          "inputs": {
+            "scene.bin": "4f043e8a070b98053fa84b7af8c773c6d447994458e0440fdd6c73036f1452c4",
+            "bank.bin": "048aec81ffb0e5463029b931c2716e5aaa818539b5f72c078f7a19cc195a9ac7",
+            "map.bin": "b94f33eacb1f404bb7811ab813e81d59d42ec2ad09e557ff47ae4cf1844e0b75",
+            "records.bin": "a181962694d3a667494ed1d9f16f0e1cb14052831a235cf8d7c9ead88725d669",
+            "cases.txt": "39d62dd748a9e59779c99a6b561a17adee6e0b3e7eb7b180d19aae6e5af775cd"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2",
+            "native": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+          }
+        }
+      ],
+      "rejections": [
+        {
+          "kind": "reference",
+          "handler": 5,
+          "exit_status": 2,
+          "stderr": "reference unsupported code boundary 00f9d0\n"
+        },
+        {
+          "kind": "reference",
+          "handler": 6,
+          "exit_status": 2,
+          "stderr": "reference unsupported code boundary 00f9d0\n"
+        },
+        {
+          "kind": "native",
+          "handler": 5,
+          "exit_status": 2,
+          "stderr": "reversal allocation exhausted\n"
+        },
+        {
+          "kind": "native",
+          "handler": 6,
+          "exit_status": 2,
+          "stderr": "reversal allocation exhausted\n"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/reversal-comparison/run-8ppzdcle/report.json",
+      "report_sha256": "2697047e10fd583dfd007da9e63c4c4ee2d4810d5f60f2e49ef2303ac206837b",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "reference_build": {
+        "revision": "313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd",
+        "cpu": "68000",
+        "commands": [
+          {
+            "argv": [
+              "/usr/bin/clang",
+              "-O2",
+              "m68kmake.c",
+              "-o",
+              "m68kmake"
+            ],
+            "exit_status": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "~/WizNLizPC/local/tools/terrain-reference/build-2wfce8ss/m68kmake"
+            ],
+            "exit_status": 0,
+            "stdout": "\n\tMusashi v4.60 68000, 68008, 68010, 68EC020, 68020, 68EC030, 68030, 68EC040, 68040 emulator\n\t\tCopyright Karl Stenerud (kstenerud@gmail.com)\n\nGenerated 1967 opcode handlers from 518 primitives\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/usr/bin/clang",
+              "-O1",
+              "-g",
+              "-fsanitize=address,undefined",
+              "-fno-sanitize-recover=all",
+              "-fno-omit-frame-pointer",
+              "-DM68K_EMULATE_010=0",
+              "-DM68K_EMULATE_EC020=0",
+              "-DM68K_EMULATE_020=0",
+              "-DM68K_EMULATE_030=0",
+              "-DM68K_EMULATE_040=0",
+              "-DM68K_EMULATE_PMMU=0",
+              "-DM68K_INSTRUCTION_HOOK=1",
+              "-I.",
+              "m68kcpu.c",
+              "m68kops.c",
+              "softfloat/softfloat.c",
+              "~/WizNLizPC/re/reference_scripts/terrain_reference.c",
+              "-lm",
+              "-o",
+              "terrain-reference"
+            ],
+            "exit_status": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "compiler": "clang version 22.1.7 (Fedora 22.1.7-1.fc44)\nTarget: x86_64-redhat-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\nConfiguration file: /etc/clang/x86_64-redhat-linux-gnu-clang.cfg\n",
+        "harness_sha256": "83abaf3871bf19219282643e10975b921de2de6c52ac6bc55253e6f6ccc2240d",
+        "builder_sha256": "737052db72a40265d370cb5cbb426846f2f1fdc8c1a17c72bd20e52499e765f5",
+        "lock_sha256": "735faf479622036ebd6f5f4975664cfa7114f27147fac5dc22af3cc8fb0574d9",
+        "executable_sha256": "fd8200580206343bca64f1bb2a55523c173374740689af73d9f77bb406f11903"
+      },
+      "sources": {
+        "tools/reversal_compare.py": "38761b4a304b3f261c64de7eb57ca29ad360d390f20923cde805f6555fa6446c",
+        "tests/reversal_cases.py": "52370aa22c8b02172b992914c12e8af9455bea79474d7bc86ab896fa90ed1abd",
+        "re/reversal_step.json": "d877115df133db2e8a4a7921a7d4b46a1a019cf03ec6b52a72db834cef0449f8"
+      },
+      "groups": [
+        {
+          "name": "actor-flat",
+          "mode": "--reversal",
+          "cases": 1670,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "4dddf50b493ef493a61df4df73acf1aace3bfe6d17a3416fae9b06fa70c99f2e"
+          },
+          "independent_goldens": 2,
+          "outputs": {
+            "reference": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5",
+            "native": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5"
+          }
+        },
+        {
+          "name": "scheduled-flat",
+          "mode": "--reversal-scheduled",
+          "cases": 192,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "374fc56faf75ed6d73df87b8d67e4f05c90ff6df9884fa4d88efa3fcaa88b416"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254",
+            "native": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254"
+          }
+        },
+        {
+          "name": "effects",
+          "mode": "--effect",
+          "cases": 197372,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "834dee8b42371e48c95e08d301595560fb7077ca0e7c812e6323b7d597ac5181"
+          },
+          "independent_goldens": 8,
+          "outputs": {
+            "reference": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7",
+            "native": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7"
+          }
+        },
+        {
+          "name": "authored-terrain",
+          "mode": "--reversal-scheduled",
+          "cases": 768,
+          "inputs": {
+            "scene.bin": "c64b361fc9b1e7143829a93b55f9d92f34bd6085a95db757397a03352584ae5b",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "917bbdb069e3514ff54333874c5ec7948a96c98cb407e8be83a587c250627084",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "07616af96d66b15e8ca56c82f01e9547580472ea225c1ddd98160fd98bf6552d"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169",
+            "native": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169"
+          }
+        },
+        {
+          "name": "cataloged-terrain",
+          "mode": "--reversal-scheduled",
+          "cases": 3584,
+          "inputs": {
+            "scene.bin": "4f043e8a070b98053fa84b7af8c773c6d447994458e0440fdd6c73036f1452c4",
+            "bank.bin": "048aec81ffb0e5463029b931c2716e5aaa818539b5f72c078f7a19cc195a9ac7",
+            "map.bin": "b94f33eacb1f404bb7811ab813e81d59d42ec2ad09e557ff47ae4cf1844e0b75",
+            "records.bin": "a181962694d3a667494ed1d9f16f0e1cb14052831a235cf8d7c9ead88725d669",
+            "cases.txt": "39d62dd748a9e59779c99a6b561a17adee6e0b3e7eb7b180d19aae6e5af775cd"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2",
+            "native": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+          }
+        }
+      ],
+      "rejections": [
+        {
+          "kind": "reference",
+          "handler": 5,
+          "exit_status": 2,
+          "stderr": "reference unsupported code boundary 00f9d0\n"
+        },
+        {
+          "kind": "reference",
+          "handler": 6,
+          "exit_status": 2,
+          "stderr": "reference unsupported code boundary 00f9d0\n"
+        },
+        {
+          "kind": "native",
+          "handler": 5,
+          "exit_status": 2,
+          "stderr": "reversal allocation exhausted\n"
+        },
+        {
+          "kind": "native",
+          "handler": 6,
+          "exit_status": 2,
+          "stderr": "reversal allocation exhausted\n"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/reversal-comparison/run-qa1nqwph/report.json",
+      "report_sha256": "087ab19a867c75572d90f5ac9d5878fec8f4af0e0c25118201079f1f7a7ce7b7",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "reference_build": {
+        "revision": "313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd",
+        "cpu": "68000",
+        "commands": [
+          {
+            "argv": [
+              "/usr/bin/clang",
+              "-O2",
+              "m68kmake.c",
+              "-o",
+              "m68kmake"
+            ],
+            "exit_status": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "~/WizNLizPC/local/tools/terrain-reference/build-2wfce8ss/m68kmake"
+            ],
+            "exit_status": 0,
+            "stdout": "\n\tMusashi v4.60 68000, 68008, 68010, 68EC020, 68020, 68EC030, 68030, 68EC040, 68040 emulator\n\t\tCopyright Karl Stenerud (kstenerud@gmail.com)\n\nGenerated 1967 opcode handlers from 518 primitives\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/usr/bin/clang",
+              "-O1",
+              "-g",
+              "-fsanitize=address,undefined",
+              "-fno-sanitize-recover=all",
+              "-fno-omit-frame-pointer",
+              "-DM68K_EMULATE_010=0",
+              "-DM68K_EMULATE_EC020=0",
+              "-DM68K_EMULATE_020=0",
+              "-DM68K_EMULATE_030=0",
+              "-DM68K_EMULATE_040=0",
+              "-DM68K_EMULATE_PMMU=0",
+              "-DM68K_INSTRUCTION_HOOK=1",
+              "-I.",
+              "m68kcpu.c",
+              "m68kops.c",
+              "softfloat/softfloat.c",
+              "~/WizNLizPC/re/reference_scripts/terrain_reference.c",
+              "-lm",
+              "-o",
+              "terrain-reference"
+            ],
+            "exit_status": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "compiler": "clang version 22.1.7 (Fedora 22.1.7-1.fc44)\nTarget: x86_64-redhat-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\nConfiguration file: /etc/clang/x86_64-redhat-linux-gnu-clang.cfg\n",
+        "harness_sha256": "83abaf3871bf19219282643e10975b921de2de6c52ac6bc55253e6f6ccc2240d",
+        "builder_sha256": "737052db72a40265d370cb5cbb426846f2f1fdc8c1a17c72bd20e52499e765f5",
+        "lock_sha256": "735faf479622036ebd6f5f4975664cfa7114f27147fac5dc22af3cc8fb0574d9",
+        "executable_sha256": "fd8200580206343bca64f1bb2a55523c173374740689af73d9f77bb406f11903"
+      },
+      "sources": {
+        "tools/reversal_compare.py": "38761b4a304b3f261c64de7eb57ca29ad360d390f20923cde805f6555fa6446c",
+        "tests/reversal_cases.py": "52370aa22c8b02172b992914c12e8af9455bea79474d7bc86ab896fa90ed1abd",
+        "re/reversal_step.json": "d877115df133db2e8a4a7921a7d4b46a1a019cf03ec6b52a72db834cef0449f8"
+      },
+      "groups": [
+        {
+          "name": "actor-flat",
+          "mode": "--reversal",
+          "cases": 1670,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "4dddf50b493ef493a61df4df73acf1aace3bfe6d17a3416fae9b06fa70c99f2e"
+          },
+          "independent_goldens": 2,
+          "outputs": {
+            "reference": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5",
+            "native": "fa9ababe7f453ab9966d9454e2a11017daf512571c071f0d44d70642f6db95b5"
+          }
+        },
+        {
+          "name": "scheduled-flat",
+          "mode": "--reversal-scheduled",
+          "cases": 192,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "374fc56faf75ed6d73df87b8d67e4f05c90ff6df9884fa4d88efa3fcaa88b416"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254",
+            "native": "8706b82f10ce3a2d977648d47825ca8336589598c946d9568e51745167e84254"
+          }
+        },
+        {
+          "name": "effects",
+          "mode": "--effect",
+          "cases": 197372,
+          "inputs": {
+            "scene.bin": "26f389288ef1f7c15ec517ecf9467ddf8e46c2976fec1d1858d6361cb0f5bbca",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "b87e571b4e2e9d1722e3858680ef7c130e6254b954af0658594855cf0cbe859b",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "834dee8b42371e48c95e08d301595560fb7077ca0e7c812e6323b7d597ac5181"
+          },
+          "independent_goldens": 8,
+          "outputs": {
+            "reference": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7",
+            "native": "4d76c49262ab4119dc7308742a106ba9ef3f57465558d04e67b4e54c49b841c7"
+          }
+        },
+        {
+          "name": "authored-terrain",
+          "mode": "--reversal-scheduled",
+          "cases": 768,
+          "inputs": {
+            "scene.bin": "c64b361fc9b1e7143829a93b55f9d92f34bd6085a95db757397a03352584ae5b",
+            "bank.bin": "103c27edffd449c28ce574b528d14da24fe7121d684f4ae821e0ccf0a2f98cc2",
+            "map.bin": "917bbdb069e3514ff54333874c5ec7948a96c98cb407e8be83a587c250627084",
+            "records.bin": "d3d53010386ecf443c8985247182ebeb423f562bd31dbfc3468aa74ba0c5195a",
+            "cases.txt": "07616af96d66b15e8ca56c82f01e9547580472ea225c1ddd98160fd98bf6552d"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169",
+            "native": "d1ae395c9ec1a4c4155cee8c618feef219c1398cf946a64ee12ad0187daea169"
+          }
+        },
+        {
+          "name": "cataloged-terrain",
+          "mode": "--reversal-scheduled",
+          "cases": 3584,
+          "inputs": {
+            "scene.bin": "4f043e8a070b98053fa84b7af8c773c6d447994458e0440fdd6c73036f1452c4",
+            "bank.bin": "048aec81ffb0e5463029b931c2716e5aaa818539b5f72c078f7a19cc195a9ac7",
+            "map.bin": "b94f33eacb1f404bb7811ab813e81d59d42ec2ad09e557ff47ae4cf1844e0b75",
+            "records.bin": "a181962694d3a667494ed1d9f16f0e1cb14052831a235cf8d7c9ead88725d669",
+            "cases.txt": "39d62dd748a9e59779c99a6b561a17adee6e0b3e7eb7b180d19aae6e5af775cd"
+          },
+          "independent_goldens": 0,
+          "outputs": {
+            "reference": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2",
+            "native": "751fb332f3289bf1640d745c93baa32821463ec1141367898761df237e0dbfe2"
+          }
+        }
+      ],
+      "rejections": [
+        {
+          "kind": "reference",
+          "handler": 5,
+          "exit_status": 2,
+          "stderr": "reference unsupported code boundary 00f9d0\n"
+        },
+        {
+          "kind": "reference",
+          "handler": 6,
+          "exit_status": 2,
+          "stderr": "reference unsupported code boundary 00f9d0\n"
+        },
+        {
+          "kind": "native",
+          "handler": 5,
+          "exit_status": 2,
+          "stderr": "reversal allocation exhausted\n"
+        },
+        {
+          "kind": "native",
+          "handler": 6,
+          "exit_status": 2,
+          "stderr": "reversal allocation exhausted\n"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "input": {
+      "report": "local/generated/input-comparison/run-l84g3xh9/report.json",
+      "report_sha256": "1ad82c51370139f35af1880bca05a9316f1a118821d0c437da45159893655b16",
+      "cases": 1024,
+      "output_sha256": "024b856a815c4c21045c87903e34b1b6acd161b50cdf64195ba334c3b860a9ca"
+    },
+    "banner": {
+      "report": "local/generated/banner-comparison/run-qghv1djy/report.json",
+      "report_sha256": "e32274287cecaab0f6ed6a723224618191e72efa28bf4bab218c105677883f60",
+      "cases": 66880,
+      "output_sha256": "b98f0c7935ff6e2cbdd4ffbb1bdf8064caf8688c72f389ac04c57e64c3289e4f"
+    },
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-tq9a1g_o/report.json",
+      "report_sha256": "e20ebeed3fd939bd041c17deaed06b70e49815ebfd120d128bffa0be43ec6703",
+      "cases": 138149
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-dir73nes/report.json",
+      "report_sha256": "55b7bf1696a795dc2fe7a9f225081117048c2e60316d17d115ae0f250d18b43a",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-rs1fizb7/report.json",
+      "report_sha256": "b70d210d37bab19532ae9b48a22c1619c947f3a4fb7f2828ede2c1041a32c314",
+      "cases": 152093
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-no6acvzr/report.json",
+      "report_sha256": "f2a64ef47a58300979e6a3a55bef63b1f9483caf433200bd6cc243ffd22f3d43",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-y4sdh5n9/report.json",
+      "report_sha256": "d00946a146fb3594cb21f92a32441b3f86243b731de9160848e6c829a8233cc2",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-ep5g_dp0/report.json",
+      "report_sha256": "0eb1d103b0cff45a76bc9b99194826b601c672ae5a3fe9ca86ec31961db0bc30",
+      "cases": 614436
+    }
+  },
+  "static_context": {
+    "report": "local/generated/effect-session-probe/run-kj_fr6o8/report.json",
+    "report_sha256": "3044087ec4311f3d96b4c1ed12830baba0bdbea0c82907309e4a921163d4cf7e",
+    "context_instructions": 7,
+    "gnu_checks": 4,
+    "scope": "Static/observed context, not restricted original/native coverage or a closed general-world graph.",
+    "sources": {
+      "re/effect_session.json": "e067be88de2e50c6ca858868b4391055728f814bf95d7f9a5e6a43ee3b7414ca",
+      "tools/effect_session_probe.py": "3c0b5c716a33c3793141cfdeee92587092b61108668f0a201a4ec04bccc12e01"
+    }
+  },
+  "fresh_restricted_instruction_union": 1054,
+  "historical_union": 1403,
+  "context_bytes": 28,
+  "context_not_in_restricted_union": true,
+  "tests": {
+    "python": 184,
+    "python_skips": 0,
+    "ctest_per_preset": 34,
+    "presets": [
+      "debug",
+      "release",
+      "sanitize"
+    ]
+  },
+  "corrections": [
+    "The first capture report included the FF3008 zero sentinel in observed free counts (48..54). Current raw-chunk revalidation excludes it: 47..53 real free pointers. Capture source hash is retained separately; native outputs were unaffected."
+  ],
+  "not_rerun": [
+    "Eight other component corpora: actions, transition, coasting, tally, palette, bonus, exit tally, score",
+    "Historical/controlled captures beyond this original window",
+    "Whole-movie selector survey",
+    "SDL3 development availability"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_unchanged": true,
+    "movie_unchanged": true,
+    "worker_unchanged": true,
+    "runtime_binaries_unchanged": 104,
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6"
+  },
+  "test_logs": {
+    "debug": {
+      "path": "local/generated/effect-session-research/test-debug.log",
+      "sha256": "99e58c0e28b4720fc60351dc6cee4ca12a99adbb2278ea3fd17dfdb150a275e3"
+    },
+    "release": {
+      "path": "local/generated/effect-session-research/test-release.log",
+      "sha256": "3a329863f0738fba4ba2c6c46e224d0e4e44d79e789e0c65b6c2abf28ce16367"
+    },
+    "sanitize": {
+      "path": "local/generated/effect-session-research/test-sanitize.log",
+      "sha256": "8af99bd049b48861d896c25713915f77288ad94aaac30c72f30beecce6a3195a"
+    }
+  }
+}

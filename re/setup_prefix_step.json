@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "setup_prefix_fragment",
+      "start": 26758,
+      "end_exclusive": 26788,
+      "sha256": "f04120daed25bc91226d12e822d60bec3a0f037495939b07e829a872c050bf71",
+      "instruction_count": 7,
+      "execution_compared": true
+    },
+    {
+      "id": "dormant_first_initializer",
+      "start": 28360,
+      "end_exclusive": 28380,
+      "sha256": "6313fd044088271b7f98e82e5eda3af2dceff649a5b18529a3013489f79c7ba4",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "dormant_second_initializer",
+      "start": 28380,
+      "end_exclusive": 28400,
+      "sha256": "e71402f2a168b378c37d11a84ffc2b95b71e281b8f14afbf849fef1fa327aacb",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "rising_pair_initializer",
+      "start": 30578,
+      "end_exclusive": 30728,
+      "sha256": "d0072510b1f0f503e623e2904e0786708f0efc6559bb06df4a03e0c40ea6079e",
+      "instruction_count": 27,
+      "execution_compared": true
+    },
+    {
+      "id": "collision_quad_initializer",
+      "start": 30778,
+      "end_exclusive": 30958,
+      "sha256": "9f1792ab66ff01b0baa8d0c907d1f77d12562e8b369b8317e41706f6fbeb9357",
+      "instruction_count": 31,
+      "execution_compared": true
+    },
+    {
+      "id": "return_only_pair_initializer",
+      "start": 31644,
+      "end_exclusive": 31782,
+      "sha256": "c6b1385515d833c9dd77c2a63118511551cc1b152e64e638f040086879819be7",
+      "instruction_count": 23,
+      "execution_compared": true
+    },
+    {
+      "id": "visibility_pair_initializer",
+      "start": 31782,
+      "end_exclusive": 31908,
+      "sha256": "6fe95281199553ccbaa95b783663d9e69ada26ec0336986084112a74ea735809",
+      "instruction_count": 21,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 26764,
+      "target": 28360
+    },
+    {
+      "pc": 26768,
+      "target": 28380
+    },
+    {
+      "pc": 26772,
+      "target": 30578
+    },
+    {
+      "pc": 26776,
+      "target": 30778
+    },
+    {
+      "pc": 26780,
+      "target": 31644
+    },
+    {
+      "pc": 26784,
+      "target": 31782
+    },
+    {
+      "pc": 28360,
+      "target": 63970
+    },
+    {
+      "pc": 28380,
+      "target": 63970
+    }
+  ],
+  "dependencies": [
+    "pair_initializer_step",
+    "visibility_pair_step",
+    "rising_pair_step",
+    "collision_quad_step",
+    "return_only_step",
+    "mixed_session"
+  ],
+  "contract": "[6886,68A4) is a fragment of the level-setup routine: LEA FF0690,A5, then BSR 6EC8, 6EDC, 7772, 783A, 7B9C and 7C26, falling through to 68A4. 6EC8 and 6EDC each pop one F9E2 object, store it in FF31B4 / FF31B8 and clear its mode byte, leaving it dormant with F9E2's other defaults (frame 021D, flags 0, 12646/12646 selectors); position, +08..+0D, target, countdown, +1A..+45 and the link are inherited. The twelve pops are ordered; FF31B4, FF31B8 and FF31C0 name members 1, 2 and 10. Native requires verified inherited fields (position and presentation for the dormant members) and zero unrepresented bytes, else rejects with no change. Exhaustion enters the never-returning FA1E loop. Later setup from 68A4, 7AD6 (the only FF31B4/FF31B8 reader) and callback79B6 are not reconstructed."
+}

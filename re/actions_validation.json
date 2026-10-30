@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "starting_commit": "28436169910a377dd925e5a0a53e4424d3b10b4a",
+  "actions_presets": {
+    "debug": {
+      "report": "local/generated/actions-comparison/run-9t_573np/report.json",
+      "report_sha256": "5ec77f85bdf2e2c0b1e6ae372d31fb2f18ba0fd0aff595d3a3ccd4ac1f57c8c8",
+      "cases": 146638,
+      "new_instructions_visited": 81,
+      "independent_goldens": 18,
+      "groups": [
+        {
+          "name": "handler-flat",
+          "cases": 139936,
+          "invocations": 139936,
+          "native_output_sha256": "3fee279635416c9b71867552d7f9d7d0cb47419570c322aaaf160f47373d2456"
+        },
+        {
+          "name": "presentation-flat",
+          "cases": 2072,
+          "invocations": 2172,
+          "native_output_sha256": "a942799220bc28178d8111cfe7378793c8b507ce7fa34d5c1638c8308924cfec"
+        },
+        {
+          "name": "scheduled-flat",
+          "cases": 2070,
+          "invocations": 2170,
+          "native_output_sha256": "e755818837d27673918df316ed042248336f07c73026e80e2770e1f583450fff"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 768,
+          "invocations": 768,
+          "native_output_sha256": "a7924fac7dfe3092cdd7956da20d47487d22b3238a133adeb8d3357bc00506cc"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 1792,
+          "invocations": 1792,
+          "native_output_sha256": "05e6895173b9b7b22c7c788a722440d76f4005c58eb0b8c6d0325a81310484f1"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/actions-comparison/run-q3rihuwa/report.json",
+      "report_sha256": "0379adb75f11cd0a29e607cde3248d551fa73999ba099586132a86b01f4eeec4",
+      "cases": 146638,
+      "new_instructions_visited": 81,
+      "independent_goldens": 18,
+      "groups": [
+        {
+          "name": "handler-flat",
+          "cases": 139936,
+          "invocations": 139936,
+          "native_output_sha256": "3fee279635416c9b71867552d7f9d7d0cb47419570c322aaaf160f47373d2456"
+        },
+        {
+          "name": "presentation-flat",
+          "cases": 2072,
+          "invocations": 2172,
+          "native_output_sha256": "a942799220bc28178d8111cfe7378793c8b507ce7fa34d5c1638c8308924cfec"
+        },
+        {
+          "name": "scheduled-flat",
+          "cases": 2070,
+          "invocations": 2170,
+          "native_output_sha256": "e755818837d27673918df316ed042248336f07c73026e80e2770e1f583450fff"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 768,
+          "invocations": 768,
+          "native_output_sha256": "a7924fac7dfe3092cdd7956da20d47487d22b3238a133adeb8d3357bc00506cc"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 1792,
+          "invocations": 1792,
+          "native_output_sha256": "05e6895173b9b7b22c7c788a722440d76f4005c58eb0b8c6d0325a81310484f1"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/actions-comparison/run-r73j9gd_/report.json",
+      "report_sha256": "168d8d5f32680cac6c7238e54cc04d081934078564aed05f9d47bf331040d83d",
+      "cases": 146638,
+      "new_instructions_visited": 81,
+      "independent_goldens": 18,
+      "groups": [
+        {
+          "name": "handler-flat",
+          "cases": 139936,
+          "invocations": 139936,
+          "native_output_sha256": "3fee279635416c9b71867552d7f9d7d0cb47419570c322aaaf160f47373d2456"
+        },
+        {
+          "name": "presentation-flat",
+          "cases": 2072,
+          "invocations": 2172,
+          "native_output_sha256": "a942799220bc28178d8111cfe7378793c8b507ce7fa34d5c1638c8308924cfec"
+        },
+        {
+          "name": "scheduled-flat",
+          "cases": 2070,
+          "invocations": 2170,
+          "native_output_sha256": "e755818837d27673918df316ed042248336f07c73026e80e2770e1f583450fff"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 768,
+          "invocations": 768,
+          "native_output_sha256": "a7924fac7dfe3092cdd7956da20d47487d22b3238a133adeb8d3357bc00506cc"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 1792,
+          "invocations": 1792,
+          "native_output_sha256": "05e6895173b9b7b22c7c788a722440d76f4005c58eb0b8c6d0325a81310484f1"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "reversal": {
+      "report": "local/generated/reversal-comparison/run-eycldqbp/report.json",
+      "report_sha256": "1fc6d9616af6f2c8f698bcef674ba6bdc852b381e4d373c14448e6598c714830",
+      "cases": 203586
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-5j0r4mgy/report.json",
+      "report_sha256": "d68d3c5ab2dd087e2569df5fe50310470415bf61345f6dbbe78ec9a334280b4e",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-ugkhb7nf/report.json",
+      "report_sha256": "535a23c44c6687ee902c11c14b6be9febcfe76edb57185f865d5b274de14c955",
+      "cases": 152093
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-zq2qd89u/report.json",
+      "report_sha256": "649f6a42dcc5888ad8c38cc7aed498009493b4a7e9be7097ff8b83e6844eced1",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-o4kb_hnd/report.json",
+      "report_sha256": "a9ab23c3c023e16f95bd0013226f72bc44ad6f22065c7a0eebe8b4752bfe5fe7",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-s9vn397q/report.json",
+      "report_sha256": "a3c117120c973b559a3646c6e0342d7812e509feb63f204928f53dca8297fc25",
+      "cases": 614436
+    }
+  },
+  "combined_instructions_visited": 937,
+  "action_movie": {
+    "report": "local/generated/actions-movie/run-ee3uhda0/report.json",
+    "report_sha256": "8d2c1a94c534bfd794358015a812ef826ac6ea40a3f0177d8e7bb8d0dc508d30",
+    "ordinary_calls": 184,
+    "branch_calls": 72,
+    "intermediate_presentation_checks": 256,
+    "windows": [
+      {
+        "start": 1615,
+        "end": 1690,
+        "classification": "ordinary unedited user movie",
+        "calls": 75,
+        "sample_requests": 0,
+        "sound_requests": 0,
+        "hooked_hash": "1baf0e12950348021cfa0a44d71a70728f9c9a324532058198a141fb1791db2f",
+        "unhooked_hash": "1baf0e12950348021cfa0a44d71a70728f9c9a324532058198a141fb1791db2f"
+      },
+      {
+        "start": 3230,
+        "end": 3339,
+        "classification": "ordinary unedited user movie",
+        "calls": 109,
+        "sample_requests": 0,
+        "sound_requests": 2,
+        "hooked_hash": "0b457909f71de875506844ea091199f66492e77c5767b8af272683a365008fbb",
+        "unhooked_hash": "0b457909f71de875506844ea091199f66492e77c5767b8af272683a365008fbb"
+      },
+      {
+        "start": 3258,
+        "end": 3318,
+        "classification": "ordinary gameplay input branch; explicit replacement inputs, zero RAM/register/ROM edits",
+        "calls": 60,
+        "sample_requests": 1,
+        "sound_requests": 2,
+        "hooked_hash": "f2aaba7fd7ab1459b42deb9433b5cc616e38c3f2adedc26696e6747abb2114a0",
+        "unhooked_hash": "f2aaba7fd7ab1459b42deb9433b5cc616e38c3f2adedc26696e6747abb2114a0"
+      },
+      {
+        "start": 3258,
+        "end": 3270,
+        "classification": "ordinary gameplay input branch; explicit replacement inputs, zero RAM/register/ROM edits",
+        "calls": 12,
+        "sample_requests": 0,
+        "sound_requests": 2,
+        "hooked_hash": "4fe1d86467ef6a156f342ebf710912e94787adbef3ec609952d276dc22941737",
+        "unhooked_hash": "4fe1d86467ef6a156f342ebf710912e94787adbef3ec609952d276dc22941737"
+      }
+    ]
+  },
+  "reversal_movie_regression": {
+    "report": "local/generated/reversal-movie/run-lduvr0hq/report.json",
+    "report_sha256": "7233677e50e9b5d1fe65f7d3d096ef8e47dcb695332ea0d24f5f169d7ce20ab4",
+    "actor_calls": 92,
+    "effect_calls": 24
+  },
+  "movie_regression": {
+    "report": "local/generated/movie-actor/run-2y7skxmj/report.json",
+    "report_sha256": "d6122f0695f493cf8d855dd81e3da68972400cc7e9936b59d304763cd1948960",
+    "calls": 507
+  },
+  "static_probe": {
+    "report": "local/generated/actions-probe/run-kiy4vdf0/report.json",
+    "report_sha256": "594697d865813a9f0cc4431c2222ee4baaaec4fa9b28976527dac68053ef4368",
+    "instructions": 937,
+    "new_instructions": 81,
+    "new_gnu_checks": 5
+  },
+  "tests": {
+    "python": 135,
+    "python_skipped": 0,
+    "ctest_per_preset": 17,
+    "logs": {
+      "build-debug.log": "f4c62db089137c1e451fccbf7c89684082f9472612ee48c40c9bfcc4a102d597",
+      "reference-build.log": "a068718ec4c081e34acd54f0f7f2e1cbb45201d4a52e35e3aba0533f7ff574e1",
+      "compare-debug.log": "cafd8308bacfba4f88708337375289a9a20344adec95462ddd6cde2d0fe994b9",
+      "probe.log": "f45e51ed3a90895b334678902e7044959c34500119d474bc70ec9afef7f73446",
+      "movie.log": "afa5423842386ee518b1b653544ed1521bf040166440601632663c2923c7cb16",
+      "test-actions.log": "bc9dfcce263367c2ad7e594e6b7786babe7fea3235383e7e68cd439bd309327f",
+      "test-debug.log": "97380ca1366270548473961aaab81260f350e1782eb428bb086398065794684d",
+      "build-sanitize.log": "a055d520d3731a679d86e54cfec8780d5295855ec926f76486a9b1762b085632",
+      "build-release.log": "43d4d8e0269bd2c7b98a952370cb932daed0e6faeba31e12217fcfcb808319f2",
+      "test-sanitize.log": "35ed2197ae0be250ed78a3a40f3d7068cdf56734a834cd75a5ac045e40c540c7",
+      "test-release.log": "5e1b435a19cf8fda6e908b9e6801f61915e3963ba47e9e178ab9d979e49dbc9f",
+      "compare-release.log": "27de4c657675d2c6bb0a3ae7e5d829ab4628ebe66e51cfb5d17602b097084d2b",
+      "compare-sanitize.log": "b7c57e7a0f656389509376cfdc5a73c4882027d7c06085ceb3503e02c57fe94f",
+      "regression-reversal.log": "da318164fca1c00ab76ff24433aeddf1aeaab2ae16145884008f9132d865fb66",
+      "regression-airborne.log": "bd7c6f777ed25b86a160857b267e14daad344c991ce2429e7f12a43558a791d2",
+      "movie-reversal.log": "13ec35dc233df059ae56abb6e5f1e26273d686d07900c20aa7c2deac6f157dc7",
+      "regression-movement.log": "85e956119663ee5371e09fcc83d7bcfae5ddcdea886965ed5fffc4e42288963f",
+      "regression-presentation.log": "ea4b9c6b3eb5181beab345deebf2537a46d70a77d5f82a9eedfd473fa906e532",
+      "regression-terrain.log": "f50ca146fe92632763ace5d397a22a95c1a249a7eb891d6601c51f86f5bb7fc3",
+      "movie-regression.log": "7b8d8150e826220915d850e345beccfa020c60e8b2b297c7864f9f516ba1b961",
+      "regression-actor.log": "6e772ba6f8c97c239e6a8f2685ec9a38b083d3b4e9b3c372c04bb18ca66ab030",
+      "test-final-debug.log": "bba1cde55e81ff2b5849757db75c59679d141a05841787621c9ac27d00bfed99"
+    }
+  },
+  "preservation": {
+    "report": "local/generated/actions-research/preservation.json",
+    "report_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf",
+    "runtime_binary_count": 104,
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6"
+  },
+  "limits": [
+    "Shared controls/parameters/globals/mailbox/terrain scratch are environment feeds; only actor state persists across movie calls.",
+    "Native code publishes a logical sample request; research adapter compares four mailbox words. Playback/consumption and resource extraction excluded.",
+    "Input branches replace recorded rows with full provenance; no RAM/register/ROM edits. Branch frame numbers overlap original route.",
+    "12646 handler and AA50 callback at 1608-1614 excluded. Comparison ends before frame 3339 allocating reversal, whose lifetime has a separate comparator.",
+    "No full-frame/native world replay, +46 services, general shared pool competition/owner destruction, native rendering/audio or playability.",
+    "All final suites pass with zero skips. Earlier authored-golden calculation, stale rejection assertion, and overbroad movie-window contracts were corrected; retained failed reports documented in session."
+  ]
+}

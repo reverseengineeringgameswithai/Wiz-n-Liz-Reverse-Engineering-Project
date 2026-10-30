@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "tally_palette_entry",
+      "start": 20944,
+      "end_exclusive": 20996,
+      "sha256": "772619317cdb99ecb3399ffb9233b3fcc5dd5edc61d540e84735a93ba557e206",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_palette_wait",
+      "start": 20996,
+      "end_exclusive": 21026,
+      "sha256": "5e8cd62e5bd3248387915aff545904e780c8d6e25f2a3a2afc6e1581b6062597",
+      "instruction_count": 6,
+      "execution_compared": true
+    },
+    {
+      "id": "tally_transition_init",
+      "start": 78414,
+      "end_exclusive": 78484,
+      "sha256": "0d4928d2426a7df82018a85bafde27f36643ac4eb74a7a70c17cc98919386ea3",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "palette_bank_wrapper",
+      "start": 79822,
+      "end_exclusive": 79862,
+      "sha256": "df8499a8feb9629ede2a4e07fa53b769d57612ac8bfddea7afdb47feaec5c276",
+      "instruction_count": 15,
+      "execution_compared": true
+    },
+    {
+      "id": "palette_components",
+      "start": 79660,
+      "end_exclusive": 79700,
+      "sha256": "3a0a4331d2d65303fce57cb85bdf3eb7e1c1d63322bf455bf871e40cb6cb6bc3",
+      "instruction_count": 16,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 20948,
+      "target": 41288
+    },
+    {
+      "pc": 20960,
+      "target": 20364
+    },
+    {
+      "pc": 20974,
+      "target": 79822
+    },
+    {
+      "pc": 20980,
+      "target": 78414
+    },
+    {
+      "pc": 21000,
+      "target": 41288
+    },
+    {
+      "pc": 21012,
+      "target": 20364
+    },
+    {
+      "pc": 79850,
+      "target": 79660
+    },
+    {
+      "pc": 79694,
+      "target": 79662
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step",
+    "actions_step",
+    "dispatch_step",
+    "transition_step",
+    "coasting_step",
+    "tally_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366,
+        43600
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396,
+        75334,
+        28942,
+        28966,
+        25386,
+        20936,
+        21026,
+        20996
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 63754,
+      "opcode": 20112,
+      "selector": "actor +46 AFTER handler; only verified RTS service",
+      "targets": [
+        75334,
+        51966
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074,
+    21094
+  ],
+  "contract": "51C8 nonzero palette gate coasts and waits for idle transition; fixed 137CE bank 2 converts sixteen source color words to B/G/R intensity triplets; 1324E starts tally transition, then deferred 5204 waits, coasts and selects deferred 5222. Fixed disjoint source/destination only; palette consumer, rendering and bonus allocation 5266 excluded."
+}

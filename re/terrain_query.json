@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "map_query",
+      "start": 39380,
+      "end_exclusive": 39448,
+      "sha256": "b527a3fdb7c7ff7a46503b801db47b58471202bcaf9a277f5d73b8f003c0a606",
+      "instruction_count": 20,
+      "execution_compared": true
+    },
+    {
+      "id": "record_query",
+      "start": 39448,
+      "end_exclusive": 39518,
+      "sha256": "b2533003dfef812a937357654db15471d5bfae16492bd3cf1ce0d42c2b1da7d5",
+      "instruction_count": 19,
+      "execution_compared": true
+    },
+    {
+      "id": "settle_down",
+      "start": 39552,
+      "end_exclusive": 39598,
+      "sha256": "63d1161f088b2f2e36d951abc801272ca2a357bd8ead853353cf33820d755943",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "contact_upper",
+      "start": 39732,
+      "end_exclusive": 39772,
+      "sha256": "74f0742437a7a9741a3bb0d6266c7781dabbaaf56aa9024c571bb84c54e58d24",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "contact_foot",
+      "start": 39772,
+      "end_exclusive": 39812,
+      "sha256": "3b334343932a964ea9aa701dfdbffc27d2eef3bd5a41fe403117e5586bfe7865",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "contact_lower",
+      "start": 39812,
+      "end_exclusive": 39852,
+      "sha256": "8259f4863b2246ac74f94b4409946dbcf866271c848b351ae9b75dea443befaf",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "contact_duplicate",
+      "start": 10504,
+      "end_exclusive": 10548,
+      "sha256": "58c45fc29b92c16167e55198f5f8caabc404dce7072d2aff85fa2d7ae1e4a680",
+      "instruction_count": 11,
+      "execution_compared": false
+    }
+  ],
+  "validated_calls": [
+    {
+      "pc": 10520,
+      "target": 39380
+    },
+    {
+      "pc": 10526,
+      "target": 39448
+    },
+    {
+      "pc": 39568,
+      "target": 39380
+    },
+    {
+      "pc": 39572,
+      "target": 39448
+    },
+    {
+      "pc": 39748,
+      "target": 39380
+    },
+    {
+      "pc": 39752,
+      "target": 39448
+    },
+    {
+      "pc": 39788,
+      "target": 39380
+    },
+    {
+      "pc": 39792,
+      "target": 39448
+    },
+    {
+      "pc": 39828,
+      "target": 39380
+    },
+    {
+      "pc": 39832,
+      "target": 39448
+    }
+  ],
+  "inputs": {
+    "coordinates": "D0.W,D1.W; subtract 128 modulo 65536",
+    "scratch_x": "0xFFFF4442",
+    "scratch_y": "0xFFFF4444",
+    "map_base": "0xFFFF4452",
+    "record_base": "0xFFFF444E",
+    "row_bytes": "0xFFFF13A4",
+    "x_mask": "0xFFFF13AE",
+    "sentinel_pattern": "0xFFFF140E"
+  },
+  "native_scope": "128x32 resources; logical pattern indices; reject accesses outside map/records; no original RAM/device ABI",
+  "output_flags": "record lookup NZVC from MOVE.B; contact probes NZVC from CMP.B; settling mismatch finishes MOVEQ #1",
+  "vertical_record_flip": false
+}

@@ -1,0 +1,1889 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-23-047",
+  "starting_commit": "3ac6c70033f373d539656827503471702c98f9e2",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "The retained level world natively: wiznliz-collision --world-pool builds the whole [6886,68D4) setup from its 6886-entry stack (all 68 slots free) and then runs every object loop of frames 634..1065 in that one MixedPool with one carried PickupWorld (controls, +1A2 links, records, kinds, FF31AC, FF31B4/FF31B8, both controls' message fields, the tilemap, FF31BE), PrivateGlobals (FF31B0, FF31A4/FF31A6, FF31BC) and E918 state. Per-loop inputs are only 78EE tracking, the resolved emitter owner position, the count of E918 calls by non-pool code and message-field updates by the non-native message producer. No library change; no new ROM routine. The P1 actor, the message producer, the FFFF32C2 object's E918 caller, the second-ingredient paths and 7B42, rendering, audio and whole-machine parity are outside scope.",
+  "world_comparison": {
+    "variant": "world_pool",
+    "frame": 629,
+    "seed_sha256": "8b231317b2f7c467ea6c675e035a5a48ea6816f89f374606174cd81672aa764e",
+    "outcome": "matched",
+    "output_sha256": "63788986fd78656b67ef99a03335a9506fe750eafb277dff7f3248414772cc92",
+    "phases": 432,
+    "loops": 432,
+    "first_loop": 634,
+    "last_loop": 1065,
+    "releases": 31,
+    "updates": 5732,
+    "sounds": 3,
+    "clears": 1,
+    "pickup_hits": 2,
+    "emitter_walks": 128,
+    "emitter_random_calls": 62,
+    "deliveries": 1,
+    "probe_hits": 9,
+    "ingredients": 1,
+    "spawns": {
+      "3": 32,
+      "11": 1
+    },
+    "owner_positions": 128,
+    "external_random_calls": [
+      {
+        "frame": 634,
+        "caller": "109E4",
+        "object": "FFFF32C2"
+      },
+      {
+        "frame": 797,
+        "caller": "10A00",
+        "object": "FFFF32C2"
+      },
+      {
+        "frame": 850,
+        "caller": "109E4",
+        "object": "FFFF32C2"
+      },
+      {
+        "frame": 1000,
+        "caller": "10A00",
+        "object": "FFFF32C2"
+      },
+      {
+        "frame": 1053,
+        "caller": "109E4",
+        "object": "FFFF32C2"
+      }
+    ],
+    "external_message_updates": [
+      {
+        "frame": 634,
+        "control": 0,
+        "before": [
+          1,
+          100,
+          0
+        ],
+        "after": [
+          0,
+          100,
+          12
+        ]
+      },
+      {
+        "frame": 754,
+        "control": 0,
+        "before": [
+          0,
+          100,
+          12
+        ],
+        "after": [
+          0,
+          0,
+          12
+        ]
+      },
+      {
+        "frame": 854,
+        "control": 0,
+        "before": [
+          3,
+          1,
+          12
+        ],
+        "after": [
+          0,
+          1,
+          12
+        ]
+      },
+      {
+        "frame": 874,
+        "control": 0,
+        "before": [
+          0,
+          1,
+          12
+        ],
+        "after": [
+          0,
+          0,
+          12
+        ]
+      }
+    ],
+    "conversions": [
+      {
+        "frame": 780,
+        "slot": 53,
+        "cause": "6D22",
+        "by": 54
+      },
+      {
+        "frame": 823,
+        "slot": 53,
+        "cause": "7910",
+        "by": 63
+      },
+      {
+        "frame": 853,
+        "slot": 67,
+        "cause": "7B22",
+        "by": 47
+      },
+      {
+        "frame": 980,
+        "slot": 53,
+        "cause": "6D22",
+        "by": 55
+      }
+    ],
+    "first_ingredient_frame": 853,
+    "write_audit": {
+      "complete_frames": 432,
+      "incomplete_frames": [],
+      "writes": {
+        "random": 268,
+        "ingredient_tail": 2
+      },
+      "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+    }
+  },
+  "original_capture": {
+    "path": "local/generated/pair-initializer-capture/run-m589atg2/report.json",
+    "sha256": "7bf8e519e8600dced8526e41b0165a4836e00d1f32c84cc4b5df04c1e760fb7e",
+    "classification": "fresh ordinary unchanged movie frames 0..1066; no edits; owned workers",
+    "endpoint": {
+      "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_checkpoints_removed": {
+      "files": 2134,
+      "bytes": 1006942788
+    },
+    "walk_recipe_ranges": [
+      "object",
+      "anchor",
+      "dormant",
+      "link0",
+      "link1",
+      "stack",
+      "gates",
+      "rise",
+      "tracking",
+      "collision_mask",
+      "multiplayer",
+      "tracking2",
+      "linked",
+      "records",
+      "kinds",
+      "mailbox",
+      "free",
+      "ingredient",
+      "message",
+      "message2",
+      "tilemap",
+      "owner_link",
+      "owner",
+      "random"
+    ],
+    "observation": {
+      "f9e2_calls": 65,
+      "f994_calls": 32,
+      "pickup_hits": [
+        {
+          "frame": 780,
+          "slot": 54,
+          "phase_before": 0,
+          "phase_after": 1,
+          "sounds": 1
+        },
+        {
+          "frame": 980,
+          "slot": 55,
+          "phase_before": 0,
+          "phase_after": 1,
+          "sounds": 1
+        }
+      ],
+      "pickup_releases": [
+        {
+          "frame": 810,
+          "slot": 54
+        },
+        {
+          "frame": 1010,
+          "slot": 55
+        }
+      ],
+      "probe_hits": [
+        {
+          "frame": 823,
+          "slot": 63,
+          "delivered": true,
+          "gated": false,
+          "sounds": 1,
+          "created": [
+            54,
+            47
+          ]
+        },
+        {
+          "frame": 824,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 825,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 826,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 827,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 828,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 829,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 830,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        },
+        {
+          "frame": 831,
+          "slot": 63,
+          "delivered": false,
+          "gated": false,
+          "sounds": 0,
+          "created": []
+        }
+      ],
+      "first_ingredients": [
+        {
+          "frame": 853,
+          "copy": 47,
+          "target": 67,
+          "shown": true,
+          "vram": 58894
+        }
+      ],
+      "delivered_links": [
+        {
+          "frame": 823,
+          "slot": 53,
+          "unchanged_through": 980
+        }
+      ],
+      "continuity": {
+        "walks": 432,
+        "updates": 6042,
+        "allocations": 33,
+        "releases": 31,
+        "unsupported_hit_frames": [
+          780,
+          823,
+          824,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830,
+          831,
+          980
+        ],
+        "conversions": {
+          "54": {
+            "frame": 780,
+            "via": "hit",
+            "cause": "6C00"
+          },
+          "53": {
+            "frame": 780,
+            "source_slot": 54,
+            "via": "fb06",
+            "cause": "6C00"
+          },
+          "67": {
+            "frame": 853,
+            "source_slot": 47,
+            "via": "fb06",
+            "cause": "7B22"
+          },
+          "55": {
+            "frame": 980,
+            "via": "hit",
+            "cause": "6C00"
+          }
+        }
+      }
+    },
+    "capture_native_comparison": [
+      {
+        "variant": "return_only",
+        "frame": 156,
+        "seed_sha256": "2d7bcf780c098c2e1b5e0a042a2f904a603592b80914f834fdfa999e9c4239a7",
+        "outcome": "matched",
+        "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+        "phases": 0
+      },
+      {
+        "variant": "visibility",
+        "frame": 156,
+        "seed_sha256": "5470bb7fd8e7fa2b1ff35205e9b1abbec30fd4a4cb1a75e93770ced48e7db209",
+        "outcome": "matched",
+        "output_sha256": "8e3e5b165f61c5bc0b3889f5cbdd4b4bfae25a835f3013952e8ac097d857a1a1",
+        "phases": 0
+      },
+      {
+        "variant": "dormant_b4",
+        "frame": 629,
+        "seed_sha256": "bd98cb20de0d088ac2f217edfe12c6ed723dfc5c1313ac89a287e589fd1474bb",
+        "outcome": "matched",
+        "output_sha256": "561b02e861544a4270c5dea88ac45926295b5410777405b99fd7ef17afbc27f3",
+        "phases": 219,
+        "converted_at_frame": 853,
+        "original_only_phases": 213
+      },
+      {
+        "variant": "dormant_b8",
+        "frame": 629,
+        "seed_sha256": "f3c9b98fd6eca07e8ac4af5b5696888f8d78e1fe2f8ce9fbf9953d12c8f64730",
+        "outcome": "matched",
+        "output_sha256": "e8752f1e9ceda735cd634e56bd9f8ebc76cc49c8ce01762d24edc0dca7fdb594",
+        "phases": 432
+      },
+      {
+        "variant": "quad",
+        "frame": 629,
+        "seed_sha256": "6becb849b62e4406e8ba942b279094241a0637927efe14f56050a5f8785546f1",
+        "outcome": "matched",
+        "output_sha256": "de71a3e35a3c32b3e7408cf7cfc252e65789ce2ab306d02aa3343b342ecbbcbb",
+        "phases": 189,
+        "rejected_at_frame": 823,
+        "original_only_phases": 243,
+        "original_hit_phases": 9
+      },
+      {
+        "variant": "return_only",
+        "frame": 629,
+        "seed_sha256": "081073848d97d315063a40f8caef131442f2968b1a8e5b3d552173e5f3fcf448",
+        "outcome": "matched",
+        "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+        "phases": 432
+      },
+      {
+        "variant": "rising",
+        "frame": 629,
+        "seed_sha256": "850083c1ab36c3ccba3f7ab106ae5d30f96297b40fc06b9d472156e2c5eb5f9e",
+        "outcome": "matched",
+        "output_sha256": "00dec4a8ce00d914ab135cb2f3440c3d5e78df54505e1b7abb55b54e6c7ef465",
+        "phases": 432
+      },
+      {
+        "variant": "visibility",
+        "frame": 629,
+        "seed_sha256": "6817ef13393400aa020069b320b3c0b8c43e1bfe8592118ad7ab88ddafff228c",
+        "outcome": "matched",
+        "output_sha256": "a33ca4f9a8fd01701f5a8ad246de2435a0eb10c20f4b70011b8d2bb3f81ae0be",
+        "phases": 432
+      },
+      {
+        "variant": "setup_prefix",
+        "frame": 629,
+        "seed_sha256": "0d975dd63cfa790f4d3bc69e90ad5a55075b3216572b6f99a8357f150ad21e98",
+        "outcome": "matched",
+        "output_sha256": "4643dc623178df309bd9616d5803a117cf4627aa85e42f8c1bec9a9680be7136",
+        "members": 12
+      },
+      {
+        "variant": "setup_tail",
+        "frame": 629,
+        "seed_sha256": "43238610facfd7990e076aa3b191e25143537c9a7f6e1821e0826744b20f47c7",
+        "outcome": "matched",
+        "output_sha256": "f4c490b2354ebbddbbec37b1b4b704b593a08833812a2d56400e1fd25997f071",
+        "phases": 146,
+        "members": 4,
+        "rejected_at_frame": 780,
+        "original_only_phases": 286
+      },
+      {
+        "variant": "setup_message",
+        "frame": 629,
+        "seed_sha256": "ac2f1654f934ae0d6a97fb81d5ab5ef88b0ad0abe969f9ccf1a2f2bc0738be11",
+        "outcome": "matched",
+        "native_vram": 57358,
+        "vram_compared": true
+      },
+      {
+        "variant": "setup_gated_pairs",
+        "frame": 629,
+        "seed_sha256": "fabd6ab13a041fac56dd7c78b6adab7a9aec54f00ea31d49e77bb1b18e39fb74",
+        "outcome": "matched",
+        "allocated": 0
+      },
+      {
+        "variant": "pickup_walks",
+        "frame": 780,
+        "seed_sha256": "03c280feb06818a3e4b39f01d857d88ee4ec371f75242f5650bb2ba8e33329f8",
+        "output_sha256": "59f1024b80b5d2934fc61448d2887016ac5108b5fd1a9729625272e6e0489aeb",
+        "outcome": "matched",
+        "walks": 62,
+        "hits": 2,
+        "releases": 2
+      },
+      {
+        "variant": "probe_walks",
+        "frame": 823,
+        "outcome": "matched",
+        "probe-hit": {
+          "seed_sha256": "1abef633834e7d1bba4e9d3d0a961fe8fc00e8a2f14ac5958a06bac5c822da16",
+          "output_sha256": "f5167cddafcb6d337dcd695482a362db78f82adb348ab0b5479eb129d39a92a0",
+          "walks": 9
+        },
+        "delivered": {
+          "seed_sha256": "959392dc82b74086116e25a7509a6ed970bc1fbff50c9bc062a08a61497af1d1",
+          "output_sha256": "a8944cd4b74158c84f975378f0dad58529bd177ee223169057466f0596218d91",
+          "walks": 59
+        },
+        "ingredient": {
+          "seed_sha256": "cfa8331b980b269c58f452ad54119145903e945de2cd5026912c9b316bb12de0",
+          "output_sha256": "1ce6b3173c77dd82352332fe545851674448a6b4b80adcb12da8fa1d7d0643e3",
+          "walks": 1
+        },
+        "scheduled": {
+          "seed_sha256": "5660ed1d24c94a109f73e951be01ce1d6e2a22fb818ad0a94773a829018f82a6",
+          "output_sha256": "82f3c0ed4de5044fdec31ac83b8f226c7f33df1e86ca5a1e3d85da4d07c1b188",
+          "walks": 213
+        },
+        "hits": 9,
+        "deliveries": 1,
+        "releases": 1,
+        "callbacks": 1,
+        "table_walks": 213
+      },
+      {
+        "variant": "world_pool",
+        "frame": 629,
+        "seed_sha256": "8b231317b2f7c467ea6c675e035a5a48ea6816f89f374606174cd81672aa764e",
+        "outcome": "matched",
+        "output_sha256": "63788986fd78656b67ef99a03335a9506fe750eafb277dff7f3248414772cc92",
+        "phases": 432,
+        "loops": 432,
+        "first_loop": 634,
+        "last_loop": 1065,
+        "releases": 31,
+        "updates": 5732,
+        "sounds": 3,
+        "clears": 1,
+        "pickup_hits": 2,
+        "emitter_walks": 128,
+        "emitter_random_calls": 62,
+        "deliveries": 1,
+        "probe_hits": 9,
+        "ingredients": 1,
+        "spawns": {
+          "3": 32,
+          "11": 1
+        },
+        "owner_positions": 128,
+        "external_random_calls": [
+          {
+            "frame": 634,
+            "caller": "109E4",
+            "object": "FFFF32C2"
+          },
+          {
+            "frame": 797,
+            "caller": "10A00",
+            "object": "FFFF32C2"
+          },
+          {
+            "frame": 850,
+            "caller": "109E4",
+            "object": "FFFF32C2"
+          },
+          {
+            "frame": 1000,
+            "caller": "10A00",
+            "object": "FFFF32C2"
+          },
+          {
+            "frame": 1053,
+            "caller": "109E4",
+            "object": "FFFF32C2"
+          }
+        ],
+        "external_message_updates": [
+          {
+            "frame": 634,
+            "control": 0,
+            "before": [
+              1,
+              100,
+              0
+            ],
+            "after": [
+              0,
+              100,
+              12
+            ]
+          },
+          {
+            "frame": 754,
+            "control": 0,
+            "before": [
+              0,
+              100,
+              12
+            ],
+            "after": [
+              0,
+              0,
+              12
+            ]
+          },
+          {
+            "frame": 854,
+            "control": 0,
+            "before": [
+              3,
+              1,
+              12
+            ],
+            "after": [
+              0,
+              1,
+              12
+            ]
+          },
+          {
+            "frame": 874,
+            "control": 0,
+            "before": [
+              0,
+              1,
+              12
+            ],
+            "after": [
+              0,
+              0,
+              12
+            ]
+          }
+        ],
+        "conversions": [
+          {
+            "frame": 780,
+            "slot": 53,
+            "cause": "6D22",
+            "by": 54
+          },
+          {
+            "frame": 823,
+            "slot": 53,
+            "cause": "7910",
+            "by": 63
+          },
+          {
+            "frame": 853,
+            "slot": 67,
+            "cause": "7B22",
+            "by": 47
+          },
+          {
+            "frame": 980,
+            "slot": 53,
+            "cause": "6D22",
+            "by": 55
+          }
+        ],
+        "first_ingredient_frame": 853,
+        "write_audit": {
+          "complete_frames": 432,
+          "incomplete_frames": [],
+          "writes": {
+            "random": 268,
+            "ingredient_tail": 2
+          },
+          "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+        }
+      }
+    ]
+  },
+  "pair_fixture_comparisons": [
+    {
+      "path": "local/generated/pair-initializer-capture/run-mhj7onwl/report.json",
+      "sha256": "0fc324a3903cf5b20e5019692f7461c4d11d014ab21efd1f47f979f7d3f38858",
+      "preset": "release",
+      "comparison": [
+        {
+          "variant": "return_only",
+          "frame": 156,
+          "seed_sha256": "2d7bcf780c098c2e1b5e0a042a2f904a603592b80914f834fdfa999e9c4239a7",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "variant": "visibility",
+          "frame": 156,
+          "seed_sha256": "5470bb7fd8e7fa2b1ff35205e9b1abbec30fd4a4cb1a75e93770ced48e7db209",
+          "outcome": "matched",
+          "output_sha256": "8e3e5b165f61c5bc0b3889f5cbdd4b4bfae25a835f3013952e8ac097d857a1a1",
+          "phases": 0
+        },
+        {
+          "variant": "dormant_b4",
+          "frame": 629,
+          "seed_sha256": "bd98cb20de0d088ac2f217edfe12c6ed723dfc5c1313ac89a287e589fd1474bb",
+          "outcome": "matched",
+          "output_sha256": "561b02e861544a4270c5dea88ac45926295b5410777405b99fd7ef17afbc27f3",
+          "phases": 219,
+          "converted_at_frame": 853,
+          "original_only_phases": 213
+        },
+        {
+          "variant": "dormant_b8",
+          "frame": 629,
+          "seed_sha256": "f3c9b98fd6eca07e8ac4af5b5696888f8d78e1fe2f8ce9fbf9953d12c8f64730",
+          "outcome": "matched",
+          "output_sha256": "e8752f1e9ceda735cd634e56bd9f8ebc76cc49c8ce01762d24edc0dca7fdb594",
+          "phases": 432
+        },
+        {
+          "variant": "quad",
+          "frame": 629,
+          "seed_sha256": "6becb849b62e4406e8ba942b279094241a0637927efe14f56050a5f8785546f1",
+          "outcome": "matched",
+          "output_sha256": "de71a3e35a3c32b3e7408cf7cfc252e65789ce2ab306d02aa3343b342ecbbcbb",
+          "phases": 189,
+          "rejected_at_frame": 823,
+          "original_only_phases": 243,
+          "original_hit_phases": 9
+        },
+        {
+          "variant": "return_only",
+          "frame": 629,
+          "seed_sha256": "081073848d97d315063a40f8caef131442f2968b1a8e5b3d552173e5f3fcf448",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        },
+        {
+          "variant": "rising",
+          "frame": 629,
+          "seed_sha256": "850083c1ab36c3ccba3f7ab106ae5d30f96297b40fc06b9d472156e2c5eb5f9e",
+          "outcome": "matched",
+          "output_sha256": "00dec4a8ce00d914ab135cb2f3440c3d5e78df54505e1b7abb55b54e6c7ef465",
+          "phases": 432
+        },
+        {
+          "variant": "visibility",
+          "frame": 629,
+          "seed_sha256": "6817ef13393400aa020069b320b3c0b8c43e1bfe8592118ad7ab88ddafff228c",
+          "outcome": "matched",
+          "output_sha256": "a33ca4f9a8fd01701f5a8ad246de2435a0eb10c20f4b70011b8d2bb3f81ae0be",
+          "phases": 432
+        },
+        {
+          "variant": "setup_prefix",
+          "frame": 629,
+          "seed_sha256": "0d975dd63cfa790f4d3bc69e90ad5a55075b3216572b6f99a8357f150ad21e98",
+          "outcome": "matched",
+          "output_sha256": "4643dc623178df309bd9616d5803a117cf4627aa85e42f8c1bec9a9680be7136",
+          "members": 12
+        },
+        {
+          "variant": "setup_tail",
+          "frame": 629,
+          "seed_sha256": "43238610facfd7990e076aa3b191e25143537c9a7f6e1821e0826744b20f47c7",
+          "outcome": "matched",
+          "output_sha256": "f4c490b2354ebbddbbec37b1b4b704b593a08833812a2d56400e1fd25997f071",
+          "phases": 146,
+          "members": 4,
+          "rejected_at_frame": 780,
+          "original_only_phases": 286
+        },
+        {
+          "variant": "setup_message",
+          "frame": 629,
+          "seed_sha256": "ac2f1654f934ae0d6a97fb81d5ab5ef88b0ad0abe969f9ccf1a2f2bc0738be11",
+          "outcome": "matched",
+          "native_vram": 57358,
+          "vram_compared": true
+        },
+        {
+          "variant": "setup_gated_pairs",
+          "frame": 629,
+          "seed_sha256": "fabd6ab13a041fac56dd7c78b6adab7a9aec54f00ea31d49e77bb1b18e39fb74",
+          "outcome": "matched",
+          "allocated": 0
+        },
+        {
+          "variant": "pickup_walks",
+          "frame": 780,
+          "seed_sha256": "03c280feb06818a3e4b39f01d857d88ee4ec371f75242f5650bb2ba8e33329f8",
+          "output_sha256": "59f1024b80b5d2934fc61448d2887016ac5108b5fd1a9729625272e6e0489aeb",
+          "outcome": "matched",
+          "walks": 62,
+          "hits": 2,
+          "releases": 2
+        },
+        {
+          "variant": "probe_walks",
+          "frame": 823,
+          "outcome": "matched",
+          "probe-hit": {
+            "seed_sha256": "1abef633834e7d1bba4e9d3d0a961fe8fc00e8a2f14ac5958a06bac5c822da16",
+            "output_sha256": "f5167cddafcb6d337dcd695482a362db78f82adb348ab0b5479eb129d39a92a0",
+            "walks": 9
+          },
+          "delivered": {
+            "seed_sha256": "959392dc82b74086116e25a7509a6ed970bc1fbff50c9bc062a08a61497af1d1",
+            "output_sha256": "a8944cd4b74158c84f975378f0dad58529bd177ee223169057466f0596218d91",
+            "walks": 59
+          },
+          "ingredient": {
+            "seed_sha256": "cfa8331b980b269c58f452ad54119145903e945de2cd5026912c9b316bb12de0",
+            "output_sha256": "1ce6b3173c77dd82352332fe545851674448a6b4b80adcb12da8fa1d7d0643e3",
+            "walks": 1
+          },
+          "scheduled": {
+            "seed_sha256": "5660ed1d24c94a109f73e951be01ce1d6e2a22fb818ad0a94773a829018f82a6",
+            "output_sha256": "82f3c0ed4de5044fdec31ac83b8f226c7f33df1e86ca5a1e3d85da4d07c1b188",
+            "walks": 213
+          },
+          "hits": 9,
+          "deliveries": 1,
+          "releases": 1,
+          "callbacks": 1,
+          "table_walks": 213
+        },
+        {
+          "variant": "world_pool",
+          "frame": 629,
+          "seed_sha256": "8b231317b2f7c467ea6c675e035a5a48ea6816f89f374606174cd81672aa764e",
+          "outcome": "matched",
+          "output_sha256": "63788986fd78656b67ef99a03335a9506fe750eafb277dff7f3248414772cc92",
+          "phases": 432,
+          "loops": 432,
+          "first_loop": 634,
+          "last_loop": 1065,
+          "releases": 31,
+          "updates": 5732,
+          "sounds": 3,
+          "clears": 1,
+          "pickup_hits": 2,
+          "emitter_walks": 128,
+          "emitter_random_calls": 62,
+          "deliveries": 1,
+          "probe_hits": 9,
+          "ingredients": 1,
+          "spawns": {
+            "3": 32,
+            "11": 1
+          },
+          "owner_positions": 128,
+          "external_random_calls": [
+            {
+              "frame": 634,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 797,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 850,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1000,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1053,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            }
+          ],
+          "external_message_updates": [
+            {
+              "frame": 634,
+              "control": 0,
+              "before": [
+                1,
+                100,
+                0
+              ],
+              "after": [
+                0,
+                100,
+                12
+              ]
+            },
+            {
+              "frame": 754,
+              "control": 0,
+              "before": [
+                0,
+                100,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            },
+            {
+              "frame": 854,
+              "control": 0,
+              "before": [
+                3,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                1,
+                12
+              ]
+            },
+            {
+              "frame": 874,
+              "control": 0,
+              "before": [
+                0,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            }
+          ],
+          "conversions": [
+            {
+              "frame": 780,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 54
+            },
+            {
+              "frame": 823,
+              "slot": 53,
+              "cause": "7910",
+              "by": 63
+            },
+            {
+              "frame": 853,
+              "slot": 67,
+              "cause": "7B22",
+              "by": 47
+            },
+            {
+              "frame": 980,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 55
+            }
+          ],
+          "first_ingredient_frame": 853,
+          "write_audit": {
+            "complete_frames": 432,
+            "incomplete_frames": [],
+            "writes": {
+              "random": 268,
+              "ingredient_tail": 2
+            },
+            "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+          }
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-m589atg2/report.json",
+      "reference_report_sha256": "7bf8e519e8600dced8526e41b0165a4836e00d1f32c84cc4b5df04c1e760fb7e"
+    },
+    {
+      "path": "local/generated/pair-initializer-capture/run-ihrwz6ca/report.json",
+      "sha256": "e07f83cfd499191f0ec44fe37b739fdc38bc5b7dbe604e9429f163b4bb6bd786",
+      "preset": "sanitize",
+      "comparison": [
+        {
+          "variant": "return_only",
+          "frame": 156,
+          "seed_sha256": "2d7bcf780c098c2e1b5e0a042a2f904a603592b80914f834fdfa999e9c4239a7",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "variant": "visibility",
+          "frame": 156,
+          "seed_sha256": "5470bb7fd8e7fa2b1ff35205e9b1abbec30fd4a4cb1a75e93770ced48e7db209",
+          "outcome": "matched",
+          "output_sha256": "8e3e5b165f61c5bc0b3889f5cbdd4b4bfae25a835f3013952e8ac097d857a1a1",
+          "phases": 0
+        },
+        {
+          "variant": "dormant_b4",
+          "frame": 629,
+          "seed_sha256": "bd98cb20de0d088ac2f217edfe12c6ed723dfc5c1313ac89a287e589fd1474bb",
+          "outcome": "matched",
+          "output_sha256": "561b02e861544a4270c5dea88ac45926295b5410777405b99fd7ef17afbc27f3",
+          "phases": 219,
+          "converted_at_frame": 853,
+          "original_only_phases": 213
+        },
+        {
+          "variant": "dormant_b8",
+          "frame": 629,
+          "seed_sha256": "f3c9b98fd6eca07e8ac4af5b5696888f8d78e1fe2f8ce9fbf9953d12c8f64730",
+          "outcome": "matched",
+          "output_sha256": "e8752f1e9ceda735cd634e56bd9f8ebc76cc49c8ce01762d24edc0dca7fdb594",
+          "phases": 432
+        },
+        {
+          "variant": "quad",
+          "frame": 629,
+          "seed_sha256": "6becb849b62e4406e8ba942b279094241a0637927efe14f56050a5f8785546f1",
+          "outcome": "matched",
+          "output_sha256": "de71a3e35a3c32b3e7408cf7cfc252e65789ce2ab306d02aa3343b342ecbbcbb",
+          "phases": 189,
+          "rejected_at_frame": 823,
+          "original_only_phases": 243,
+          "original_hit_phases": 9
+        },
+        {
+          "variant": "return_only",
+          "frame": 629,
+          "seed_sha256": "081073848d97d315063a40f8caef131442f2968b1a8e5b3d552173e5f3fcf448",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        },
+        {
+          "variant": "rising",
+          "frame": 629,
+          "seed_sha256": "850083c1ab36c3ccba3f7ab106ae5d30f96297b40fc06b9d472156e2c5eb5f9e",
+          "outcome": "matched",
+          "output_sha256": "00dec4a8ce00d914ab135cb2f3440c3d5e78df54505e1b7abb55b54e6c7ef465",
+          "phases": 432
+        },
+        {
+          "variant": "visibility",
+          "frame": 629,
+          "seed_sha256": "6817ef13393400aa020069b320b3c0b8c43e1bfe8592118ad7ab88ddafff228c",
+          "outcome": "matched",
+          "output_sha256": "a33ca4f9a8fd01701f5a8ad246de2435a0eb10c20f4b70011b8d2bb3f81ae0be",
+          "phases": 432
+        },
+        {
+          "variant": "setup_prefix",
+          "frame": 629,
+          "seed_sha256": "0d975dd63cfa790f4d3bc69e90ad5a55075b3216572b6f99a8357f150ad21e98",
+          "outcome": "matched",
+          "output_sha256": "4643dc623178df309bd9616d5803a117cf4627aa85e42f8c1bec9a9680be7136",
+          "members": 12
+        },
+        {
+          "variant": "setup_tail",
+          "frame": 629,
+          "seed_sha256": "43238610facfd7990e076aa3b191e25143537c9a7f6e1821e0826744b20f47c7",
+          "outcome": "matched",
+          "output_sha256": "f4c490b2354ebbddbbec37b1b4b704b593a08833812a2d56400e1fd25997f071",
+          "phases": 146,
+          "members": 4,
+          "rejected_at_frame": 780,
+          "original_only_phases": 286
+        },
+        {
+          "variant": "setup_message",
+          "frame": 629,
+          "seed_sha256": "ac2f1654f934ae0d6a97fb81d5ab5ef88b0ad0abe969f9ccf1a2f2bc0738be11",
+          "outcome": "matched",
+          "native_vram": 57358,
+          "vram_compared": true
+        },
+        {
+          "variant": "setup_gated_pairs",
+          "frame": 629,
+          "seed_sha256": "fabd6ab13a041fac56dd7c78b6adab7a9aec54f00ea31d49e77bb1b18e39fb74",
+          "outcome": "matched",
+          "allocated": 0
+        },
+        {
+          "variant": "pickup_walks",
+          "frame": 780,
+          "seed_sha256": "03c280feb06818a3e4b39f01d857d88ee4ec371f75242f5650bb2ba8e33329f8",
+          "output_sha256": "59f1024b80b5d2934fc61448d2887016ac5108b5fd1a9729625272e6e0489aeb",
+          "outcome": "matched",
+          "walks": 62,
+          "hits": 2,
+          "releases": 2
+        },
+        {
+          "variant": "probe_walks",
+          "frame": 823,
+          "outcome": "matched",
+          "probe-hit": {
+            "seed_sha256": "1abef633834e7d1bba4e9d3d0a961fe8fc00e8a2f14ac5958a06bac5c822da16",
+            "output_sha256": "f5167cddafcb6d337dcd695482a362db78f82adb348ab0b5479eb129d39a92a0",
+            "walks": 9
+          },
+          "delivered": {
+            "seed_sha256": "959392dc82b74086116e25a7509a6ed970bc1fbff50c9bc062a08a61497af1d1",
+            "output_sha256": "a8944cd4b74158c84f975378f0dad58529bd177ee223169057466f0596218d91",
+            "walks": 59
+          },
+          "ingredient": {
+            "seed_sha256": "cfa8331b980b269c58f452ad54119145903e945de2cd5026912c9b316bb12de0",
+            "output_sha256": "1ce6b3173c77dd82352332fe545851674448a6b4b80adcb12da8fa1d7d0643e3",
+            "walks": 1
+          },
+          "scheduled": {
+            "seed_sha256": "5660ed1d24c94a109f73e951be01ce1d6e2a22fb818ad0a94773a829018f82a6",
+            "output_sha256": "82f3c0ed4de5044fdec31ac83b8f226c7f33df1e86ca5a1e3d85da4d07c1b188",
+            "walks": 213
+          },
+          "hits": 9,
+          "deliveries": 1,
+          "releases": 1,
+          "callbacks": 1,
+          "table_walks": 213
+        },
+        {
+          "variant": "world_pool",
+          "frame": 629,
+          "seed_sha256": "8b231317b2f7c467ea6c675e035a5a48ea6816f89f374606174cd81672aa764e",
+          "outcome": "matched",
+          "output_sha256": "63788986fd78656b67ef99a03335a9506fe750eafb277dff7f3248414772cc92",
+          "phases": 432,
+          "loops": 432,
+          "first_loop": 634,
+          "last_loop": 1065,
+          "releases": 31,
+          "updates": 5732,
+          "sounds": 3,
+          "clears": 1,
+          "pickup_hits": 2,
+          "emitter_walks": 128,
+          "emitter_random_calls": 62,
+          "deliveries": 1,
+          "probe_hits": 9,
+          "ingredients": 1,
+          "spawns": {
+            "3": 32,
+            "11": 1
+          },
+          "owner_positions": 128,
+          "external_random_calls": [
+            {
+              "frame": 634,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 797,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 850,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1000,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1053,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            }
+          ],
+          "external_message_updates": [
+            {
+              "frame": 634,
+              "control": 0,
+              "before": [
+                1,
+                100,
+                0
+              ],
+              "after": [
+                0,
+                100,
+                12
+              ]
+            },
+            {
+              "frame": 754,
+              "control": 0,
+              "before": [
+                0,
+                100,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            },
+            {
+              "frame": 854,
+              "control": 0,
+              "before": [
+                3,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                1,
+                12
+              ]
+            },
+            {
+              "frame": 874,
+              "control": 0,
+              "before": [
+                0,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            }
+          ],
+          "conversions": [
+            {
+              "frame": 780,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 54
+            },
+            {
+              "frame": 823,
+              "slot": 53,
+              "cause": "7910",
+              "by": 63
+            },
+            {
+              "frame": 853,
+              "slot": 67,
+              "cause": "7B22",
+              "by": 47
+            },
+            {
+              "frame": 980,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 55
+            }
+          ],
+          "first_ingredient_frame": 853,
+          "write_audit": {
+            "complete_frames": 432,
+            "incomplete_frames": [],
+            "writes": {
+              "random": 268,
+              "ingredient_tail": 2
+            },
+            "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+          }
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-m589atg2/report.json",
+      "reference_report_sha256": "7bf8e519e8600dced8526e41b0165a4836e00d1f32c84cc4b5df04c1e760fb7e"
+    }
+  ],
+  "superseded_runs": {
+    "exploration": {
+      "path": "local/generated/pair-initializer-capture/run-hltyxepl/report.json",
+      "sha256": "714120a1d89924fd85a4f9c9d2df7080a60750597f4e573c34e2bc5375edfc92",
+      "reason": "Same recipe before the world comparison was wired into the tool; it matched all fourteen earlier comparisons and served the first world runs, the five foreign E918 calls and the first sabotage checks; superseded because the tool sources changed afterwards."
+    },
+    "docstrings": {
+      "path": "local/generated/pair-initializer-capture/run-h4f_f2wy/report.json",
+      "sha256": "1e361bea2234fcb9642ecc1893b2c45ae90e44304a6f594feb28559e55637212",
+      "fixtures": [
+        {
+          "path": "local/generated/pair-initializer-capture/run-c2scn8lc/report.json",
+          "sha256": "b4d1c79e69ec8519e1359d136ae556dd8689062c34a961d0e0891e111be72cc7"
+        },
+        {
+          "path": "local/generated/pair-initializer-capture/run-1u5woe6z/report.json",
+          "sha256": "5907516159f5a1bc281a650051c83256002aa37d13518ca4a34973c77b68c8cc"
+        }
+      ],
+      "reason": "Matched all fifteen comparisons (world output and seed identical to the final run) in debug and, as fixtures, release and sanitize; superseded only because three docstrings of tools/genesis_world_pool.py were corrected afterwards, which changes the recorded source hash."
+    }
+  },
+  "regression_comparisons": [
+    {
+      "path": "local/generated/collision-comparison/run-dkl46z6e/report.json",
+      "sha256": "e2604bfe5c266f6d891fb778ac3122da1d0fb1295e4b9c7820e052ad5c4ca15e",
+      "preset": "debug",
+      "variant": "probe",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/collision-comparison/run-03efjdy3/report.json",
+      "sha256": "a8947af51bd31600f0a7b2ae49c0c9fa97f1cde18ffdecffad9dda34cb6e527b",
+      "preset": "release",
+      "variant": "probe",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/collision-comparison/run-6e10tshv/report.json",
+      "sha256": "cde39338d24ca53eb17f050ea3833332ffa0a07aa38ff19dbda19edf927f5fe8",
+      "preset": "sanitize",
+      "variant": "probe",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/pickup-service-comparison/run-zdjii48j/report.json",
+      "sha256": "c651a1727940d11fdad4388e3d4c7ec9017ff94357f4bcff2fb5eb65249413f6",
+      "preset": "debug",
+      "variant": "pickup",
+      "cases": 136848,
+      "new_instructions_visited": 9
+    },
+    {
+      "path": "local/generated/pickup-service-comparison/run-yh3wqewi/report.json",
+      "sha256": "b61830e334872212cc0e64a2d5afa18d31662e0914def04aaa68e7e23a62b3f6",
+      "preset": "release",
+      "variant": "pickup",
+      "cases": 136848,
+      "new_instructions_visited": 9
+    },
+    {
+      "path": "local/generated/pickup-service-comparison/run-96wxgz2y/report.json",
+      "sha256": "5c26a469fe9b21ec433fa39aca0020d4be73855f71ebf4fcf97cf2ca15be7e3a",
+      "preset": "sanitize",
+      "variant": "pickup",
+      "cases": 136848,
+      "new_instructions_visited": 9
+    },
+    {
+      "path": "local/generated/pickup-hit-comparison/run-f3tx_rjs/report.json",
+      "sha256": "dd537df4a55931812bc031b9f95df8ab850358bbd3ddcc7e37e432fc45b8542c",
+      "preset": "debug",
+      "cases": 6576,
+      "outcomes": {
+        "kept": 5884,
+        "vanishing": 2198,
+        "p1_link_converted": 974,
+        "released": 554,
+        "swapped_out": 1716,
+        "p1_exchange": 862,
+        "collectable": 1156,
+        "no_contact": 4149,
+        "swapped_in": 1368,
+        "repeat_hit": 128,
+        "family_stop": 137,
+        "redressed": 49,
+        "p2_exchange": 143,
+        "p2_link_converted": 182,
+        "callback_stop": 1
+      },
+      "successful_instructions_visited": 244,
+      "new_instructions_visited": 115
+    },
+    {
+      "path": "local/generated/pickup-hit-comparison/run-52xxvj8n/report.json",
+      "sha256": "e63416c0db1c3c136e71c0268532566cc57841ea657476ffb43f1a5d0e1b5402",
+      "preset": "release",
+      "cases": 6576,
+      "outcomes": {
+        "kept": 5884,
+        "vanishing": 2198,
+        "p1_link_converted": 974,
+        "released": 554,
+        "swapped_out": 1716,
+        "p1_exchange": 862,
+        "collectable": 1156,
+        "no_contact": 4149,
+        "swapped_in": 1368,
+        "repeat_hit": 128,
+        "family_stop": 137,
+        "redressed": 49,
+        "p2_exchange": 143,
+        "p2_link_converted": 182,
+        "callback_stop": 1
+      },
+      "successful_instructions_visited": 244,
+      "new_instructions_visited": 115
+    },
+    {
+      "path": "local/generated/pickup-hit-comparison/run-ve0f64nr/report.json",
+      "sha256": "67c26354520e2f9920045ce57c82f3b8bacecb4bbd2759a5ee0919f3a1f2863f",
+      "preset": "sanitize",
+      "cases": 6576,
+      "outcomes": {
+        "kept": 5884,
+        "vanishing": 2198,
+        "p1_link_converted": 974,
+        "released": 554,
+        "swapped_out": 1716,
+        "p1_exchange": 862,
+        "collectable": 1156,
+        "no_contact": 4149,
+        "swapped_in": 1368,
+        "repeat_hit": 128,
+        "family_stop": 137,
+        "redressed": 49,
+        "p2_exchange": 143,
+        "p2_link_converted": 182,
+        "callback_stop": 1
+      },
+      "successful_instructions_visited": 244,
+      "new_instructions_visited": 115
+    },
+    {
+      "path": "local/generated/delivery-comparison/run-u2dpz87d/report.json",
+      "sha256": "44173e011c4e901b58b1dfe670a19a9afd7f65270cc1e268ed2a7b58afd6c0cd",
+      "preset": "debug",
+      "cases": 8557,
+      "successful_instructions_visited": 206,
+      "new_instructions_visited": 40,
+      "variants": {
+        "probe-hit": {
+          "cases": 4425,
+          "outcomes": {
+            "p1_delivered": 807,
+            "dormant_return": 476,
+            "gate_closed": 781,
+            "repeat_after_delivery": 836,
+            "p2_delivered": 202,
+            "two_deliveries": 44,
+            "exhausted": 268,
+            "probe_callback": 67,
+            "no_first_contact": 1621,
+            "other": 273
+          },
+          "observation": {
+            "cases": 4425,
+            "walks": 125041,
+            "instructions": 5399993,
+            "queries": 160594
+          },
+          "instructions_visited": 190
+        },
+        "delivered": {
+          "cases": 4132,
+          "outcomes": {
+            "sparkle_kept": 1982,
+            "copy_kept": 1989,
+            "copy_callback": 78,
+            "sparkle_released": 83
+          },
+          "observation": {
+            "cases": 4132,
+            "walks": 132111,
+            "instructions": 1992080
+          },
+          "instructions_visited": 71
+        }
+      }
+    },
+    {
+      "path": "local/generated/delivery-comparison/run-zek57jx6/report.json",
+      "sha256": "18acd2c304870a6a2c70c975f2c2eb35f6739d66538c5c55e225dd2c882ab27c",
+      "preset": "release",
+      "cases": 8557,
+      "successful_instructions_visited": 206,
+      "new_instructions_visited": 40,
+      "variants": {
+        "probe-hit": {
+          "cases": 4425,
+          "outcomes": {
+            "p1_delivered": 807,
+            "dormant_return": 476,
+            "gate_closed": 781,
+            "repeat_after_delivery": 836,
+            "p2_delivered": 202,
+            "two_deliveries": 44,
+            "exhausted": 268,
+            "probe_callback": 67,
+            "no_first_contact": 1621,
+            "other": 273
+          },
+          "observation": {
+            "cases": 4425,
+            "walks": 125041,
+            "instructions": 5399993,
+            "queries": 160594
+          },
+          "instructions_visited": 190
+        },
+        "delivered": {
+          "cases": 4132,
+          "outcomes": {
+            "sparkle_kept": 1982,
+            "copy_kept": 1989,
+            "copy_callback": 78,
+            "sparkle_released": 83
+          },
+          "observation": {
+            "cases": 4132,
+            "walks": 132111,
+            "instructions": 1992080
+          },
+          "instructions_visited": 71
+        }
+      }
+    },
+    {
+      "path": "local/generated/delivery-comparison/run-zpwtad9m/report.json",
+      "sha256": "423635826749abae423df416dfef359c07f7e3801708a857e0ab6d71f1eaa15a",
+      "preset": "sanitize",
+      "cases": 8557,
+      "successful_instructions_visited": 206,
+      "new_instructions_visited": 40,
+      "variants": {
+        "probe-hit": {
+          "cases": 4425,
+          "outcomes": {
+            "p1_delivered": 807,
+            "dormant_return": 476,
+            "gate_closed": 781,
+            "repeat_after_delivery": 836,
+            "p2_delivered": 202,
+            "two_deliveries": 44,
+            "exhausted": 268,
+            "probe_callback": 67,
+            "no_first_contact": 1621,
+            "other": 273
+          },
+          "observation": {
+            "cases": 4425,
+            "walks": 125041,
+            "instructions": 5399993,
+            "queries": 160594
+          },
+          "instructions_visited": 190
+        },
+        "delivered": {
+          "cases": 4132,
+          "outcomes": {
+            "sparkle_kept": 1982,
+            "copy_kept": 1989,
+            "copy_callback": 78,
+            "sparkle_released": 83
+          },
+          "observation": {
+            "cases": 4132,
+            "walks": 132111,
+            "instructions": 1992080
+          },
+          "instructions_visited": 71
+        }
+      }
+    },
+    {
+      "path": "local/generated/ingredient-comparison/run-c5t171yp/report.json",
+      "sha256": "cecaf36054b3c7a2456c0e88071749baff3e5758b8d1c985508a3109a5d4c50e",
+      "preset": "debug",
+      "cases": 4172,
+      "successful_instructions_visited": 178,
+      "new_instructions_visited": 29,
+      "variants": {
+        "ingredient": {
+          "cases": 4172,
+          "outcomes": {
+            "first_ingredient": 340,
+            "p1_control": 211,
+            "message_shown": 285,
+            "message_refused": 55,
+            "not_called": 3811,
+            "fast_cadence": 76,
+            "p2_control": 129,
+            "second_ingredient_stop": 21
+          },
+          "observation": {
+            "cases": 4172,
+            "walks": 131891,
+            "instructions": 1969299
+          },
+          "instructions_visited": 178
+        }
+      }
+    },
+    {
+      "path": "local/generated/ingredient-comparison/run-nmkm02pb/report.json",
+      "sha256": "c8a94edd2591b1efc5ac3954ab2efe5564808b1115395b28b3513123446a10f1",
+      "preset": "release",
+      "cases": 4172,
+      "successful_instructions_visited": 178,
+      "new_instructions_visited": 29,
+      "variants": {
+        "ingredient": {
+          "cases": 4172,
+          "outcomes": {
+            "first_ingredient": 340,
+            "p1_control": 211,
+            "message_shown": 285,
+            "message_refused": 55,
+            "not_called": 3811,
+            "fast_cadence": 76,
+            "p2_control": 129,
+            "second_ingredient_stop": 21
+          },
+          "observation": {
+            "cases": 4172,
+            "walks": 131891,
+            "instructions": 1969299
+          },
+          "instructions_visited": 178
+        }
+      }
+    },
+    {
+      "path": "local/generated/ingredient-comparison/run-ltmfifwc/report.json",
+      "sha256": "7ca4ce6a9f291b44bfb8010496e598a86133560be469f5640d104a88189eeb96",
+      "preset": "sanitize",
+      "cases": 4172,
+      "successful_instructions_visited": 178,
+      "new_instructions_visited": 29,
+      "variants": {
+        "ingredient": {
+          "cases": 4172,
+          "outcomes": {
+            "first_ingredient": 340,
+            "p1_control": 211,
+            "message_shown": 285,
+            "message_refused": 55,
+            "not_called": 3811,
+            "fast_cadence": 76,
+            "p2_control": 129,
+            "second_ingredient_stop": 21
+          },
+          "observation": {
+            "cases": 4172,
+            "walks": 131891,
+            "instructions": 1969299
+          },
+          "instructions_visited": 178
+        }
+      }
+    },
+    {
+      "path": "local/generated/collision-quad-comparison/run-2gby7d2l/report.json",
+      "sha256": "ae6ae72725795183653464618facbde67bddda2c408e4228fbb2a43393c79283",
+      "preset": "debug",
+      "variant": "collision-quad",
+      "cases": 8746,
+      "outcomes": {
+        "original_exhausted_after_0": 1058,
+        "native_exhausted": 3372,
+        "original_exhausted_after_1": 1062,
+        "original_exhausted_after_2": 1054,
+        "original_exhausted_after_3": 1030,
+        "original_created": 4542,
+        "native_created": 2592,
+        "native_unknown_inheritance": 2782
+      },
+      "successful_instructions_visited": 45,
+      "new_instructions_visited": 31
+    },
+    {
+      "path": "local/generated/collision-quad-comparison/run-qjdzhp9l/report.json",
+      "sha256": "37cf9a2b95e9d4cfdfca281cb4c79b9bc30354aded5ebcdd1f6101cc958764ea",
+      "preset": "release",
+      "variant": "collision-quad",
+      "cases": 8746,
+      "outcomes": {
+        "original_exhausted_after_0": 1058,
+        "native_exhausted": 3372,
+        "original_exhausted_after_1": 1062,
+        "original_exhausted_after_2": 1054,
+        "original_exhausted_after_3": 1030,
+        "original_created": 4542,
+        "native_created": 2592,
+        "native_unknown_inheritance": 2782
+      },
+      "successful_instructions_visited": 45,
+      "new_instructions_visited": 31
+    },
+    {
+      "path": "local/generated/collision-quad-comparison/run-azfv05r0/report.json",
+      "sha256": "04ac3a1ff09b218dc323924e5726c2fbbd8a05eeb9c71fff1eb3b29859cc858a",
+      "preset": "sanitize",
+      "variant": "collision-quad",
+      "cases": 8746,
+      "outcomes": {
+        "original_exhausted_after_0": 1058,
+        "native_exhausted": 3372,
+        "original_exhausted_after_1": 1062,
+        "original_exhausted_after_2": 1054,
+        "original_exhausted_after_3": 1030,
+        "original_created": 4542,
+        "native_created": 2592,
+        "native_unknown_inheritance": 2782
+      },
+      "successful_instructions_visited": 45,
+      "new_instructions_visited": 31
+    }
+  ],
+  "native_builds": [
+    {
+      "path": "build/debug/provenance.json",
+      "sha256": "25379855d2df0aaa95bddd2552fde92085cfdd4f5ce7f6e8b38130cd175e19a6",
+      "preset": "debug",
+      "collision": "4ee0a40079c8d67a0eeb67ef879e6a3104a206282aace6a0a3a0bbad24d9652f"
+    },
+    {
+      "path": "build/release/provenance.json",
+      "sha256": "90212bd9bd542c041eb7d560debfed008f0a319ef29ca971f82a9f5b85026f30",
+      "preset": "release",
+      "collision": "dfb3b7c9d8d6199dd91a35ae23fb5624f91046f4669936488bca7d544181d58f"
+    },
+    {
+      "path": "build/sanitize/provenance.json",
+      "sha256": "6dffe6aecea1ced11f21894dd4b86998406c0f67244df671844360780b5069b5",
+      "preset": "sanitize",
+      "collision": "e8bb8c3ef9410d2689cd0fd5697a3512b7ccf86e578c5dabc14053295fdb2763"
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 224,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/world-pool-research/test-debug.log",
+        "sha256": "3759c583f3d39981601391b87c716f5472f28214d07ea0d1da1e4da4f00b5784"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 224,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/world-pool-research/test-release.log",
+        "sha256": "7936c8b7769faab28ea6322afd7c3b68fe83df1b79443444bb3b48c5d42aa8ee"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 224,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/world-pool-research/test-sanitize.log",
+        "sha256": "d210e06bf4ce842783e05f1462dd6cdf7cefb5ff695ed98d6e35d5191ab2972d"
+      }
+    }
+  ],
+  "sabotage": {
+    "capture": "local/generated/pair-initializer-capture/run-m589atg2/report.json",
+    "capture_sha256": "7bf8e519e8600dced8526e41b0165a4836e00d1f32c84cc4b5df04c1e760fb7e",
+    "native": "build/debug/wiznliz-collision",
+    "purpose": "Each explicit input must be consumed: dropping or changing one must break the comparison at that frame or make native reject.",
+    "runs": [
+      {
+        "change": "unchanged",
+        "exit_status": 0,
+        "stderr": "",
+        "first_mismatch_frame": null,
+        "lines": 433
+      },
+      {
+        "change": "no external E918 call at 798",
+        "exit_status": 0,
+        "stderr": "",
+        "first_mismatch_frame": 798,
+        "lines": 433
+      },
+      {
+        "change": "no message update at 754",
+        "exit_status": 0,
+        "stderr": "",
+        "first_mismatch_frame": 754,
+        "lines": 433
+      },
+      {
+        "change": "owner x + 1 at 790",
+        "exit_status": 0,
+        "stderr": "",
+        "first_mismatch_frame": 790,
+        "lines": 433
+      },
+      {
+        "change": "owner withheld at 790",
+        "exit_status": 2,
+        "stderr": "trail owner unavailable",
+        "first_mismatch_frame": null,
+        "lines": 157
+      },
+      {
+        "change": "P1 tracking moved at 780",
+        "exit_status": 2,
+        "stderr": "unconsumed owner position",
+        "first_mismatch_frame": 780,
+        "lines": 148
+      }
+    ]
+  },
+  "coverage": {
+    "new_bounded_native_mappings": 0,
+    "new_partial_native_mappings": 0,
+    "new_fragment_mappings": 0,
+    "bounded_simulation_mappings": 133,
+    "partial_simulation_mappings": 6,
+    "indexed_functions": 148,
+    "new_classified_bytes": 0,
+    "classified_bytes": 29146,
+    "unclassified_bytes": 1019430,
+    "new_native_instructions": 0,
+    "cumulative_executed_union": 2142,
+    "scope": "Composition of already mapped routines; no restricted corpus gained instructions. The world comparison is a recording-window comparison, not a function mapping."
+  },
+  "failures": [
+    {
+      "scope": "first world comparison (exploration capture, before any recorded result)",
+      "reason": "The expectation assumed only the emitter calls E918 after the setup. The trace showed five E918 calls by code at 109E4 (three) and 10A00 (two) for the object at FFFF32C2, outside the pool, just after the object loops of frames 634, 797, 850, 1000 and 1053. They are now an explicit per-loop count that native applies with its own E918 recurrence before the loop; the state is never re-seeded.",
+      "resolved": true
+    },
+    {
+      "scope": "world expectation",
+      "reason": "The second run differed only in the setup line: the expectation listed 7DB8's CB9A row clear among the world's requests, while the transport prints it with 7DB8's selection. All 432 loop lines already matched.",
+      "resolved": true
+    },
+    {
+      "scope": "between-loop byte check",
+      "reason": "The first form compared each slot's next-loop entry with the previous frame end and failed at slot 67 after 852: a lower slot's walk (the copy's 7AD6 at 853) changes it earlier in the same loop. It now compares each entry with the previous frame end except for slots another walk of that loop changed before their own walk, and each frame end with the walk exit except for slots changed after it.",
+      "resolved": true
+    },
+    {
+      "scope": "synthetic transport test",
+      "reason": "The test decoder first nested each object's fields inside the event tuple; its assertions expect flat tuples, so the decoder now flattens them.",
+      "resolved": true
+    },
+    {
+      "scope": "superseded capture",
+      "reason": "The first definitive capture (run-h4f_f2wy, with release/sanitize fixtures run-c2scn8lc and run-1u5woe6z) matched all fifteen comparisons; it was superseded only to correct three docstrings of tools/genesis_world_pool.py, whose hash the capture records.",
+      "resolved": true
+    }
+  ],
+  "not_rerun": [
+    "return-only/table-motion/private/trail/reversal/effect regressions (their targets did not change)",
+    "every earlier pair/setup variant except collision-quad (wiznliz-return-only and wiznliz-private unchanged)",
+    "input/banner/presentation/actor/dispatch/airborne/movement/terrain and actions through score corpora",
+    "mixed-session comparisons and a fresh mixed capture (wiznliz-session unchanged)",
+    "other historical or controlled captures",
+    "whole-movie handler survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "the P1 actor joined to the world (step_mixed_session with a PickupWorld) so tracking and the owner position become native outputs",
+    "the second-ingredient paths of 79B6 [7A00,7A26) and 7AD6 [7AE6,7B22) and the FF31C0 anchor chain 7B42 (13294, 7B58 with D269, 7E18, 1324E, 7B8A)",
+    "the message producer that consumes +46 and clears +53, and native CB9A rendering",
+    "the FFFF32C2 object and its E918 callers at 109E4/10A00",
+    "the 6C00 family branches 6E32/6E8A/6E5E",
+    "the gated-pair lead handlers and FF3172..FF3178 gate producers",
+    "the setup after 68D4 and other F9E2 callers",
+    "the 6EF0 allocating path",
+    "overlap-hit FF31C0 readers",
+    "FF31A4/FF31A6 gate producers",
+    "FA30 and pool reset residue",
+    "P2 and world scheduling",
+    "boot, rendering and audio"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries_verified": 104,
+    "source_files_verified": 59,
+    "external_status_unchanged": true,
+    "external_status_difference": null,
+    "wl3pc": {
+      "read_only": true,
+      "baseline_head": "c0c973eff3f0e60d87d9bcd2e3a7918501bb1665",
+      "observed_head": "9c892b826ce9228f7cbe069a6c08fac0f3f83216",
+      "owner_commits_during_pass": [
+        "9c892b826ce9228f7cbe069a6c08fac0f3f83216 2026-10-23 10:55:37 -0400 golf building: ported and drawn, from the map and back, checked step and from power-on (WL3-050, WL3-052)",
+        "dffbbe85eee86ad3b5d479e405815911630d0f8b 2026-10-23 10:45:18 -0400 oracle: an invented save with every crayon, and the golf building traced (WL3-050)"
+      ],
+      "status_unchanged": false,
+      "note": "This pass issued only read-only git queries to WL3PC."
+    },
+    "owned_workers_remaining": [],
+    "foreign_emulator_processes": [],
+    "initial_manifest": "local/generated/world-pool-research/preservation.json",
+    "initial_manifest_sha256": "7c7f22b57218522dcee338ae159f9554ff487dfeaeddfd7900949d2646d61e2c",
+    "final_manifest_sha256": "cc065c785f6d2ff3865fd01d5f52f873bd47484aafb3a5a73d1d055fede2caab"
+  }
+}

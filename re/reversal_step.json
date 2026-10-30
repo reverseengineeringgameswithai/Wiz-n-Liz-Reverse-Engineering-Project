@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "fast_reverse_left_entry",
+      "start": 42920,
+      "end_exclusive": 42988,
+      "sha256": "b57c85140b3b0ed1bb2ac551778b67dc0ec9f1d57048678d5bd4e924cba9b777",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_reverse_left",
+      "start": 42988,
+      "end_exclusive": 43028,
+      "sha256": "6b8c2ee1b34f82d9c4a201a174595391ce25c824ef6cf936dfa2fd0521a3886b",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_reverse_left_callback",
+      "start": 43028,
+      "end_exclusive": 43032,
+      "sha256": "48917a4ca00fb17d833ba6491c2bc56e250d08ad09dfc00043c220e267757ce6",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "spawn_right_reversal_effect",
+      "start": 43032,
+      "end_exclusive": 43132,
+      "sha256": "05d083fb3c7f90cc5c886d25723250016faaea3d1554878abff22792b226b55c",
+      "instruction_count": 18,
+      "execution_compared": true
+    },
+    {
+      "id": "follow_right_reversal_effect",
+      "start": 43132,
+      "end_exclusive": 43150,
+      "sha256": "75dca60b77fcb7f1c5ec4d8801b2c3a8fdd45af0fb021bb8152183e64c6b196c",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_reverse_right_entry",
+      "start": 43374,
+      "end_exclusive": 43442,
+      "sha256": "91c1ff435a34d0e9c3852a9d97a7d77599b0813b26d81486fddf536f548b54d9",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_reverse_right",
+      "start": 43442,
+      "end_exclusive": 43482,
+      "sha256": "132bfeb87f43d6109147a2bada2c75bf71657752113bc23134343b891609050b",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_reverse_right_callback",
+      "start": 43482,
+      "end_exclusive": 43486,
+      "sha256": "7cd049ca7a1a2e64442ab9e7283dd17e908db29652985be4977e80543cbd8bd8",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "spawn_left_reversal_effect",
+      "start": 43486,
+      "end_exclusive": 43584,
+      "sha256": "e4c84507d36df78396fe5eb61a98cbb7d749cbf4f91f69d401637b580cdb33b4",
+      "instruction_count": 18,
+      "execution_compared": true
+    },
+    {
+      "id": "follow_left_reversal_effect",
+      "start": 43584,
+      "end_exclusive": 43600,
+      "sha256": "4980de1421dd74bfcc5c19d7da7d3bddb3b63b111db423b092fc9c60cdbc1314",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_object_success",
+      "start": 63892,
+      "end_exclusive": 63952,
+      "sha256": "f020bf44e2d665f61243fbe17c341c2cc33e7e4f985e18b98b997efcdce6922c",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "release_object",
+      "start": 64164,
+      "end_exclusive": 64188,
+      "sha256": "6396114fd35c940d5f0e77e93866a09602c8a9285321585a6254c4a593150d61",
+      "instruction_count": 7,
+      "execution_compared": true
+    },
+    {
+      "id": "object_phase_level",
+      "start": 2058,
+      "end_exclusive": 2076,
+      "sha256": "0edc2c72c1b763c18179cbc4615642920eebd25deca500a9cbd74f5012fcb453",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "object_phase_other_route",
+      "start": 27050,
+      "end_exclusive": 27068,
+      "sha256": "0edc2c72c1b763c18179cbc4615642920eebd25deca500a9cbd74f5012fcb453",
+      "instruction_count": 5,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 42984,
+      "target": 43032
+    },
+    {
+      "pc": 42996,
+      "target": 42808
+    },
+    {
+      "pc": 43000,
+      "target": 39518
+    },
+    {
+      "pc": 43008,
+      "target": 42790
+    },
+    {
+      "pc": 43020,
+      "target": 44264
+    },
+    {
+      "pc": 43024,
+      "target": 42790
+    },
+    {
+      "pc": 43028,
+      "target": 42258
+    },
+    {
+      "pc": 43032,
+      "target": 63892
+    },
+    {
+      "pc": 43036,
+      "target": 43130
+    },
+    {
+      "pc": 43438,
+      "target": 43486
+    },
+    {
+      "pc": 43450,
+      "target": 43262
+    },
+    {
+      "pc": 43454,
+      "target": 39518
+    },
+    {
+      "pc": 43462,
+      "target": 43244
+    },
+    {
+      "pc": 43474,
+      "target": 44246
+    },
+    {
+      "pc": 43478,
+      "target": 43244
+    },
+    {
+      "pc": 43482,
+      "target": 41940
+    },
+    {
+      "pc": 43486,
+      "target": 63892
+    },
+    {
+      "pc": 43490,
+      "target": 43582
+    },
+    {
+      "pc": 63902,
+      "target": 63952
+    },
+    {
+      "pc": 2062,
+      "target": 2082
+    },
+    {
+      "pc": 2064,
+      "target": 63340
+    },
+    {
+      "pc": 27054,
+      "target": 27074
+    },
+    {
+      "pc": 27056,
+      "target": 63340
+    }
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step"
+  ],
+  "stop_boundaries": [
+    63750,
+    63756,
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    40022,
+    40270,
+    63952,
+    1035074
+  ],
+  "contract": "Actor allocation and fast reversal; effect presentation/release then X follow. Typed owner and bounded native LIFO storage. F9D0 exhaustion stops before hardware loop. Shared general object pool, later +46 and whole-frame scheduling excluded."
+}

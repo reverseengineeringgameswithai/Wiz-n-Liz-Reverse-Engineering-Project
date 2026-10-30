@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "transition_handlers",
+      "start": 28942,
+      "end_exclusive": 29012,
+      "sha256": "1b0f86ffd6a28c39ca03d33cb80836b4181945076294306e6924ad84ccaae51e",
+      "instruction_count": 12,
+      "execution_compared": true
+    },
+    {
+      "id": "transition_coast",
+      "start": 41288,
+      "end_exclusive": 41366,
+      "sha256": "7c06779671a6280da1b501e460281dec166e14dfb170132b13b916b1531b21e4",
+      "instruction_count": 24,
+      "execution_compared": true
+    },
+    {
+      "id": "transition_start",
+      "start": 78344,
+      "end_exclusive": 78414,
+      "sha256": "b19e199c229036f051409f2b0fa427eb1adf592be3d2d4a8c54c67af8e4cc76b",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "transition_timer",
+      "start": 78938,
+      "end_exclusive": 79062,
+      "sha256": "fdd022ca501054a2df99dbf4a07a48a568de1eb1276bfc4a1e2be6f2ed64ff4e",
+      "instruction_count": 23,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 28946,
+      "target": 41288
+    },
+    {
+      "pc": 28960,
+      "target": 78344
+    },
+    {
+      "pc": 28970,
+      "target": 41288
+    },
+    {
+      "pc": 28982,
+      "target": 29010
+    },
+    {
+      "pc": 41292,
+      "target": 41308
+    },
+    {
+      "pc": 41294,
+      "target": 41310
+    },
+    {
+      "pc": 41300,
+      "target": 41322
+    },
+    {
+      "pc": 41304,
+      "target": 41300
+    },
+    {
+      "pc": 41312,
+      "target": 41344
+    },
+    {
+      "pc": 41316,
+      "target": 41312
+    },
+    {
+      "pc": 41326,
+      "target": 39772
+    },
+    {
+      "pc": 41330,
+      "target": 41336
+    },
+    {
+      "pc": 41336,
+      "target": 39532
+    },
+    {
+      "pc": 41340,
+      "target": 39532
+    },
+    {
+      "pc": 41348,
+      "target": 39772
+    },
+    {
+      "pc": 41352,
+      "target": 41358
+    },
+    {
+      "pc": 41358,
+      "target": 39532
+    },
+    {
+      "pc": 41362,
+      "target": 39532
+    },
+    {
+      "pc": 78944,
+      "target": 79024
+    },
+    {
+      "pc": 78954,
+      "target": 78966
+    },
+    {
+      "pc": 78962,
+      "target": 79024
+    },
+    {
+      "pc": 78972,
+      "target": 79026
+    },
+    {
+      "pc": 78982,
+      "target": 79010
+    },
+    {
+      "pc": 79008,
+      "target": 79024
+    },
+    {
+      "pc": 79034,
+      "target": 79010
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step",
+    "actions_step",
+    "dispatch_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366,
+        43600
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396,
+        75334,
+        28942,
+        28966
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 63754,
+      "opcode": 20112,
+      "selector": "actor +46 AFTER handler; only verified RTS service",
+      "targets": [
+        75334,
+        51966
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074
+  ],
+  "contract": "710E/7126 actor handlers through actual wrapper RTS, separate A148 coasting and explicit 13208 transition initialization / 1345A timer. Shared state and associated-control destination outputs transactional. Palette consumer, other objects, transition entry and mode scheduling excluded."
+}

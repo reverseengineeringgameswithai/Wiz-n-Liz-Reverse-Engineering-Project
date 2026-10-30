@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "starting_commit": "390c109e312df072186a3459ed9a40bbd215e792",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "630A associated actor/tracking initialization; 632A tail to existing A148 within the bounded actor wrapper. Initializer does not run motion or tracking-coordinate tail. Other world objects, shared transition initiation and full world/frame parity excluded.",
+  "coasting_presets": {
+    "debug": {
+      "report": "local/generated/coasting-comparison/run-ypxwqyt7/report.json",
+      "report_sha256": "142c9177f6b39a357aa4b57a7d17292b11975fdcaa715cd45f79259cb47a3c5b",
+      "cases": 87571,
+      "new_instructions_visited": 8,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 13680,
+          "independent_goldens": 8,
+          "native_output_sha256": "a6276094b2d3bd7f88991e8eea660a2f5fdd433252e0c7ce2e90eefbb189351c"
+        },
+        {
+          "name": "entry",
+          "cases": 66211,
+          "independent_goldens": 3,
+          "native_output_sha256": "1b51544ecb1c7defcd9551beeb121c5d65deebc2a3d516a976bbfa56dc27aff3"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 2304,
+          "independent_goldens": 0,
+          "native_output_sha256": "557a03d67b33e2aa6476c46b4ad8a25afcd12db8f7a729c79d7fd7255009c028"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 5376,
+          "independent_goldens": 0,
+          "native_output_sha256": "3c5acf202a1db3b09c8bef9f5273139d6428ec670dc58eaf4ff9da47b42d7441"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/coasting-comparison/run-c4lnwkkg/report.json",
+      "report_sha256": "99ce1310b499849680bddca0617a07e73c45cf367827dcf9355fc98075763073",
+      "cases": 87571,
+      "new_instructions_visited": 8,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 13680,
+          "independent_goldens": 8,
+          "native_output_sha256": "a6276094b2d3bd7f88991e8eea660a2f5fdd433252e0c7ce2e90eefbb189351c"
+        },
+        {
+          "name": "entry",
+          "cases": 66211,
+          "independent_goldens": 3,
+          "native_output_sha256": "1b51544ecb1c7defcd9551beeb121c5d65deebc2a3d516a976bbfa56dc27aff3"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 2304,
+          "independent_goldens": 0,
+          "native_output_sha256": "557a03d67b33e2aa6476c46b4ad8a25afcd12db8f7a729c79d7fd7255009c028"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 5376,
+          "independent_goldens": 0,
+          "native_output_sha256": "3c5acf202a1db3b09c8bef9f5273139d6428ec670dc58eaf4ff9da47b42d7441"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/coasting-comparison/run-1x7fj64x/report.json",
+      "report_sha256": "7d7bf71b272dfc497b3ec71fa24a39b5e8dd0fcb059db8c0a3bab3e8589068a9",
+      "cases": 87571,
+      "new_instructions_visited": 8,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 13680,
+          "independent_goldens": 8,
+          "native_output_sha256": "a6276094b2d3bd7f88991e8eea660a2f5fdd433252e0c7ce2e90eefbb189351c"
+        },
+        {
+          "name": "entry",
+          "cases": 66211,
+          "independent_goldens": 3,
+          "native_output_sha256": "1b51544ecb1c7defcd9551beeb121c5d65deebc2a3d516a976bbfa56dc27aff3"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 2304,
+          "independent_goldens": 0,
+          "native_output_sha256": "557a03d67b33e2aa6476c46b4ad8a25afcd12db8f7a729c79d7fd7255009c028"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 5376,
+          "independent_goldens": 0,
+          "native_output_sha256": "3c5acf202a1db3b09c8bef9f5273139d6428ec670dc58eaf4ff9da47b42d7441"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "transition": {
+      "report": "local/generated/transition-comparison/run-l01zav5o/report.json",
+      "report_sha256": "f231a984cda4abfdb53c5bf04468b48dc7cb469fb739c7b8000753691339b6c5",
+      "cases": 306528
+    },
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-scgbod08/report.json",
+      "report_sha256": "fa88d2efdc11f176a6d2dab16f4c6f73e0b3af0f379ad4f42b01f1181409de90",
+      "cases": 138149
+    },
+    "actions": {
+      "report": "local/generated/actions-comparison/run-vhw_x4rm/report.json",
+      "report_sha256": "114f76bb708e5ab1fcf89dffeca849e19eedf5797d4969c5abd1ce4291e56238",
+      "cases": 146638
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-1fym9xb6/report.json",
+      "report_sha256": "a183c0ff677dab8bc6ee01b43e439ff128833d8895376f4b731516bd6a69ba61",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-6t4c7zwl/report.json",
+      "report_sha256": "f1bb5e79a25e70c88c284bd3ad1ea2652911ac68257120ff3ad634514a568a91",
+      "cases": 152093
+    },
+    "reversal": {
+      "report": "local/generated/reversal-comparison/run-2q29cfwd/report.json",
+      "report_sha256": "e1c10a948d427d6792daefd4b698ff8856a44d275cfb8d42fde9095e1d788207",
+      "cases": 203586
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-j_g6z0_f/report.json",
+      "report_sha256": "bb05866252f877e7dd603b8bdae76a45a6e32a6602e06a6d908294b77fe06f28",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-j84hqj9w/report.json",
+      "report_sha256": "20d8ba2b8f9c146490ab5d4f8840b553e4439c4ed64143a5eb1cfde996500f5d",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-v938go3a/report.json",
+      "report_sha256": "9771df0c1d017c6e3051865c5aaba57eeeb3f4cf180a44626760691c56c8dd5b",
+      "cases": 614436
+    }
+  },
+  "scoped_instruction_union": 1028,
+  "static_probe": {
+    "report": "local/generated/coasting-probe/run-70205etc/report.json",
+    "report_sha256": "4c4fad00f96e5304bd2ad6d42ca6be620ea73ba8a2153f89f0810af147f548ff",
+    "instructions": 1028,
+    "gnu_checks": 5,
+    "gnu_limit": "installed m68k.gnu rejects immediate BCHG 086e; not claimed as corroborated by this decoder",
+    "new_instructions": 8,
+    "new_gnu_checks": 3,
+    "new_gnu_limit": "Installed m68k.gnu rejects JMP absolute long; primary decode and restricted original execution cover the tail instruction."
+  },
+  "ordinary_movie": {
+    "report": "local/generated/coasting-movie/run-g7vzhcyq/report.json",
+    "report_sha256": "3d2d160849794501b33ecafe95a604c4133155ca796435e18cc2e4c7cf6c97d0",
+    "start": 1742,
+    "end": 1759,
+    "comparison": {
+      "ok": true,
+      "initializers": 1,
+      "continuous_wrapper_calls": 16,
+      "first_update_frame": 1743,
+      "command": [
+        "~/WizNLizPC/build/debug/wiznliz-actor",
+        "movie.scene",
+        "~/WizNLizPC/local/generated/coasting-movie/run-g7vzhcyq/scene.bin",
+        "movie.bank",
+        "~/WizNLizPC/local/generated/coasting-movie/run-g7vzhcyq/bank.bin",
+        "--coast-sequence"
+      ],
+      "output_sha256": "e47a74270be8f2eec2b0d5b2d400f7590b84e1732d41874a5c1f5a556df50c7b",
+      "scope": "one P1 initializer and its next 16 P1 updates; P2 initializer observed but not compared; shared transition and other world objects excluded"
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "transition_movie_regression": {
+    "report": "local/generated/transition-movie/run-son5h9w7/report.json",
+    "report_sha256": "2f6c19f2d8f18ae64e6d6ca42d6321a0754b30321c143198c6417ac6b7770a5c",
+    "start": 1516,
+    "end": 1533,
+    "comparison": {
+      "ok": true,
+      "comparisons": {
+        "continuous-wrapper": {
+          "calls": 17,
+          "command": [
+            "~/WizNLizPC/build/debug/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/transition-movie/run-son5h9w7/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/transition-movie/run-son5h9w7/bank.bin",
+            "--transition-sequence"
+          ],
+          "output_sha256": "31a584d8af294cc28d9d3af62e29e804a988b6373fbb036092b072d08590a21e"
+        },
+        "timer": {
+          "calls": 17,
+          "command": [
+            "~/WizNLizPC/build/debug/wiznliz-actor",
+            "movie.scene",
+            "~/WizNLizPC/local/generated/transition-movie/run-son5h9w7/scene.bin",
+            "movie.bank",
+            "~/WizNLizPC/local/generated/transition-movie/run-son5h9w7/bank.bin",
+            "--transition-timer"
+          ],
+          "output_sha256": "5f3bebbc57de5e120f74ee8c2a1773f4b28927fc869a74570ec01a1d6e770ddb"
+        }
+      },
+      "handlers": {
+        "0x710e": 1,
+        "0x7126": 16
+      },
+      "completion_frame": 1532
+    },
+    "hooked_unhooked_equal": true,
+    "final_hash": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "wrapper_movie_regression": {
+    "report": "local/generated/dispatch-movie/run-v23xeorr/report.json",
+    "report_sha256": "6b589a8f2cd9f4c1318a01088153a9d4d2b24b368ea81b2621f1ed1e79c311e8",
+    "ordinary_calls": 191,
+    "branch_calls": 72,
+    "independent_unhooked_matches": 4
+  },
+  "tests": {
+    "debug": {
+      "python_tests": 149,
+      "skips": 0,
+      "ctest_targets": 22,
+      "log": "local/generated/arrival-research/test-debug.log",
+      "sha256": "c35f7af0e84983e73722868231168b221469ea6112dee23371825ebd549b0a0d"
+    },
+    "release": {
+      "python_tests": 149,
+      "skips": 0,
+      "ctest_targets": 22,
+      "log": "local/generated/arrival-research/test-release.log",
+      "sha256": "aa55c70dfd46c1fba95b152f544b1b3864794c49190503ac9091c371d0a6f5d2"
+    },
+    "sanitize": {
+      "python_tests": 149,
+      "skips": 0,
+      "ctest_targets": 22,
+      "log": "local/generated/arrival-research/test-sanitize.log",
+      "sha256": "613913ce6757f2189cf3286ee0a32f3a113687e2b57a2324f10b5a059cf4e7c9"
+    }
+  },
+  "build_logs": {
+    "debug": {
+      "path": "local/generated/arrival-research/build-debug.log",
+      "sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794"
+    },
+    "release": {
+      "path": "local/generated/arrival-research/build-release.log",
+      "sha256": "213abdf8b711291a65a966e1bf4c850cc7271531aaf06e13b52ea06367d50064"
+    },
+    "sanitize": {
+      "path": "local/generated/arrival-research/build-sanitize.log",
+      "sha256": "3cda708bef23351e45d4bac1739a52a258a9676385de03eb16e4b50a9d165bf8"
+    }
+  },
+  "preservation": {
+    "report": "local/generated/arrival-research/preservation.json",
+    "report_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf",
+    "verified_runtime_binaries": 104,
+    "worker_verified": true,
+    "rom_verified": true,
+    "movie_verified": true
+  },
+  "limitations": [
+    "Initializer sweeps of selector, first word and vertical state are correlated, not a Cartesian proof.",
+    "Ordinary movie comparison covers one P1 initializer and sixteen P1 updates. P2 initialization is observed but not compared.",
+    "Native actor/service/tracking coordinates persist; shared environment changes and scratch are externally supplied.",
+    "Original movie/input/build identities are fixed; no RAM/register/ROM edits in the new capture.",
+    "GNU secondary decoder rejects absolute-long JMP; primary/static/original-execution evidence covers the new tail.",
+    "Earlier 507 actor/presentation and 92 actor / 24 effect movie contracts and full survey were not rerun.",
+    "TASK-0010 remains in progress; native playability none. Next: 51C8 at movie frames 3403..3577."
+  ]
+}

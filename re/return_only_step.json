@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "active_dispatch",
+      "start": 27050,
+      "end_exclusive": 27074,
+      "sha256": "accd0d8d9af7d06216da80e59c122dcbe4a8b14115364d654cfe24b90f387062",
+      "instruction_count": 7,
+      "execution_compared": true
+    },
+    {
+      "id": "presentation",
+      "start": 63340,
+      "end_exclusive": 63568,
+      "sha256": "9618d1cf8fc39bbfd53d4a4721ee12e165157af2264ff575c23311647f8f24d6",
+      "instruction_count": 59,
+      "execution_compared": true
+    },
+    {
+      "id": "return_only",
+      "start": 75334,
+      "end_exclusive": 75336,
+      "sha256": "1ceeabf0c6a5a30bad12cdac0e3ab015a7188a42e6aebb556aad00bb9cd693ad",
+      "instruction_count": 1,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [],
+  "dependencies": [
+    "presentation_step",
+    "dispatch_step",
+    "effect_session"
+  ],
+  "contract": "Composition of existing active gate, presentation and fixed 12646 handler/service; no new function mapping or classified byte. Any invoked callback rejects, including null. Inactive return-only objects retain occupied state and consume no update budget; no initializer, activation producer, release or renderer reconstructed."
+}

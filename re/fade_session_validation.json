@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-23-050",
+  "starting_commit": "880497b7de576e0ebeee034a59238bb641b5353c",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "The level-start fade joined to the native session: P1SessionState carries the shared 1345A timer, which step_p1_session and step_mixed_session run once per call before the banner; the session evidence accepts an active timer whose own writes alone change FF0B90..FF0BA3. wiznliz-session --world-session now runs the [6886,68D4) setup and every object loop 634..1065 with the timer, native P1 from one seed and physical held sets and the world consuming P1's effects; no supplied loops remain. Inputs besides held buttons: E918 counts and message-producer updates. The fade's palette consumers, renderer, audio and whole-machine parity are outside scope.",
+  "world_session_capture": {
+    "path": "local/generated/world-session/run-z6v12tnt/report.json",
+    "sha256": "fbf8ae8fb9d317715723ff6885c504c4a9b13bc9a2b914b25e314e55e7153b6b",
+    "classification": "fresh ordinary unchanged movie frames 634..1066; no edits; owned workers",
+    "endpoint": {
+      "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "world": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "identity_build": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "world_report": {
+      "path": "local/generated/pair-initializer-capture/run-m589atg2/report.json",
+      "sha256": "7bf8e519e8600dced8526e41b0165a4836e00d1f32c84cc4b5df04c1e760fb7e"
+    },
+    "observation": {
+      "p1_calls": 432,
+      "scratch_writes": 5320,
+      "world": {
+        "loops": 432,
+        "first_loop": 634,
+        "last_loop": 1065,
+        "releases": 31,
+        "updates": 5732,
+        "sounds": 3,
+        "clears": 1,
+        "pickup_hits": 2,
+        "emitter_walks": 128,
+        "emitter_random_calls": 62,
+        "deliveries": 1,
+        "probe_hits": 9,
+        "ingredients": 1,
+        "spawns": {
+          "3": 32,
+          "11": 1
+        },
+        "owner_positions": 128,
+        "external_random_calls": 5,
+        "external_message_updates": 4,
+        "conversions": [
+          {
+            "frame": 780,
+            "slot": 53,
+            "cause": "6D22",
+            "by": 54
+          },
+          {
+            "frame": 823,
+            "slot": 53,
+            "cause": "7910",
+            "by": 63
+          },
+          {
+            "frame": 853,
+            "slot": 67,
+            "cause": "7B22",
+            "by": 47
+          },
+          {
+            "frame": 980,
+            "slot": 53,
+            "cause": "6D22",
+            "by": 55
+          }
+        ],
+        "first_ingredient_frame": 853,
+        "write_audit": {
+          "complete_frames": 432,
+          "incomplete_frames": [],
+          "writes": {
+            "random": 268,
+            "ingredient_tail": 2
+          },
+          "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+        }
+      },
+      "cross_check": {
+        "frames": 432,
+        "tracking": 432,
+        "owner_positions": 128
+      },
+      "fade": {
+        "active_frames": [
+          634,
+          668
+        ],
+        "level_steps": [
+          654,
+          656,
+          658,
+          660,
+          662,
+          664,
+          666,
+          668
+        ],
+        "consumer_clears": 8
+      }
+    },
+    "comparison": {
+      "seed_sha256": "7d452922481e063390c7eee4a17872032245cec4f2e6c12338dd7264898563be",
+      "output_sha256": "acfa4e00c90c61dd6034835f2dd527f88ed188ad20f90a1d5a3d030e8d21bed1",
+      "outcome": "matched",
+      "supplied_loops": 0,
+      "p1_calls": 432,
+      "world_loops": 432,
+      "held_rows": 432,
+      "p1_sounds": 12
+    }
+  },
+  "world_session_fixtures": [
+    {
+      "path": "local/generated/world-session/run-u8n22j5m/report.json",
+      "sha256": "2146c1c6272a4a58dcdc93680ef03753ab294c53e1259b55fcb0527d4b44aa64",
+      "preset": "release",
+      "start": 634,
+      "end": 1066,
+      "comparison": {
+        "seed_sha256": "7d452922481e063390c7eee4a17872032245cec4f2e6c12338dd7264898563be",
+        "output_sha256": "acfa4e00c90c61dd6034835f2dd527f88ed188ad20f90a1d5a3d030e8d21bed1",
+        "outcome": "matched",
+        "supplied_loops": 0,
+        "p1_calls": 432,
+        "world_loops": 432,
+        "held_rows": 432,
+        "p1_sounds": 12
+      },
+      "reference_report": "local/generated/world-session/run-z6v12tnt/report.json",
+      "reference_report_sha256": "fbf8ae8fb9d317715723ff6885c504c4a9b13bc9a2b914b25e314e55e7153b6b",
+      "endpoint": {
+        "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "world": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      }
+    },
+    {
+      "path": "local/generated/world-session/run-vbpuecyb/report.json",
+      "sha256": "10588359e67d287e9cce5cb443634605748d7949dddccd3f2082dce762928fd5",
+      "preset": "sanitize",
+      "start": 634,
+      "end": 1066,
+      "comparison": {
+        "seed_sha256": "7d452922481e063390c7eee4a17872032245cec4f2e6c12338dd7264898563be",
+        "output_sha256": "acfa4e00c90c61dd6034835f2dd527f88ed188ad20f90a1d5a3d030e8d21bed1",
+        "outcome": "matched",
+        "supplied_loops": 0,
+        "p1_calls": 432,
+        "world_loops": 432,
+        "held_rows": 432,
+        "p1_sounds": 12
+      },
+      "reference_report": "local/generated/world-session/run-z6v12tnt/report.json",
+      "reference_report_sha256": "fbf8ae8fb9d317715723ff6885c504c4a9b13bc9a2b914b25e314e55e7153b6b",
+      "endpoint": {
+        "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "world": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      }
+    }
+  ],
+  "regression_captures": {
+    "mixed": [
+      {
+        "path": "local/generated/mixed-session/run-4wxfvfmi/report.json",
+        "sha256": "9a179f6e1918957d623585fd5008a064da1b91eac8066039502e68a9013789f5",
+        "preset": "debug",
+        "start": 1066,
+        "end": 1100,
+        "comparison": {
+          "calls": 34,
+          "physical_rows": 34,
+          "per_call_environment_feeds": 0,
+          "initial_slots": 68,
+          "pool_events": 633,
+          "anchor_slot": 58,
+          "sound_requests": 2,
+          "banner_requests": 34,
+          "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+        },
+        "endpoint": {
+          "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/mixed-session/run-3q7w1sjq/report.json",
+        "sha256": "debbaaf9c80af339c02caa094daf60d6dbcc1d36b34f673a5d59ee4bef8b1d4d",
+        "preset": "release",
+        "start": 1066,
+        "end": 1100,
+        "comparison": {
+          "calls": 34,
+          "physical_rows": 34,
+          "per_call_environment_feeds": 0,
+          "initial_slots": 68,
+          "pool_events": 633,
+          "anchor_slot": 58,
+          "sound_requests": 2,
+          "banner_requests": 34,
+          "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+        },
+        "reference_report": "local/generated/mixed-session/run-4wxfvfmi/report.json",
+        "reference_report_sha256": "9a179f6e1918957d623585fd5008a064da1b91eac8066039502e68a9013789f5",
+        "endpoint": {
+          "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/mixed-session/run-ujo1dpnz/report.json",
+        "sha256": "f550bfafd1288452d4707cfcef7649dbe93f2e55e9dfa39bf6f680858ecc2700",
+        "preset": "sanitize",
+        "start": 1066,
+        "end": 1100,
+        "comparison": {
+          "calls": 34,
+          "physical_rows": 34,
+          "per_call_environment_feeds": 0,
+          "initial_slots": 68,
+          "pool_events": 633,
+          "anchor_slot": 58,
+          "sound_requests": 2,
+          "banner_requests": 34,
+          "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+        },
+        "reference_report": "local/generated/mixed-session/run-4wxfvfmi/report.json",
+        "reference_report_sha256": "9a179f6e1918957d623585fd5008a064da1b91eac8066039502e68a9013789f5",
+        "endpoint": {
+          "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      }
+    ],
+    "session_early": [
+      {
+        "path": "local/generated/session-movie/run-zn7lhhzg/report.json",
+        "sha256": "7fe782209409979408901fadf8fe5c7540ee31c37c64b0b6097182cc0a3f671b",
+        "preset": "debug",
+        "start": 700,
+        "end": 1067,
+        "cadence": {
+          "video_frames": 367,
+          "actor_invocations": 367,
+          "producer_invocations": 1101,
+          "input_polls": 1468,
+          "inactive_timer_invocations": 367,
+          "scratch_writes": 5205,
+          "banner_invocations": 367
+        },
+        "comparison": {
+          "calls": 367,
+          "seed_fields": 35,
+          "button_rows": 367,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "ba92d3030b033d90cfb53feba321d9b06ac8a64644a458c8128b3bb2ab0182c1",
+          "sound_requests": 12,
+          "banner_invocations": 367,
+          "handlers": {
+            "0xa1be": 23,
+            "0xa408": 31,
+            "0xaaea": 66,
+            "0xab04": 144,
+            "0xa6c8": 86,
+            "0xa546": 42,
+            "0xa246": 1,
+            "0xa88e": 47
+          }
+        },
+        "endpoint": {
+          "hooked": "5d1ec2e7b29908bf38fd6341591866ed3a62a74e83c7c6a0d63fa6b21767de3d",
+          "unhooked": "5d1ec2e7b29908bf38fd6341591866ed3a62a74e83c7c6a0d63fa6b21767de3d",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/session-comparison/run-8psppaik/report.json",
+        "sha256": "f8fbd2d2d5b409984ab513835a90369b7a6e40dbfbf21f2fd7eea37da5eddd61",
+        "preset": "release",
+        "start": 700,
+        "end": 1067,
+        "comparison": {
+          "calls": 367,
+          "seed_fields": 35,
+          "button_rows": 367,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "ba92d3030b033d90cfb53feba321d9b06ac8a64644a458c8128b3bb2ab0182c1",
+          "sound_requests": 12,
+          "banner_invocations": 367,
+          "handlers": {
+            "0xa1be": 23,
+            "0xa408": 31,
+            "0xaaea": 66,
+            "0xab04": 144,
+            "0xa6c8": 86,
+            "0xa546": 42,
+            "0xa246": 1,
+            "0xa88e": 47
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-zn7lhhzg/report.json",
+        "reference_report_sha256": "7fe782209409979408901fadf8fe5c7540ee31c37c64b0b6097182cc0a3f671b"
+      },
+      {
+        "path": "local/generated/session-comparison/run-y7ibdqtb/report.json",
+        "sha256": "f34a29ddc7d3e11da590f0cc53df801499337a68bdd85cda5edbb1e05d400fdb",
+        "preset": "sanitize",
+        "start": 700,
+        "end": 1067,
+        "comparison": {
+          "calls": 367,
+          "seed_fields": 35,
+          "button_rows": 367,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "ba92d3030b033d90cfb53feba321d9b06ac8a64644a458c8128b3bb2ab0182c1",
+          "sound_requests": 12,
+          "banner_invocations": 367,
+          "handlers": {
+            "0xa1be": 23,
+            "0xa408": 31,
+            "0xaaea": 66,
+            "0xab04": 144,
+            "0xa6c8": 86,
+            "0xa546": 42,
+            "0xa246": 1,
+            "0xa88e": 47
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-zn7lhhzg/report.json",
+        "reference_report_sha256": "7fe782209409979408901fadf8fe5c7540ee31c37c64b0b6097182cc0a3f671b"
+      }
+    ],
+    "session_late": [
+      {
+        "path": "local/generated/session-movie/run-54c5nx3n/report.json",
+        "sha256": "18f9b43eb748672bfba59e1e4d17e17bb7aa8297737864d0cb4b29a33d1c14d0",
+        "preset": "debug",
+        "start": 3100,
+        "end": 3200,
+        "cadence": {
+          "video_frames": 100,
+          "actor_invocations": 100,
+          "producer_invocations": 600,
+          "input_polls": 800,
+          "inactive_timer_invocations": 100,
+          "scratch_writes": 892,
+          "banner_invocations": 0
+        },
+        "comparison": {
+          "calls": 100,
+          "seed_fields": 32,
+          "button_rows": 100,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+          "sound_requests": 4,
+          "banner_invocations": 0,
+          "handlers": {
+            "0xa408": 25,
+            "0xaaea": 22,
+            "0xab04": 56,
+            "0xa4ec": 15,
+            "0xa546": 7
+          }
+        },
+        "endpoint": {
+          "hooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+          "unhooked": "2ccb0adfa5d1e2f943ad0950c87d70c22a789b3544135b72230e75f80f6bba62",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/session-comparison/run-grsib70_/report.json",
+        "sha256": "003b7cc3afd42298c4ec74291df8557562a8fbab30d3f6d665a4325027a85e32",
+        "preset": "release",
+        "start": 3100,
+        "end": 3200,
+        "comparison": {
+          "calls": 100,
+          "seed_fields": 32,
+          "button_rows": 100,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+          "sound_requests": 4,
+          "banner_invocations": 0,
+          "handlers": {
+            "0xa408": 25,
+            "0xaaea": 22,
+            "0xab04": 56,
+            "0xa4ec": 15,
+            "0xa546": 7
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-54c5nx3n/report.json",
+        "reference_report_sha256": "18f9b43eb748672bfba59e1e4d17e17bb7aa8297737864d0cb4b29a33d1c14d0"
+      },
+      {
+        "path": "local/generated/session-comparison/run-1xwknsou/report.json",
+        "sha256": "9f9ffae89c46ef2e818be469aaf541d40b14075159a7f4cc03f80182a9b1fed8",
+        "preset": "sanitize",
+        "start": 3100,
+        "end": 3200,
+        "comparison": {
+          "calls": 100,
+          "seed_fields": 32,
+          "button_rows": 100,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+          "sound_requests": 4,
+          "banner_invocations": 0,
+          "handlers": {
+            "0xa408": 25,
+            "0xaaea": 22,
+            "0xab04": 56,
+            "0xa4ec": 15,
+            "0xa546": 7
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-54c5nx3n/report.json",
+        "reference_report_sha256": "18f9b43eb748672bfba59e1e4d17e17bb7aa8297737864d0cb4b29a33d1c14d0"
+      }
+    ],
+    "effect": [
+      {
+        "path": "local/generated/effect-session/run-4p4_icso/report.json",
+        "sha256": "9e1f392434ea81635a89978551d87282d193ca75d739798ac5189529888d6a52",
+        "preset": "debug",
+        "start": 700,
+        "end": 1090,
+        "cadence": {
+          "actor_calls": 390,
+          "producer_calls": 1170,
+          "input_polls": 1560,
+          "inactive_timers": 390,
+          "scratch_writes": 5350,
+          "native_events": 610828,
+          "routine_events": 102510
+        },
+        "comparison": {
+          "calls": 390,
+          "seed_fields": 36,
+          "physical_rows": 390,
+          "per_call_environment_feeds": 0,
+          "effect_calls": 12,
+          "spawns": 1,
+          "releases": 1,
+          "native_capacity": 1,
+          "sound_requests": 12,
+          "banner_requests": 390,
+          "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+        },
+        "endpoint": {
+          "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/effect-session/run-fncov24m/report.json",
+        "sha256": "75abb62f763e6668902e7a52edfa8950b744edb6433513e17d2fd5eeb1709319",
+        "preset": "release",
+        "start": 700,
+        "end": 1090,
+        "cadence": {
+          "actor_calls": 390,
+          "producer_calls": 1170,
+          "input_polls": 1560,
+          "inactive_timers": 390,
+          "scratch_writes": 5350,
+          "native_events": 610828,
+          "routine_events": 102510
+        },
+        "comparison": {
+          "calls": 390,
+          "seed_fields": 36,
+          "physical_rows": 390,
+          "per_call_environment_feeds": 0,
+          "effect_calls": 12,
+          "spawns": 1,
+          "releases": 1,
+          "native_capacity": 1,
+          "sound_requests": 12,
+          "banner_requests": 390,
+          "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+        },
+        "reference_report": "local/generated/effect-session/run-4p4_icso/report.json",
+        "reference_report_sha256": "9e1f392434ea81635a89978551d87282d193ca75d739798ac5189529888d6a52",
+        "endpoint": {
+          "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/effect-session/run-zp83knb6/report.json",
+        "sha256": "05fd040dda9d32b5d1e181ff704c32f3ff922499df0103296505d4e386ebd715",
+        "preset": "sanitize",
+        "start": 700,
+        "end": 1090,
+        "cadence": {
+          "actor_calls": 390,
+          "producer_calls": 1170,
+          "input_polls": 1560,
+          "inactive_timers": 390,
+          "scratch_writes": 5350,
+          "native_events": 610828,
+          "routine_events": 102510
+        },
+        "comparison": {
+          "calls": 390,
+          "seed_fields": 36,
+          "physical_rows": 390,
+          "per_call_environment_feeds": 0,
+          "effect_calls": 12,
+          "spawns": 1,
+          "releases": 1,
+          "native_capacity": 1,
+          "sound_requests": 12,
+          "banner_requests": 390,
+          "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+        },
+        "reference_report": "local/generated/effect-session/run-4p4_icso/report.json",
+        "reference_report_sha256": "9e1f392434ea81635a89978551d87282d193ca75d739798ac5189529888d6a52",
+        "endpoint": {
+          "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      }
+    ]
+  },
+  "native_builds": [
+    {
+      "path": "build/debug/provenance.json",
+      "sha256": "c9f315b3c92e113e577ce1922cdd75a6908b9e430aeb1a0d3627560dc8b2f6c9",
+      "preset": "debug",
+      "session": "3c2dffaf423269e698e8291f82a4a4828aea1040f727be6b6f7039674800055a"
+    },
+    {
+      "path": "build/release/provenance.json",
+      "sha256": "0ae34b6558066f5cf16ce4b6df71a17e9e8214c4cbc4ad45854d68605a854313",
+      "preset": "release",
+      "session": "204343208294a1617aeff97e1f8c03177400f58518cc85283be909a9ad6ba241"
+    },
+    {
+      "path": "build/sanitize/provenance.json",
+      "sha256": "899be6216f6f40814296d047e52efb7581ee05823c639a06341031d14f81a218",
+      "preset": "sanitize",
+      "session": "d9ca0b7edd9e0a076bac9b8c61f4a93d5659edf9b5ded1efbd57c72eacd45a93"
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 226,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/fade-research/test-debug.log",
+        "sha256": "4af3b36671069a7123c7c5f213166aaf744298525380f1aded977aeeaebd1a9d"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 226,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/fade-research/test-release.log",
+        "sha256": "f07cdfb42ea4e2cf2d5507de0a635556d6becd5b7d4d6ef81f6550a2e3e05faf"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 226,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/fade-research/test-sanitize.log",
+        "sha256": "6f50964c56d44024c91377c7277223767dd01e0184c869a49e10a311c677412d"
+      }
+    }
+  ],
+  "coverage": {
+    "new_bounded_native_mappings": 0,
+    "new_partial_native_mappings": 0,
+    "new_classified_bytes": 0,
+    "bounded_simulation_mappings": 133,
+    "partial_simulation_mappings": 6,
+    "indexed_functions": 148,
+    "classified_bytes": 29146,
+    "unclassified_bytes": 1019430,
+    "new_native_instructions": 0,
+    "cumulative_executed_union": 2142,
+    "scope": "Composition: the already mapped 1345A timer now runs in the session."
+  },
+  "failures": [
+    {
+      "scope": "validator change (before any recorded result)",
+      "reason": "The first edit named the new validate_session parameter `timer`, which an existing loop variable of that function reassigns; it would have switched timer mode on for every caller. It was renamed active_timer before any run.",
+      "resolved": true
+    }
+  ],
+  "not_rerun": [
+    "restricted corpora (no simulation routine changed; the timer corpus is unchanged)",
+    "a fresh world (pair) capture: its tool is unchanged",
+    "whole-movie survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "the joined run past 1066: the second fruit delivery and 79B6/7AD6's second-ingredient path with the 7B42 anchor chain (SPELL COMPLETED!, DOOR OPEN!)",
+    "the message producer and the FFFF32C2 object's E918 callers",
+    "the fade's palette consumers (13432, 1350E) and rendering",
+    "the 6C00 family branches, gated-pair leads and gate producers",
+    "the setup after 68D4, the level sequence before it and boot",
+    "audio and the SDL3 shell"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries_verified": 104,
+    "source_files_verified": 59,
+    "external_status_unchanged": true,
+    "external_status_difference": null,
+    "scope": "Project boundaries: vault/02_Workflow/PROJECT_BOUNDARIES.md; no other home-directory project is queried.",
+    "owned_workers_remaining": [],
+    "foreign_emulator_processes": [],
+    "initial_manifest": "local/generated/fade-research/preservation.json",
+    "initial_manifest_sha256": "2f9f511e7dbd3126ec0da78882af8c7ded55188d7bcf251dd48879e36c259755",
+    "final_manifest_sha256": "05142216072e3e0d1e53cc8c22c741771528860ff49dd1860b3609c9727177fa"
+  }
+}

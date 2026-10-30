@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "rising_pair_initializer",
+      "start": 30578,
+      "end_exclusive": 30728,
+      "sha256": "d0072510b1f0f503e623e2904e0786708f0efc6559bb06df4a03e0c40ea6079e",
+      "instruction_count": 27,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 30578,
+      "target": 63970
+    },
+    {
+      "pc": 30650,
+      "target": 63970
+    },
+    {
+      "pc": 63980,
+      "target": 64030
+    },
+    {
+      "pc": 64046,
+      "target": 64030
+    }
+  ],
+  "dependencies": [
+    "pair_initializer_step",
+    "visibility_pair_step",
+    "private_step",
+    "mixed_session"
+  ],
+  "contract": "7772 performs two ordered F9E2 pops and initializes two 7808 rising objects. Both store the caller's A5 at +4A and clear countdown +10. First: (158,262) frames 922..927; A4 is set to it. Second: X = first X + 0x20 (word), Y = first Y via A4, frames 928..933. Counter/reload 5/5, mode 81, handler 7808. No flags or FF31C0 store; A4/A6 are left on the first/second objects, A5 preserved. Only +01, +0E target, +1A..+45 are inherited; native requires a verified target and zero unrepresented bytes, else rejects. Exhaustion enters the never-returning FA1E loop. FF31B0 gate producers and the rest of level setup are not reconstructed."
+}

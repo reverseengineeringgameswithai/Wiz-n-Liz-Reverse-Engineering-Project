@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-05-033",
+  "starting_commit": "3fa722ba8b34e8eb912e0a3994decf7d80a599fc",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "Typed fixed-RTS objects retain presentation and occupancy in the shared pool. Five active slots, two dormant occupied slots; no external reservations in [1066,1100). One initial seed then physical input only. 565 spawn/update/release events plus 68 inactive observations. Initializers, activation producers, callback79B6, hit7910 and whole-world/frame/render/audio parity unsupported.",
+  "component_comparisons": [
+    {
+      "path": "local/generated/return-only-comparison/run-1sdfjefu/report.json",
+      "sha256": "c29bcfecba1cb7d09b476fcffb5ee5ac09053e313b155fcce2ae6c3bfa4036e1",
+      "preset": "debug",
+      "cases": 286848,
+      "successful_instructions_visited": 42,
+      "new_instructions_visited": 0
+    },
+    {
+      "path": "local/generated/return-only-comparison/run-6ez46ztk/report.json",
+      "sha256": "046c36a57b625df108140ace0e3c12c729c02b48f7808d48bc4d0a7b7c8863aa",
+      "preset": "release",
+      "cases": 286848,
+      "successful_instructions_visited": 42,
+      "new_instructions_visited": 0
+    },
+    {
+      "path": "local/generated/return-only-comparison/run-g7z8c069/report.json",
+      "sha256": "42ba1f751348ca46515633cca089ffed079b6fa6a2af407f81a6008ddd1c255a",
+      "preset": "sanitize",
+      "cases": 286848,
+      "successful_instructions_visited": 42,
+      "new_instructions_visited": 0
+    },
+    {
+      "path": "local/generated/collision-comparison/run-q9s65z_f/report.json",
+      "sha256": "05aa9ec275c2a5127dcfc9fdf4825515685089b22179cbf6f464a937991ba02e",
+      "preset": "debug",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-nt9b1wnf/report.json",
+      "sha256": "d071a2597631b17d743c8fa155bc32a91033b789d342d3ab2afc4e959891d952",
+      "preset": "debug",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-_pcd8u37/report.json",
+      "sha256": "25acbd27b369d738c1faa0c1f072be5ffaf3725a86014ae4390a066611049eef",
+      "preset": "debug",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-fn8ut7b4/report.json",
+      "sha256": "32520af0ffe725abf1d3b9f120a3274a785e48a5e7928bc6df5ef8f96fe855d7",
+      "preset": "debug",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-xqg460ay/report.json",
+      "sha256": "dd80f26bf20a8729a54f3655be3bccc03aaef82172edb476f8ee7b328d665bbb",
+      "preset": "debug",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/collision-comparison/run-np2_l2nz/report.json",
+      "sha256": "4a0c97c2bdd8f347ff7051fe084928b17beb2cd222f35efe7f6130b66a9443cf",
+      "preset": "release",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-oq57s2ke/report.json",
+      "sha256": "77432b901f3573e883687567dbe9c895abcf01128b470fc9a10356a076e5e440",
+      "preset": "release",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-771ui5kj/report.json",
+      "sha256": "029df39c1e5031a0807e465650f440743531c94af12f1bad20105dcc24a44afd",
+      "preset": "release",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-dgte9dbi/report.json",
+      "sha256": "bdd4611932f232a6a4c0369f097d9a4641882c79e31ee297685d9b5c75e6e572",
+      "preset": "release",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-1jtkgd0b/report.json",
+      "sha256": "1589803f34ccffaec17292d8c1988595bfcac7672a6d9f9168ddaf05644b98c6",
+      "preset": "release",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/collision-comparison/run-1bzc3g2p/report.json",
+      "sha256": "a4154a39083739c244c546b427e9848ee009721d70981a846674cdfc8c99583d",
+      "preset": "sanitize",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-37v9h9ev/report.json",
+      "sha256": "df33bdbad493347f098bc04cae7d47adf03ada8bf701ec8eb52541163addd597",
+      "preset": "sanitize",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-kp417mt1/report.json",
+      "sha256": "ffa9dfdc05ab06523e7bce2ddd15dee2cc025e75e6772443dc3ed85076f422ec",
+      "preset": "sanitize",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-n2zaag84/report.json",
+      "sha256": "ac1a4988bc54030e8f20eb967a565a388884c5e8c7da99233f9aa228f58cdf48",
+      "preset": "sanitize",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-5g11wp_b/report.json",
+      "sha256": "66753efbd9fd06abca9b24fe6f4cae713374f6b670680a712f2e031c5ad2b0b6",
+      "preset": "sanitize",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/input-comparison/run-9fy93ic5/report.json",
+      "sha256": "de09e7389fe80104f20881510a84193469e3e6af9fb872b71c4ff39a0f60b7c7",
+      "preset": "sanitize",
+      "cases": 1024
+    },
+    {
+      "path": "local/generated/banner-comparison/run-kf84blfx/report.json",
+      "sha256": "685db5531901d15da99a926b31fcca93ca77e861461336677dfde6a965b4f9a4",
+      "preset": "sanitize",
+      "cases": 66880
+    },
+    {
+      "path": "local/generated/presentation-comparison/run-eg248get/report.json",
+      "sha256": "cb4af3b9ba2e87ce3b4f76b70162475ddc8d309f55d748a6f9fdd84563722512",
+      "preset": "sanitize",
+      "cases": 347320,
+      "new_instructions_visited": 90
+    },
+    {
+      "path": "local/generated/actor-comparison/run-esu1tmql/report.json",
+      "sha256": "698df9d057eaaabe34e594e55363664fea1256e3f7da098a3e80b9b9f805c07e",
+      "preset": "sanitize",
+      "cases": 152093,
+      "new_instruction_addresses_visited": 315
+    },
+    {
+      "path": "local/generated/dispatch-comparison/run-tzu_mub5/report.json",
+      "sha256": "5c89203e5e710edc95a1af476597e8033cc4a3121a3f1d65bd88caf74efb0e67",
+      "preset": "sanitize",
+      "cases": 138149,
+      "new_instructions_visited": 15
+    },
+    {
+      "path": "local/generated/airborne-comparison/run-54fs_6ux/report.json",
+      "sha256": "44e92deca8dbe6beabbd0ce2f0df95000bbd0a164e88fbae33dbd9174e7b8a87",
+      "preset": "sanitize",
+      "cases": 415940,
+      "new_instruction_addresses_visited": 172
+    },
+    {
+      "path": "local/generated/movement-comparison/run-kgf_wx0a/report.json",
+      "sha256": "47b5775d0a1375f1b5826c40342f5f83489983ef90e7dd6b3cf1e1abe4705653",
+      "preset": "sanitize",
+      "cases": 282233,
+      "new_instruction_addresses_visited": 74
+    },
+    {
+      "path": "local/generated/terrain-comparison/run-9734oi_q/report.json",
+      "sha256": "ae98ba2baa01158b00cf02b84e8ec3d667a72bf25f39b1b6120648f178290301",
+      "preset": "sanitize",
+      "total_cases": 614436
+    }
+  ],
+  "mixed_comparisons": [
+    {
+      "path": "local/generated/mixed-session/run-lw7uuh43/report.json",
+      "sha256": "e377232f2aedd806c3891d028885dcef9b3cc7fee8fd3b5abfe8a234b0c49846",
+      "preset": "debug",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 633,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "ee43b59863c5171cbd96d553e3889309a9fd5834f27d0a00fe6f7a8458d025dd"
+      }
+    },
+    {
+      "path": "local/generated/mixed-session/run-2oxlv1e6/report.json",
+      "sha256": "106d4444a2546071b619c4552fe96894d1251c3325da186f6c0ce7815fdbfd21",
+      "preset": "release",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 633,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "ee43b59863c5171cbd96d553e3889309a9fd5834f27d0a00fe6f7a8458d025dd"
+      },
+      "reference_report": "local/generated/mixed-session/run-lw7uuh43/report.json",
+      "reference_report_sha256": "e377232f2aedd806c3891d028885dcef9b3cc7fee8fd3b5abfe8a234b0c49846"
+    },
+    {
+      "path": "local/generated/mixed-session/run-yy6ctdui/report.json",
+      "sha256": "99414a2e67369b9d62f163471f82145bdd618de15da88dd96dc0703afacc0067",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 633,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "ee43b59863c5171cbd96d553e3889309a9fd5834f27d0a00fe6f7a8458d025dd"
+      },
+      "reference_report": "local/generated/mixed-session/run-lw7uuh43/report.json",
+      "reference_report_sha256": "e377232f2aedd806c3891d028885dcef9b3cc7fee8fd3b5abfe8a234b0c49846"
+    }
+  ],
+  "original_capture": {
+    "path": "local/generated/mixed-session/run-lw7uuh43/report.json",
+    "sha256": "e377232f2aedd806c3891d028885dcef9b3cc7fee8fd3b5abfe8a234b0c49846",
+    "classification": "fresh ordinary unchanged movie; no edits; owned workers",
+    "endpoint": {
+      "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "observation": {
+      "particle_updates": 136,
+      "inactive_observations": 68,
+      "emitter_updates": 34,
+      "private_updates": 136,
+      "return_only_updates": 170,
+      "collision_updates": 34,
+      "table_updates": 34,
+      "allocations": 9,
+      "reversal_updates": 12,
+      "releases": 9,
+      "managed_writes": 2111,
+      "return_only_writes": 271,
+      "free_writes": 27,
+      "slots": 68,
+      "initial_free": 50,
+      "reservations": 0,
+      "initial_return_only": 7,
+      "inactive_occupied": 2,
+      "initial_particles": 4,
+      "collision_input": {
+        "x_mask": 1023,
+        "secondary_gate": 0,
+        "secondary_tracking": [
+          0,
+          0
+        ],
+        "fixed_writes": 0,
+        "primary_tracking_writes": 68,
+        "primary_queries": 34,
+        "x_misses": 32,
+        "y_misses": 2,
+        "scope": "P1 wrapper F91A/F924 writes control +42/+44 (native write next PCs F91E/F928); no mask, gate or P2 tracking writers in this window. P2 production is unsupported."
+      },
+      "initial_collision": 1,
+      "table_input": {
+        "loop_count": 0,
+        "producer_countdown": 80,
+        "writes": 0,
+        "producer_entries": 34,
+        "producer_prefix_exits": 34,
+        "scope": "One retained loop-count seed; producer not scheduled natively. No writes, including transients, in this window."
+      },
+      "initial_table": 1,
+      "private_globals": {
+        "rise_gate": 0,
+        "flags_gate": 0,
+        "hide_gate": 0,
+        "writes": 0,
+        "scope": "Seeded once. No writes in this ordinary window; producers remain outside the native session."
+      },
+      "initial_private": 4,
+      "initial_state_scope": "Native P1, emitter/RNG, live trail/reversal and 7808/7CA4/7A88 objects and 78EE miss-only probe, ordered shared free stack; all seven return-only objects retained, including two dormant occupied slots; no external reservations.",
+      "actor_calls": 34,
+      "scratch_writes": 214,
+      "routine_events": 9973,
+      "native_events": 52895,
+      "producer_calls": 102,
+      "input_polls": 136,
+      "inactive_timers": 34,
+      "newborn_particle_updates": 97
+    },
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9"
+  },
+  "native_builds": [
+    {
+      "path": "build/debug/provenance.json",
+      "sha256": "4a519eb490471ea25f9d66bfd9859411414942e676f53d6574a039b4d83d208b",
+      "preset": "debug",
+      "executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "ef3b43121982dffb7b871284f368a35bf7917279719b84f4f47c5c526c8cd649",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "5c6599dfc7e9b95159741bfa9a6ec557ff9b681bbb5c9e6b45889370d49a74c8",
+        "wiznliz-table-motion": "9f337cf008d3a73d7a915d39dc61ba372a6d9e197d4bbe5b791d168d54795ab4",
+        "wiznliz-collision": "2c506e9608327bdc958f9bae6b195eb43654541d0c4a6435d6252cc04f05b05a",
+        "wiznliz-return-only": "09532f5187378023282dd2ac106625f4b382da49a5cd8eb030e006df2bc153ca"
+      }
+    },
+    {
+      "path": "build/release/provenance.json",
+      "sha256": "6a3ebd3586d94fd49cbfe3dd747633ee97b74a251dfd3b7074d8962b041f0d38",
+      "preset": "release",
+      "executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "8f1c8734fb4428ad8b2c27130acbba8d3acb1d80d4359522aaecccc1b03249e4",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "ada48dc409e4bffbf5342d5be90df3d7d2ed2715463f1b2f6b5a8e7336a1019e",
+        "wiznliz-collision": "52417edae0a26e12b34afa03a2e0a3743e0bb529e14271d0a06ce8ecf80b11d9",
+        "wiznliz-return-only": "5753659de8073497646948ba9820a7a433f8d0246e11c4634d20a75600174f77"
+      }
+    },
+    {
+      "path": "build/sanitize/provenance.json",
+      "sha256": "ae95da10416d0220c75bcbce39684314150c15b605b041948ee0503795e0b020",
+      "preset": "sanitize",
+      "executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "5930facc18487af2dbbcc1b94f4c899185c826ac62dfebcc32c6254597dcee89",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "d9d13d42742035ce321327f451c70af923daac889f943265890747c164c6d3e2",
+        "wiznliz-table-motion": "8f7630d236812a33648cb34abd2984d4bc49b56f454620987b4c26d0da6aa408",
+        "wiznliz-collision": "93c6aaae5751cc46433ca9cdb2bd5cd813d14c3d3cedeffd94b218f50ef8b915",
+        "wiznliz-return-only": "0cf31c61ba65b04859383cafb831134e3bc33e725c6bb4f7842f9cd648c12950"
+      }
+    }
+  ],
+  "prior_p1_comparisons": [
+    {
+      "path": "local/generated/effect-session/run-57bviknt/report.json",
+      "sha256": "3ba4870f32ea9b60d5f5ba3091576d545608640d7fdf6d38c3b11dd44e4b63b3",
+      "preset": "debug",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-yvpblbbs/report.json",
+      "sha256": "d9f2151a03219f097a599c82c7a4ab4da6ca896430750d7e12f555870ead2cd8",
+      "preset": "release",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-bcnzf7u5/report.json",
+      "sha256": "52bbbfb3f074c7818c7c6da5cd33fb2e0d1084478245c5d63feaee3f7d4e2d92",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 198,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/passive-object-research/test-debug.log",
+        "sha256": "f4978e4d53fe78d08fbd03b63dc3979cecd9f15ac02d4d110caa9a6fcf815e24"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 198,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/passive-object-research/test-release.log",
+        "sha256": "36640246d1f711d598ec11f8b9fcf2480124acfcbfb306d38253046324dc5c55"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 198,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/passive-object-research/test-sanitize.log",
+        "sha256": "28bf469508cb5450f0123f67fdde946109c7f7c921f4619cd5241c4f4e414417"
+      }
+    }
+  ],
+  "context_probe": {
+    "path": "local/generated/mixed-session-probe/run-rg363ydr/report.json",
+    "sha256": "84fe429492c023462067d4d7ff4c50e4b904cafd49068f4bd662fa437f1a3c98"
+  },
+  "research": [
+    {
+      "path": "local/generated/passive-object-research/inventory.json",
+      "sha256": "cd5261b6e85f53feaaf00f0e7f44d69a2a6d243c865dfef2da9503ad56b8045e"
+    },
+    {
+      "path": "local/generated/passive-object-research/next-callback-context.txt",
+      "sha256": "86fb16f3c5d31bf8211ad43a994ca9fd76dfcb01215c442aa675fa6fe15b861f"
+    },
+    {
+      "path": "local/generated/passive-object-research/next-allocation-context.txt",
+      "sha256": "c7a5886966da8773f0546911bd0df25c7ebdcf31d6468417bfe3253e90e6d1a9"
+    }
+  ],
+  "coverage": {
+    "new_bounded_native_mappings": 0,
+    "new_partial_native_mappings": 0,
+    "bounded_simulation_mappings": 106,
+    "partial_simulation_mappings": 2,
+    "indexed_functions": 117,
+    "new_classified_bytes": 0,
+    "classified_bytes": 26257,
+    "unclassified_bytes": 1022319,
+    "new_native_instructions": 0,
+    "successful_composed_instructions": 42,
+    "fresh_fourteen_corpus_union": 1185,
+    "fresh_union_with_writers": 1194,
+    "cumulative_executed_union": 1543,
+    "cumulative_scope": "No new original instruction or function count from composition. Other historical corpora were not rerun; future initializer leads are static local research only."
+  },
+  "failures": [
+    {
+      "scope": "local metadata orchestration",
+      "reason": "Summary attempted to read two still-running comparison logs, then the preservation attachment lacked its output index. Both were rerun successfully after waiting for completion; no native/reference or capture failure.",
+      "resolved": true
+    }
+  ],
+  "earlier_capture": {
+    "path": "local/generated/mixed-session/run-42_vkdyu/report.json",
+    "sha256": "f06862fb32d37a64c549e1f41af44e5385dcfd4d6907664742c4f021f46f35f5",
+    "reason": "Successful first capture preceded stricter rejection of extra per-frame return-only invocations outside the ordered phase. Final fresh capture and independent unhooked replay use final source hashes."
+  },
+  "not_rerun": [
+    "actions/transition/coasting/tally/palette/bonus/exit-tally/score comparison corpora",
+    "other historical or controlled captures",
+    "whole-movie handler survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "F9E2 allocation and 7B9C return-only pair initializer",
+    "callback79B6",
+    "collision-hit7910",
+    "general activation producers and P2/world scheduling",
+    "FF31xx producer scheduling",
+    "boot, rendering and audio"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries_verified": 104,
+    "source_files_verified": 59,
+    "owned_workers_remaining": [],
+    "initial_manifest": "local/generated/passive-object-research/preservation.json",
+    "final_manifest_sha256": "57a20601b97f9f024311a375e277d9191ed25c36c52793df0fef58589c921b9f"
+  }
+}

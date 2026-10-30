@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "scheduler",
+      "start": 63340,
+      "end_exclusive": 63568,
+      "sha256": "9618d1cf8fc39bbfd53d4a4721ee12e165157af2264ff575c23311647f8f24d6",
+      "instruction_count": 59,
+      "execution_compared": true
+    },
+    {
+      "id": "scheduled_dispatch",
+      "start": 63734,
+      "end_exclusive": 63750,
+      "sha256": "d28686293c87423f3ed8c0860e9f1b307ce9f6d692f3a87f960a394bab4ad212",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "turn_right_callback",
+      "start": 41704,
+      "end_exclusive": 41708,
+      "sha256": "170bdbdd79ee2beac4b25e703614eaa9c2e80896cca5ea06a3a8801455a01cfc",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "turn_left_callback",
+      "start": 41856,
+      "end_exclusive": 41860,
+      "sha256": "bf7863581485e5945d892a1257a0b321989a9354c1419823a5505cd915917cdb",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "reverse_left_callback",
+      "start": 42254,
+      "end_exclusive": 42258,
+      "sha256": "eeb76ca5e43fe71e30d44eda9749de666c485d0a5f4fffa22bfb12df876dd855",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "reverse_right_callback",
+      "start": 42580,
+      "end_exclusive": 42584,
+      "sha256": "41c4896b7f7a89e189758f9e47874ecb787f253b55b29bcb9667e36928f38215",
+      "instruction_count": 1,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_jump_right_callback",
+      "start": 42868,
+      "end_exclusive": 42920,
+      "sha256": "1cfc1c82305a90d407c31e82171b01ec0633bfba6c222e3728ce56b9d14397d3",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_jump_left_callback",
+      "start": 43322,
+      "end_exclusive": 43374,
+      "sha256": "1cfc1c82305a90d407c31e82171b01ec0633bfba6c222e3728ce56b9d14397d3",
+      "instruction_count": 11,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 63346,
+      "target": 63468
+    },
+    {
+      "pc": 63352,
+      "target": 63468
+    },
+    {
+      "pc": 63366,
+      "target": 63378
+    },
+    {
+      "pc": 63376,
+      "target": 63470
+    },
+    {
+      "pc": 63384,
+      "target": 63428
+    },
+    {
+      "pc": 63398,
+      "target": 63468
+    },
+    {
+      "pc": 63406,
+      "target": 63420
+    },
+    {
+      "pc": 63440,
+      "target": 63468
+    },
+    {
+      "pc": 63448,
+      "target": 63462
+    },
+    {
+      "pc": 63476,
+      "target": 63522
+    },
+    {
+      "pc": 63490,
+      "target": 63562
+    },
+    {
+      "pc": 63498,
+      "target": 63512
+    },
+    {
+      "pc": 63510,
+      "target": 63562
+    },
+    {
+      "pc": 63518,
+      "target": 63562
+    },
+    {
+      "pc": 63534,
+      "target": 63562
+    },
+    {
+      "pc": 63542,
+      "target": 63556
+    },
+    {
+      "pc": 63554,
+      "target": 63562
+    },
+    {
+      "pc": 63738,
+      "target": 63756
+    },
+    {
+      "pc": 63740,
+      "target": 63340
+    },
+    {
+      "pc": 41704,
+      "target": 41940
+    },
+    {
+      "pc": 41856,
+      "target": 42258
+    },
+    {
+      "pc": 42254,
+      "target": 42258
+    },
+    {
+      "pc": 42580,
+      "target": 41940
+    },
+    {
+      "pc": 42872,
+      "target": 42882
+    },
+    {
+      "pc": 43326,
+      "target": 43336
+    }
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    63750,
+    63756
+  ],
+  "rejected_boundaries": [
+    51966,
+    40022,
+    40270,
+    42920,
+    43374,
+    1035074
+  ],
+  "contract": "F76C presentation through caller return; optional active gate and selected handler through F906 or inactive F90C. Unknown callbacks reject on invocation. Later +46 service, other actors, full-frame timing and rendering excluded."
+}

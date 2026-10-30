@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "starting_commit": "28045904d4078d2541acfdb4dd084739d68a4ec4",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "scope": "710E/7126 through bounded actor wrapper; A148 fixed coasting; 13208 initialization and separate 1345A timer; excludes preceding entry, palette consumer and full world/frame parity",
+  "transition_presets": {
+    "debug": {
+      "report": "local/generated/transition-comparison/run-pizchvan/report.json",
+      "report_sha256": "882876a5f3475e6f12ac267202640415c57c9a6dd57724e67164d5b03fd223a7",
+      "cases": 306528,
+      "new_instructions_visited": 68,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 27816,
+          "independent_goldens": 8,
+          "native_output_sha256": "bbd9bcea79a44b023752483aa0932711b2fe0ad7120f50c25dcfce94bc552083"
+        },
+        {
+          "name": "timer",
+          "cases": 263352,
+          "independent_goldens": 8,
+          "native_output_sha256": "b61a4e2cada3fce764636242f6636ad794dc45e0b63be58030de4cd33133377e"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "f8a95d6b0e63b941b88c19432f7bcef450f1deff76d54d0a76b4ebaf1d23db1f"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "300b0524e5b32ee6f02115a8050ede08ad1263ed031e60d749295c8d63ed4ab6"
+        }
+      ]
+    },
+    "release": {
+      "report": "local/generated/transition-comparison/run-bq160k40/report.json",
+      "report_sha256": "986730aa222b46356df5435dabad9102cc1001e9bb9a8a8d5d6bc2b1a4f0ef87",
+      "cases": 306528,
+      "new_instructions_visited": 68,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 27816,
+          "independent_goldens": 8,
+          "native_output_sha256": "bbd9bcea79a44b023752483aa0932711b2fe0ad7120f50c25dcfce94bc552083"
+        },
+        {
+          "name": "timer",
+          "cases": 263352,
+          "independent_goldens": 8,
+          "native_output_sha256": "b61a4e2cada3fce764636242f6636ad794dc45e0b63be58030de4cd33133377e"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "f8a95d6b0e63b941b88c19432f7bcef450f1deff76d54d0a76b4ebaf1d23db1f"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "300b0524e5b32ee6f02115a8050ede08ad1263ed031e60d749295c8d63ed4ab6"
+        }
+      ]
+    },
+    "sanitize": {
+      "report": "local/generated/transition-comparison/run-3zfhrtzk/report.json",
+      "report_sha256": "92a418ee2052f30b6f548a74d490ea78fc53810e0fbc45893b5c115947ff761c",
+      "cases": 306528,
+      "new_instructions_visited": 68,
+      "groups": [
+        {
+          "name": "actor-flat",
+          "cases": 27816,
+          "independent_goldens": 8,
+          "native_output_sha256": "bbd9bcea79a44b023752483aa0932711b2fe0ad7120f50c25dcfce94bc552083"
+        },
+        {
+          "name": "timer",
+          "cases": 263352,
+          "independent_goldens": 8,
+          "native_output_sha256": "b61a4e2cada3fce764636242f6636ad794dc45e0b63be58030de4cd33133377e"
+        },
+        {
+          "name": "authored-terrain",
+          "cases": 4608,
+          "independent_goldens": 0,
+          "native_output_sha256": "f8a95d6b0e63b941b88c19432f7bcef450f1deff76d54d0a76b4ebaf1d23db1f"
+        },
+        {
+          "name": "cataloged-terrain",
+          "cases": 10752,
+          "independent_goldens": 0,
+          "native_output_sha256": "300b0524e5b32ee6f02115a8050ede08ad1263ed031e60d749295c8d63ed4ab6"
+        }
+      ]
+    }
+  },
+  "sanitized_regressions": {
+    "dispatch": {
+      "report": "local/generated/dispatch-comparison/run-gyt_10sw/report.json",
+      "report_sha256": "0c7ca5a632ead14c6cdde7199ffcb94a3671883da27dade0170dfdf9a84f391b",
+      "cases": 138149
+    },
+    "actions": {
+      "report": "local/generated/actions-comparison/run-jaap4d_f/report.json",
+      "report_sha256": "098e707ba353fd1d45cf6da9be320bf24dd65420cdf9bcd35b320711f257b086",
+      "cases": 146638
+    },
+    "presentation": {
+      "report": "local/generated/presentation-comparison/run-81cgo9my/report.json",
+      "report_sha256": "715c5875e5f1f0b65386150dbede3a86e12ada98a08086ffcf0c86f8adcd0d59",
+      "cases": 347320
+    },
+    "actor": {
+      "report": "local/generated/actor-comparison/run-8j51ug30/report.json",
+      "report_sha256": "1a7524f77ad1cb9e533ef3948fa047492fc78c84ab97c1d019ac364f46c0bf2b",
+      "cases": 152093
+    },
+    "reversal": {
+      "report": "local/generated/reversal-comparison/run-huc8i_83/report.json",
+      "report_sha256": "cd44a7152e2bca048253a756450894372ed06bd0c08bd73e0f9612ab6c4d78c7",
+      "cases": 203586
+    },
+    "airborne": {
+      "report": "local/generated/airborne-comparison/run-7wra9uty/report.json",
+      "report_sha256": "47ef9f62a1d1cfdb22c24a467a776e2c76fe8ef5c13b6dd8fc705ccc338f5607",
+      "cases": 415940
+    },
+    "movement": {
+      "report": "local/generated/movement-comparison/run-c9fp7id4/report.json",
+      "report_sha256": "72c6bb2c2173c7b3ddb41194fdd3d5e6753f4e7ac2c0fc1f3443315913fda697",
+      "cases": 282233
+    },
+    "terrain": {
+      "report": "local/generated/terrain-comparison/run-zf2y97wq/report.json",
+      "report_sha256": "7b0f9c941f9219ec36f6987e547899950a0accc5151f1e1df91cbcab92b378b8",
+      "cases": 614436
+    }
+  },
+  "scoped_instruction_union": 1020,
+  "static_probe": {
+    "report": "local/generated/transition-probe/run-fd0dqsgq/report.json",
+    "report_sha256": "64f9d3af77140d92d3b136bc056c952f9ec94a4fba695c2b35cc463a1580fdca",
+    "instructions": 1020,
+    "gnu_checks": 5,
+    "gnu_limit": "installed m68k.gnu rejects immediate BCHG 086e; not claimed as corroborated by this decoder",
+    "new_instructions": 68,
+    "new_gnu_checks": 6,
+    "new_gnu_limit": "Installed m68k.gnu rejects JMP absolute long and SUBQ absolute long; primary decode and restricted original execution cover these instructions."
+  },
+  "ordinary_movie": {
+    "report": "local/generated/transition-movie/run-i6q8a7yy/report.json",
+    "report_sha256": "e0c50dcad0f99f8e63e82989961373ed3d5f4c901c698a59fdf8b1fc33904e97",
+    "wrapper_calls": 17,
+    "timer_calls": 17,
+    "start": 1516,
+    "end": 1533,
+    "completion_frame": 1532,
+    "hooked_unhooked_equal": true,
+    "final_hash": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+    "hash_scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+  },
+  "wrapper_movie_regression": {
+    "report": "local/generated/dispatch-movie/run-f8s_q4o3/report.json",
+    "report_sha256": "001fe6f39d1a6f0bdce29121eae72a47eb275bb17edbd0f84fbc3aeb96bee53d",
+    "ordinary_calls": 191,
+    "branch_calls": 72
+  },
+  "tests": {
+    "debug": {
+      "python_tests": 144,
+      "skips": 0,
+      "ctest_targets": 20,
+      "log": "local/generated/transition-research/test-debug.log",
+      "sha256": "bb398516b38246f6dfde9fcd344842091fb0961cb4587d8dc58bab852f1464f9"
+    },
+    "release": {
+      "python_tests": 144,
+      "skips": 0,
+      "ctest_targets": 20,
+      "log": "local/generated/transition-research/test-release.log",
+      "sha256": "c12fb1684248f50ba864dbdceb67d04671d22110da1686aec5e45310714c48f8"
+    },
+    "sanitize": {
+      "python_tests": 144,
+      "skips": 0,
+      "ctest_targets": 20,
+      "log": "local/generated/transition-research/test-sanitize.log",
+      "sha256": "e51bdefdfffca3ed6b9d0cf5de57ef51eeb14cfa47f052257447ee6044fec2ba"
+    }
+  },
+  "build_logs": {
+    "debug": {
+      "path": "local/generated/transition-research/build-debug.log",
+      "sha256": "c01859b9aa111d8c8fe5dd96e288753897a3833ad630141bea66fbd9273916fa"
+    },
+    "release": {
+      "path": "local/generated/transition-research/build-release.log",
+      "sha256": "eff1fd2e4bf97885950674f8d8d9f4be9c004d72057d56d9a39281ef42f2a6b3"
+    },
+    "sanitize": {
+      "path": "local/generated/transition-research/build-sanitize.log",
+      "sha256": "c5b911997a735c7fcfd309d85495b6095a5ddec7e5594d563b7c0fa1ad76bed2"
+    }
+  },
+  "preservation": {
+    "report": "local/generated/transition-research/preservation.json",
+    "report_sha256": "b0707fc69fafec7fd10921154652a9c0c0bea499e0b0f157d11440ada498b8bf"
+  },
+  "limitations": [
+    "Palette curves are logical identities; conversion and rendering are not implemented.",
+    "Native actor/service/tracking persist in the movie; shared environment changes are externally supplied.",
+    "Original MOVIE/source/input/build identities are fixed; no RAM/register/ROM edits in new capture.",
+    "GNU secondary decoder rejects absolute-long JMP/SUBQ; primary/static/original-execution evidence retained.",
+    "Earlier 507 actor/presentation and 92 actor / 24 effect movie contracts and full survey were not rerun.",
+    "TASK-0010 remains in progress; native playability none."
+  ]
+}

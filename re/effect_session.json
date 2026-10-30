@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "world_slot_base",
+      "start": 27044,
+      "end_exclusive": 27050,
+      "sha256": "c019ea450c93cfa65c84aaf5ac0f1fe5fa672e6225e9e74bc5bc411573588e89",
+      "instruction_count": 1,
+      "execution_compared": false
+    },
+    {
+      "id": "effect_service_and_next_slot",
+      "start": 27068,
+      "end_exclusive": 27086,
+      "sha256": "fba23563242310fe7f045187e6515926164eeb4522daa5dd79f5c5e359119b78",
+      "instruction_count": 5,
+      "execution_compared": false
+    },
+    {
+      "id": "render_zero_clear",
+      "start": 45350,
+      "end_exclusive": 45354,
+      "sha256": "c5025d423cb5450ebcd1a9a40abfdd53398ae6c283a7ec6879efa8884b3e4597",
+      "instruction_count": 1,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 27084,
+      "target": 27050
+    }
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 27072,
+      "targets": [
+        75334
+      ],
+      "scope": "P1 reversal objects in measured early loop only"
+    }
+  ],
+  "dependencies": [
+    "reversal_step",
+    "dispatch_step"
+  ],
+  "contract": "Additional static/observed world-loop context. P1 reversal service is return-only; no native general object loop or render code. Original component instructions remain covered by reversal_step. New context is not counted as restricted original/native instruction coverage."
+}

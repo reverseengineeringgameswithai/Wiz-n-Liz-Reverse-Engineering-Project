@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-05-034",
+  "starting_commit": "c53a43a763fb41ed71cca2f10176ef9dec11cc6d",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "F9E2 A6 allocation and the 7B9C return-only pair initializer: two ordered LIFO pops, F9E2 defaults, 7B9C stores, verified inherited fields and logical FF31C0 anchor in the retained mixed pool. Exhaustion and unknown inheritance reject without allocation. Level setup, other F9E2 callers, FA30, resets, 7AD6/callback79B6, overlap-hit FF31C0 readers, hit7910 and whole-world/render/audio parity unsupported.",
+  "pair_component_comparisons": [
+    {
+      "path": "local/generated/pair-initializer-comparison/run-h3pm15c2/report.json",
+      "sha256": "78b4948371542410e9f3b70a98f8f2edfc9c9476f00f0da05f8990c19cebd765",
+      "preset": "debug",
+      "cases": 8714,
+      "outcomes": {
+        "original_exhausted_after_0": 1351,
+        "native_exhausted": 2491,
+        "original_exhausted_after_1": 1399,
+        "original_created": 5964,
+        "native_created": 3989,
+        "native_unknown_inheritance": 2234
+      },
+      "successful_instructions_visited": 37,
+      "new_instructions_visited": 37
+    },
+    {
+      "path": "local/generated/pair-initializer-comparison/run-7hdohmn4/report.json",
+      "sha256": "a2cbc393d70813cd2aa88f5e412d0e5e8c656baec4b20434357fe0208be42cd1",
+      "preset": "release",
+      "cases": 8714,
+      "outcomes": {
+        "original_exhausted_after_0": 1351,
+        "native_exhausted": 2491,
+        "original_exhausted_after_1": 1399,
+        "original_created": 5964,
+        "native_created": 3989,
+        "native_unknown_inheritance": 2234
+      },
+      "successful_instructions_visited": 37,
+      "new_instructions_visited": 37
+    },
+    {
+      "path": "local/generated/pair-initializer-comparison/run-3nzmr4gz/report.json",
+      "sha256": "3073586d44b4373541da2750547f10eae3e6c3398bb554499dd8216a98739df3",
+      "preset": "sanitize",
+      "cases": 8714,
+      "outcomes": {
+        "original_exhausted_after_0": 1351,
+        "native_exhausted": 2491,
+        "original_exhausted_after_1": 1399,
+        "original_created": 5964,
+        "native_created": 3989,
+        "native_unknown_inheritance": 2234
+      },
+      "successful_instructions_visited": 37,
+      "new_instructions_visited": 37
+    }
+  ],
+  "regression_comparisons": [
+    {
+      "path": "local/generated/return-only-comparison/run-3ndpnsch/report.json",
+      "sha256": "cefbe049fe8527770c3e11c0e87b158f44229d99639c0dce3a957e4930924770",
+      "preset": "debug",
+      "cases": 286848,
+      "successful_instructions_visited": 42,
+      "new_instructions_visited": 0
+    },
+    {
+      "path": "local/generated/collision-comparison/run-u9rrevg8/report.json",
+      "sha256": "d2d786d4bf11aa33d3be9a49c11aebdab03a026e006fc8df5acd1ee3a27b2fa4",
+      "preset": "debug",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-_d7b1d5h/report.json",
+      "sha256": "339cf07a8cc77dd4f09783a934ba2b71ebc3dcf1eeb5b10bf01d82c33e1f8e42",
+      "preset": "debug",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-gwxd_33f/report.json",
+      "sha256": "285b507ae031f3ec661f2fda64e82360295badd54d4c3311a9530f27dbe4468d",
+      "preset": "debug",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-gg0s9qlv/report.json",
+      "sha256": "b5b5c55020f2306464679e54dd44174626f67a8984055b8717b098302dfd1955",
+      "preset": "debug",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-3n2yua53/report.json",
+      "sha256": "b5e0511124716bab26d7501200b4a11a1060e1a411e818e6820e3fee4bd09c45",
+      "preset": "debug",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/return-only-comparison/run-3s8qh1_y/report.json",
+      "sha256": "95554287c23133c19e430d22aa49cbdd67cee63b9a47b8a516b813ac204eaadd",
+      "preset": "release",
+      "cases": 286848,
+      "successful_instructions_visited": 42,
+      "new_instructions_visited": 0
+    },
+    {
+      "path": "local/generated/collision-comparison/run-iow8sli5/report.json",
+      "sha256": "56b8c401c2b64fba8f4abe4b88318bdd49bbdcbaba7e2ed6a3751bb360ff391b",
+      "preset": "release",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-ri0amwbj/report.json",
+      "sha256": "3135b5d3f9f8173dc3e7843dd2103a36d3217d78c60310376089b4695974b414",
+      "preset": "release",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-f0f0zo8q/report.json",
+      "sha256": "20b1def263dc230e70435a316bc6b767dda4e773f590ac38a09b7ac01f8a2a89",
+      "preset": "release",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-w_q6f4xr/report.json",
+      "sha256": "485c01a7f34331fa4c7c6d9c940112582599ca05ad078e4833239e9c7024e750",
+      "preset": "release",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-3cjuxf_f/report.json",
+      "sha256": "83ad5376ae32fef211e746d2386a03b79c68306238e946a7bc81b6acc0b8c4d3",
+      "preset": "release",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/return-only-comparison/run-uxbbens8/report.json",
+      "sha256": "eff8f90c78b37c9ee198e75dab89b4506b7db949495f12c48c9e10dfb4f834b1",
+      "preset": "sanitize",
+      "cases": 286848,
+      "successful_instructions_visited": 42,
+      "new_instructions_visited": 0
+    },
+    {
+      "path": "local/generated/collision-comparison/run-naz5u1gy/report.json",
+      "sha256": "d695da17664157b451547735b0df1adf5057128651fa113e1bad28b62e296cc5",
+      "preset": "sanitize",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-urvucamq/report.json",
+      "sha256": "480e62449fe843a117a3c0c3994bca798fca3d4d9b560cfd816c4bdd69f9a283",
+      "preset": "sanitize",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-7gxthiy4/report.json",
+      "sha256": "549f6f8dbdb1d8195b2013b3fb66e307c92465b2ab4048b7bf3033cd9dd5d9d0",
+      "preset": "sanitize",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-18xh86yk/report.json",
+      "sha256": "cd09696d1f1b32071eb26ed2a03e5a2ff23e293b4b274d43c98981d9c196e78d",
+      "preset": "sanitize",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-67qfbzo0/report.json",
+      "sha256": "87efe282fe5b3f575859c88a48eaf6f7ea1584c38dfb47be28c6ab9e49f8ef7c",
+      "preset": "sanitize",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/input-comparison/run-674vryy7/report.json",
+      "sha256": "2d53e739a5294c24866783fd21c800b5589babaedfbaeb3e3a53fb97e98fb666",
+      "preset": "sanitize",
+      "cases": 1024
+    },
+    {
+      "path": "local/generated/banner-comparison/run-yz7bits5/report.json",
+      "sha256": "f01a47900368346ff1b6820dc9ba44c9de4d487672d85d160c950c42d5c0b82c",
+      "preset": "sanitize",
+      "cases": 66880
+    },
+    {
+      "path": "local/generated/presentation-comparison/run-a88u7clo/report.json",
+      "sha256": "66a132423eb1b40941d917b6c1afe47da4f73c85dd46a872dc96af6c96c4c1c0",
+      "preset": "sanitize",
+      "cases": 347320,
+      "new_instructions_visited": 90
+    },
+    {
+      "path": "local/generated/actor-comparison/run-li1vxufa/report.json",
+      "sha256": "08212ad111bcd9dac67a3a0d1b087d31fe5b36d00b1ab10bcc9e11efe414ba83",
+      "preset": "sanitize",
+      "cases": 152093,
+      "new_instruction_addresses_visited": 315
+    },
+    {
+      "path": "local/generated/dispatch-comparison/run-b75kgdr1/report.json",
+      "sha256": "b2f2c68e1bc374345428f80059aaeb551a22400ff729cc29992c1f0d620e231a",
+      "preset": "sanitize",
+      "cases": 138149,
+      "new_instructions_visited": 15
+    },
+    {
+      "path": "local/generated/airborne-comparison/run-lsxopr32/report.json",
+      "sha256": "5c8a7a6fad1d99d72e4898e01bb782b2cafb649618ea5d29470cf5573a95fc26",
+      "preset": "sanitize",
+      "cases": 415940,
+      "new_instruction_addresses_visited": 172
+    },
+    {
+      "path": "local/generated/movement-comparison/run-9r1ctq9c/report.json",
+      "sha256": "b5a43b100f693bd60adbd7467ef4a091fadfa4e983a9bac487105d54b58437c4",
+      "preset": "sanitize",
+      "cases": 282233,
+      "new_instruction_addresses_visited": 74
+    },
+    {
+      "path": "local/generated/terrain-comparison/run-mjtf5t6d/report.json",
+      "sha256": "0671db51bccccea224511ca16d1f381ba2287c711f79ccea97944dd46088b535",
+      "preset": "sanitize",
+      "total_cases": 614436
+    }
+  ],
+  "prior_p1_comparisons": [
+    {
+      "path": "local/generated/effect-session/run-fjflk5iz/report.json",
+      "sha256": "3ab7feb779bc3f120fe848426876755fe99611ba3508dccc6a5ea224d886bf4e",
+      "preset": "debug",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-f5xksqus/report.json",
+      "sha256": "9d04677eb7e0d98f63c918fe808834407f1433db57cc93a1a785690c8fc6ceb0",
+      "preset": "release",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-o2tsx2ji/report.json",
+      "sha256": "795efa9c999dfb7e4265a967fbaeb95b07986c88ffd61d4bf8080ba390fc0289",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    }
+  ],
+  "original_capture": {
+    "path": "local/generated/pair-initializer-capture/run-r781581b/report.json",
+    "sha256": "bb28a5231eb47ac0abbf166231109eb88657485a28ab2aa93eda4988dbd74033",
+    "classification": "fresh ordinary unchanged movie frames 0..1066; no edits; owned workers",
+    "endpoint": {
+      "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "observation": {
+      "f9e2_calls": 65,
+      "f9e2_callers": {
+        "0x1ef3c": 18,
+        "0x1f058": 1,
+        "0x1f0a0": 1,
+        "0x1f11e": 1,
+        "0x1f146": 1,
+        "0x1f16a": 1,
+        "0x1f18e": 1,
+        "0x7ba2": 2,
+        "0x7be0": 2,
+        "0x7c2c": 2,
+        "0x7c6a": 2,
+        "0x1ee08": 1,
+        "0x595c": 18,
+        "0x153aa": 1,
+        "0x6ece": 1,
+        "0x6ee2": 1,
+        "0x7778": 1,
+        "0x77c0": 1,
+        "0x7840": 1,
+        "0x7880": 1,
+        "0x78a4": 1,
+        "0x78c8": 1,
+        "0x6afa": 2,
+        "0x6ebc": 2,
+        "0x59b4": 1
+      },
+      "f9e2_frame_crossings": 1,
+      "f994_calls": 32,
+      "fa30_calls": 0,
+      "resets": 5,
+      "pair_invocations": 2,
+      "pair_frames": [
+        156,
+        629
+      ],
+      "pair_write_audits": [
+        {
+          "frame": 156,
+          "writes": 2722,
+          "pair_writes": 40,
+          "other_allocator_writes": 225,
+          "complete": true
+        },
+        {
+          "frame": 629,
+          "writes": 3533,
+          "pair_writes": 40,
+          "other_allocator_writes": 126,
+          "complete": true
+        }
+      ],
+      "continuity": {
+        "frames": 436,
+        "walks": 432,
+        "updates": 864,
+        "allocations": 33,
+        "releases": 31,
+        "end_rows": {
+          "59": [
+            8,
+            161,
+            270,
+            0,
+            129,
+            916,
+            916,
+            921,
+            4,
+            4,
+            0,
+            0,
+            0
+          ],
+          "58": [
+            8,
+            164,
+            270,
+            2048,
+            129,
+            921,
+            916,
+            921,
+            3,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        "write_audit": {
+          "complete_frames": 435,
+          "incomplete_frames": [
+            632
+          ],
+          "pair_writes": 1441,
+          "scope": "Write events are complete only where the native buffer did not drop; boundary and routine continuity cover every frame."
+        }
+      }
+    },
+    "worker_checkpoints_removed": {
+      "files": 2134,
+      "bytes": 996597448
+    },
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "capture_native_comparison": [
+      {
+        "seed_sha256": "71f66296506ee4a54799fdb5993ca337b2f5d3d028289e0666e82a14b6a13ae5",
+        "outcome": "matched",
+        "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+        "phases": 0
+      },
+      {
+        "seed_sha256": "238e39b874fb3777e3807a5ee1c80f88c89ff77584c7ee92252e0a40b3e34d2b",
+        "outcome": "matched",
+        "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+        "phases": 432
+      }
+    ],
+    "capture_native_note": "The capture-time debug comparison used the build before the size-14 collision-context transport fix; final comparisons below reuse this capture with every final preset."
+  },
+  "pair_fixture_comparisons": [
+    {
+      "path": "local/generated/pair-initializer-capture/run-w3y9bbwp/report.json",
+      "sha256": "09e5636b8bf54c7bc8311a6ec1ef929e284d41de87245a978424d1a8dc647c4c",
+      "preset": "debug",
+      "comparison": [
+        {
+          "seed_sha256": "71f66296506ee4a54799fdb5993ca337b2f5d3d028289e0666e82a14b6a13ae5",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "seed_sha256": "238e39b874fb3777e3807a5ee1c80f88c89ff77584c7ee92252e0a40b3e34d2b",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-r781581b/report.json",
+      "reference_report_sha256": "bb28a5231eb47ac0abbf166231109eb88657485a28ab2aa93eda4988dbd74033"
+    },
+    {
+      "path": "local/generated/pair-initializer-capture/run-2p5nhk5z/report.json",
+      "sha256": "1a8eb65464ea9ccaad9868fb1db766156a520390c9658363af8e90408ea03f87",
+      "preset": "release",
+      "comparison": [
+        {
+          "seed_sha256": "71f66296506ee4a54799fdb5993ca337b2f5d3d028289e0666e82a14b6a13ae5",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "seed_sha256": "238e39b874fb3777e3807a5ee1c80f88c89ff77584c7ee92252e0a40b3e34d2b",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-r781581b/report.json",
+      "reference_report_sha256": "bb28a5231eb47ac0abbf166231109eb88657485a28ab2aa93eda4988dbd74033"
+    },
+    {
+      "path": "local/generated/pair-initializer-capture/run-l8ycaid7/report.json",
+      "sha256": "28127f618923c4ec31041a85cce21d09bc6a01dbf6898cd9f4fcaf871f8a26fd",
+      "preset": "sanitize",
+      "comparison": [
+        {
+          "seed_sha256": "71f66296506ee4a54799fdb5993ca337b2f5d3d028289e0666e82a14b6a13ae5",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "seed_sha256": "238e39b874fb3777e3807a5ee1c80f88c89ff77584c7ee92252e0a40b3e34d2b",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-r781581b/report.json",
+      "reference_report_sha256": "bb28a5231eb47ac0abbf166231109eb88657485a28ab2aa93eda4988dbd74033"
+    }
+  ],
+  "mixed_capture": {
+    "path": "local/generated/mixed-session/run-wkefr83n/report.json",
+    "sha256": "f9beb6fe98b3810a636ff59b485a45e0e595ed0f0a05b8d976bb734dacb98b97",
+    "classification": "fresh ordinary unchanged movie; no edits; owned workers",
+    "endpoint": {
+      "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "observation": {
+      "particle_updates": 136,
+      "inactive_observations": 68,
+      "emitter_updates": 34,
+      "private_updates": 136,
+      "return_only_updates": 170,
+      "collision_updates": 34,
+      "table_updates": 34,
+      "allocations": 9,
+      "reversal_updates": 12,
+      "releases": 9,
+      "managed_writes": 2111,
+      "return_only_writes": 271,
+      "free_writes": 27,
+      "slots": 68,
+      "initial_free": 50,
+      "reservations": 0,
+      "initial_return_only": 7,
+      "inactive_occupied": 2,
+      "initial_particles": 4,
+      "collision_input": {
+        "x_mask": 1023,
+        "secondary_gate": 0,
+        "secondary_tracking": [
+          0,
+          0
+        ],
+        "fixed_writes": 0,
+        "primary_tracking_writes": 68,
+        "primary_queries": 34,
+        "x_misses": 32,
+        "y_misses": 2,
+        "scope": "P1 wrapper F91A/F924 writes control +42/+44 (native write next PCs F91E/F928); no mask, gate or P2 tracking writers in this window. P2 production is unsupported."
+      },
+      "initial_collision": 1,
+      "table_input": {
+        "loop_count": 0,
+        "producer_countdown": 80,
+        "writes": 0,
+        "producer_entries": 34,
+        "producer_prefix_exits": 34,
+        "scope": "One retained loop-count seed; producer not scheduled natively. No writes, including transients, in this window."
+      },
+      "initial_table": 1,
+      "private_globals": {
+        "rise_gate": 0,
+        "flags_gate": 0,
+        "hide_gate": 0,
+        "writes": 0,
+        "scope": "Seeded once. No writes in this ordinary window; producers remain outside the native session."
+      },
+      "initial_private": 4,
+      "anchor": {
+        "slot": 58,
+        "generation": 1,
+        "writes": 0,
+        "scope": "Logical FF31C0 identity seeded once and printed each call; no FF31C0 write here. Its readers (7AD6 activation via callback79B6, five overlap-hit +16 resets) are not reconstructed."
+      },
+      "initial_state_scope": "Native P1, emitter/RNG, live trail/reversal and 7808/7CA4/7A88 objects and 78EE miss-only probe, ordered shared free stack; all seven return-only objects retained, including two dormant occupied slots, plus the FF31C0 pair anchor; no external reservations.",
+      "actor_calls": 34,
+      "scratch_writes": 214,
+      "routine_events": 9973,
+      "native_events": 52895,
+      "producer_calls": 102,
+      "input_polls": 136,
+      "inactive_timers": 34,
+      "newborn_particle_updates": 97
+    }
+  },
+  "mixed_comparisons": [
+    {
+      "path": "local/generated/mixed-session/run-wkefr83n/report.json",
+      "sha256": "f9beb6fe98b3810a636ff59b485a45e0e595ed0f0a05b8d976bb734dacb98b97",
+      "preset": "debug",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 633,
+        "anchor_slot": 58,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+      }
+    },
+    {
+      "path": "local/generated/mixed-session/run-z9ssgdi_/report.json",
+      "sha256": "0364b66d4c542ff18165944ecf29bcde45866c732b60d9f4e6afa351b550bc87",
+      "preset": "release",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 633,
+        "anchor_slot": 58,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+      },
+      "reference_report": "local/generated/mixed-session/run-wkefr83n/report.json",
+      "reference_report_sha256": "f9beb6fe98b3810a636ff59b485a45e0e595ed0f0a05b8d976bb734dacb98b97"
+    },
+    {
+      "path": "local/generated/mixed-session/run-nmotfmy7/report.json",
+      "sha256": "b703892a9a5259237ba4c9278d191d589c83833b51b597dd40383fecc8d354cd",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 633,
+        "anchor_slot": 58,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+      },
+      "reference_report": "local/generated/mixed-session/run-wkefr83n/report.json",
+      "reference_report_sha256": "f9beb6fe98b3810a636ff59b485a45e0e595ed0f0a05b8d976bb734dacb98b97"
+    }
+  ],
+  "native_builds": [
+    {
+      "path": "build/debug/provenance.json",
+      "sha256": "5ff5eebdea7ea5989cd8b5e062cd57c33037edca7e07a072981a697520c6d495",
+      "preset": "debug",
+      "executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "ef04f57a45670120e6c847f022200a97a02d2667cf22c3681ca7c04fbe308d76",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "e3cacad64b71251d2c2b5c312251c2ea294ff55eaedfd05af7cf9bea7906797b",
+        "wiznliz-table-motion": "3f38599b46e4f9d51454f8c631eaa7dd19d04bfc2e5c5ba35627d26acaeab795",
+        "wiznliz-collision": "254cdc852ba5619bb0d84617ad8061441d776c5ce2e86b8766841d32e12cf1e9",
+        "wiznliz-return-only": "9bc43a3c2b444a97237f9ac1558626bb64d235b5a8da5ff853d50891f7954fbe"
+      }
+    },
+    {
+      "path": "build/release/provenance.json",
+      "sha256": "c2e091643b7cc82eca36e5819504cf6467d63d4f35ec406788fa1753b2079d05",
+      "preset": "release",
+      "executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "9d439331264918fd6526493239353fceb1ebb7f0b1284fa90cc9eda4ed1a3550",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "ada48dc409e4bffbf5342d5be90df3d7d2ed2715463f1b2f6b5a8e7336a1019e",
+        "wiznliz-collision": "52417edae0a26e12b34afa03a2e0a3743e0bb529e14271d0a06ce8ecf80b11d9",
+        "wiznliz-return-only": "478b633e1e47e6f1cb31565adf67f7afcb537340f6315bd23c1e73fdf0dc8822"
+      }
+    },
+    {
+      "path": "build/sanitize/provenance.json",
+      "sha256": "fdc52b5fe9b4b1232ef824af10337503f16ebfc1f98c7eccb7d0a1dffde76897",
+      "preset": "sanitize",
+      "executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "35a75bf58cc4ec6172fe378034b3137ef2b95213afe807c18e92c68171b95764",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "847e992bae67b3d453e99cb66730fab68bc3cf44b2e8201f0be36c7c32005c95",
+        "wiznliz-table-motion": "dc0031a822eb0aabd5dc1e1a07a79257e04bba75a86c688f4ce39b511f36338f",
+        "wiznliz-collision": "53c650c9eebeb8f07124af8c2b4ee98a481ab138493313138902336662e22da2",
+        "wiznliz-return-only": "d6084c97e6eee9a2f2da82a51c8c3e2007cab902404afffe0bc47a71ef241fcb"
+      }
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 205,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/pair-initializer-research/test-debug.log",
+        "sha256": "121ce5384cc3ef74d3cae8eed2e8842132a15a583c136fe45fae0c17a2fca52a"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 205,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/pair-initializer-research/test-release.log",
+        "sha256": "b9dceda73648b77b9ea68062289c1d0ca5a53fcef6219dbfae80250903829972"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 205,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/pair-initializer-research/test-sanitize.log",
+        "sha256": "f9e9eca3118fc1386078baf15710ebb953b0d503b3b5ab540190de5f0cf32edd"
+      }
+    }
+  ],
+  "context_probe": {
+    "path": "local/generated/mixed-session-probe/run-wbgyijir/report.json",
+    "sha256": "84fe429492c023462067d4d7ff4c50e4b904cafd49068f4bd662fa437f1a3c98"
+  },
+  "research": [
+    {
+      "path": "local/generated/pair-initializer-research/discover/events.json",
+      "sha256": "d8d6a3f8cefa9de2e261c8ad6664ebca8e660f137b351fbc3152e7d00934d445"
+    },
+    {
+      "path": "local/generated/pair-initializer-research/frame629/routines.json",
+      "sha256": "4cb79aa1f1af892e7bd10b0a4b8e91f7149769128ac44aaac4aadf17d0b147f7"
+    },
+    {
+      "path": "local/generated/pair-initializer-research/frame629/writes.json",
+      "sha256": "55357c20217058e7ea3c6e7cca1b9cfb1754fff45cd5c39f660eba25000d7923"
+    }
+  ],
+  "coverage": {
+    "new_bounded_native_mappings": 2,
+    "new_partial_native_mappings": 0,
+    "bounded_simulation_mappings": 108,
+    "partial_simulation_mappings": 2,
+    "indexed_functions": 119,
+    "new_classified_bytes": 216,
+    "classified_bytes": 26473,
+    "unclassified_bytes": 1022103,
+    "new_native_instructions": 37,
+    "static_only_instructions": 3,
+    "fresh_fifteen_corpus_union": 1222,
+    "fresh_union_with_writers": 1231,
+    "cumulative_executed_union": 1580,
+    "cumulative_scope": "37 restricted-original instructions in [7B9C,7C26) and [F9E2,FA1E) are new; FA1E..FA30 is decoded only. Eight other component corpora were not rerun."
+  },
+  "failures": [
+    {
+      "scope": "fresh mixed-session capture",
+      "reason": "First anchored capture failed natively with \"collision inputs unavailable\": the transport parsed collision context only for exactly 13 header fields, dropping it for the new 14-field anchored header. Fixed to >=13, added a collision+anchor transport test, rebuilt and recaptured.",
+      "resolved": true
+    },
+    {
+      "scope": "regression orchestration",
+      "reason": "The first regression batch was stopped after that transport fix invalidated the builds; all batches reran on final builds.",
+      "resolved": true
+    },
+    {
+      "scope": "synthetic test builder",
+      "reason": "Initial synthetic F9E2 events zeroed the popped free-stack entry; the original only moves the head. The validator was correct; the test model was fixed.",
+      "resolved": true
+    }
+  ],
+  "earlier_capture": {
+    "path": "local/generated/pair-initializer-capture/run-ktiqtizv/report.json",
+    "sha256": "8e6306a2d9e63304327e4ee7349c3a25863d51c7d766f019c054b06d9d8d5a19",
+    "reason": "First passing fresh capture preceded removal of owned per-seek worker checkpoints (954 MB) from the tool; the final capture used final tool sources."
+  },
+  "not_rerun": [
+    "input/banner/presentation/actor/dispatch/airborne/movement/terrain in debug/release (sanitize only)",
+    "actions/transition/coasting/tally/palette/bonus/exit-tally/score corpora",
+    "other historical or controlled captures",
+    "whole-movie handler survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "7C26 private-pair initializer and the rest of the [6886,68A4) level setup",
+    "other F9E2 callers and FA30",
+    "pool reset residue",
+    "7AD6 activation/callback79B6",
+    "overlap-hit FF31C0 readers and collision-hit7910",
+    "P2/world scheduling",
+    "boot, rendering and audio"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries_verified": 104,
+    "source_files_verified": 59,
+    "external_status_unchanged": true,
+    "wl3pc_unchanged": true,
+    "owned_workers_remaining": [],
+    "emulator_processes": 0,
+    "initial_manifest": "local/generated/pair-initializer-research/preservation.json",
+    "initial_manifest_sha256": "13455a7309abf05738c3eada8f8e66f249909aee50bab8d0fac04b95f530241f",
+    "final_manifest_sha256": "ff9bcd8fb940ced77b7bec187361afd51c6ec8171e5688bfb7e141960952def4"
+  }
+}

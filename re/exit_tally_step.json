@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "exit_tally",
+      "start": 20786,
+      "end_exclusive": 20838,
+      "sha256": "f7f7b4f2f7cae2ada28e1e22602bf7d45c309fd6d0264d0c7702cf247430daf5",
+      "instruction_count": 13,
+      "execution_compared": true
+    },
+    {
+      "id": "secondary_score_exit",
+      "start": 20838,
+      "end_exclusive": 20842,
+      "sha256": "8e2718f855bfac74fd822f636a798102b9770ef7a0ced4f1b634c4d56f876b6b",
+      "instruction_count": 1,
+      "execution_compared": false
+    },
+    {
+      "id": "exit_tally_transition",
+      "start": 20842,
+      "end_exclusive": 20872,
+      "sha256": "71b35d449486be884477b49bcbe4fe9b35e0ef8a0840efbe48e7d52f196d9e2c",
+      "instruction_count": 6,
+      "execution_compared": true
+    },
+    {
+      "id": "exit_tally_wait",
+      "start": 20872,
+      "end_exclusive": 20936,
+      "sha256": "efe137b61a34a98f0541df9d113022c226ac42e9ccb0c125c53d44ba39659e43",
+      "instruction_count": 12,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 20790,
+      "target": 41288
+    },
+    {
+      "pc": 20800,
+      "target": 20824
+    },
+    {
+      "pc": 20802,
+      "target": 21372
+    },
+    {
+      "pc": 20810,
+      "target": 20364
+    },
+    {
+      "pc": 20830,
+      "target": 20842
+    },
+    {
+      "pc": 20836,
+      "target": 20842
+    },
+    {
+      "pc": 20838,
+      "target": 21490
+    },
+    {
+      "pc": 20848,
+      "target": 20858
+    },
+    {
+      "pc": 20854,
+      "target": 20364
+    },
+    {
+      "pc": 20866,
+      "target": 78344
+    },
+    {
+      "pc": 20876,
+      "target": 41288
+    },
+    {
+      "pc": 20888,
+      "target": 20364
+    },
+    {
+      "pc": 20920,
+      "target": 20926
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step",
+    "actions_step",
+    "dispatch_step",
+    "transition_step",
+    "coasting_step",
+    "tally_step",
+    "palette_step",
+    "bonus_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366,
+        43600
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396,
+        75334,
+        28942,
+        28966,
+        25386,
+        20936,
+        21026,
+        20996,
+        20786,
+        20872
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 63754,
+      "opcode": 20112,
+      "selector": "actor +46 AFTER handler; only verified RTS service",
+      "targets": [
+        75334,
+        51966
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074,
+    18362,
+    21490
+  ],
+  "contract": "5132 bounded tally/countdown-60/transition path and 5188 coast/wait/save/equality-clear/mode-1 completion. Last unit returns before transition; 13208 tails now but 5188 is deferred. Secondary-score path 53F2 remains an explicit transactional rejection."
+}

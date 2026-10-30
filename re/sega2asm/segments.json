@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "interval_convention": "[start,end)",
+  "segments": [
+    {"name": "header", "type": "header", "start": 0, "end": 512, "evidence": "ROM header/vector structure"},
+    {"name": "reset_fragment", "type": "bin", "start": 512, "end": 654, "classification": "m68000_static_fragment", "evidence": "FIND-0001 static reset fragment; preserved raw due to FIND-0002 decoder defects, not a complete function"},
+    {"name": "reset_init_table", "type": "bin", "start": 654, "end": 762, "evidence": "FIND-0001 data read via A5 and skipped by branch"},
+    {"name": "unclassified_tail", "type": "bin", "start": 762, "end": 1048576, "evidence": "Raw preservation only; includes independently verified RNC subrange cataloged in re/rnc_blocks.json (FIND-0004)"}
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-05-031",
+  "starting_commit": "aa4f4e97ec6bda4d4c58524dfcf600853e3927f7",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "7A88 handler and bounded scheduled presentation/fixed RTS service, retained mixed-pool state with one FF31BC seed then physical input only. callback79B6 and collision-hit7910 unsupported. Eight external reservations; no world/frame/render/audio parity.",
+  "component_comparisons": [
+    {
+      "path": "local/generated/table-motion-comparison/run-oogq4wgr/report.json",
+      "sha256": "e98a5c55871f259e3dc11fa48167738edb7acadba24f4ef7a6091087d0cac287",
+      "preset": "debug",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      },
+      "native_executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "e9b4ff72c204ef749afcba9caaf709b305c26acc3acc2d6f6a8e9e5e97929a03",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "eabec904afbc60b06623b003c4bb3bebea4738503339bd76b46f3cdf72a84910",
+        "wiznliz-table-motion": "33b674d8a6abf4301ad3c00d445affcfc9786480a53d420feb1f64aea4b29d79"
+      }
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-q0yt1_6z/report.json",
+      "sha256": "09c1204f384d494a8a2d830657347d09e309fe2467aee231b5dcdb4610c88495",
+      "preset": "release",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      },
+      "native_executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "f131407b5603b1ed593f2031ef6d4a9acf73122399ae2d01bcb34aa8c166572c",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "a1f4675b0834deb3c2e08740e2ffb6037c547f828188d6a1c060c6aa9754ec42"
+      }
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-j7q_9out/report.json",
+      "sha256": "1781b3c7e4f0909d1d43915f97c1616ce38f7ebd1109b4796c8421e57377d98a",
+      "preset": "sanitize",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      },
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-w40zmmb4/report.json",
+      "sha256": "dad588a28541f3ad67507d42d4f713e70c13ceeabbb93cb5e85403090f4548a0",
+      "preset": "debug",
+      "cases": 277232,
+      "new_instructions_visited": 20,
+      "native_executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "e9b4ff72c204ef749afcba9caaf709b305c26acc3acc2d6f6a8e9e5e97929a03",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "eabec904afbc60b06623b003c4bb3bebea4738503339bd76b46f3cdf72a84910",
+        "wiznliz-table-motion": "33b674d8a6abf4301ad3c00d445affcfc9786480a53d420feb1f64aea4b29d79"
+      }
+    },
+    {
+      "path": "local/generated/trail-comparison/run-s9jk4sve/report.json",
+      "sha256": "96b2321f061579ec625b64ac3c2783fe58a93eda1ae4f6a1199f815a261e3110",
+      "preset": "debug",
+      "cases": 209082,
+      "new_instructions_visited": 62,
+      "native_executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "e9b4ff72c204ef749afcba9caaf709b305c26acc3acc2d6f6a8e9e5e97929a03",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "eabec904afbc60b06623b003c4bb3bebea4738503339bd76b46f3cdf72a84910",
+        "wiznliz-table-motion": "33b674d8a6abf4301ad3c00d445affcfc9786480a53d420feb1f64aea4b29d79"
+      }
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-thkbrypu/report.json",
+      "sha256": "657b74c4cfb3cb02a944688d8f004280ab783e94750918f2fee95c07409128f4",
+      "preset": "debug",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "native_executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "e9b4ff72c204ef749afcba9caaf709b305c26acc3acc2d6f6a8e9e5e97929a03",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "eabec904afbc60b06623b003c4bb3bebea4738503339bd76b46f3cdf72a84910",
+        "wiznliz-table-motion": "33b674d8a6abf4301ad3c00d445affcfc9786480a53d420feb1f64aea4b29d79"
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-iv8r69nk/report.json",
+      "sha256": "5f0ca08f5535f44f679a476b24ea5bea84d27e666132f0a3d2e0276110077e46",
+      "preset": "release",
+      "cases": 277232,
+      "new_instructions_visited": 20,
+      "native_executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "f131407b5603b1ed593f2031ef6d4a9acf73122399ae2d01bcb34aa8c166572c",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "a1f4675b0834deb3c2e08740e2ffb6037c547f828188d6a1c060c6aa9754ec42"
+      }
+    },
+    {
+      "path": "local/generated/trail-comparison/run-ppnko3yg/report.json",
+      "sha256": "2b5eb0545861bb55111c100b67b5be0bfdeaf1ae5920c7fb331ec90f7d7b6c29",
+      "preset": "release",
+      "cases": 209082,
+      "new_instructions_visited": 62,
+      "native_executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "f131407b5603b1ed593f2031ef6d4a9acf73122399ae2d01bcb34aa8c166572c",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "a1f4675b0834deb3c2e08740e2ffb6037c547f828188d6a1c060c6aa9754ec42"
+      }
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-e0kwzcbu/report.json",
+      "sha256": "596844d94e6ca312e00a9f1bbf011eb960d4675d3dd22d2f6966d018e10c45fa",
+      "preset": "release",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "native_executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "f131407b5603b1ed593f2031ef6d4a9acf73122399ae2d01bcb34aa8c166572c",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "a1f4675b0834deb3c2e08740e2ffb6037c547f828188d6a1c060c6aa9754ec42"
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-rmp24acn/report.json",
+      "sha256": "105767919ce7c813764420a341f04e042d86856a79617d3abe52a1bf53385c99",
+      "preset": "sanitize",
+      "cases": 277232,
+      "new_instructions_visited": 20,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/trail-comparison/run-l5j7zlwi/report.json",
+      "sha256": "23e4af3141bf18cb1340edd1b29776192a28c397fe5061ba7126483cf670ea64",
+      "preset": "sanitize",
+      "cases": 209082,
+      "new_instructions_visited": 62,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-apvk7j8l/report.json",
+      "sha256": "87a119d8ce211f3f73806a44d015f97e6a41b535633c5ed17ec5b06f7be97f03",
+      "preset": "sanitize",
+      "cases": 203586,
+      "new_instructions_visited": 119,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/input-comparison/run-sz1_8xdl/report.json",
+      "sha256": "f84bf3ab5842a821322cfcefad8bba800647b9d0e0f7d7937343fd6ba988b8b5",
+      "preset": "sanitize",
+      "cases": 1024,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/banner-comparison/run-9x830ptx/report.json",
+      "sha256": "6f4703d126e7c6d11e709652c8df67ca488eac9e587dddff4ad6c64cc38ab282",
+      "preset": "sanitize",
+      "cases": 66880,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/presentation-comparison/run-_a_o2r7s/report.json",
+      "sha256": "ff04fa2133c8eb4a4d8d74a254052ef149dd5caf848261d353bef5f5636bb16b",
+      "preset": "sanitize",
+      "cases": 347320,
+      "new_instructions_visited": 90,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/actor-comparison/run-hq0a3ytw/report.json",
+      "sha256": "43a4eebaea2c3f1db873fce0e68dc0275d27d84d53159609dea367470bcf648b",
+      "preset": "sanitize",
+      "cases": 152093,
+      "new_instruction_addresses_visited": 315,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/dispatch-comparison/run-326zzpz8/report.json",
+      "sha256": "e10fbcfe213465eae29feae8cec651de977f72465d0d82a78c6710cd3956702b",
+      "preset": "sanitize",
+      "cases": 138149,
+      "new_instructions_visited": 15,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/airborne-comparison/run-omui3bsm/report.json",
+      "sha256": "c5651e64c773ec6dc72eb77ceacfdf652cff647c15acdbc70c56831094399e42",
+      "preset": "sanitize",
+      "cases": 415940,
+      "new_instruction_addresses_visited": 172,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/movement-comparison/run-f5iqqdjh/report.json",
+      "sha256": "e90a3d297a2a814634508c2fb69067c0f627a6b1a994232756c906943dc8acd2",
+      "preset": "sanitize",
+      "cases": 282233,
+      "new_instruction_addresses_visited": 74,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    },
+    {
+      "path": "local/generated/terrain-comparison/run-qwhz7ale/report.json",
+      "sha256": "1bad50ce1764a2a47649eabd44acf3b105b0dad9d183a1c11f9c7e1f9020c10b",
+      "preset": "sanitize",
+      "total_cases": 614436,
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    }
+  ],
+  "mixed_comparisons": [
+    {
+      "path": "local/generated/mixed-session/run-4rbjst8z/report.json",
+      "sha256": "0b1e168e1a381ecfaf64daa20e6951797fec06f3adc390ac06d326969b64269b",
+      "preset": "debug",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 361,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "a383c920e584944522ebb9e24bc8cf56e3f1d909a8cb1c8b3cbc94ae093aa974"
+      },
+      "reference_report": "local/generated/mixed-session/run-k10mv8i2/report.json",
+      "reference_report_sha256": "678949b00e95abb059d39948a31a1030f91fac831c9626245ff60c7cf1b1e213",
+      "native_executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "e9b4ff72c204ef749afcba9caaf709b305c26acc3acc2d6f6a8e9e5e97929a03",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "eabec904afbc60b06623b003c4bb3bebea4738503339bd76b46f3cdf72a84910",
+        "wiznliz-table-motion": "33b674d8a6abf4301ad3c00d445affcfc9786480a53d420feb1f64aea4b29d79"
+      }
+    },
+    {
+      "path": "local/generated/mixed-session/run-59xmh539/report.json",
+      "sha256": "49bd54d28027aff27253ef262a0b02d820784d4c4e59af8491b2cf0203367a3f",
+      "preset": "release",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 361,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "a383c920e584944522ebb9e24bc8cf56e3f1d909a8cb1c8b3cbc94ae093aa974"
+      },
+      "reference_report": "local/generated/mixed-session/run-k10mv8i2/report.json",
+      "reference_report_sha256": "678949b00e95abb059d39948a31a1030f91fac831c9626245ff60c7cf1b1e213",
+      "native_executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "f131407b5603b1ed593f2031ef6d4a9acf73122399ae2d01bcb34aa8c166572c",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "a1f4675b0834deb3c2e08740e2ffb6037c547f828188d6a1c060c6aa9754ec42"
+      }
+    },
+    {
+      "path": "local/generated/mixed-session/run-7jtv3uvw/report.json",
+      "sha256": "9fcfffbca15108f3ba1fbd52af1c149f13104b81c0e0b229d2ed16715a2a7d16",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 361,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "a383c920e584944522ebb9e24bc8cf56e3f1d909a8cb1c8b3cbc94ae093aa974"
+      },
+      "reference_report": "local/generated/mixed-session/run-k10mv8i2/report.json",
+      "reference_report_sha256": "678949b00e95abb059d39948a31a1030f91fac831c9626245ff60c7cf1b1e213",
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    }
+  ],
+  "original_capture": {
+    "path": "local/generated/mixed-session/run-k10mv8i2/report.json",
+    "sha256": "678949b00e95abb059d39948a31a1030f91fac831c9626245ff60c7cf1b1e213",
+    "classification": "fresh ordinary unchanged movie; no edits; owned workers",
+    "endpoint": {
+      "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "observation": {
+      "particle_updates": 136,
+      "emitter_updates": 34,
+      "private_updates": 136,
+      "table_updates": 34,
+      "allocations": 9,
+      "reversal_updates": 12,
+      "releases": 9,
+      "managed_writes": 1806,
+      "reserved_writes": 305,
+      "free_writes": 27,
+      "slots": 68,
+      "initial_free": 50,
+      "reservations": 8,
+      "initial_particles": 4,
+      "table_input": {
+        "loop_count": 0,
+        "producer_countdown": 80,
+        "writes": 0,
+        "producer_entries": 34,
+        "producer_prefix_exits": 34,
+        "scope": "One retained loop-count seed; producer not scheduled natively. No writes, including transients, in this window."
+      },
+      "initial_table": 1,
+      "private_globals": {
+        "rise_gate": 0,
+        "flags_gate": 0,
+        "hide_gate": 0,
+        "writes": 0,
+        "scope": "Seeded once. No writes in this ordinary window; producers remain outside the native session."
+      },
+      "initial_private": 4,
+      "initial_state_scope": "Native P1, emitter/RNG, live trail/reversal and 7808/7CA4/7A88 objects, ordered shared free stack; eight audited external reservations omit private state.",
+      "actor_calls": 34,
+      "scratch_writes": 214,
+      "routine_events": 9835,
+      "native_events": 52895,
+      "producer_calls": 102,
+      "input_polls": 136,
+      "inactive_timers": 34,
+      "newborn_particle_updates": 97
+    },
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9"
+  },
+  "prior_p1_comparisons": [
+    {
+      "path": "local/generated/effect-session/run-mw58_t1f/report.json",
+      "sha256": "572fdea75d4b286e0f676a8fc1e027b1d65430fa2fb3e0f790a686ac060f0e6e",
+      "preset": "debug",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f",
+      "native_executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "e9b4ff72c204ef749afcba9caaf709b305c26acc3acc2d6f6a8e9e5e97929a03",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "eabec904afbc60b06623b003c4bb3bebea4738503339bd76b46f3cdf72a84910",
+        "wiznliz-table-motion": "33b674d8a6abf4301ad3c00d445affcfc9786480a53d420feb1f64aea4b29d79"
+      }
+    },
+    {
+      "path": "local/generated/effect-session/run-8ljdzlw3/report.json",
+      "sha256": "3aac4d488b3b3d91767840a7a8c7fd7da56619416c25454f2fc3a9ead7e7ba0c",
+      "preset": "release",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f",
+      "native_executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "f131407b5603b1ed593f2031ef6d4a9acf73122399ae2d01bcb34aa8c166572c",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "a1f4675b0834deb3c2e08740e2ffb6037c547f828188d6a1c060c6aa9754ec42"
+      }
+    },
+    {
+      "path": "local/generated/effect-session/run-phpw8pnp/report.json",
+      "sha256": "ac4cfb1a6d46c1d68421b867df008687521c6dd90315232f6f1860b5222de5fd",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f",
+      "native_executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "75827f65c7821b0cecb26e0f3c1fdf1c82ca2126605787afb4a6b36396500f73",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "3e284fbf4185e033cf3762703320ecb919cbb9321691d9ffc53c674531195a75",
+        "wiznliz-table-motion": "e3c84061b8347733db57030cd08216aee5cbde8187d5886c16d2088653f637ea"
+      }
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 194,
+      "python_skips": 0,
+      "ctest": 42,
+      "passed": true,
+      "log": {
+        "path": "local/generated/table-motion-research/test-debug.log",
+        "sha256": "eefc4e6d080f1c184fdc90fe3b1d61a6be6f601eb38463544bfd96a6f81ba86f"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 194,
+      "python_skips": 0,
+      "ctest": 42,
+      "passed": true,
+      "log": {
+        "path": "local/generated/table-motion-research/test-release.log",
+        "sha256": "8ba6a1d51f886e575b90485b1d8dd692630e6e419d0ceb76979689999df62cce"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 194,
+      "python_skips": 0,
+      "ctest": 42,
+      "passed": true,
+      "log": {
+        "path": "local/generated/table-motion-research/test-sanitize.log",
+        "sha256": "3c43d748f5fba8af0ef06e8c3c7bf94d40dd8bb1d9332a92af4af52a046f7a45"
+      }
+    }
+  ],
+  "context_probe": {
+    "path": "local/generated/mixed-session-probe/run-6ys8v7yk/report.json",
+    "sha256": "84fe429492c023462067d4d7ff4c50e4b904cafd49068f4bd662fa437f1a3c98"
+  },
+  "coverage": {
+    "new_native_mappings": 1,
+    "bounded_simulation_mappings": 105,
+    "partial_simulation_mappings": 1,
+    "indexed_functions": 115,
+    "promoted_preclassified_bytes": 78,
+    "preclassified_table_bytes": 48,
+    "new_classified_research_bytes": 52,
+    "classified_bytes": 26257,
+    "unclassified_bytes": 1022319,
+    "new_native_instructions": 19,
+    "new_research_writer_instructions": 9,
+    "fresh_twelve_corpus_union": 1157,
+    "fresh_union_with_writers": 1166,
+    "cumulative_executed_union": 1515,
+    "cumulative_scope": "1487 historical instructions plus 19 table handler and 9 research writer-fragment instructions. Other historical corpora were not rerun."
+  },
+  "attempts": [
+    "Initial debug build rejected missing explicit <optional> include; added it before successful final builds. No native/reference semantic mismatch."
+  ],
+  "not_rerun": [
+    "actions/transition/coasting/tally/palette/bonus/exit-tally/score comparison corpora",
+    "other old or controlled captures",
+    "whole-movie handler survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "callback79B6 (only its reset fragment was independently audited)",
+    "collision-hit7910 and native 78EE/AC5E integration",
+    "FF31xx producers beyond the verified fragments, initializers and broader scheduling",
+    "boot, rendering and audio"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries_verified": 104,
+    "source_files_verified": 59,
+    "owned_workers_remaining": [],
+    "initial_manifest": "local/generated/table-motion-research/preservation.json",
+    "final_manifest_sha256": "57a20601b97f9f024311a375e277d9191ed25c36c52793df0fef58589c921b9f"
+  }
+}

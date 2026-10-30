@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "identity_id": "ROM-LOCAL-0001",
+  "original": {
+    "path": "Original_Game/Wiz 'N' Liz (USA).md",
+    "size_bytes": 1048576,
+    "sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161"
+  },
+  "normalized": null,
+  "transformation": null,
+  "encoding": "linear_big_endian",
+  "observations": {
+    "header": {
+      "console": "SEGA GENESIS",
+      "copyright": "(C)T-1131993.NOV",
+      "domestic_title": "WIZ 'N' LIZ IN THE FRANTIC WABBIT WESCUE",
+      "overseas_title": "WIZ 'N' LIZ IN THE FRANTIC WABBIT WESCUE",
+      "product_code": "GM T-113026",
+      "supported_io": " J",
+      "rom_start_inclusive": 0,
+      "rom_end_inclusive": 1048575,
+      "ram_start_inclusive": 16711680,
+      "ram_end_inclusive": 16777215,
+      "extra_memory_hex": "202020202020202020202020",
+      "modem_hex": "202020202020202020202020",
+      "memo": "",
+      "region_text": "JUE"
+    },
+    "checksum": {
+      "algorithm": "sum big-endian u16 over file [0x200, EOF), modulo 65536",
+      "stored": 49374,
+      "calculated": 49374,
+      "matches": true
+    },
+    "initial_stack_pointer_raw": 4294902016,
+    "reset_pc_raw": 512
+  },
+  "provenance": "User-supplied local file; no independent dump provenance established."
+}

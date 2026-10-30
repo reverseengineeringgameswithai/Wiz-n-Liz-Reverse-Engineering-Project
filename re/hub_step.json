@@ -1,0 +1,279 @@
+{
+ "schema_version": 1,
+ "address_space": "rom_file_offset",
+ "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+ "regions": [
+  {
+   "id": "hub_setup_doors",
+   "start": 24198,
+   "end_exclusive": 24206,
+   "sha256": "efed3642338661fba9d5d6ffdbc0e2266c6adfca2fc1b1fe2edf8c3b575dd463",
+   "instruction_count": 2,
+   "execution_compared": true
+  },
+  {
+   "id": "hub_walk",
+   "start": 24414,
+   "end_exclusive": 24438,
+   "sha256": "accd0d8d9af7d06216da80e59c122dcbe4a8b14115364d654cfe24b90f387062",
+   "instruction_count": 7,
+   "execution_compared": true
+  },
+  {
+   "id": "hub_exit_test",
+   "start": 24612,
+   "end_exclusive": 24640,
+   "sha256": "46733951548a0f0b064384fba19cc0a46696f5f46f2214c497a7ec2c0ad8bfa4",
+   "instruction_count": 7,
+   "execution_compared": true
+  },
+  {
+   "id": "door_table",
+   "start": 24806,
+   "end_exclusive": 24862,
+   "sha256": "bea164e9c29a11dbb5cb96a0a46a87a912f734a965e99fb7769de05b1179154a",
+   "instruction_count": 14,
+   "execution_compared": true
+  },
+  {
+   "id": "door_make",
+   "start": 24862,
+   "end_exclusive": 25078,
+   "sha256": "358b132617522b110b11dacff1d564fbf404ea5bd3024d211b17b6b2f48b2912",
+   "instruction_count": 45,
+   "execution_compared": true
+  },
+  {
+   "id": "door_countdown",
+   "start": 25078,
+   "end_exclusive": 25114,
+   "sha256": "59f2d08b6a12fad7394db56196c9df021e4a8156eaf90950590775cbca113b50",
+   "instruction_count": 7,
+   "execution_compared": true
+  },
+  {
+   "id": "door_contact",
+   "start": 25114,
+   "end_exclusive": 25148,
+   "sha256": "ab0bb46e7cc8aaac14c074b44f5db97f983dcfce1929cc186743d60f66f33f8b",
+   "instruction_count": 9,
+   "execution_compared": true
+  },
+  {
+   "id": "door_enter",
+   "start": 25148,
+   "end_exclusive": 25354,
+   "sha256": "20f0f7c7235056cd7d62050cf337b68488da0ab5503d7c0d36ae1d3af402f046",
+   "instruction_count": 35,
+   "execution_compared": true
+  },
+  {
+   "id": "door_digits",
+   "start": 25396,
+   "end_exclusive": 25498,
+   "sha256": "3b844802057b6179208a5ed6ef92c73d846ae34393874c7e0c2bb18d25d660d5",
+   "instruction_count": 22,
+   "execution_compared": true
+  },
+  {
+   "id": "door_states",
+   "start": 25508,
+   "end_exclusive": 25570,
+   "sha256": "f563d09f1ee08031c802df66946e9bce9dd2c254638a31995b6a6b84b767301a",
+   "instruction_count": 15,
+   "execution_compared": true
+  },
+  {
+   "id": "control_message_clear",
+   "start": 94872,
+   "end_exclusive": 94910,
+   "sha256": "cdcb5da2ee5f7df573b10e472bb9dab9f12a85570db80d940e53529902703f4d",
+   "instruction_count": 8,
+   "execution_compared": true
+  },
+  {
+   "id": "release_a5",
+   "start": 64140,
+   "end_exclusive": 64164,
+   "sha256": "cabf5f210269782b3d89697e285985a8f40c2e64589ada2b163313d8713052fe",
+   "instruction_count": 7,
+   "execution_compared": true
+  },
+  {
+   "id": "puff",
+   "start": 64196,
+   "end_exclusive": 64228,
+   "sha256": "2f4bc277bff5b20ad2f39b44a878c0f7bc52022e7b69d159990b73146eac64ae",
+   "instruction_count": 7,
+   "execution_compared": true
+  }
+ ],
+ "data": [
+  {
+   "id": "door_digit_frames",
+   "start": 25498,
+   "end_exclusive": 25508,
+   "sha256": "a5ea80543d81ec0fab51162161fb0e2771a82a58e4e59912bed65e77d3deb3cd"
+  }
+ ],
+ "transfers": [
+  {
+   "pc": 24198,
+   "target": 25508
+  },
+  {
+   "pc": 24202,
+   "target": 24806
+  },
+  {
+   "pc": 24418,
+   "target": 24438
+  },
+  {
+   "pc": 24420,
+   "target": 63340
+  },
+  {
+   "pc": 24624,
+   "target": 24634
+  },
+  {
+   "pc": 24632,
+   "target": 24638
+  },
+  {
+   "pc": 24634,
+   "target": 24298
+  },
+  {
+   "pc": 24822,
+   "target": 24828
+  },
+  {
+   "pc": 24848,
+   "target": 24862
+  },
+  {
+   "pc": 24856,
+   "target": 24828
+  },
+  {
+   "pc": 24862,
+   "target": 63970
+  },
+  {
+   "pc": 24900,
+   "target": 25396
+  },
+  {
+   "pc": 24914,
+   "target": 24964
+  },
+  {
+   "pc": 24960,
+   "target": 25076
+  },
+  {
+   "pc": 24964,
+   "target": 63970
+  },
+  {
+   "pc": 25008,
+   "target": 25076
+  },
+  {
+   "pc": 25012,
+   "target": 25076
+  },
+  {
+   "pc": 25014,
+   "target": 63970
+  },
+  {
+   "pc": 25058,
+   "target": 25076
+  },
+  {
+   "pc": 25082,
+   "target": 25112
+  },
+  {
+   "pc": 25120,
+   "target": 44126
+  },
+  {
+   "pc": 25124,
+   "target": 25148
+  },
+  {
+   "pc": 25132,
+   "target": 25112
+  },
+  {
+   "pc": 25140,
+   "target": 44126
+  },
+  {
+   "pc": 25144,
+   "target": 25148
+  },
+  {
+   "pc": 25148,
+   "target": 94872
+  },
+  {
+   "pc": 25310,
+   "target": 64140
+  },
+  {
+   "pc": 25320,
+   "target": 64140
+  },
+  {
+   "pc": 25332,
+   "target": 25354
+  },
+  {
+   "pc": 25342,
+   "target": 25354
+  },
+  {
+   "pc": 25346,
+   "target": 78344
+  },
+  {
+   "pc": 25396,
+   "target": 63892
+  },
+  {
+   "pc": 25404,
+   "target": 63892
+  },
+  {
+   "pc": 25514,
+   "target": 25568
+  },
+  {
+   "pc": 25532,
+   "target": 25568
+  },
+  {
+   "pc": 25558,
+   "target": 25550
+  },
+  {
+   "pc": 64200,
+   "target": 64226
+  }
+ ],
+ "dependencies": [
+  "door_entry_step",
+  "completion_step",
+  "transition_step",
+  "coasting_step",
+  "reversal_step",
+  "collision_step",
+  "pair_initializer_step"
+ ],
+ "contract": "The scene between levels (5D30): its doors. [5E86,5E8E): BSR 63A4, BSR 60E6. [63A4,63E2): with FF33E2 clear and FF33C4's low three bits clear, the first eight FF330C records' +8 = FF33C4 >> 3 and FF33DE (byte) cleared. [60E6,611E): eight records (nine with FF33E2 set), each 14 bytes: +0 X, +2 Y, +4 the door's number, +8 its state, +A the two-player marker, through BSR 611E. [611E,61F6): F9E2; +22 = the number, (X, Y), mode 80, frame 00B0, handler 12646; BSR 6334; +26/+2A = its two objects; a non-negative +8: mode 81, frames 00A8/00B7, cadence 3/3, +10 = 003C, handler 61F6; a negative one: a F9E2 object at (X - 8, Y), frame 00CD, handler 12646, then with FF33E2 set and +A non-negative a F9E2 object at (X - 1, Y + 7), frame 0217, with +A nonzero X + 2, frame 0218 and +12 EOR 0800. [6334,639A) and the [639A,63A4) table: two F994 objects (A4 then A5), mode 80, handlers 12646, at (X - 10, Y - 0A) and (X + 8, Y - 0A), frames 00B8 plus the table byte at the number's EXT.W low byte, and that plus one. [61F6,621A): +10 - 1; non-negative returns (6218's RTS); negative: extents 0010/0018, +46 = 621A, +16 = 6218. [621A,623C): AC5E against FF0690, then FF0838 with FF33E2 set; a contact continues at 623C. [623C,630A): JSR 17298 on the touching control; FF4446/FF4448 = the door's +2/+4 - 0114/0098, each AND FFF8; FF3398 = FF330C + MULU.W #0E of +22 (LEA (A0,D0.W)); X - 4, Y + 8, mode 85, frames 021E/021E/0227, target 0227, cadence 3/3, callback FAA4, +10 = 0, handler FAC4, +46 = 6218; FA8C on +26 then +2A; 630A on FF0690 and FF0838; JSR 13208. [17298,172BE): the control's +46 and +4E = FFFFFFFF, +52/+53 cleared, +54/+56/+58 cleared. [FA8C,FAA4): A5's mode cleared and its slot pushed. [FAC4,FAE4): +10 - 1; negative: X - 4, mode 85, +6 = +8, +16 = FAE2; FAE2 is an RTS. [5F5E,5F76): the hub loop's walk body (active gate, F76C, handler, service). [6024,6040): with FF0690's +1A6 = FFFF and FF0B90 zero the loop returns at 603E, otherwise BRA 5EEA. Natively src/sim/hub.* (update_hub_door_states, HubDoor, step_hub_door, hub_loop_ends) and MixedPool::initialize_hub_doors / enter_hub_door with HubWorld; 630A on P1 and 13208 run on the session's actor and timer."
+}

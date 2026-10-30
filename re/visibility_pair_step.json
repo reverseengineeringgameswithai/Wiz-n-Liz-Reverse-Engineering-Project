@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "visibility_pair_initializer",
+      "start": 31782,
+      "end_exclusive": 31908,
+      "sha256": "6fe95281199553ccbaa95b783663d9e69ada26ec0336986084112a74ea735809",
+      "instruction_count": 21,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 31782,
+      "target": 63970
+    },
+    {
+      "pc": 31844,
+      "target": 63970
+    },
+    {
+      "pc": 63980,
+      "target": 64030
+    },
+    {
+      "pc": 64046,
+      "target": 64030
+    }
+  ],
+  "dependencies": [
+    "pair_initializer_step",
+    "private_step",
+    "mixed_session"
+  ],
+  "contract": "7C26 performs two ordered F9E2 pops from the shared FF311C LIFO stack and initializes two 7CA4 gated-visibility objects: (287,152) frames 892..901 and (287,184) frames 902..911, counter/reload 5/5, mode 81, handler 7CA4. It writes no flags and no FF31C0; A6 is left as the second object. F9E2 (classified with 7B9C) leaves +01, +0E, +10, +1A..+45 and +4A inherited; native requires verified inherited fields and zero unrepresented bytes, else rejects. Exhaustion enters the never-returning FA1E loop; restricted execution stops there and native rejection allocates nothing. Gate producers, other level setup and callbacks are not reconstructed."
+}

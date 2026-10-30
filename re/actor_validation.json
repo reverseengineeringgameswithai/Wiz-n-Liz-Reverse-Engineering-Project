@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "starting_commit": "45c947d1551117926cb583ad9de8145509700883",
+  "actor_presets": {
+    "debug": {
+      "cases": 152093,
+      "report": "local/generated/actor-comparison/run-den6zrty/report.json",
+      "report_sha256": "7928e14b7dea6d68cafffdd2cb2b6bea517e24436e6d781e11689c16a4ff9ac7",
+      "new_instructions_visited": 315,
+      "total_instructions_visited": 628,
+      "groups": [
+        {
+          "name": "flat",
+          "cases": 135901,
+          "entry_calls": 135901,
+          "landings": 33445,
+          "sound_requests": 264476,
+          "native_output_sha256": "0fc1aee66bade221d27ac492032bb9f139d37177d2a5fa2e0a0577b5dd38dfe3"
+        },
+        {
+          "name": "authored",
+          "cases": 4544,
+          "entry_calls": 19904,
+          "landings": 1308,
+          "sound_requests": 2124,
+          "native_output_sha256": "d2a02a827f1f9512ebc0dc9a9d5473ddb94545b023e7460d7f975a29b6635433"
+        },
+        {
+          "name": "cataloged-scene",
+          "cases": 11648,
+          "entry_calls": 11648,
+          "landings": 2,
+          "sound_requests": 8172,
+          "native_output_sha256": "25c4f467eeb56224891565fb7a652da76d916d350374cefe5bf7c96863f3201a"
+        }
+      ],
+      "rejection_checks": 10
+    },
+    "release": {
+      "cases": 152093,
+      "report": "local/generated/actor-comparison/run-dmaa4i3n/report.json",
+      "report_sha256": "49807153d1b3718a864b52a26604de67d3eab11109304b1017c5531f5a1a88f0",
+      "new_instructions_visited": 315,
+      "total_instructions_visited": 628,
+      "groups": [
+        {
+          "name": "flat",
+          "cases": 135901,
+          "entry_calls": 135901,
+          "landings": 33445,
+          "sound_requests": 264476,
+          "native_output_sha256": "0fc1aee66bade221d27ac492032bb9f139d37177d2a5fa2e0a0577b5dd38dfe3"
+        },
+        {
+          "name": "authored",
+          "cases": 4544,
+          "entry_calls": 19904,
+          "landings": 1308,
+          "sound_requests": 2124,
+          "native_output_sha256": "d2a02a827f1f9512ebc0dc9a9d5473ddb94545b023e7460d7f975a29b6635433"
+        },
+        {
+          "name": "cataloged-scene",
+          "cases": 11648,
+          "entry_calls": 11648,
+          "landings": 2,
+          "sound_requests": 8172,
+          "native_output_sha256": "25c4f467eeb56224891565fb7a652da76d916d350374cefe5bf7c96863f3201a"
+        }
+      ],
+      "rejection_checks": 10
+    },
+    "sanitize": {
+      "cases": 152093,
+      "report": "local/generated/actor-comparison/run-swbg7ya_/report.json",
+      "report_sha256": "943736637aab02929cca61f2cb29036e0c3945c896803e4e7bdc6762b8ea4b63",
+      "new_instructions_visited": 315,
+      "total_instructions_visited": 628,
+      "groups": [
+        {
+          "name": "flat",
+          "cases": 135901,
+          "entry_calls": 135901,
+          "landings": 33445,
+          "sound_requests": 264476,
+          "native_output_sha256": "0fc1aee66bade221d27ac492032bb9f139d37177d2a5fa2e0a0577b5dd38dfe3"
+        },
+        {
+          "name": "authored",
+          "cases": 4544,
+          "entry_calls": 19904,
+          "landings": 1308,
+          "sound_requests": 2124,
+          "native_output_sha256": "d2a02a827f1f9512ebc0dc9a9d5473ddb94545b023e7460d7f975a29b6635433"
+        },
+        {
+          "name": "cataloged-scene",
+          "cases": 11648,
+          "entry_calls": 11648,
+          "landings": 2,
+          "sound_requests": 8172,
+          "native_output_sha256": "25c4f467eeb56224891565fb7a652da76d916d350374cefe5bf7c96863f3201a"
+        }
+      ],
+      "rejection_checks": 10
+    }
+  },
+  "regressions": {
+    "airborne-regression": {
+      "cases": 415940,
+      "report": "local/generated/airborne-comparison/run-ib5alldr/report.json",
+      "preset": "sanitize"
+    },
+    "movement-regression": {
+      "cases": 282233,
+      "report": "local/generated/movement-comparison/run-knpuzxkp/report.json",
+      "preset": "sanitize"
+    },
+    "terrain-regression": {
+      "cases": 614436,
+      "report": "local/generated/terrain-comparison/run-uz3jpro6/report.json",
+      "preset": "sanitize"
+    }
+  },
+  "genesis": {
+    "report": "local/generated/genesis-actor/run-cnph4jtf/report.json",
+    "report_sha256": "fff6b688921227e4259d95eb6bea03dd5ade6afd98c780eea723f1499347d2b8",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "calls": 283,
+    "handler_hits": {
+      "0xa1be": 15,
+      "0xa408": 58,
+      "0xaaea": 34,
+      "0xab04": 58,
+      "0xa546": 55,
+      "0xa246": 43,
+      "0xa27e": 1,
+      "0xa6c8": 17,
+      "0xa384": 17,
+      "0xa88e": 27
+    },
+    "branches": [
+      {
+        "name": "ordinary-route",
+        "classification": "ordinary gameplay",
+        "calls": 136,
+        "sound_requests": 2,
+        "unhooked_covered_state_sha256": "321bf89b4b0bf311c719f63c9cc57c90258b2d984a23b300f67cfd9848980551",
+        "artifacts": {
+          "ordinary-route/trace.json": "2d3f953b00aca9c6672650d59d8b40a321bba92512e32f2525bd296d85885a5f",
+          "ordinary-route/comparison.json": "1f412084cf098a6e99171472c50233de6aaa8fcaae2135c4801ff17362d2f2f6",
+          "ordinary-route/cases.txt": "ca1d259e0a93a08b7352b3374ffeb9edd286ddc4c1c6f83fb4206c89cdd33b42",
+          "ordinary-route/scene.bin": "7cd572db6a570ee25bdd99fac9d9e13be0fa058bfa4a88c05f2ea59b68b3ef2c",
+          "ordinary-route/bank.bin": "ae258e30bf64235f5151d12aac4a618ae9303ab89dc7f17c88ee8f46b7e30b12",
+          "worker/ordinary-route.state.json": "e1db1fa2d6987e2cfdd6485d6d114b12ecdf9a7092cc25e6884ae45792ffe7b7"
+        }
+      },
+      {
+        "name": "idle-jump",
+        "classification": "ordinary gameplay",
+        "calls": 13,
+        "sound_requests": 2,
+        "unhooked_covered_state_sha256": "b4343414442d61cc9f3a62f56e2f40d1ca80d8e09c628ce3e0c20a06537ae0d1",
+        "artifacts": {
+          "idle-jump/trace.json": "9b91fc42117ab442828a4532b21ef62bba1f6eebb99c01e7e1af4a0588d9a667",
+          "idle-jump/comparison.json": "586de32daea803ac28679902bd12d26e911b0f4ec0a95ccfc7293bfdb387047f",
+          "idle-jump/cases.txt": "1298670532ad2c12bf471dd3b92ce89e99eb24c1858f9faf7cb33c743d0070db",
+          "idle-jump/scene.bin": "7cd572db6a570ee25bdd99fac9d9e13be0fa058bfa4a88c05f2ea59b68b3ef2c",
+          "idle-jump/bank.bin": "ae258e30bf64235f5151d12aac4a618ae9303ab89dc7f17c88ee8f46b7e30b12",
+          "worker/idle-jump.state.json": "ad4bdcc1bd38fd32f008ae8fb03eae7bb87d3516c8ecdc48518aaa836f2cfdee"
+        }
+      },
+      {
+        "name": "fast-right",
+        "classification": "ordinary gameplay",
+        "calls": 61,
+        "sound_requests": 2,
+        "unhooked_covered_state_sha256": "f5c212fba65e8df30382a299cf722aba42d9ec2a41906ba04d1ff437f7aa1923",
+        "artifacts": {
+          "fast-right/trace.json": "b133baf8b7c00f22c1402f80f4a68499fce68e4a5122f58b6fe196fcb3aaf5dc",
+          "fast-right/comparison.json": "fd1fa92993afdfc5d48d8808c58e16ede13085e468c95342e76fb6c664a6d5ff",
+          "fast-right/cases.txt": "c3619ff1541ac857dd498963a61c7cab2758ec4cfc108cbd610991e861cc178a",
+          "fast-right/scene.bin": "7cd572db6a570ee25bdd99fac9d9e13be0fa058bfa4a88c05f2ea59b68b3ef2c",
+          "fast-right/bank.bin": "ae258e30bf64235f5151d12aac4a618ae9303ab89dc7f17c88ee8f46b7e30b12",
+          "worker/fast-right.state.json": "49a2fd7ec53d275e14ad79f736590af99a3ecaa795e0004be5a45338bc09ef58"
+        }
+      },
+      {
+        "name": "fast-left",
+        "classification": "ordinary gameplay",
+        "calls": 71,
+        "sound_requests": 2,
+        "unhooked_covered_state_sha256": "0c9bb85967c20e93ded692718334865e13e8830971dfa4cc2e8c01b1796063cc",
+        "artifacts": {
+          "fast-left/trace.json": "b72f188ff2dd299e9d14417e80682418f968ce530d2e890145abc850ff190159",
+          "fast-left/comparison.json": "303d386d03c1efd971cea89f2279ce691da20caffdb2cb6999d9ec538c4549a1",
+          "fast-left/cases.txt": "bfae03615d2bb8e9e4fc6e189e7c058b523ec0aed7f68cb293a8a8f6ea953650",
+          "fast-left/scene.bin": "7cd572db6a570ee25bdd99fac9d9e13be0fa058bfa4a88c05f2ea59b68b3ef2c",
+          "fast-left/bank.bin": "ae258e30bf64235f5151d12aac4a618ae9303ab89dc7f17c88ee8f46b7e30b12",
+          "worker/fast-left.state.json": "db2224f0692627dfc10a98ec004c445759f4509b60830d0a11ee9b7fae39dccf"
+        }
+      },
+      {
+        "name": "landing-idle-right",
+        "classification": "controlled RAM edit",
+        "calls": 1,
+        "sound_requests": 0,
+        "unhooked_covered_state_sha256": "08ac11dbe51aa439cc8600ea91ce208db5daf0bf37697c8af6d0d3722e31b1bf",
+        "artifacts": {
+          "landing-idle-right/trace.json": "9adbee78bf088c32b52b1bc7bafdaf9046b36f36b3acffd5a54c5d4884547960",
+          "landing-idle-right/comparison.json": "84a54dce2794c26a1adf23bc7f516ce35b71bbc531e923f6a048ea691363285d",
+          "landing-idle-right/cases.txt": "d9bcfed0529d16ed0b7daf8daf2623d63137f8d2a0a8dd6a517866d46d3d87e1",
+          "landing-idle-right/scene.bin": "7cd572db6a570ee25bdd99fac9d9e13be0fa058bfa4a88c05f2ea59b68b3ef2c",
+          "landing-idle-right/bank.bin": "ae258e30bf64235f5151d12aac4a618ae9303ab89dc7f17c88ee8f46b7e30b12",
+          "worker/landing-idle-right.state.json": "48314fd939fc818fba72ffcff0f206da0e66ddb62b20bcd9225ebc8fc385ab76"
+        }
+      },
+      {
+        "name": "landing-idle-left",
+        "classification": "controlled RAM edit",
+        "calls": 1,
+        "sound_requests": 0,
+        "unhooked_covered_state_sha256": "5bd632e69ad283688d7b987f42b931bbed4e9e97cc054a3beb419757860c0521",
+        "artifacts": {
+          "landing-idle-left/trace.json": "51079c5139ebe4b578497fd230433516cf5a440e5b021df7a8db8eb31691f45d",
+          "landing-idle-left/comparison.json": "76d3f68db707febcb0386e20832f2cf92f48ecf8718986cf150a35ceef5d00fc",
+          "landing-idle-left/cases.txt": "e5b15ba7b13434716ee36006899cd299fcda515a26388d86f25e901ac460015b",
+          "landing-idle-left/scene.bin": "7cd572db6a570ee25bdd99fac9d9e13be0fa058bfa4a88c05f2ea59b68b3ef2c",
+          "landing-idle-left/bank.bin": "ae258e30bf64235f5151d12aac4a618ae9303ab89dc7f17c88ee8f46b7e30b12",
+          "worker/landing-idle-left.state.json": "1e8c79b8d6472f801b775bbd4f191641c78daf2995b5eb0b064c2fdb81630f72"
+        }
+      }
+    ],
+    "contract": "F904-to-F906 actor fields and sound request arguments; not whole-frame/audio/scheduler parity",
+    "compared_fields": [
+      "handler",
+      "x",
+      "y",
+      "speed",
+      "vertical",
+      "delay",
+      "flags",
+      "mode",
+      "first",
+      "begin",
+      "end",
+      "counter",
+      "reload",
+      "target",
+      "cycles",
+      "callback",
+      "scratch_x",
+      "scratch_y",
+      "ordered_sound_requests"
+    ]
+  },
+  "tests": {
+    "python": 117,
+    "python_skips": 0,
+    "ctest_per_preset": 14,
+    "presets": [
+      "debug",
+      "release",
+      "sanitize"
+    ]
+  },
+  "union_visited_instructions": 647,
+  "limitations": [
+    "No native playability, presentation/frame scheduling or audio driver",
+    "Fast reversal allocation and idle up/down actions reject atomically",
+    "Musashi sound selector zero executes original mismatch returns; requests only are compared",
+    "GPGX hashes cover declared exposed state, not hidden device state"
+  ]
+}

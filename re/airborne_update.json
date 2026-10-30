@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "air_horizontal_dispatch",
+      "start": 39852,
+      "end_exclusive": 39882,
+      "sha256": "e5bd61ec468c06d245b3c036969ae9225b71fb0ca9dda3ce1b5af9f89799606c",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "air_left",
+      "start": 39882,
+      "end_exclusive": 39944,
+      "sha256": "c365f1da02769c7eccff99aac88a3887a8b828e910acdff9168c51494fd74a8d",
+      "instruction_count": 17,
+      "execution_compared": true
+    },
+    {
+      "id": "air_positive_dispatch",
+      "start": 39944,
+      "end_exclusive": 39960,
+      "sha256": "0f159bd45bc38c121785e7a47ec5aa64d47072fc15e0293d955c17121b9de325",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "air_right",
+      "start": 39960,
+      "end_exclusive": 40022,
+      "sha256": "65f1c5ce3fc0f26eaa0894e0c3e6236dab539bca446e9adbd44fca67ae763434",
+      "instruction_count": 17,
+      "execution_compared": true
+    },
+    {
+      "id": "idle_right_entry",
+      "start": 41380,
+      "end_exclusive": 41406,
+      "sha256": "f749ec9872b154879dfe6b31f2dfc1a0f335e95a899063a831dd834d8e8693cc",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "idle_left_entry",
+      "start": 41516,
+      "end_exclusive": 41542,
+      "sha256": "6fda9986698da0b4ba6937a7229ae4e634860e32ed5e6c431c5657e71fdb15ab",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "right_reload",
+      "start": 42584,
+      "end_exclusive": 42640,
+      "sha256": "e7fb2c57d90f3c2de4fe2b3f8569bbf9f6e695d080166b2415b6c81dbbeaa54a",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "left_reload",
+      "start": 42640,
+      "end_exclusive": 42696,
+      "sha256": "1a09ecc516873508b3e4ef6a2a904da2a10b5278a61bfebba04666d7065a96ac",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "delayed_airborne_entry",
+      "start": 43754,
+      "end_exclusive": 43780,
+      "sha256": "9bfeb19bbfe53e4904bb51866bd6306a94cd83b3c34d4e79e129f0afc89a5172",
+      "instruction_count": 7,
+      "execution_compared": true
+    },
+    {
+      "id": "airborne_fall",
+      "start": 43780,
+      "end_exclusive": 43914,
+      "sha256": "76f7dd9be727f289b38f41b9757647f9ea0de8a31483ee857f12cce2151a4885",
+      "instruction_count": 38,
+      "execution_compared": true
+    },
+    {
+      "id": "landing",
+      "start": 43914,
+      "end_exclusive": 44126,
+      "sha256": "c04a2e2cf61c46e8da386b4e6bb09fc9ace91fe654eab3033166c086aef9c285",
+      "instruction_count": 42,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 39856,
+      "target": 39878
+    },
+    {
+      "pc": 39858,
+      "target": 39944
+    },
+    {
+      "pc": 39864,
+      "target": 39882
+    },
+    {
+      "pc": 39868,
+      "target": 39864
+    },
+    {
+      "pc": 39878,
+      "target": 39552
+    },
+    {
+      "pc": 39902,
+      "target": 39380
+    },
+    {
+      "pc": 39906,
+      "target": 39448
+    },
+    {
+      "pc": 39924,
+      "target": 40020
+    },
+    {
+      "pc": 39934,
+      "target": 39532
+    },
+    {
+      "pc": 39938,
+      "target": 39934
+    },
+    {
+      "pc": 39946,
+      "target": 39960
+    },
+    {
+      "pc": 39950,
+      "target": 39946
+    },
+    {
+      "pc": 39980,
+      "target": 39380
+    },
+    {
+      "pc": 39984,
+      "target": 39448
+    },
+    {
+      "pc": 40002,
+      "target": 40020
+    },
+    {
+      "pc": 40012,
+      "target": 39532
+    },
+    {
+      "pc": 40016,
+      "target": 40012
+    },
+    {
+      "pc": 42590,
+      "target": 42632
+    },
+    {
+      "pc": 42598,
+      "target": 42624
+    },
+    {
+      "pc": 42606,
+      "target": 42616
+    },
+    {
+      "pc": 42614,
+      "target": 42638
+    },
+    {
+      "pc": 42622,
+      "target": 42638
+    },
+    {
+      "pc": 42630,
+      "target": 42638
+    },
+    {
+      "pc": 42646,
+      "target": 42688
+    },
+    {
+      "pc": 42654,
+      "target": 42680
+    },
+    {
+      "pc": 42662,
+      "target": 42672
+    },
+    {
+      "pc": 42670,
+      "target": 42694
+    },
+    {
+      "pc": 42678,
+      "target": 42694
+    },
+    {
+      "pc": 42686,
+      "target": 42694
+    },
+    {
+      "pc": 43758,
+      "target": 43772
+    },
+    {
+      "pc": 43764,
+      "target": 43780
+    },
+    {
+      "pc": 43770,
+      "target": 43780
+    },
+    {
+      "pc": 43780,
+      "target": 39518
+    },
+    {
+      "pc": 43790,
+      "target": 43842
+    },
+    {
+      "pc": 43796,
+      "target": 43818
+    },
+    {
+      "pc": 43812,
+      "target": 44264
+    },
+    {
+      "pc": 43816,
+      "target": 43842
+    },
+    {
+      "pc": 43822,
+      "target": 43842
+    },
+    {
+      "pc": 43838,
+      "target": 44246
+    },
+    {
+      "pc": 43848,
+      "target": 43858
+    },
+    {
+      "pc": 43862,
+      "target": 43896
+    },
+    {
+      "pc": 43864,
+      "target": 39852
+    },
+    {
+      "pc": 43868,
+      "target": 43914
+    },
+    {
+      "pc": 43882,
+      "target": 39552
+    },
+    {
+      "pc": 43886,
+      "target": 43914
+    },
+    {
+      "pc": 43890,
+      "target": 43882
+    },
+    {
+      "pc": 43896,
+      "target": 39852
+    },
+    {
+      "pc": 43920,
+      "target": 44024
+    },
+    {
+      "pc": 43930,
+      "target": 43978
+    },
+    {
+      "pc": 43964,
+      "target": 42584
+    },
+    {
+      "pc": 43972,
+      "target": 41380
+    },
+    {
+      "pc": 44032,
+      "target": 44080
+    },
+    {
+      "pc": 44066,
+      "target": 42640
+    },
+    {
+      "pc": 44074,
+      "target": 41516
+    }
+  ],
+  "continuation_boundaries": [
+    {
+      "pc": 41406,
+      "native": "idle_right",
+      "reason": "immediate fallthrough after landing idle initialization; handler not executed"
+    },
+    {
+      "pc": 41542,
+      "native": "idle_left",
+      "reason": "immediate fallthrough after landing idle initialization; handler not executed"
+    }
+  ],
+  "actor_fields": {
+    "flags": 18,
+    "vertical_motion": 38,
+    "airborne_delay": 42,
+    "handler": 22
+  },
+  "control_fields": {
+    "boost_byte": 22,
+    "left_byte": 28,
+    "right_byte": 29,
+    "acceleration_word": 96,
+    "contact_damping_count_minus_one": 106,
+    "gravity_word": 108
+  },
+  "global_inputs": {
+    "acceleration_gate_word": "0xFFFF0F16"
+  },
+  "initializer_evidence": "re/movement_step.json motion_parameters region",
+  "scope": "original execution to RTS or exact explicit immediate idle-continuation boundary; no full frame/controller"
+}

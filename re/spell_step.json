@@ -1,0 +1,119 @@
+{
+ "schema_version": 1,
+ "address_space": "rom_file_offset",
+ "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+ "regions": [
+  {
+   "id": "second_ingredient_branch",
+   "start": 31232,
+   "end_exclusive": 31270,
+   "sha256": "be371c4281f2a359e0246662034119cb115b3c553e689dd26abe70e447e8169d",
+   "instruction_count": 8,
+   "execution_compared": true
+  },
+  {
+   "id": "second_activation",
+   "start": 31462,
+   "end_exclusive": 31522,
+   "sha256": "20485a36e82bf4e1d9aa184bb48dbfdcb42cfded3242ab88c0f39fe893c9eabf",
+   "instruction_count": 13,
+   "execution_compared": true
+  },
+  {
+   "id": "spell_countdown",
+   "start": 31554,
+   "end_exclusive": 31566,
+   "sha256": "3c9947a2d9a59258fc5c4554b463c536af9caf6b2d60d50e2722eb66a416806e",
+   "instruction_count": 3,
+   "execution_compared": true
+  },
+  {
+   "id": "spell_countdown_return",
+   "start": 31574,
+   "end_exclusive": 31576,
+   "sha256": "1ceeabf0c6a5a30bad12cdac0e3ab015a7188a42e6aebb556aad00bb9cd693ad",
+   "instruction_count": 1,
+   "execution_compared": true
+  },
+  {
+   "id": "spell_producer_gate",
+   "start": 31944,
+   "end_exclusive": 31978,
+   "sha256": "683b5f10d4e7202b189d0333697c9bbc9b4954e502fd33431fbe06ab5b59432f",
+   "instruction_count": 6,
+   "execution_compared": true,
+   "previously_classified": true
+  },
+  {
+   "id": "spell_exchange",
+   "start": 31978,
+   "end_exclusive": 32184,
+   "sha256": "106505e2202ef9a6bd7eaa86fc739eb8a2722873749a098be574969d4a7f2aa9",
+   "instruction_count": 48,
+   "execution_compared": true
+  }
+ ],
+ "transfers": [
+  {
+   "pc": 31240,
+   "target": 52082
+  },
+  {
+   "pc": 31262,
+   "target": 31446
+  },
+  {
+   "pc": 31474,
+   "target": 64262
+  },
+  {
+   "pc": 31486,
+   "target": 64164
+  },
+  {
+   "pc": 31558,
+   "target": 31574
+  },
+  {
+   "pc": 31560,
+   "target": 78484
+  },
+  {
+   "pc": 31954,
+   "target": 31978
+  },
+  {
+   "pc": 31962,
+   "target": 31978
+  },
+  {
+   "pc": 31990,
+   "target": 32182
+  },
+  {
+   "pc": 32006,
+   "target": 32182
+  },
+  {
+   "pc": 32014,
+   "target": 32022
+  },
+  {
+   "pc": 32018,
+   "target": 32028
+  },
+  {
+   "pc": 32024,
+   "target": 32028
+  }
+ ],
+ "dependencies": [
+  "ingredient_step",
+  "delivery_step",
+  "table_motion_step",
+  "setup_message_step",
+  "pickup_hit_step",
+  "presentation_step"
+ ],
+ "contract": "callback79B6 and 7AD6 on their second-ingredient paths, the FF31C0 anchor handler 7B42 up to 13294, and the per-frame 7CC8 producer. [7A00,7A26): +46(A5) = D22F (\"SECOND INGREDIENT COLLECTED! / SPELL BEING MIXED!\", priority byte 01) and JSR CB72; D0 = +32(A0) with A0 the FF31AC object (A0 survives CB72); NEG.W; +32 = D0; +10 = 000E; JSR 7AD6; RTS. [7AE6,7B22): A4 = FF31B8; FF31B0 = A4; FB06 copies the 78 copy bytes into it; the copy's +42 record names A4; JSR FAA4 releases the copy; A6 = FF31C0; +16 = 7B42, +4A = A5, +10 = 012C; A6 restored; RTS. [7B42,7B4E) and the RTS at 7B56: SUBQ.W #1,+10; BPL returns; a negative result calls 13294 (not reconstructed; the following +16 = 7B58 store at 7B4E stays static). [7CC8,7DB8), called by BSR from 6972 each frame between the banner and P1's last input conversion: FF31B0 zero skips the countdown, else FF31BE decrements and a negative result increments FF31BC and reloads 0028; then with FF31AC and FF31B0 both nonzero, when the FF31AC object's +32 is non-negative and the FF31B0 object lies lower (CMPA/BCS), or negative and it lies higher (CMPA/BHI), the two objects exchange +06, +08, +0A, +0C, +0D, +10, +36, +32, +2E, +02 and +04. Natively MixedPool::walk_delivered (both paths), SpellCountdown/step_spell_countdown and MixedPool::mix_spell."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "source": "https://github.com/mamedev/mame",
+  "revision": "309bec2b8fe5279d461960a7935cc540203307c2",
+  "accessed": "2026-10-02",
+  "purpose": "Source inspection only; no MAME code linked, copied into native implementation, or executed",
+  "license": "Inspected C++ files BSD-3-Clause; repository as a whole GPL-2.0; see COPYING and file headers",
+  "local_directory": "local/tools/docs/mame-vdp",
+  "files": [
+    {
+      "path": "src/devices/video/315_5313.cpp",
+      "sha256": "da220e2fe600e8b74d054e397cfbc8cca9d1eb3a226df9aa6e50da8c4f13cbd5"
+    },
+    {
+      "path": "src/devices/video/315_5313.h",
+      "sha256": "aea21cac3ec835d32b21018d50801b5e7d21fa0c64b1095c94a86f6f0fdebf92"
+    },
+    {
+      "path": "src/devices/video/315_5124.cpp",
+      "sha256": "0884ddea25e9e2a67984b7ab1f546dff5c457193e4b0377a51b400dedfedeb58"
+    },
+    {
+      "path": "src/emu/drawgfx.cpp",
+      "sha256": "4b10a23600c1babd40cf0faa1b681de861c23c28f21d874f512f44d8ff03c27b"
+    },
+    {
+      "path": "COPYING",
+      "sha256": "9814ccb157fdb0a8f0fa049f858b6ac761320e90eb28f54e2972468d6d6ac0ca"
+    },
+    {
+      "path": "docs/legal/BSD-3-Clause",
+      "sha256": "a27554938d3dd6569931e5e18b93214a57f47bc1bb8b75fc32fdd18abe042a07"
+    }
+  ]
+}

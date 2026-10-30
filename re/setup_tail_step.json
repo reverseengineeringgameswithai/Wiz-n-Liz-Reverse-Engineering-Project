@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "setup_tail_fragment",
+      "start": 26788,
+      "end_exclusive": 26812,
+      "sha256": "8339025f64cbd70585df023c9baadcd617972cd02f6cdc43522ce3118acf1360",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_table_pass",
+      "start": 27284,
+      "end_exclusive": 27376,
+      "sha256": "5c84e0fc0915ed5f0a1ef63f1083f75ef841bb2eda39bddf37d76b82affa6099",
+      "instruction_count": 26,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_initializer",
+      "start": 27376,
+      "end_exclusive": 27460,
+      "sha256": "d3517de3da28ea13d9cdbbfaaa05530babd046df31d76c4d9017b9585848a2b2",
+      "instruction_count": 21,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_frames",
+      "start": 27460,
+      "end_exclusive": 27570,
+      "sha256": "cf9ba2617822a324fb0b981be56fb474c9bf23668a3556ccad97945a1436120b",
+      "instruction_count": 28,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_cadence",
+      "start": 27570,
+      "end_exclusive": 27606,
+      "sha256": "985babc368d965c9e7a3cbb9850602610060314090399fab023ed843385edda0",
+      "instruction_count": 8,
+      "execution_compared": true
+    },
+    {
+      "id": "control_link_initializer",
+      "start": 28342,
+      "end_exclusive": 28360,
+      "sha256": "56593f7e5570572a23f8a80a7c445a82922e04f5e5918ddd94da12e80c403945",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 26788,
+      "target": 27284
+    },
+    {
+      "pc": 26798,
+      "target": 28342
+    },
+    {
+      "pc": 26808,
+      "target": 28342
+    },
+    {
+      "pc": 27358,
+      "target": 27376
+    },
+    {
+      "pc": 27380,
+      "target": 63970
+    },
+    {
+      "pc": 27426,
+      "target": 27460
+    },
+    {
+      "pc": 27442,
+      "target": 27570
+    },
+    {
+      "pc": 28342,
+      "target": 63970
+    }
+  ],
+  "dependencies": [
+    "setup_prefix_step",
+    "pair_initializer_step",
+    "collision_step",
+    "mixed_session"
+  ],
+  "contract": "[68A4,68BC) is the next level-setup fragment: BSR 6A94, LEA FF0690,A5, BSR 6EB6, LEA FF0838,A5, BSR 6EB6. 6A94 clears 16 x 12 bytes from FF447A, FF31AC and FF31B0, then for each of 16 FF312C kinds that is not FFFF calls 6AF0 with D2 = kind, D3 = the FF314C count, D0/D1 = the next FF4C80 pair (Y + 16), A3 = the next FF447A record and A0/A1 = that entry's addresses. 6AF0 pops an F9E2 object, stores A5 at +4A and A3 at +42, writes the (object, A0, A1) record, mode 81, position, extents 0010/0010, frames by 6B44 (signed kind < 14: kind*6 + 0260 by MULU.W/ADDI.W, end +5; else 020D/0205 families or 01FD), service 6BD6, countdown D3 and cadence by 6BB2 (1/1 when the count is 2, else 5/5), handler 12646; only the target is inherited. 6EB6 pops one object, stores it at +1A2 of the A5 control record and clears its mode (dormant, 6EC8's shape). Native requires verified inheritance and zero unrepresented bytes, else rejects with no change. Exhaustion enters the never-returning FA1E loop. 6BD6's hit path 6C00 and the later setup from 68BC are not reconstructed."
+}

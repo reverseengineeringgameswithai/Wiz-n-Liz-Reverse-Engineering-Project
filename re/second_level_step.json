@@ -1,0 +1,110 @@
+{
+ "schema_version": 1,
+ "address_space": "rom_file_offset",
+ "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+ "regions": [
+  {
+   "id": "second_level_anchor_clear",
+   "start": 3652,
+   "end_exclusive": 3666,
+   "sha256": "3a13d777c9544b1b7b55a79c0297fbb76cc45b0c12296fc571b1b1ee988d5ed6",
+   "instruction_count": 3,
+   "execution_compared": true
+  },
+  {
+   "id": "action_cooldown",
+   "start": 4518,
+   "end_exclusive": 4590,
+   "sha256": "7d48ceff6e927fe37f42b59d514becb22b1d9d82090f739b3c548fb49006978e",
+   "instruction_count": 15,
+   "execution_compared": true
+  },
+  {
+   "id": "second_level_appearance",
+   "start": 4950,
+   "end_exclusive": 4964,
+   "sha256": "1df04acf26a27cd74f93137ba7463485dce51b5e91ad1ee1ef2ba9468698a75c",
+   "instruction_count": 2,
+   "execution_compared": true
+  },
+  {
+   "id": "second_level_mode",
+   "start": 1908,
+   "end_exclusive": 1916,
+   "sha256": "d3b52ba55ba6fa3eedb6da31e513ef9fc8525b0a4f140c3348c5ea280ec072f1",
+   "instruction_count": 1,
+   "execution_compared": true
+  },
+  {
+   "id": "hint_pad_jump",
+   "start": 85564,
+   "end_exclusive": 85582,
+   "sha256": "e1f5eef9069f447301828bdb246a0986b853756951e5a224eab4a311cf9cffd5",
+   "instruction_count": 5,
+   "execution_compared": true
+  },
+  {
+   "id": "hint_loop_test",
+   "start": 104238,
+   "end_exclusive": 104294,
+   "sha256": "b0de8069a061873a5a0698a832182439fd7805fd026b58efc483d8ec88df2f6b",
+   "instruction_count": 12,
+   "execution_compared": true
+  }
+ ],
+ "data": [],
+ "transfers": [
+  {
+   "pc": 4544,
+   "target": 4590
+  },
+  {
+   "pc": 4552,
+   "target": 4562
+  },
+  {
+   "pc": 4560,
+   "target": 4590
+  },
+  {
+   "pc": 4562,
+   "target": 59672
+  },
+  {
+   "pc": 4958,
+   "target": 39250
+  },
+  {
+   "pc": 104244,
+   "target": 104054
+  },
+  {
+   "pc": 104254,
+   "target": 104266
+  },
+  {
+   "pc": 104262,
+   "target": 104054
+  },
+  {
+   "pc": 104274,
+   "target": 78344
+  },
+  {
+   "pc": 104278,
+   "target": 104054
+  },
+  {
+   "pc": 104288,
+   "target": 104054
+  }
+ ],
+ "dependencies": [
+  "scene_change_step",
+  "hub_step",
+  "movement_step",
+  "transition_step",
+  "trail_step"
+ ],
+ "contract": "From the hub's end into the second level, as it changes the carried session (single player). The hint screen (1959E) after 16EA4's fade-in and FF0F10 = 00F0: [14E3C,14E4E): FF0690's +16 = +1E | +1F | +20 (after 14DA2's conversion); [1972E,19766): while FF0B90 is nonzero the loop continues (19676); then Start (+14 bit 7 clear) or FF0F10 decremented below zero sets FF0F0E = FFFF and JSR 13208, and the loop continues; [1975A,19766) once FF0F0E is set: the screen returns when FF0B90 is zero. E2A after its 16EA4: [E44,E52): FF0690's +A2/+A4 cleared (then 9880 rebuilds both actors at their anchors). 118C: [11A6,11EE): A6 = FF0690's actor, FF33CE cleared, FF33D8 = FFFF; if FF3402 (signed) is at most 000A: 0 when FF3402 is 0, else E918's low word modulo FF3402 (DIVU) plus 2; [1356,1364): FF33E4 = 1 and 9952 on FF0690 again (the appearance and parameters). [774,77C): FF33E0 = 0013. Research-only effects: FF33CE, FF33E4, 9880's camera words; 54BA, 2512, 1386, 1454, 4484, E876 and the rest of 118C/E2A (the level's world, HUD, messages, map and graphics) are not native."
+}

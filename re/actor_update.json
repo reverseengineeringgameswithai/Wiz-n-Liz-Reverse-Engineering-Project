@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "idle_right",
+      "start": 41406,
+      "end_exclusive": 41466,
+      "sha256": "7cde475ff77c8b7edc2123acb617ab6b2ad45a4723964a39ca879491e1da7feb",
+      "instruction_count": 15,
+      "execution_compared": true
+    },
+    {
+      "id": "drop_helper",
+      "start": 41466,
+      "end_exclusive": 41516,
+      "sha256": "7cd8dc41d2bd708ec1dd383af2cf1f9a935fe1485d2a7d7eb9c5470436b7ddc2",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "idle_left",
+      "start": 41542,
+      "end_exclusive": 41598,
+      "sha256": "e7ab943a22d428a61cecda249a123d5fa7310bb5978796765ccdc89556520160",
+      "instruction_count": 15,
+      "execution_compared": true
+    },
+    {
+      "id": "idle_jump",
+      "start": 41598,
+      "end_exclusive": 41638,
+      "sha256": "80479e7ae99a33a7528a50887495f38159e8768842559d692f65d6a46d3ae046",
+      "instruction_count": 7,
+      "execution_compared": true
+    },
+    {
+      "id": "turn_right_entry",
+      "start": 41638,
+      "end_exclusive": 41704,
+      "sha256": "4ab947c393271c9de9bcfbe035210af722ea89a4ea0c2665696c3a0e98660806",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "turn_right",
+      "start": 41708,
+      "end_exclusive": 41790,
+      "sha256": "ddb718775fde012c0cd510face070c4c85263dc1779f84e09cda696afd9e3a29",
+      "instruction_count": 18,
+      "execution_compared": true
+    },
+    {
+      "id": "turn_left_entry",
+      "start": 41790,
+      "end_exclusive": 41856,
+      "sha256": "c2e22b6459620464e1e4b3dfc0570e4aaf122f12fff94330362266ddbd358ade",
+      "instruction_count": 11,
+      "execution_compared": true
+    },
+    {
+      "id": "turn_left",
+      "start": 41860,
+      "end_exclusive": 41940,
+      "sha256": "0c889b687244d63e691ddcfbca81bfcd3a25fe812bba9f49c853875b1b04f0f3",
+      "instruction_count": 18,
+      "execution_compared": true
+    },
+    {
+      "id": "ground_right_entry",
+      "start": 41940,
+      "end_exclusive": 41992,
+      "sha256": "114012bb210010f02215ae76c87ed0e3888ff797a4362def0dbd0c67aa026e6a",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "ground_right",
+      "start": 41992,
+      "end_exclusive": 42066,
+      "sha256": "c25ff8b8f3bfefcc3266565c650cc56abf2a3989bba1df4d71b38764609151a6",
+      "instruction_count": 19,
+      "execution_compared": true
+    },
+    {
+      "id": "ground_right_fast_jump_reverse",
+      "start": 42080,
+      "end_exclusive": 42254,
+      "sha256": "5a2c7c9f584cd45ce2cba4dfdff245c5259cbce201061fece6be121f16dc24bc",
+      "instruction_count": 32,
+      "execution_compared": true
+    },
+    {
+      "id": "ground_left_entry",
+      "start": 42258,
+      "end_exclusive": 42310,
+      "sha256": "ba98143b2863ea65d23d045009927f34494d44b9f338db0e3b98239befcc445d",
+      "instruction_count": 9,
+      "execution_compared": true
+    },
+    {
+      "id": "ground_left",
+      "start": 42310,
+      "end_exclusive": 42384,
+      "sha256": "2c7684071356075974749104ecc08de1f03ec0b0c43501952b7a7eb496882229",
+      "instruction_count": 19,
+      "execution_compared": true
+    },
+    {
+      "id": "ground_left_fast_jump_reverse",
+      "start": 42398,
+      "end_exclusive": 42580,
+      "sha256": "04440c1be0627d4230f03c42d403484d810c026c5993bcc2e1858f19f253d38a",
+      "instruction_count": 34,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_right",
+      "start": 42696,
+      "end_exclusive": 42794,
+      "sha256": "98ac45d3dfd3785da68aa6a1432ca8ad2fa51e924e831f6234437b018c031c7b",
+      "instruction_count": 22,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_right_jump",
+      "start": 42808,
+      "end_exclusive": 42868,
+      "sha256": "93d053b5ae526c19cda4d71d71e356f5c0880b56048e9c73eb269797b0a366ae",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_left",
+      "start": 43150,
+      "end_exclusive": 43248,
+      "sha256": "bba90950add21320318dd71c4740f8ed6ddf0947ea021841dc8d2d57e1df7ace",
+      "instruction_count": 22,
+      "execution_compared": true
+    },
+    {
+      "id": "fast_left_jump",
+      "start": 43262,
+      "end_exclusive": 43322,
+      "sha256": "5238622988a3fb0965d6d35c119907fa87423031611843eae86e10a77b195b78",
+      "instruction_count": 10,
+      "execution_compared": true
+    },
+    {
+      "id": "jump_requests_and_motion",
+      "start": 43656,
+      "end_exclusive": 43754,
+      "sha256": "0c563c2a5d64489bbe1e2dad72904826e9497b97c73214d91d1ac4ef53d61879",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "sound_selector_guard",
+      "start": 1035058,
+      "end_exclusive": 1035074,
+      "sha256": "415d0ec76f4efe3dd0d84ba9111f2d134e0d77af07d3f9fda54791559cb78a80",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "sound_return",
+      "start": 1035130,
+      "end_exclusive": 1035134,
+      "sha256": "03a25086f5ab76d3f6d6e4b28b82324e5b8250ef780caf51270747c0537f8ef9",
+      "instruction_count": 2,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 41406,
+      "target": 41466
+    },
+    {
+      "pc": 41414,
+      "target": 41940
+    },
+    {
+      "pc": 41422,
+      "target": 41790
+    },
+    {
+      "pc": 41430,
+      "target": 41598
+    },
+    {
+      "pc": 41434,
+      "target": 39518
+    },
+    {
+      "pc": 41442,
+      "target": 39598
+    },
+    {
+      "pc": 41450,
+      "target": 40022
+    },
+    {
+      "pc": 41458,
+      "target": 40270
+    },
+    {
+      "pc": 41462,
+      "target": 39598
+    },
+    {
+      "pc": 41470,
+      "target": 41514
+    },
+    {
+      "pc": 41488,
+      "target": 39380
+    },
+    {
+      "pc": 41496,
+      "target": 41514
+    },
+    {
+      "pc": 41506,
+      "target": 43600
+    },
+    {
+      "pc": 41510,
+      "target": 43754
+    },
+    {
+      "pc": 41542,
+      "target": 41466
+    },
+    {
+      "pc": 41548,
+      "target": 42258
+    },
+    {
+      "pc": 41556,
+      "target": 41638
+    },
+    {
+      "pc": 41564,
+      "target": 41598
+    },
+    {
+      "pc": 41566,
+      "target": 39518
+    },
+    {
+      "pc": 41574,
+      "target": 39598
+    },
+    {
+      "pc": 41582,
+      "target": 40022
+    },
+    {
+      "pc": 41590,
+      "target": 40270
+    },
+    {
+      "pc": 41594,
+      "target": 39598
+    },
+    {
+      "pc": 41634,
+      "target": 43656
+    },
+    {
+      "pc": 41714,
+      "target": 41722
+    },
+    {
+      "pc": 41720,
+      "target": 41750
+    },
+    {
+      "pc": 41722,
+      "target": 39518
+    },
+    {
+      "pc": 41730,
+      "target": 41746
+    },
+    {
+      "pc": 41742,
+      "target": 44246
+    },
+    {
+      "pc": 41746,
+      "target": 39598
+    },
+    {
+      "pc": 41786,
+      "target": 43656
+    },
+    {
+      "pc": 41860,
+      "target": 39518
+    },
+    {
+      "pc": 41870,
+      "target": 41878
+    },
+    {
+      "pc": 41876,
+      "target": 41900
+    },
+    {
+      "pc": 41882,
+      "target": 41896
+    },
+    {
+      "pc": 41892,
+      "target": 44264
+    },
+    {
+      "pc": 41896,
+      "target": 39598
+    },
+    {
+      "pc": 41936,
+      "target": 43656
+    },
+    {
+      "pc": 41992,
+      "target": 41466
+    },
+    {
+      "pc": 42002,
+      "target": 42012
+    },
+    {
+      "pc": 42008,
+      "target": 42122
+    },
+    {
+      "pc": 42016,
+      "target": 42162
+    },
+    {
+      "pc": 42020,
+      "target": 39518
+    },
+    {
+      "pc": 42028,
+      "target": 42050
+    },
+    {
+      "pc": 42036,
+      "target": 42080
+    },
+    {
+      "pc": 42046,
+      "target": 44246
+    },
+    {
+      "pc": 42050,
+      "target": 42584
+    },
+    {
+      "pc": 42058,
+      "target": 41380
+    },
+    {
+      "pc": 42062,
+      "target": 39598
+    },
+    {
+      "pc": 42118,
+      "target": 39598
+    },
+    {
+      "pc": 42158,
+      "target": 43656
+    },
+    {
+      "pc": 42224,
+      "target": 42122
+    },
+    {
+      "pc": 42226,
+      "target": 39518
+    },
+    {
+      "pc": 42234,
+      "target": 42250
+    },
+    {
+      "pc": 42246,
+      "target": 44264
+    },
+    {
+      "pc": 42250,
+      "target": 39598
+    },
+    {
+      "pc": 42310,
+      "target": 41466
+    },
+    {
+      "pc": 42318,
+      "target": 42490
+    },
+    {
+      "pc": 42328,
+      "target": 42338
+    },
+    {
+      "pc": 42334,
+      "target": 42440
+    },
+    {
+      "pc": 42338,
+      "target": 39518
+    },
+    {
+      "pc": 42346,
+      "target": 42368
+    },
+    {
+      "pc": 42354,
+      "target": 42398
+    },
+    {
+      "pc": 42364,
+      "target": 44264
+    },
+    {
+      "pc": 42368,
+      "target": 42640
+    },
+    {
+      "pc": 42376,
+      "target": 41516
+    },
+    {
+      "pc": 42380,
+      "target": 39598
+    },
+    {
+      "pc": 42436,
+      "target": 39598
+    },
+    {
+      "pc": 42446,
+      "target": 39598
+    },
+    {
+      "pc": 42486,
+      "target": 43656
+    },
+    {
+      "pc": 42552,
+      "target": 42440
+    },
+    {
+      "pc": 42554,
+      "target": 39518
+    },
+    {
+      "pc": 42562,
+      "target": 42576
+    },
+    {
+      "pc": 42572,
+      "target": 44246
+    },
+    {
+      "pc": 42576,
+      "target": 39598
+    },
+    {
+      "pc": 42696,
+      "target": 41466
+    },
+    {
+      "pc": 42706,
+      "target": 42714
+    },
+    {
+      "pc": 42712,
+      "target": 42808
+    },
+    {
+      "pc": 42718,
+      "target": 42920
+    },
+    {
+      "pc": 42722,
+      "target": 39518
+    },
+    {
+      "pc": 42730,
+      "target": 42744
+    },
+    {
+      "pc": 42740,
+      "target": 44246
+    },
+    {
+      "pc": 42750,
+      "target": 42790
+    },
+    {
+      "pc": 42790,
+      "target": 39598
+    },
+    {
+      "pc": 42864,
+      "target": 43656
+    },
+    {
+      "pc": 43150,
+      "target": 41466
+    },
+    {
+      "pc": 43160,
+      "target": 43168
+    },
+    {
+      "pc": 43166,
+      "target": 43262
+    },
+    {
+      "pc": 43172,
+      "target": 43374
+    },
+    {
+      "pc": 43176,
+      "target": 39518
+    },
+    {
+      "pc": 43184,
+      "target": 43198
+    },
+    {
+      "pc": 43194,
+      "target": 44264
+    },
+    {
+      "pc": 43204,
+      "target": 43244
+    },
+    {
+      "pc": 43244,
+      "target": 39598
+    },
+    {
+      "pc": 43318,
+      "target": 43656
+    },
+    {
+      "pc": 43688,
+      "target": 1035058
+    },
+    {
+      "pc": 43726,
+      "target": 1035058
+    },
+    {
+      "pc": 1035072,
+      "target": 1035130
+    }
+  ],
+  "rejected_boundaries": [
+    40022,
+    40270,
+    42920,
+    43374,
+    1035074
+  ],
+  "contract": "One handler invocation through RTS, including immediate continuations; sound requests at FCB32. Restricted sound execution uses selector 0 mismatch; no active sound driver, animation scheduler, allocation or frame timing parity.",
+  "new_control_fields": {
+    "ground_acceleration": 94,
+    "jump_impulse": 98,
+    "jump_delay": 100,
+    "jump": 22,
+    "drop": 23,
+    "up": 26,
+    "down": 27
+  },
+  "new_actor_fields": {
+    "presentation_target": 14,
+    "presentation_cycles": 16,
+    "presentation_callback": 26
+  }
+}

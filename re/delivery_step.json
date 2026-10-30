@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "delivery_hit",
+      "start": 30992,
+      "end_exclusive": 31158,
+      "sha256": "b4d725ff31897198eb17e6402dc8f9d3d2472b095222444727aeec6e7205cd03",
+      "instruction_count": 37,
+      "execution_compared": true
+    },
+    {
+      "id": "delivery_dormant_return",
+      "start": 31318,
+      "end_exclusive": 31320,
+      "sha256": "1ceeabf0c6a5a30bad12cdac0e3ab015a7188a42e6aebb556aad00bb9cd693ad",
+      "instruction_count": 1,
+      "execution_compared": true,
+      "previously_classified": true
+    },
+    {
+      "id": "sparkle_allocation",
+      "start": 22958,
+      "end_exclusive": 22972,
+      "sha256": "b7954be48b88a07e4df9994094c83e9ce189996469ec34c18b81f060a00eedde",
+      "instruction_count": 3,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 31002,
+      "target": 31156
+    },
+    {
+      "pc": 31014,
+      "target": 31318
+    },
+    {
+      "pc": 31052,
+      "target": 1035058
+    },
+    {
+      "pc": 31126,
+      "target": 63892
+    },
+    {
+      "pc": 31136,
+      "target": 64262
+    },
+    {
+      "pc": 22958,
+      "target": 63970
+    }
+  ],
+  "dependencies": [
+    "pickup_hit_step",
+    "collision_step",
+    "collision_quad_step",
+    "trail_step",
+    "reversal_step",
+    "presentation_step"
+  ],
+  "contract": "7910, the 78EE probe hit, with A5 = the touching control (FF0690, or FF0838 behind FF33E2) and A6 = the probe: return at once (79B4) while the long FF31B0 is nonzero. Otherwise A4 = the control's +1A2 link; a zero mode byte returns at 7A56 (the RTS that ends callback79B6's code). With a nonzero mode, push A6, FF0A9E..FF0AA4 = 008C/0006/00C0/0001 and JSR FCB32 (a sound request); A6 = the link: +4A = A5, +22 = +08, +26 = +0A; D0/D1 = its +02/+04 minus 8 and JSR 59AE (preserving A6): an F9E2 pop placed at (D0,D1), then 59BC (mode 85, frames 021E/021E/0227, target 0227, 3/3, both selectors 12646, callback FAA4 release, +12 AND 9FFF). Then the link's Y - 4, JSR 5964 (mode 87, frames 0227/021E/0227, target 021E, 3/3, both selectors 12646, callback FAA4, +12 AND 9FFF), position (00A4,00F6) and callback +1A = 79B6. JSR F994 (preserving A5) pops the copy into A4; FB06 copies all 78 link bytes into it; the copy's +42 (the value just copied) is written back to the link; CLR.B leaves the link dormant; pop A6. 7972 and 797C use JSR (xxx).W. The copy's later 79B6 callback (frames back from +22/+26, mode 81, 6BB2, the 7A88 table handler, FF31AC, CB72 messages and 7AD6) is not reconstructed. Natively the hit belongs to MixedPool::walk_probe with an explicit PickupWorld and the FF31B0 word; the sparkle is a TrailParticle, the copy a DeliveredPickup and the link a dormant ReturnOnlyObject; allocator exhaustion (the FA1E/F9D0 loops) rejects."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "control_overlap",
+      "start": 44126,
+      "end_exclusive": 44188,
+      "sha256": "58ffa2555e60ef372127318bebe4e1b25f3b8c576966013d90e8385120ab2acc",
+      "instruction_count": 19,
+      "execution_compared": true
+    },
+    {
+      "id": "pickup_miss_service",
+      "start": 27606,
+      "end_exclusive": 27648,
+      "sha256": "962090a0ce66ddbb4941b1a211f8f9c56ac5c38b78dec33227ac5b9a6e527284",
+      "instruction_count": 9,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [],
+  "dependencies": [
+    "collision_step",
+    "setup_tail_step"
+  ],
+  "contract": "6BD6, the 6AF0 pickup service: LEA FF0690,A5; JSR AC5E; BNE 6C00; TST.W FF33E2; BEQ 6BFE; LEA FF0838,A5; JSR AC5E; BNE 6C00; RTS. The miss path has 78EE's exact shape; the hit target 6C00 is not reconstructed and rejects natively. AC5E was mapped by the collision-miss pass."
+}

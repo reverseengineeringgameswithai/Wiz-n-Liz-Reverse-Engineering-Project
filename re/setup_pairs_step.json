@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "setup_pairs_fragment",
+      "start": 26820,
+      "end_exclusive": 26836,
+      "sha256": "4027fd6713f147c1ea518fb54acea3d5e01a8b3127be5d8602f5fb3e63cdde0d",
+      "instruction_count": 4,
+      "execution_compared": true
+    },
+    {
+      "id": "p2_placed_pair_initializer",
+      "start": 32702,
+      "end_exclusive": 32832,
+      "sha256": "20dd7f90150269506530af1d2b7e764057d4b2641091dbd7456cb754597e3286",
+      "instruction_count": 28,
+      "execution_compared": true
+    },
+    {
+      "id": "first_fixed_pair_initializer",
+      "start": 29012,
+      "end_exclusive": 29134,
+      "sha256": "eb5882c4f3af6b000623b50991c8e2e718362ac0eb088d39b0e7204ff5a7f4ed",
+      "instruction_count": 26,
+      "execution_compared": true
+    },
+    {
+      "id": "second_fixed_pair_initializer",
+      "start": 29534,
+      "end_exclusive": 29656,
+      "sha256": "92e2f8379c5eb3b97da15a4e2ac67acd77d2d85826be08c357f1fe8e61e66759",
+      "instruction_count": 26,
+      "execution_compared": true
+    },
+    {
+      "id": "third_fixed_pair_initializer",
+      "start": 30056,
+      "end_exclusive": 30178,
+      "sha256": "48150f32325ded1cd8ed9d0856e4be27ee9ccae27e65cb6cedd728d5cda256c4",
+      "instruction_count": 26,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_success",
+      "start": 63970,
+      "end_exclusive": 64030,
+      "sha256": "15d2a68b0f3140038cf16e53cc378c6e78edaa7c0b841e28a64e6b4cdb2e67d4",
+      "instruction_count": 14,
+      "execution_compared": true
+    },
+    {
+      "id": "allocate_a6_exhaustion_loop",
+      "start": 64030,
+      "end_exclusive": 64048,
+      "sha256": "c640cdb8f9027a3a8bc251c8d38e7800ba36ce66558feb031f865350c48df17d",
+      "instruction_count": 3,
+      "execution_compared": false
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 26820,
+      "target": 32702
+    },
+    {
+      "pc": 26824,
+      "target": 29012
+    },
+    {
+      "pc": 26828,
+      "target": 29534
+    },
+    {
+      "pc": 26832,
+      "target": 30056
+    },
+    {
+      "pc": 32716,
+      "target": 63970
+    },
+    {
+      "pc": 32722,
+      "target": 63970
+    },
+    {
+      "pc": 29022,
+      "target": 63970
+    },
+    {
+      "pc": 29030,
+      "target": 63970
+    },
+    {
+      "pc": 29544,
+      "target": 63970
+    },
+    {
+      "pc": 29552,
+      "target": 63970
+    },
+    {
+      "pc": 30066,
+      "target": 63970
+    },
+    {
+      "pc": 30074,
+      "target": 63970
+    }
+  ],
+  "dependencies": [
+    "setup_message_step",
+    "setup_tail_step",
+    "pair_initializer_step"
+  ],
+  "contract": "[68C4,68D4) is the next level-setup fragment: BSR 7FBE, BSR 7154, BSR 735E, BSR 7568. Each initializer returns at once when its gate word (FF3172, FF3174, FF3176, FF3178) is zero. Open, each pops two F9E2 objects (7FBE first saves A5/A6 with MOVEM and uses BSR; the others use JSR) and orders them by address (CMPA.L A6,A4; BLT; EXG): the lower (A4) gets mode 80, frame 021D, handler 12646 and position (FF80,FF80) for 7FBE or (0,0) for the others; the higher (A6) gets +36 = A4, mode 80, frame 021D and +4A = A5. 7FBE stores the caller's A5, countdown 003C and handler 8040, then loads A5 = FF0838 and places A6 at (+3C - 8, +3E - FFE8) from that control record before restoring A5/A6. 7154/735E/7568 load A5 = FF0690 first (left in A5) and place A6 at (0318,0098), (03A4,004E) or (023C,0060) minus (8, FFE8) by word arithmetic, countdown 001E and handlers 71CE, 73D8 and 75E2. Neither member writes +08..+0D, +0E or the partner's +10/+4A, so those are inherited. The lead handlers (countdown, then 5964 and a presentation callback) are not reconstructed; an active lead rejects natively."
+}

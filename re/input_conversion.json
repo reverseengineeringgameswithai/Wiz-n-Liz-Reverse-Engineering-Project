@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "convert_three_button_pad",
+      "start": 85582,
+      "end_exclusive": 85796,
+      "sha256": "88a0bc4288cd7b82c1b0a2e4b7e2cf4e46a8229c3cb8a040c923d60bd6b43931",
+      "instruction_count": 54,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 85598,
+      "target": 85612
+    },
+    {
+      "pc": 85606,
+      "target": 85624
+    },
+    {
+      "pc": 85618,
+      "target": 85624
+    },
+    {
+      "pc": 85630,
+      "target": 85644
+    },
+    {
+      "pc": 85638,
+      "target": 85656
+    },
+    {
+      "pc": 85650,
+      "target": 85656
+    },
+    {
+      "pc": 85662,
+      "target": 85668
+    },
+    {
+      "pc": 85674,
+      "target": 85680
+    },
+    {
+      "pc": 85686,
+      "target": 85692
+    },
+    {
+      "pc": 85698,
+      "target": 85704
+    }
+  ],
+  "contract": {
+    "input": "Combined active-low byte at control +14; U D L R B C A Start bits 0..7 in the observed three-button producer.",
+    "output": "FF/00 directions +1A..1D; A/B/C/Start +1E..21; +15 any A/B/C, +16 B/C, +17 A. Opposing axes normalize to zero.",
+    "retained": "Raw +14, +18/+19, every other control byte and D1..A6; D0/CCR scratch. No previous input or edge detection.",
+    "not_implemented": "Physical device I/O at 14DA2, alternative remapper 14E3C, pause, multiplayer/world scheduling."
+  },
+  "native": "src/sim/input.cpp",
+  "finding": "FIND-0025"
+}

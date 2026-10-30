@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "name": "Musashi isolated 68000 terrain reference",
+  "source": "https://github.com/kstenerud/Musashi",
+  "revision": "313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd",
+  "accessed": "2026-10-02",
+  "license": "Musashi MIT; bundled SoftFloat Release 2b custom notice (retained unchanged)",
+  "license_evidence": "readme.txt and source file headers including softfloat/softfloat.c",
+  "role": "Research CPU execution only; never linked to native runtime",
+  "source_modifications": [],
+  "files": [
+    {
+      "path": "m68k.h",
+      "sha256": "7fb10f51ee36d45f6e2be38d72aa0c57853810a816f1cf19e0f0c600bd1afa4a",
+      "size_bytes": 15856,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68k.h"
+    },
+    {
+      "path": "m68k_in.c",
+      "sha256": "7a5836fa60ac5c59f77adbcfe086a288d5356c3d373ab15d337986a4e51e0132",
+      "size_bytes": 239644,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68k_in.c"
+    },
+    {
+      "path": "m68kconf.h",
+      "sha256": "8193cf670f6bfe61ad373055e7f44039427174195109bee78167ff3e0630dca4",
+      "size_bytes": 10040,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68kconf.h"
+    },
+    {
+      "path": "m68kcpu.c",
+      "sha256": "0d98c1bfd104929ca393ab6020c05adaa3de5433961cbf924d0ab78a82778405",
+      "size_bytes": 52531,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68kcpu.c"
+    },
+    {
+      "path": "m68kcpu.h",
+      "sha256": "372d2086a9c39aadf87d9e0fa42104c5849bd4972ce74b191c0d458208193635",
+      "size_bytes": 72113,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68kcpu.h"
+    },
+    {
+      "path": "m68kfpu.c",
+      "sha256": "e86c9eaaa51993c2d0fac1f6d489bafbe3d4209ff74163e97b7720011fe4327a",
+      "size_bytes": 41351,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68kfpu.c"
+    },
+    {
+      "path": "m68kmake.c",
+      "sha256": "c6da040b9f9b4a2a30aabc7b26f7228796ef6090934002d9c8a788d754904788",
+      "size_bytes": 43967,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68kmake.c"
+    },
+    {
+      "path": "m68kmmu.h",
+      "sha256": "66bdbef424dc672c79d316cad6060d487a9cd574b0c12d008e82505a4a27df89",
+      "size_bytes": 9002,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/m68kmmu.h"
+    },
+    {
+      "path": "readme.txt",
+      "sha256": "ecff54ee43a229d39aaa6def046c95d5133f8f936ba83a6e62af50ac01832a4f",
+      "size_bytes": 12285,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/readme.txt"
+    },
+    {
+      "path": "softfloat/README.txt",
+      "sha256": "c71e555b87858bcbd6629ca2a1b181babaf8fe129172c15489a9eeeb56a6dc1f",
+      "size_bytes": 3450,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/README.txt"
+    },
+    {
+      "path": "softfloat/mamesf.h",
+      "sha256": "0060a07e2a2292bb98a79917a8ddd02ae3225173ce37d919eb7e76a8cc661aac",
+      "size_bytes": 2856,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/mamesf.h"
+    },
+    {
+      "path": "softfloat/milieu.h",
+      "sha256": "48da7850cbd2481c3d87f7bde42815d0e64d08a2772afb847b5f91d90afcf9be",
+      "size_bytes": 2232,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/milieu.h"
+    },
+    {
+      "path": "softfloat/softfloat-macros",
+      "sha256": "003fd1da7dac65e74c3129af0a45a2fb238140d281ccf456b2f3d18ac633e840",
+      "size_bytes": 24993,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/softfloat-macros"
+    },
+    {
+      "path": "softfloat/softfloat-specialize",
+      "sha256": "ec8df128b1ebd711215e39d35ac62c8bde59f8bcd0cf88718d8fa5d18a475d72",
+      "size_bytes": 16695,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/softfloat-specialize"
+    },
+    {
+      "path": "softfloat/softfloat.c",
+      "sha256": "a9249098c1be64f346a20d72250be47e779764819afed2c6ecce7f8687476db6",
+      "size_bytes": 158817,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/softfloat.c"
+    },
+    {
+      "path": "softfloat/softfloat.h",
+      "sha256": "5cf048506ee233be66e1ec0ce7f15e0184e3758c14c41829a7f3ab0195f7b509",
+      "size_bytes": 17855,
+      "url": "https://raw.githubusercontent.com/kstenerud/Musashi/313ebf1bd9f4d0d93341eb5ce21fd8a119e9dbdd/softfloat/softfloat.h"
+    }
+  ],
+  "build": "python3 tools/build_terrain_reference.py",
+  "explicit_network_bootstrap": "python3 tools/build_terrain_reference.py --download",
+  "executable": "local/tools/terrain-reference/terrain-reference",
+  "build_report": "local/tools/terrain-reference/build.json",
+  "configuration": {
+    "cpu": "68000",
+    "other_cpu_variants": false,
+    "instruction_hook": true,
+    "prefetch": false,
+    "timing_claim": false,
+    "sanitizers": "Clang ASan/UBSan"
+  },
+  "limits": {
+    "instructions_per_call": 256,
+    "cases_per_process": 1000000,
+    "rom_bytes": 1048576,
+    "map_bytes": 8192,
+    "record_bytes": 16384,
+    "wall_timeout_seconds": 60,
+    "movement_instructions_per_call": 16000000,
+    "movement_repeats_per_case": 16
+  },
+  "limitations": [
+    "Isolated function execution on constructed state; no full Genesis, device, interrupt, game boot or cycle-accuracy claim.",
+    "Original ROM loaded read-only, exact identity/routine hashes checked by Python; harness refuses undeclared reads, code escapes, ROM/device writes and unbalanced stack.",
+    "No reference code linked into project native libraries or executables.",
+    "Optional --movement transport executes eight additional routines with explicit actor/control memory and transition/step counters; airborne handler itself is not executed.",
+    "Optional --airborne mode executes bounded airborne/landing paths and stops BEFORE idle continuations at 0xA1BE/0xA246 with the original pending return stack intact. No skipped instruction or simulated return."
+  ]
+}

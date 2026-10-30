@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-05-032",
+  "starting_commit": "94611678dfa49a1edaf7691ca3ea00a949d06abf",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "scope": "AC5E control-coordinate overlap and 78EE miss-only service, active/presentation/fixed RTS handler, retained pool slot 63 and P1 wrapper tracking. Fixed mask/gate/optional P2 config seeded once, then physical inputs only. Hit7910 and callback79B6 unsupported; seven return-only reservations and no world/frame/render/audio parity.",
+  "component_comparisons": [
+    {
+      "path": "local/generated/collision-comparison/run-zi5r3h7m/report.json",
+      "sha256": "251af3ae28ecb8d8d33a2bc1e13555acb64eacff2392548391498c33e42dd139",
+      "preset": "debug",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/collision-comparison/run-q7ecg8j3/report.json",
+      "sha256": "b49de0774667c692c60608978423bedbab4dc500c467841cd978232d5894de8d",
+      "preset": "release",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/collision-comparison/run-bstbf3v0/report.json",
+      "sha256": "97e6508cbf77d951a8acea957ea864d8f975f6ee26dd5e107998e0e90e57d926",
+      "preset": "sanitize",
+      "cases": 478345,
+      "new_instructions_visited": 28
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-6bi5idb3/report.json",
+      "sha256": "117c795c7d5132c1f304de5b8285a0ca52444d681650b6c44bb34738677d814f",
+      "preset": "debug",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-rbexlhwp/report.json",
+      "sha256": "3c476a0c1b8c36642314eef13b75dad7e7daf068682c4ba94da1ecf59a2e4ffc",
+      "preset": "debug",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-nxkhfuk6/report.json",
+      "sha256": "30ae82966b69a907c58a3f1e3ea922380f85a45afa9888df2e5e435544bfaede",
+      "preset": "debug",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-dp2ekamy/report.json",
+      "sha256": "bb00f39e1c574c49bc09171ab438509e8f0fc690214361fde7bffbfa8c028bf3",
+      "preset": "debug",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-nomc3szy/report.json",
+      "sha256": "acb49d40503ce45c7c4b016e4404b2601266027cd0f05007aae15a05f4c2e7eb",
+      "preset": "release",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-wck9zqzo/report.json",
+      "sha256": "2e7007d2a5214d0217ad8c98fc4b1aea13b23a020ff20a26c28b67c69a47096d",
+      "preset": "release",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-_34fwutv/report.json",
+      "sha256": "4752080004fd088f320a9b58f9caa6822450fbd056fd1b27d2b4c6ef1a5750cf",
+      "preset": "release",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-7u2e0opl/report.json",
+      "sha256": "837896cc753036b2dda3fb43168f4f86c7e052e695a95d6ef70c1f8ff3f55530",
+      "preset": "release",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/table-motion-comparison/run-kbj3kphp/report.json",
+      "sha256": "f696f743e88ef85d9d7eb971c8040bda3ae9b4d3af19774e99281c614ba7fefe",
+      "preset": "sanitize",
+      "cases": 406634,
+      "new_instructions_visited": 19,
+      "writer_audit": {
+        "cases": 131422,
+        "observation": {
+          "cases": 131422,
+          "instructions": 722171,
+          "visited": [
+            31302,
+            31310,
+            31318,
+            31944,
+            31954,
+            31956,
+            31962,
+            31964,
+            31970
+          ]
+        },
+        "output_sha256": "b72e818a3ecf5edf9a023a3ed823ac58f4f035bdbb579f34bde297a6e9b09e8f",
+        "scope": "Restricted original versus authored arithmetic; no native producer or callback implementation."
+      }
+    },
+    {
+      "path": "local/generated/private-comparison/run-l5tmslnn/report.json",
+      "sha256": "4e199baf56f728d7677695073ae8f87878a2eeecc2af75028f6f91aa6f596105",
+      "preset": "sanitize",
+      "cases": 277232,
+      "new_instructions_visited": 20
+    },
+    {
+      "path": "local/generated/trail-comparison/run-28glpkyi/report.json",
+      "sha256": "b912b48eb7fbbbe0d8995c053e1d79a9f2b0b6ddf33dbc75911818d61c552647",
+      "preset": "sanitize",
+      "cases": 209082,
+      "new_instructions_visited": 62
+    },
+    {
+      "path": "local/generated/reversal-comparison/run-8_jbd3kv/report.json",
+      "sha256": "8230890e25b60fa9ba2599604873d19053ee66b7e92f7a8d0afe7855236f0c3f",
+      "preset": "sanitize",
+      "cases": 203586,
+      "new_instructions_visited": 119
+    },
+    {
+      "path": "local/generated/input-comparison/run-5x65j5xx/report.json",
+      "sha256": "0a5668ed080ce8a005b2062ac547e38abf08dcc3b49cd7840b421c333f2b8c0d",
+      "preset": "sanitize",
+      "cases": 1024
+    },
+    {
+      "path": "local/generated/banner-comparison/run-ytpxaetl/report.json",
+      "sha256": "8cb299ec1d1e9a73d7a636ac5e0ccf9d3155c5566d01f870d19aef5a8e4eebf3",
+      "preset": "sanitize",
+      "cases": 66880
+    },
+    {
+      "path": "local/generated/presentation-comparison/run-0chmn16z/report.json",
+      "sha256": "48b8d8c5a71fbc20dbbf36308390665b1b6a92b466bbb5efdef66a8eea537401",
+      "preset": "sanitize",
+      "cases": 347320,
+      "new_instructions_visited": 90
+    },
+    {
+      "path": "local/generated/actor-comparison/run-z5b7mq9a/report.json",
+      "sha256": "9ac7758b229cf344ece0e534d89d2459e2711fd1344477d61188a7279642465e",
+      "preset": "sanitize",
+      "cases": 152093,
+      "new_instruction_addresses_visited": 315
+    },
+    {
+      "path": "local/generated/dispatch-comparison/run-kna6rwhj/report.json",
+      "sha256": "645f844cbc5f2c105c047f6fcb7c4e81855c680c3a5251d8b89c3c6de99a39a0",
+      "preset": "sanitize",
+      "cases": 138149,
+      "new_instructions_visited": 15
+    },
+    {
+      "path": "local/generated/airborne-comparison/run-3l59sryc/report.json",
+      "sha256": "58b490bbbd1cdf1cccef7ce68248cb162eb0e6546140a4e97484a6adc01a4e13",
+      "preset": "sanitize",
+      "cases": 415940,
+      "new_instruction_addresses_visited": 172
+    },
+    {
+      "path": "local/generated/movement-comparison/run-s9obw7dw/report.json",
+      "sha256": "4ed40cf2fe349e77689febc5d10138a03c481a9eb616d1f1578d9d3376c08f55",
+      "preset": "sanitize",
+      "cases": 282233,
+      "new_instruction_addresses_visited": 74
+    },
+    {
+      "path": "local/generated/terrain-comparison/run-brqce50q/report.json",
+      "sha256": "51083b8ca36af8dae2487a03b1374799c0a217c6b167d0ad389d32abc2da2984",
+      "preset": "sanitize",
+      "total_cases": 614436
+    }
+  ],
+  "mixed_comparisons": [
+    {
+      "path": "local/generated/mixed-session/run-iog_ybnw/report.json",
+      "sha256": "e0e948d5e1709ca247bc7bce452476b05795f20e1cc2626bfa12719b5b77e77e",
+      "preset": "debug",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 395,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "d8c821e24c4c828b4e0b8ff2a90a3ad59dd4bc1f49a4e00a88d2bd55862e178c"
+      }
+    },
+    {
+      "path": "local/generated/mixed-session/run-4mb26up0/report.json",
+      "sha256": "76e13646d7b403e58ace51488d7d87cd52118cd8070ab5e0891f7431207e2143",
+      "preset": "release",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 395,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "d8c821e24c4c828b4e0b8ff2a90a3ad59dd4bc1f49a4e00a88d2bd55862e178c"
+      },
+      "reference_report": "local/generated/mixed-session/run-iog_ybnw/report.json",
+      "reference_report_sha256": "e0e948d5e1709ca247bc7bce452476b05795f20e1cc2626bfa12719b5b77e77e"
+    },
+    {
+      "path": "local/generated/mixed-session/run-c31rj0gu/report.json",
+      "sha256": "1f13408a5b3c3b03dcccbde1a7bc2a3d4ff845483fa6c0f7f40924aa6e6849f2",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 34,
+        "physical_rows": 34,
+        "per_call_environment_feeds": 0,
+        "initial_slots": 68,
+        "pool_events": 395,
+        "sound_requests": 2,
+        "banner_requests": 34,
+        "output_sha256": "d8c821e24c4c828b4e0b8ff2a90a3ad59dd4bc1f49a4e00a88d2bd55862e178c"
+      },
+      "reference_report": "local/generated/mixed-session/run-iog_ybnw/report.json",
+      "reference_report_sha256": "e0e948d5e1709ca247bc7bce452476b05795f20e1cc2626bfa12719b5b77e77e"
+    }
+  ],
+  "original_capture": {
+    "path": "local/generated/mixed-session/run-iog_ybnw/report.json",
+    "sha256": "e0e948d5e1709ca247bc7bce452476b05795f20e1cc2626bfa12719b5b77e77e",
+    "classification": "fresh ordinary unchanged movie; no edits; owned workers",
+    "endpoint": {
+      "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+      "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+    },
+    "observation": {
+      "particle_updates": 136,
+      "emitter_updates": 34,
+      "private_updates": 136,
+      "collision_updates": 34,
+      "table_updates": 34,
+      "allocations": 9,
+      "reversal_updates": 12,
+      "releases": 9,
+      "managed_writes": 1840,
+      "reserved_writes": 271,
+      "free_writes": 27,
+      "slots": 68,
+      "initial_free": 50,
+      "reservations": 7,
+      "initial_particles": 4,
+      "collision_input": {
+        "x_mask": 1023,
+        "secondary_gate": 0,
+        "secondary_tracking": [
+          0,
+          0
+        ],
+        "fixed_writes": 0,
+        "primary_tracking_writes": 68,
+        "primary_queries": 34,
+        "x_misses": 32,
+        "y_misses": 2,
+        "scope": "P1 wrapper F91A/F924 writes control +42/+44 (native write next PCs F91E/F928); no mask, gate or P2 tracking writers in this window. P2 production is unsupported."
+      },
+      "initial_collision": 1,
+      "table_input": {
+        "loop_count": 0,
+        "producer_countdown": 80,
+        "writes": 0,
+        "producer_entries": 34,
+        "producer_prefix_exits": 34,
+        "scope": "One retained loop-count seed; producer not scheduled natively. No writes, including transients, in this window."
+      },
+      "initial_table": 1,
+      "private_globals": {
+        "rise_gate": 0,
+        "flags_gate": 0,
+        "hide_gate": 0,
+        "writes": 0,
+        "scope": "Seeded once. No writes in this ordinary window; producers remain outside the native session."
+      },
+      "initial_private": 4,
+      "initial_state_scope": "Native P1, emitter/RNG, live trail/reversal and 7808/7CA4/7A88 objects and 78EE miss-only probe, ordered shared free stack; seven audited external reservations omit private state.",
+      "actor_calls": 34,
+      "scratch_writes": 214,
+      "routine_events": 9973,
+      "native_events": 52895,
+      "producer_calls": 102,
+      "input_polls": 136,
+      "inactive_timers": 34,
+      "newborn_particle_updates": 97
+    },
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "input_sha256": "34434f0aa0b1ebc7dbf4e464cd044ac52436b944bf6a01cdc24c811e1f6c3a88",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9"
+  },
+  "native_builds": [
+    {
+      "path": "build/debug/provenance.json",
+      "sha256": "ec5b87b9a5f68a3199e9900722d9d99a323cf274ba73d6ba83d2326d10e5ecef",
+      "preset": "debug",
+      "executables": {
+        "wiznliz-rnc2": "badb578ef93033aae10e5b4e804fcfdf4c8165fe83f69ab36ec29c0e3b8bc497",
+        "wiznliz-bank-atlas": "ea0455f3e738b705ef5cb5dc377304801514394bf2aa4a39fdd76a6f9c1ce621",
+        "wiznliz-scene-preview": "cd19191ed357c3c67c5c7cf9203998efd952b28a7bdc4ce362bfccf1ec6f96b6",
+        "wiznliz-terrain": "fcdd7fc28b4705ba15fa88a8a8b66fccf90713d8d0b9d53ebe1966c373b74ee6",
+        "wiznliz-movement": "e3540bfb31feac6c800adf02a48ac8802149235c56befd3eb5a2018b7cd7e282",
+        "wiznliz-airborne": "e62d8fced53af714f36411bd425b0c86551341fc2c5b71562c0ade5292190fc5",
+        "wiznliz-actor": "5ce087878d9b111cc92bb084c659b04ba3e7e59c39046823f3bcc9a7ac5ffbb7",
+        "wiznliz-session": "8e0f97565aefdf961b695e41f8754ec17351d924ca72c7ef6057edd06c0f70d7",
+        "wiznliz-trail": "6ed176f5da27895488e29db5219e9834713688ade8aa60e1f8dfb6740c2e93ca",
+        "wiznliz-private": "2546885a6aef3a1996081e5f43ed8235a7d25e2295d3d7ae7b10a9378e02a03e",
+        "wiznliz-table-motion": "b55409ebf8c68b103893f102f8b8e53a158217bc70d75acd410439b0078b0984",
+        "wiznliz-collision": "845500bf2f67e3759663aea9a9de3f9dda856bb8b0fdad38fc63123b54e70362"
+      }
+    },
+    {
+      "path": "build/release/provenance.json",
+      "sha256": "1cc5d981dfee5cb9699bcbf06886654ad81144cc4f509d6a9284c0a86dd0ca54",
+      "preset": "release",
+      "executables": {
+        "wiznliz-rnc2": "6c85bea48b9429de5fd0f0e8c38dfc0f221f3590a09d123c0b54eae2ac3bad52",
+        "wiznliz-bank-atlas": "682407d0a16802fc9e136901524eaf96f48e59c88b5c2cb1b3ca79e88b4f3881",
+        "wiznliz-scene-preview": "05c0c8c849149b24f27f2045d2aa54253abc6aea777557eda353ac91eebd5f6e",
+        "wiznliz-terrain": "f89feff437016adc5bafffc35b8a0a44c72224a427c5550558970d865da470bf",
+        "wiznliz-movement": "9dc9306ca6705b76869b9c0bc84dedb89e44617fc1ac8e7ab483a228d28ff2bb",
+        "wiznliz-airborne": "6c313bb833be33c61e04ad6811849b22036b247df79baa4d933e214698eef436",
+        "wiznliz-actor": "d7d944fe9ce7c1ecc4e58df646812fdba1b90fddd545bddb82e4387d4191e5e7",
+        "wiznliz-session": "73c74d951f7ae97e80338664c9ff264c1317249035c633fbf69050aacd9713ae",
+        "wiznliz-trail": "c274952a7815bb31d1311e0c8e8e46ecc94cb55cfd1febb03eb2baba83a18fa1",
+        "wiznliz-private": "02ed14a1401139305dccc927fe282efd42cfe4f4a272c5c9bf3c1de78f842a33",
+        "wiznliz-table-motion": "ada48dc409e4bffbf5342d5be90df3d7d2ed2715463f1b2f6b5a8e7336a1019e",
+        "wiznliz-collision": "8c359d9f3467b0f560b21cc20770d0afe4f74ad33b776dca0d9d26d46b5f8f40"
+      }
+    },
+    {
+      "path": "build/sanitize/provenance.json",
+      "sha256": "3369fd66609fe66a49c011575d49fc00ed676afaa11da0a6bc40c284cfae816c",
+      "preset": "sanitize",
+      "executables": {
+        "wiznliz-rnc2": "f6d6465e2827d9e583813ce06e59e00c1aed8c1ec14c4c7459634455db3a245f",
+        "wiznliz-bank-atlas": "485f7301236d50fcb6d6dc54d281edd43a4a3649658750fac6f7ac35ea048e24",
+        "wiznliz-scene-preview": "decece8263793815234789ad2b4c07b91aebe0be7b9ea2d62d3a35bb3393e33d",
+        "wiznliz-terrain": "0b04d0a496b619592fdaa6264d876236ab8d28ae7e43b3e9b8973dee01f11ef4",
+        "wiznliz-movement": "377cf2d1419d744de423a766f98d4f07463787a964b0ca27057eb731b2f66e1b",
+        "wiznliz-airborne": "02cfb8c8b9859f1d14eb0b474b75390667a9d87fa7fcce93bfde4aaedec8fbf1",
+        "wiznliz-actor": "0169cd063570a2cbe02addc0734bf4b4f06934c3c4fbe87da699008c004e8a7d",
+        "wiznliz-session": "9fe99f6a362ea80d01703437a2c8da74298d8fc59314b9393809e00022910cbf",
+        "wiznliz-trail": "ada1de7f55f73f4b89800e883da6ed606e2f3c6ca226c277f623d7d6132e3778",
+        "wiznliz-private": "4afde06ea08dd436fb6da9774b104c00059d2d39f93da21231039f76a6a406b3",
+        "wiznliz-table-motion": "8a30b9a683586c94bd1bb584042cbdbbe369873f795d3bfba7c4b3c4a1a7bb96",
+        "wiznliz-collision": "162d7a8225ed8c5c20476040f9650b318df77e97024882ea13a9d60f97ac01c7"
+      }
+    }
+  ],
+  "prior_p1_comparisons": [
+    {
+      "path": "local/generated/effect-session/run-ookegv96/report.json",
+      "sha256": "49b2d440721634f72809e79f3e5aaca133d4c4e4176430a3c5e09afcea8cf4e6",
+      "preset": "debug",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-hzxz1zg4/report.json",
+      "sha256": "6a8c3c6b9524f9497b3780ddc4741267b5c75bebde3c4be7d6333620b588ed53",
+      "preset": "release",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    },
+    {
+      "path": "local/generated/effect-session/run-7d5fa1ea/report.json",
+      "sha256": "25438e1c007c5739aa0a8bdf457d68dd98a702ddf81fe501f9564a71502a85cc",
+      "preset": "sanitize",
+      "comparison": {
+        "calls": 390,
+        "seed_fields": 36,
+        "physical_rows": 390,
+        "per_call_environment_feeds": 0,
+        "effect_calls": 12,
+        "spawns": 1,
+        "releases": 1,
+        "native_capacity": 1,
+        "sound_requests": 12,
+        "banner_requests": 390,
+        "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+      },
+      "reference_report": "local/generated/effect-session/run-6gklchzd/report.json",
+      "reference_report_sha256": "50d78c7f146d68a09b829365d64a0b8fc4d4973b0f8984fa6e3055f837834e8f"
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 196,
+      "python_skips": 0,
+      "ctest": 44,
+      "passed": true,
+      "log": {
+        "path": "local/generated/collision-miss-research/test-debug.log",
+        "sha256": "3dfc87f6d45e153f4e7595ffb7dc6a13b7d6206b7a63061374e609a5d2bd6c0e"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 196,
+      "python_skips": 0,
+      "ctest": 44,
+      "passed": true,
+      "log": {
+        "path": "local/generated/collision-miss-research/test-release.log",
+        "sha256": "d9b4a412cadad10678ec45be9580ca07b5e4b54aa8a0de52dddeeceaf2bad247"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 196,
+      "python_skips": 0,
+      "ctest": 44,
+      "passed": true,
+      "log": {
+        "path": "local/generated/collision-miss-research/test-sanitize.log",
+        "sha256": "c6f0ba840133bceff5b0f036187f449b2ea9c397f84db592a6d3ff703823a3a4"
+      }
+    }
+  ],
+  "context_probe": {
+    "path": "local/generated/mixed-session-probe/run-e4brclsc/report.json",
+    "sha256": "84fe429492c023462067d4d7ff4c50e4b904cafd49068f4bd662fa437f1a3c98"
+  },
+  "research": [
+    {
+      "path": "local/generated/collision-miss-research/direct-input-references.json",
+      "sha256": "a9edb352258545ca9004157833f3f08cb14087893afbc3bedbf6aff932e3fd5d"
+    },
+    {
+      "path": "local/generated/collision-miss-research/tracking-writer.txt",
+      "sha256": "424f8b6968a4909dbe6909b761b512a3e7d6a8e39e546ec25f93d6508e2831a8"
+    }
+  ],
+  "coverage": {
+    "new_bounded_native_mappings": 1,
+    "new_partial_native_mappings": 1,
+    "bounded_simulation_mappings": 106,
+    "partial_simulation_mappings": 2,
+    "indexed_functions": 117,
+    "promoted_preclassified_bytes": 96,
+    "new_classified_bytes": 0,
+    "classified_bytes": 26257,
+    "unclassified_bytes": 1022319,
+    "new_native_instructions": 28,
+    "fresh_thirteen_corpus_union": 1185,
+    "fresh_union_with_writers": 1194,
+    "cumulative_executed_union": 1543,
+    "cumulative_scope": "1515 historical instructions plus 28 overlap/miss-service instructions. Other historical corpora were not rerun."
+  },
+  "attempts": [
+    {
+      "reason": "First movie validator incorrectly required every miss to end at X; original has two Y-only misses. Native arithmetic already correct. Validator corrected to check comparison operands and actual branches, then a fresh capture and independent unhooked replay succeeded.",
+      "report": {
+        "path": "local/generated/mixed-session/run-jild2s89/report.json",
+        "sha256": "6b09064acd7be231182c3445041f5b9aff1b8a8fb3b103c7751e7bae85dda39d"
+      }
+    }
+  ],
+  "not_rerun": [
+    "actions/transition/coasting/tally/palette/bonus/exit-tally/score comparison corpora",
+    "other old or controlled captures",
+    "whole-movie handler survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "seven return-only reservations: active slots 58-62 and inactive occupied slots 52/66",
+    "collision-hit7910",
+    "callback79B6",
+    "P2 tracking producers and broader collision configuration writers/initializers",
+    "FF31xx producer scheduling",
+    "boot, world services, rendering and audio"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "build_id": "6caddf552236e2538cef28557605012c6f18f00807e4d1dca9ec1b0c63db89c6",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries_verified": 104,
+    "source_files_verified": 59,
+    "owned_workers_remaining": [],
+    "initial_manifest": "local/generated/collision-miss-research/preservation.json",
+    "final_manifest_sha256": "57a20601b97f9f024311a375e277d9191ed25c36c52793df0fef58589c921b9f"
+  }
+}

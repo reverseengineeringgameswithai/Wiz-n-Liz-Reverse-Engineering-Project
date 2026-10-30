@@ -1,0 +1,247 @@
+{
+ "schema_version": 1,
+ "address_space": "rom_file_offset",
+ "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+ "regions": [
+  {
+   "id": "scene_entry_copy",
+   "start": 1160,
+   "end_exclusive": 1182,
+   "sha256": "06c5ed91ac1ce3853f93edcb305de40beca573c5caa3b77f4f6640c03b3eb5fe",
+   "instruction_count": 3,
+   "execution_compared": true
+  },
+  {
+   "id": "clear_objects",
+   "start": 94244,
+   "end_exclusive": 94296,
+   "sha256": "640ed1b7a76057e0621c1fafe4e2d5faa0a8fd328738b633b1b6cdcc929d193a",
+   "instruction_count": 14,
+   "execution_compared": true
+  },
+  {
+   "id": "reset_pool",
+   "start": 63568,
+   "end_exclusive": 63602,
+   "sha256": "9f96067a74db63e2625cad734d34e0388cbd6b9c1ae511785eb6379579494092",
+   "instruction_count": 7,
+   "execution_compared": true
+  },
+  {
+   "id": "reset_slots",
+   "start": 63602,
+   "end_exclusive": 63730,
+   "sha256": "fdeb33352cbf6b3a80056daaa4a2228c16b5faf1cda5064ba1a8eff2bc6a0df1",
+   "instruction_count": 25,
+   "execution_compared": true
+  },
+  {
+   "id": "build_free_stack",
+   "start": 63808,
+   "end_exclusive": 63892,
+   "sha256": "b641250f317627c78f8953a96a01a52ba64c556d2dfbdfd6af123a97750d3c03",
+   "instruction_count": 19,
+   "execution_compared": true
+  },
+  {
+   "id": "reset_render_lists",
+   "start": 94732,
+   "end_exclusive": 94806,
+   "sha256": "fd34d5ecef8ad180055b42d7c78745070d1cefdff1b5db444602e49603d5d76f",
+   "instruction_count": 12,
+   "execution_compared": true
+  },
+  {
+   "id": "clear_gate",
+   "start": 94132,
+   "end_exclusive": 94138,
+   "sha256": "b3289d6e49a1fcfadb265ea0802642b38fa2f294a6ee1e1678833510322eddf1",
+   "instruction_count": 1,
+   "execution_compared": true
+  },
+  {
+   "id": "fade_in_countdown",
+   "start": 94200,
+   "end_exclusive": 94212,
+   "sha256": "aeb73aadde0a52f657f6c8f6ce021628432d3f43c71a48e631462eaf08a30fc0",
+   "instruction_count": 2,
+   "execution_compared": true
+  },
+  {
+   "id": "fade_in_start",
+   "start": 78274,
+   "end_exclusive": 78344,
+   "sha256": "76753f9e63f0fb04623aa498ade05e75b450744808cace06c77e19cfaac19a8e",
+   "instruction_count": 9,
+   "execution_compared": true
+  },
+  {
+   "id": "actor_init_pair",
+   "start": 39040,
+   "end_exclusive": 39134,
+   "sha256": "6ce9fe2a7e07b28bf73baf4e5b813c26ab805e5c6d1712604d6abc1208e0b787",
+   "instruction_count": 17,
+   "execution_compared": true
+  },
+  {
+   "id": "actor_init",
+   "start": 39134,
+   "end_exclusive": 39250,
+   "sha256": "b524eab84f1c14b8751c563565a82535ba5481e04578f6b270934435027362cd",
+   "instruction_count": 25,
+   "execution_compared": true
+  },
+  {
+   "id": "actor_defaults",
+   "start": 39250,
+   "end_exclusive": 39380,
+   "sha256": "d050eb1c00961e87e3c0772c5617e238e05cb5bd7bbf3fae6e9cb92e771e56d5",
+   "instruction_count": 26,
+   "execution_compared": true
+  },
+  {
+   "id": "camera_reset",
+   "start": 95102,
+   "end_exclusive": 95174,
+   "sha256": "1b2015aaa9fffcf2a3800439d35c4dfa87e0208d6ee5cf20aac73b1103229f7a",
+   "instruction_count": 16,
+   "execution_compared": true
+  },
+  {
+   "id": "clear_messages",
+   "start": 94852,
+   "end_exclusive": 94872,
+   "sha256": "515d045dd86cb2263a0a265bf1ace137c43ba80dc47cf265faee989d45f5eef6",
+   "instruction_count": 4,
+   "execution_compared": true
+  },
+  {
+   "id": "hub_control_init",
+   "start": 23914,
+   "end_exclusive": 23934,
+   "sha256": "261fd1efe2179e5acfc5598ef3d068052deb55d4485b67961ea642311723b214",
+   "instruction_count": 4,
+   "execution_compared": true
+  },
+  {
+   "id": "control_init",
+   "start": 17516,
+   "end_exclusive": 17540,
+   "sha256": "224f5884925e916cd24ee87ed556edd617fbed42909071e95c912b0b0b393dcd",
+   "instruction_count": 5,
+   "execution_compared": true
+  },
+  {
+   "id": "hub_countdown",
+   "start": 24276,
+   "end_exclusive": 24284,
+   "sha256": "950cf28f2c325ff4c65f054745b59c0600004076bc81272624a4bb963e96b249",
+   "instruction_count": 1,
+   "execution_compared": true
+  }
+ ],
+ "data": [],
+ "transfers": [
+  {
+   "pc": 94258,
+   "target": 94256
+  },
+  {
+   "pc": 94274,
+   "target": 94272
+  },
+  {
+   "pc": 94290,
+   "target": 94288
+  },
+  {
+   "pc": 63568,
+   "target": 63602
+  },
+  {
+   "pc": 63572,
+   "target": 63808
+  },
+  {
+   "pc": 63576,
+   "target": 94732
+  },
+  {
+   "pc": 63648,
+   "target": 63612
+  },
+  {
+   "pc": 63880,
+   "target": 63868
+  },
+  {
+   "pc": 94200,
+   "target": 78274
+  },
+  {
+   "pc": 39074,
+   "target": 39082
+  },
+  {
+   "pc": 39082,
+   "target": 39134
+  },
+  {
+   "pc": 39120,
+   "target": 39128
+  },
+  {
+   "pc": 39128,
+   "target": 39134
+  },
+  {
+   "pc": 39138,
+   "target": 39250
+  },
+  {
+   "pc": 39148,
+   "target": 95102
+  },
+  {
+   "pc": 39188,
+   "target": 39194
+  },
+  {
+   "pc": 39190,
+   "target": 39224
+  },
+  {
+   "pc": 39194,
+   "target": 39198
+  },
+  {
+   "pc": 39330,
+   "target": 39344
+  },
+  {
+   "pc": 39350,
+   "target": 39360
+  },
+  {
+   "pc": 39358,
+   "target": 39366
+  },
+  {
+   "pc": 94858,
+   "target": 94872
+  },
+  {
+   "pc": 94868,
+   "target": 94872
+  }
+ ],
+ "dependencies": [
+  "hub_step",
+  "movement_step",
+  "pickup_hit_step",
+  "transition_step",
+  "reversal_step",
+  "pair_initializer_step"
+ ],
+ "contract": "The scene change from the level's end into the scene between levels, as it changes the carried session state. [488,49E): FF0690's +A2/+A4 = FF4446/FF4448. [17024,17058): the 68 pool slots (FF1B50..FF3007) and both actors (FF1AB4, FF1B02) zeroed. [F850,F872): BSR F872, BSR F940, JSR 1720C, FF17AC..FF17B3 = FFFFFFFF. [F872,F8F2): every slot and both actors: mode, +06, +12, +14 cleared, +16/+46 = 12646. [F940,F994): each control's +00 = its actor (mode cleared); FF3008 = 0, then FF300C.. = slots 0..67 and FF311C past them. [1720C,17256): FF148C..FF1493 cleared, FF1AA8 = FF148C, FF17AC/FF17B0 = FFFFFFFF, FF1AAC = FFFF, FF1AAE = FF140A, FF1AB0 = FF140A << 5 (render lists, not native). [16FB4,16FBA): FF0F16 (the acceleration gate) cleared. [16FF8,17004): BSR 131C2, FF0B92 = 001E. [131C2,13208): FF0B90 = FFFF, FF0B96 = 0, FF0B92 = 6, FF0B94 = 1, FF0EDE cleared, curves 1356A/1356A/135AA. [9880,98DE): FF0690's +08/+0C/+18 (FF13E0 selects +18) and BSR 98DE, then FF0838's (+18 inverted) and BSR 98DE. [98DE,9952): +1A6 cleared; BSR 9952; the actor's +0C = 19; JSR 1737E; +12 OR 0800; X = 0114 + +A2, Y = 00B0 + +A4; +96/+98/+3A/+18 by +18. [9952,99D4): the actor's +4A = the control, +12/+22 cleared; +5A..+6C (+30 nonzero: +5A/+5C = 0060/FFA0); +B6 = 00B0 with FF33E2 set, else 00D8; JSR 5964; +1A = AA50. [1737E,173C6): +9E/+A0/+9A/+9C/+108/+10A/+B8/+B2/+B4 cleared, +A6/+A8 = +A2/+A4 >> 3 (camera words, not native). [17284,17298): 17298 on FF0690, then FF0838. [5D6A,5D7E) with [446C,4484): +11A = FFFF, +144 cleared, +16E = 1, +F2 = FFFF on each control (not native). [5ED4,5EDC): FF0B92 = 000A. Natively make_hub_actor, hub_actor_parameters, start_fade_in, reset_object_pool and enter_hub_scene (with the cleared gate); P2's actor is compared but not carried by a session."
+}

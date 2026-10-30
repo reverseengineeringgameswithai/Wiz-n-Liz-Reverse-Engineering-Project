@@ -1,0 +1,11 @@
+/Original_Game/
+/local/
+/build/
+/dist/
+/.venv/
+**/__pycache__/
+*.py[cod]
+/vault/.obsidian/workspace*.json
+/vault/.obsidian/cache/
+/vault/.obsidian/plugins/
+/vault/.trash/

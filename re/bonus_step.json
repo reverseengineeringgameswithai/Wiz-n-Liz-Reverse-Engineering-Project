@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "address_space": "rom_file_offset",
+  "regions": [
+    {
+      "id": "tally_bonus",
+      "start": 21094,
+      "end_exclusive": 21158,
+      "sha256": "019ff7884615b432c7ef3d43dd47fcc8e0dc5b0f29f3ac94c6f5dbe8f52c4cf3",
+      "instruction_count": 16,
+      "execution_compared": true
+    },
+    {
+      "id": "bonus_availability",
+      "start": 17690,
+      "end_exclusive": 17702,
+      "sha256": "ce45b43a70ce3aaa4fe4ef9c624c57ab98e76dc5ff092c336c5be42cc96daed5",
+      "instruction_count": 5,
+      "execution_compared": true
+    },
+    {
+      "id": "bonus_empty_selection",
+      "start": 18288,
+      "end_exclusive": 18362,
+      "sha256": "53428525449f7ee5b1a23f0603f26e21fc65f8535f147c1f2b29ee795022cd3f",
+      "instruction_count": 22,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 21116,
+      "target": 972518
+    },
+    {
+      "pc": 21136,
+      "target": 17690
+    },
+    {
+      "pc": 21140,
+      "target": 21158
+    },
+    {
+      "pc": 21146,
+      "target": 18288
+    },
+    {
+      "pc": 21154,
+      "target": 21136
+    },
+    {
+      "pc": 17696,
+      "target": 17700
+    },
+    {
+      "pc": 17698,
+      "target": 17694
+    },
+    {
+      "pc": 18298,
+      "target": 18362
+    },
+    {
+      "pc": 18308,
+      "target": 18354
+    },
+    {
+      "pc": 18340,
+      "target": 18300
+    },
+    {
+      "pc": 18360,
+      "target": 18300
+    }
+  ],
+  "dependencies": [
+    "terrain_query",
+    "movement_step",
+    "airborne_update",
+    "actor_update",
+    "presentation_step",
+    "reversal_step",
+    "actions_step",
+    "dispatch_step",
+    "transition_step",
+    "coasting_step",
+    "tally_step",
+    "palette_step"
+  ],
+  "indirect_transfers": [
+    {
+      "pc": 63566,
+      "opcode": 20176,
+      "selector": "actor +1A logical presentation callback",
+      "targets": [
+        51966,
+        41704,
+        41856,
+        42254,
+        42580,
+        42868,
+        43322,
+        43028,
+        43482,
+        64164,
+        63800,
+        41366,
+        43600
+      ]
+    },
+    {
+      "pc": 63748,
+      "opcode": 20112,
+      "selector": "actor +16 handler AFTER presentation",
+      "targets": [
+        43754,
+        43780,
+        41992,
+        42310,
+        42696,
+        43150,
+        41406,
+        41542,
+        41708,
+        41860,
+        42220,
+        42548,
+        41598,
+        42988,
+        43442,
+        40080,
+        40230,
+        40328,
+        40396,
+        75334,
+        28942,
+        28966,
+        25386,
+        20936,
+        21026,
+        20996
+      ]
+    },
+    {
+      "pc": 2074,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 27066,
+      "opcode": 20112,
+      "selector": "effect +16 AFTER presentation/release",
+      "targets": [
+        43132,
+        43584
+      ]
+    },
+    {
+      "pc": 63754,
+      "opcode": 20112,
+      "selector": "actor +46 AFTER handler; only verified RTS service",
+      "targets": [
+        75334,
+        51966
+      ]
+    }
+  ],
+  "stop_boundaries": [
+    2076,
+    2082,
+    27068,
+    27074
+  ],
+  "rejected_boundaries": [
+    51966,
+    63952,
+    1035074,
+    18362
+  ],
+  "contract": "5266: sample request, special gate, up to five control-table assignments; 451A scan stops on zero or negative sentinel; 4770 D2=0 selects an empty slot with word-wrapped arithmetic and equality-only cursor reset. Partial success commits on sentinel; bounded invalid scans/counts/nontermination reject. Other 4770 mode and world consumers excluded."
+}

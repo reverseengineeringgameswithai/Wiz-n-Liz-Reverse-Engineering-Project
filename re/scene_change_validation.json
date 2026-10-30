@@ -1,0 +1,2286 @@
+{
+  "schema_version": 1,
+  "session": "2026-10-23-055",
+  "starting_commit": "fcda3c5b8a0f7857bd1585811d7afa675dfad96c",
+  "task": "TASK-0010",
+  "status": "in_progress",
+  "native_playability": "none",
+  "completed_in": {
+    "session": "2026-10-28-056",
+    "starting_commit": "d8f3059061e9f5b14dbd0eefb3c8a0d191039e87",
+    "note": "Session 055 checkpointed before its fresh all-in-one capture (a restart); session 056 ran it, the fresh standalone captures and every fixture with the unchanged tools and builds, superseding the partial record and its offline comparison."
+  },
+  "scope": "The scene change from the level's end into the hub: 0x488, 16EA4's 17024, F850 (F872, F940, 1720C), FF0F16 and 131C2 with 001E, 9880 (98DE, 9952, 1737E, 5964), 17284, 446C and 5ED4; natively make_hub_actor, hub_actor_parameters, start_fade_in, reset_object_pool and enter_hub_scene. The level, the scene change and the hub run as one native run (634..1758) from one P1 seed. Map/graphics loading, the HUD, camera/message words, P2's actor in a session, the next scene, renderer and audio are outside scope.",
+  "hub_comparisons": [
+    {
+      "path": "local/generated/hub-comparison/run-v5qc0ycz/report.json",
+      "sha256": "b57eafe18ae4803cffeca038fccf42f5c068817ad42623f520cdc0b70d83e61f",
+      "preset": "debug",
+      "cases": 8583,
+      "new_instructions_visited": 375,
+      "successful_instructions_visited": 513
+    },
+    {
+      "path": "local/generated/hub-comparison/run-a8vh_w5z/report.json",
+      "sha256": "971a680e91e4d1e6a52d553b28c7a75a082b281ba0b97516b06576957a1265f0",
+      "preset": "release",
+      "cases": 8583,
+      "new_instructions_visited": 375,
+      "successful_instructions_visited": 513
+    },
+    {
+      "path": "local/generated/hub-comparison/run-7dse2dxy/report.json",
+      "sha256": "ce45736926470b40a51e885f52240ad30e0a5135e90116bdc074b513ca4871a7",
+      "preset": "sanitize",
+      "cases": 8583,
+      "new_instructions_visited": 375,
+      "successful_instructions_visited": 513
+    }
+  ],
+  "game_session_capture": {
+    "path": "local/generated/game-session/run-s49_3nc8/report.json",
+    "sha256": "d2ebd6deac1839f4eb506920ff9bfab51ca1a6ecb13f1eef9f12f528e7381075",
+    "preset": "debug",
+    "comparison": {
+      "seed_sha256": "bc8e13842d91cdf757ad1c921dcd19582f0f03702471292752059c775be9beea",
+      "output_sha256": "8fab99e3a154d78827662b606ec71d0baa91e49dd1d3ee28a4879f43a401bc31",
+      "outcome": "matched",
+      "level_p1_calls": 899,
+      "level_loops": 899,
+      "hub_p1_calls": 196,
+      "hub_loops": 196,
+      "p1_calls": 1095,
+      "hub_occupied": [
+        22,
+        24
+      ]
+    },
+    "endpoints": {
+      "level": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+      "hub": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+      "scene": "ec37fbb9fc41ca86695cf66fabcf517769b8a1fd87e0afd0b776758ca5cf3c9b"
+    },
+    "classification": "fresh ordinary unchanged movie frames 634..1759; no edits; owned workers",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "world_report": {
+      "path": "local/generated/pair-initializer-capture/run-4am47z5y/report.json",
+      "sha256": "71c0449a9dd8c21e361869a88b69b2e7c64386c19183dda5f63bd71fd7447e9c"
+    },
+    "observation": {
+      "level_p1_calls": 899,
+      "hub_p1_calls": 196,
+      "scene": {
+        "calls": 50,
+        "carried_changes": {
+          "0x49e": [
+            "anchor"
+          ],
+          "0x16ee8": [
+            "actor"
+          ],
+          "0x16eee": [
+            "actor"
+          ],
+          "0x5d36": [
+            "timer"
+          ],
+          "0x98ae": [
+            "actor",
+            "selector"
+          ],
+          "0x5e9e": [
+            "scratch"
+          ],
+          "0x5edc": [
+            "timer"
+          ]
+        },
+        "pool_frames": [
+          1535,
+          1536,
+          1562
+        ],
+        "timer_events_before": 3,
+        "inputs": {
+          "two_player": 0,
+          "slow": 0,
+          "stage": 0,
+          "difficulty": 0,
+          "record": 0
+        },
+        "banner": [
+          0,
+          59008,
+          1,
+          1,
+          59064
+        ]
+      }
+    }
+  },
+  "game_session_fixtures": [
+    {
+      "path": "local/generated/game-session/run-j_dz6elg/report.json",
+      "sha256": "8eaa2ca0b217ded5e9fd88ca6da4d91ef8ed0ac827e43e7c6b35018424b6260c",
+      "preset": "debug",
+      "comparison": {
+        "seed_sha256": "bc8e13842d91cdf757ad1c921dcd19582f0f03702471292752059c775be9beea",
+        "output_sha256": "8fab99e3a154d78827662b606ec71d0baa91e49dd1d3ee28a4879f43a401bc31",
+        "outcome": "matched",
+        "level_p1_calls": 899,
+        "level_loops": 899,
+        "hub_p1_calls": 196,
+        "hub_loops": 196,
+        "p1_calls": 1095,
+        "hub_occupied": [
+          22,
+          24
+        ]
+      },
+      "reference_report": "local/generated/game-session/run-s49_3nc8/report.json",
+      "reference_report_sha256": "d2ebd6deac1839f4eb506920ff9bfab51ca1a6ecb13f1eef9f12f528e7381075",
+      "endpoints": {
+        "level": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+        "hub": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+        "scene": "ec37fbb9fc41ca86695cf66fabcf517769b8a1fd87e0afd0b776758ca5cf3c9b"
+      }
+    },
+    {
+      "path": "local/generated/game-session/run-q6jzzfgr/report.json",
+      "sha256": "551f80a74015a3b3b7fe07ce996b5c43fe43947860735d166a3a7bfae27e5eeb",
+      "preset": "release",
+      "comparison": {
+        "seed_sha256": "bc8e13842d91cdf757ad1c921dcd19582f0f03702471292752059c775be9beea",
+        "output_sha256": "8fab99e3a154d78827662b606ec71d0baa91e49dd1d3ee28a4879f43a401bc31",
+        "outcome": "matched",
+        "level_p1_calls": 899,
+        "level_loops": 899,
+        "hub_p1_calls": 196,
+        "hub_loops": 196,
+        "p1_calls": 1095,
+        "hub_occupied": [
+          22,
+          24
+        ]
+      },
+      "reference_report": "local/generated/game-session/run-s49_3nc8/report.json",
+      "reference_report_sha256": "d2ebd6deac1839f4eb506920ff9bfab51ca1a6ecb13f1eef9f12f528e7381075",
+      "endpoints": {
+        "level": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+        "hub": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+        "scene": "ec37fbb9fc41ca86695cf66fabcf517769b8a1fd87e0afd0b776758ca5cf3c9b"
+      }
+    },
+    {
+      "path": "local/generated/game-session/run-3kbfvhru/report.json",
+      "sha256": "83ba4cd70fbc19f78ce788c53ac170f129d9493a7c6f70b50f92a2fb79807928",
+      "preset": "sanitize",
+      "comparison": {
+        "seed_sha256": "bc8e13842d91cdf757ad1c921dcd19582f0f03702471292752059c775be9beea",
+        "output_sha256": "8fab99e3a154d78827662b606ec71d0baa91e49dd1d3ee28a4879f43a401bc31",
+        "outcome": "matched",
+        "level_p1_calls": 899,
+        "level_loops": 899,
+        "hub_p1_calls": 196,
+        "hub_loops": 196,
+        "p1_calls": 1095,
+        "hub_occupied": [
+          22,
+          24
+        ]
+      },
+      "reference_report": "local/generated/game-session/run-s49_3nc8/report.json",
+      "reference_report_sha256": "d2ebd6deac1839f4eb506920ff9bfab51ca1a6ecb13f1eef9f12f528e7381075",
+      "endpoints": {
+        "level": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+        "hub": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+        "scene": "ec37fbb9fc41ca86695cf66fabcf517769b8a1fd87e0afd0b776758ca5cf3c9b"
+      }
+    }
+  ],
+  "standalone_sessions": {
+    "world-session": {
+      "capture": {
+        "path": "local/generated/world-session/run-vuef_6mv/report.json",
+        "sha256": "f744a1a96ba8fe6fb3641792fb5417181b8af2d539d30714aa4979d05be58b95",
+        "preset": "debug",
+        "start": 634,
+        "end": 1533,
+        "comparison": {
+          "seed_sha256": "a1a564802a43c77bf87f9173b7d74b5c08ca7b175d403df0f50dd4db735f1dd4",
+          "output_sha256": "0c1a0acd68f93fe796f9cf38278fb81a24014178ec0405e3867a6aa56dca877d",
+          "outcome": "matched",
+          "supplied_loops": 0,
+          "p1_calls": 899,
+          "world_loops": 899,
+          "held_rows": 899,
+          "p1_sounds": 18
+        },
+        "endpoint": {
+          "hooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+          "unhooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+          "world": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        "observation": {
+          "p1_calls": 899,
+          "scratch_writes": 7369,
+          "world": {
+            "loops": 899,
+            "first_loop": 634,
+            "last_loop": 1532,
+            "releases": 77,
+            "updates": 12347,
+            "sounds": 7,
+            "clears": 3,
+            "pickup_hits": 2,
+            "emitter_walks": 166,
+            "emitter_random_calls": 80,
+            "deliveries": 2,
+            "probe_hits": 17,
+            "ingredients": 2,
+            "completions": 1,
+            "sparkle_walks": 65,
+            "sparkle_random_calls": 157,
+            "doors_opened": 1,
+            "doors_entered": 1,
+            "spawns": {
+              "3": 73,
+              "11": 2,
+              "2": 1,
+              "13": 1,
+              "14": 1,
+              "15": 1
+            },
+            "owner_positions": 166,
+            "external_random_calls": 9,
+            "external_message_updates": 7,
+            "conversions": [
+              {
+                "frame": 780,
+                "slot": 53,
+                "cause": "6D22",
+                "by": 54
+              },
+              {
+                "frame": 823,
+                "slot": 53,
+                "cause": "7910",
+                "by": 63
+              },
+              {
+                "frame": 853,
+                "slot": 67,
+                "cause": "7B22",
+                "by": 47
+              },
+              {
+                "frame": 980,
+                "slot": 53,
+                "cause": "6D22",
+                "by": 55
+              },
+              {
+                "frame": 1103,
+                "slot": 53,
+                "cause": "7910",
+                "by": 63
+              },
+              {
+                "frame": 1133,
+                "slot": 66,
+                "cause": "7AE6",
+                "by": 48
+              },
+              {
+                "frame": 1133,
+                "slot": 58,
+                "cause": "7AE6 anchor",
+                "by": 48
+              },
+              {
+                "frame": 1433,
+                "slot": 58,
+                "cause": "13294"
+              },
+              {
+                "frame": 1447,
+                "slot": 58,
+                "cause": "7B58",
+                "recipe": [
+                  6,
+                  5
+                ]
+              },
+              {
+                "frame": 1461,
+                "slot": 58,
+                "cause": "7B92"
+              },
+              {
+                "frame": 1515,
+                "slot": 48,
+                "cause": "7082",
+                "sign": 47
+              }
+            ],
+            "first_ingredient_frame": 853,
+            "exchanges": [
+              1134,
+              1162,
+              1163,
+              1164,
+              1165,
+              1166,
+              1167,
+              1168,
+              1169,
+              1170,
+              1171,
+              1172,
+              1222,
+              1246,
+              1247,
+              1248,
+              1249,
+              1250,
+              1272,
+              1288,
+              1289,
+              1290,
+              1307,
+              1319,
+              1320,
+              1321,
+              1336,
+              1346,
+              1347,
+              1348,
+              1360,
+              1369,
+              1370,
+              1371,
+              1382,
+              1390,
+              1391,
+              1392,
+              1401,
+              1409,
+              1410,
+              1411,
+              1421,
+              1427,
+              1428,
+              1429,
+              1437,
+              1444
+            ],
+            "write_audit": {
+              "complete_frames": 899,
+              "incomplete_frames": [],
+              "writes": {
+                "random": 984,
+                "ingredient_tail": 2,
+                "producer": 326
+              },
+              "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+            }
+          },
+          "cross_check": {
+            "frames": 899,
+            "tracking": 899,
+            "owner_positions": 166
+          },
+          "fade": {
+            "active_frames": [
+              634,
+              1532
+            ],
+            "level_steps": [
+              654,
+              656,
+              658,
+              660,
+              662,
+              664,
+              666,
+              668,
+              1440,
+              1441,
+              1442,
+              1443,
+              1444,
+              1445,
+              1446,
+              1447,
+              1454,
+              1455,
+              1456,
+              1457,
+              1458,
+              1459,
+              1460,
+              1461,
+              1518,
+              1520,
+              1522,
+              1524,
+              1526,
+              1528,
+              1530,
+              1532
+            ],
+            "consumer_clears": 32
+          }
+        }
+      },
+      "fixtures": [
+        {
+          "path": "local/generated/world-session/run-u49a_py1/report.json",
+          "sha256": "d6328ff5238adba6dc0d9525250ee31141402288375d16205517881b0de26e70",
+          "preset": "debug",
+          "start": 634,
+          "end": 1533,
+          "comparison": {
+            "seed_sha256": "a1a564802a43c77bf87f9173b7d74b5c08ca7b175d403df0f50dd4db735f1dd4",
+            "output_sha256": "0c1a0acd68f93fe796f9cf38278fb81a24014178ec0405e3867a6aa56dca877d",
+            "outcome": "matched",
+            "supplied_loops": 0,
+            "p1_calls": 899,
+            "world_loops": 899,
+            "held_rows": 899,
+            "p1_sounds": 18
+          },
+          "reference_report": "local/generated/world-session/run-vuef_6mv/report.json",
+          "reference_report_sha256": "f744a1a96ba8fe6fb3641792fb5417181b8af2d539d30714aa4979d05be58b95",
+          "endpoint": {
+            "hooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "unhooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "world": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+          }
+        },
+        {
+          "path": "local/generated/world-session/run-5tfu4me0/report.json",
+          "sha256": "0dabd777b136d13a2caceca1e05fd9949d9960419da00dedf91dd51a4e287dde",
+          "preset": "release",
+          "start": 634,
+          "end": 1533,
+          "comparison": {
+            "seed_sha256": "a1a564802a43c77bf87f9173b7d74b5c08ca7b175d403df0f50dd4db735f1dd4",
+            "output_sha256": "0c1a0acd68f93fe796f9cf38278fb81a24014178ec0405e3867a6aa56dca877d",
+            "outcome": "matched",
+            "supplied_loops": 0,
+            "p1_calls": 899,
+            "world_loops": 899,
+            "held_rows": 899,
+            "p1_sounds": 18
+          },
+          "reference_report": "local/generated/world-session/run-vuef_6mv/report.json",
+          "reference_report_sha256": "f744a1a96ba8fe6fb3641792fb5417181b8af2d539d30714aa4979d05be58b95",
+          "endpoint": {
+            "hooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "unhooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "world": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+          }
+        },
+        {
+          "path": "local/generated/world-session/run-4bil6jls/report.json",
+          "sha256": "92e415f2d6dc45c2eba5fa2f8bd7066631c4721ab2cb713e6eee9f45164708c7",
+          "preset": "sanitize",
+          "start": 634,
+          "end": 1533,
+          "comparison": {
+            "seed_sha256": "a1a564802a43c77bf87f9173b7d74b5c08ca7b175d403df0f50dd4db735f1dd4",
+            "output_sha256": "0c1a0acd68f93fe796f9cf38278fb81a24014178ec0405e3867a6aa56dca877d",
+            "outcome": "matched",
+            "supplied_loops": 0,
+            "p1_calls": 899,
+            "world_loops": 899,
+            "held_rows": 899,
+            "p1_sounds": 18
+          },
+          "reference_report": "local/generated/world-session/run-vuef_6mv/report.json",
+          "reference_report_sha256": "f744a1a96ba8fe6fb3641792fb5417181b8af2d539d30714aa4979d05be58b95",
+          "endpoint": {
+            "hooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "unhooked": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "world": "33e6cf29f672062518c0018efb7a62c8fd50eef9b6f14a91b2f1cdb1370d6d2d",
+            "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+          }
+        }
+      ]
+    },
+    "hub-session": {
+      "capture": {
+        "path": "local/generated/hub-session/run-s7w9oa6_/report.json",
+        "sha256": "a8292c62c0629fa875a683a10a13f1c4d00dec3d2004e6417ca975706d2271d7",
+        "preset": "debug",
+        "start": 1563,
+        "end": 1759,
+        "comparison": {
+          "seed_sha256": "63782edae821c6cb33ac76491b85e6b5560c458ff869e2b5d19d9ec72383710b",
+          "output_sha256": "a11b1a47f1d421b2e21e7285dbe055cf3bfadbb7438515affebf93b38f8baa6d",
+          "outcome": "matched",
+          "p1_calls": 196,
+          "hub_loops": 196,
+          "held_rows": 196,
+          "p1_sounds": 2,
+          "setup_objects": 24,
+          "occupied": [
+            22,
+            24
+          ],
+          "record_states": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            65535
+          ]
+        },
+        "endpoint": {
+          "hooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+          "unhooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+          "world": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        },
+        "observation": {
+          "p1_calls": 196,
+          "scratch_writes": 472,
+          "world": {
+            "walk_handlers": {
+              "0x12646": 6688,
+              "0x61f6": 488,
+              "0x621a": 1072,
+              "0x6218": 1080,
+              "0xfac4": 1,
+              "0xfae2": 15
+            },
+            "setup_writes": 408,
+            "loop_writes": 3196,
+            "render_clears": 806,
+            "entry": {
+              "frame": 1742,
+              "control": 4294903440,
+              "number": 0
+            },
+            "end": 1758
+          }
+        }
+      },
+      "fixtures": [
+        {
+          "path": "local/generated/hub-session/run-3t3nbph4/report.json",
+          "sha256": "c9261b35a7816f18bf578643e8e9fab3e82893193ba83f88817a12153db92458",
+          "preset": "debug",
+          "start": 1563,
+          "end": 1759,
+          "comparison": {
+            "seed_sha256": "63782edae821c6cb33ac76491b85e6b5560c458ff869e2b5d19d9ec72383710b",
+            "output_sha256": "a11b1a47f1d421b2e21e7285dbe055cf3bfadbb7438515affebf93b38f8baa6d",
+            "outcome": "matched",
+            "p1_calls": 196,
+            "hub_loops": 196,
+            "held_rows": 196,
+            "p1_sounds": 2,
+            "setup_objects": 24,
+            "occupied": [
+              22,
+              24
+            ],
+            "record_states": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              65535
+            ]
+          },
+          "reference_report": "local/generated/hub-session/run-s7w9oa6_/report.json",
+          "reference_report_sha256": "a8292c62c0629fa875a683a10a13f1c4d00dec3d2004e6417ca975706d2271d7",
+          "endpoint": {
+            "hooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "unhooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "world": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+          }
+        },
+        {
+          "path": "local/generated/hub-session/run-ri2t5efr/report.json",
+          "sha256": "9d29678f46a555f2fd1d73ba7f46ee2ae7ad610e48cc44df2cbb3be4f6c56a96",
+          "preset": "release",
+          "start": 1563,
+          "end": 1759,
+          "comparison": {
+            "seed_sha256": "63782edae821c6cb33ac76491b85e6b5560c458ff869e2b5d19d9ec72383710b",
+            "output_sha256": "a11b1a47f1d421b2e21e7285dbe055cf3bfadbb7438515affebf93b38f8baa6d",
+            "outcome": "matched",
+            "p1_calls": 196,
+            "hub_loops": 196,
+            "held_rows": 196,
+            "p1_sounds": 2,
+            "setup_objects": 24,
+            "occupied": [
+              22,
+              24
+            ],
+            "record_states": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              65535
+            ]
+          },
+          "reference_report": "local/generated/hub-session/run-s7w9oa6_/report.json",
+          "reference_report_sha256": "a8292c62c0629fa875a683a10a13f1c4d00dec3d2004e6417ca975706d2271d7",
+          "endpoint": {
+            "hooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "unhooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "world": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+          }
+        },
+        {
+          "path": "local/generated/hub-session/run-00_zjqy0/report.json",
+          "sha256": "375d547906e725fdd5d965a3419b38755905c47bf24d7c4e661b3dc05a7395ea",
+          "preset": "sanitize",
+          "start": 1563,
+          "end": 1759,
+          "comparison": {
+            "seed_sha256": "63782edae821c6cb33ac76491b85e6b5560c458ff869e2b5d19d9ec72383710b",
+            "output_sha256": "a11b1a47f1d421b2e21e7285dbe055cf3bfadbb7438515affebf93b38f8baa6d",
+            "outcome": "matched",
+            "p1_calls": 196,
+            "hub_loops": 196,
+            "held_rows": 196,
+            "p1_sounds": 2,
+            "setup_objects": 24,
+            "occupied": [
+              22,
+              24
+            ],
+            "record_states": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              65535
+            ]
+          },
+          "reference_report": "local/generated/hub-session/run-s7w9oa6_/report.json",
+          "reference_report_sha256": "a8292c62c0629fa875a683a10a13f1c4d00dec3d2004e6417ca975706d2271d7",
+          "endpoint": {
+            "hooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "unhooked": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "world": "064cba824310e55e338fa740638b064b7dd80ec05d391db9031331ae9993e1d1",
+            "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+          }
+        }
+      ]
+    }
+  },
+  "setup_fixtures": [
+    {
+      "path": "local/generated/pair-initializer-capture/run-fe6nktz0/report.json",
+      "sha256": "e2a6ce0540167ffbe707f0a0fe1fecbeeb3f77e867a70ff6e246b1385ec4a0a9",
+      "preset": "debug",
+      "end": 1066,
+      "comparison": [
+        {
+          "variant": "return_only",
+          "frame": 156,
+          "seed_sha256": "2d7bcf780c098c2e1b5e0a042a2f904a603592b80914f834fdfa999e9c4239a7",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "variant": "visibility",
+          "frame": 156,
+          "seed_sha256": "5470bb7fd8e7fa2b1ff35205e9b1abbec30fd4a4cb1a75e93770ced48e7db209",
+          "outcome": "matched",
+          "output_sha256": "8e3e5b165f61c5bc0b3889f5cbdd4b4bfae25a835f3013952e8ac097d857a1a1",
+          "phases": 0
+        },
+        {
+          "variant": "dormant_b4",
+          "frame": 629,
+          "seed_sha256": "bd98cb20de0d088ac2f217edfe12c6ed723dfc5c1313ac89a287e589fd1474bb",
+          "outcome": "matched",
+          "output_sha256": "561b02e861544a4270c5dea88ac45926295b5410777405b99fd7ef17afbc27f3",
+          "phases": 219,
+          "converted_at_frame": 853,
+          "original_only_phases": 213
+        },
+        {
+          "variant": "dormant_b8",
+          "frame": 629,
+          "seed_sha256": "f3c9b98fd6eca07e8ac4af5b5696888f8d78e1fe2f8ce9fbf9953d12c8f64730",
+          "outcome": "matched",
+          "output_sha256": "e8752f1e9ceda735cd634e56bd9f8ebc76cc49c8ce01762d24edc0dca7fdb594",
+          "phases": 432
+        },
+        {
+          "variant": "quad",
+          "frame": 629,
+          "seed_sha256": "6becb849b62e4406e8ba942b279094241a0637927efe14f56050a5f8785546f1",
+          "outcome": "matched",
+          "output_sha256": "de71a3e35a3c32b3e7408cf7cfc252e65789ce2ab306d02aa3343b342ecbbcbb",
+          "phases": 189,
+          "rejected_at_frame": 823,
+          "original_only_phases": 243,
+          "original_hit_phases": 9
+        },
+        {
+          "variant": "return_only",
+          "frame": 629,
+          "seed_sha256": "081073848d97d315063a40f8caef131442f2968b1a8e5b3d552173e5f3fcf448",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        },
+        {
+          "variant": "rising",
+          "frame": 629,
+          "seed_sha256": "850083c1ab36c3ccba3f7ab106ae5d30f96297b40fc06b9d472156e2c5eb5f9e",
+          "outcome": "matched",
+          "output_sha256": "00dec4a8ce00d914ab135cb2f3440c3d5e78df54505e1b7abb55b54e6c7ef465",
+          "phases": 432
+        },
+        {
+          "variant": "visibility",
+          "frame": 629,
+          "seed_sha256": "6817ef13393400aa020069b320b3c0b8c43e1bfe8592118ad7ab88ddafff228c",
+          "outcome": "matched",
+          "output_sha256": "a33ca4f9a8fd01701f5a8ad246de2435a0eb10c20f4b70011b8d2bb3f81ae0be",
+          "phases": 432
+        },
+        {
+          "variant": "setup_prefix",
+          "frame": 629,
+          "seed_sha256": "0d975dd63cfa790f4d3bc69e90ad5a55075b3216572b6f99a8357f150ad21e98",
+          "outcome": "matched",
+          "output_sha256": "4643dc623178df309bd9616d5803a117cf4627aa85e42f8c1bec9a9680be7136",
+          "members": 12
+        },
+        {
+          "variant": "setup_tail",
+          "frame": 629,
+          "seed_sha256": "43238610facfd7990e076aa3b191e25143537c9a7f6e1821e0826744b20f47c7",
+          "outcome": "matched",
+          "output_sha256": "f4c490b2354ebbddbbec37b1b4b704b593a08833812a2d56400e1fd25997f071",
+          "phases": 146,
+          "members": 4,
+          "rejected_at_frame": 780,
+          "original_only_phases": 286
+        },
+        {
+          "variant": "setup_message",
+          "frame": 629,
+          "seed_sha256": "ac2f1654f934ae0d6a97fb81d5ab5ef88b0ad0abe969f9ccf1a2f2bc0738be11",
+          "outcome": "matched",
+          "native_vram": 57358,
+          "vram_compared": true
+        },
+        {
+          "variant": "setup_gated_pairs",
+          "frame": 629,
+          "seed_sha256": "fabd6ab13a041fac56dd7c78b6adab7a9aec54f00ea31d49e77bb1b18e39fb74",
+          "outcome": "matched",
+          "allocated": 0
+        },
+        {
+          "variant": "pickup_walks",
+          "frame": 780,
+          "seed_sha256": "03c280feb06818a3e4b39f01d857d88ee4ec371f75242f5650bb2ba8e33329f8",
+          "output_sha256": "59f1024b80b5d2934fc61448d2887016ac5108b5fd1a9729625272e6e0489aeb",
+          "outcome": "matched",
+          "walks": 62,
+          "hits": 2,
+          "releases": 2
+        },
+        {
+          "variant": "probe_walks",
+          "frame": 823,
+          "outcome": "matched",
+          "probe-hit": {
+            "seed_sha256": "1abef633834e7d1bba4e9d3d0a961fe8fc00e8a2f14ac5958a06bac5c822da16",
+            "output_sha256": "f5167cddafcb6d337dcd695482a362db78f82adb348ab0b5479eb129d39a92a0",
+            "walks": 9
+          },
+          "delivered": {
+            "seed_sha256": "959392dc82b74086116e25a7509a6ed970bc1fbff50c9bc062a08a61497af1d1",
+            "output_sha256": "a8944cd4b74158c84f975378f0dad58529bd177ee223169057466f0596218d91",
+            "walks": 59
+          },
+          "ingredient": {
+            "seed_sha256": "cfa8331b980b269c58f452ad54119145903e945de2cd5026912c9b316bb12de0",
+            "output_sha256": "1ce6b3173c77dd82352332fe545851674448a6b4b80adcb12da8fa1d7d0643e3",
+            "walks": 1
+          },
+          "scheduled": {
+            "seed_sha256": "5660ed1d24c94a109f73e951be01ce1d6e2a22fb818ad0a94773a829018f82a6",
+            "output_sha256": "82f3c0ed4de5044fdec31ac83b8f226c7f33df1e86ca5a1e3d85da4d07c1b188",
+            "walks": 213
+          },
+          "hits": 9,
+          "deliveries": 1,
+          "releases": 1,
+          "callbacks": 1,
+          "table_walks": 213
+        },
+        {
+          "variant": "world_pool",
+          "frame": 629,
+          "seed_sha256": "ce966da7287c5606b735eee1a4e7b64d9df35def9637f00c3c37e598a7840246",
+          "outcome": "matched",
+          "output_sha256": "1de1770251f057d02da25b666d530bafc56d6c0ff5c394fcf6b619eb6ba80dbe",
+          "phases": 432,
+          "loops": 432,
+          "first_loop": 634,
+          "last_loop": 1065,
+          "releases": 31,
+          "updates": 5732,
+          "sounds": 3,
+          "clears": 1,
+          "pickup_hits": 2,
+          "emitter_walks": 128,
+          "emitter_random_calls": 62,
+          "deliveries": 1,
+          "probe_hits": 9,
+          "ingredients": 1,
+          "spawns": {
+            "3": 32,
+            "11": 1
+          },
+          "owner_positions": 128,
+          "external_random_calls": [
+            {
+              "frame": 634,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 797,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 850,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1000,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1053,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            }
+          ],
+          "external_message_updates": [
+            {
+              "frame": 634,
+              "control": 0,
+              "before": [
+                1,
+                100,
+                0
+              ],
+              "after": [
+                0,
+                100,
+                12
+              ]
+            },
+            {
+              "frame": 754,
+              "control": 0,
+              "before": [
+                0,
+                100,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            },
+            {
+              "frame": 854,
+              "control": 0,
+              "before": [
+                3,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                1,
+                12
+              ]
+            },
+            {
+              "frame": 874,
+              "control": 0,
+              "before": [
+                0,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            }
+          ],
+          "conversions": [
+            {
+              "frame": 780,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 54
+            },
+            {
+              "frame": 823,
+              "slot": 53,
+              "cause": "7910",
+              "by": 63
+            },
+            {
+              "frame": 853,
+              "slot": 67,
+              "cause": "7B22",
+              "by": 47
+            },
+            {
+              "frame": 980,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 55
+            }
+          ],
+          "first_ingredient_frame": 853,
+          "exchanges": [],
+          "write_audit": {
+            "complete_frames": 432,
+            "incomplete_frames": [],
+            "writes": {
+              "random": 268,
+              "ingredient_tail": 2
+            },
+            "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+          }
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-4am47z5y/report.json",
+      "reference_report_sha256": "71c0449a9dd8c21e361869a88b69b2e7c64386c19183dda5f63bd71fd7447e9c",
+      "endpoint": {
+        "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      }
+    },
+    {
+      "path": "local/generated/pair-initializer-capture/run-kgauz6j9/report.json",
+      "sha256": "8f6e27f3e2bf0bee5f6788bcd1133259cdd1cdfd96413d2f5fd26e7af382b0fe",
+      "preset": "release",
+      "end": 1066,
+      "comparison": [
+        {
+          "variant": "return_only",
+          "frame": 156,
+          "seed_sha256": "2d7bcf780c098c2e1b5e0a042a2f904a603592b80914f834fdfa999e9c4239a7",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "variant": "visibility",
+          "frame": 156,
+          "seed_sha256": "5470bb7fd8e7fa2b1ff35205e9b1abbec30fd4a4cb1a75e93770ced48e7db209",
+          "outcome": "matched",
+          "output_sha256": "8e3e5b165f61c5bc0b3889f5cbdd4b4bfae25a835f3013952e8ac097d857a1a1",
+          "phases": 0
+        },
+        {
+          "variant": "dormant_b4",
+          "frame": 629,
+          "seed_sha256": "bd98cb20de0d088ac2f217edfe12c6ed723dfc5c1313ac89a287e589fd1474bb",
+          "outcome": "matched",
+          "output_sha256": "561b02e861544a4270c5dea88ac45926295b5410777405b99fd7ef17afbc27f3",
+          "phases": 219,
+          "converted_at_frame": 853,
+          "original_only_phases": 213
+        },
+        {
+          "variant": "dormant_b8",
+          "frame": 629,
+          "seed_sha256": "f3c9b98fd6eca07e8ac4af5b5696888f8d78e1fe2f8ce9fbf9953d12c8f64730",
+          "outcome": "matched",
+          "output_sha256": "e8752f1e9ceda735cd634e56bd9f8ebc76cc49c8ce01762d24edc0dca7fdb594",
+          "phases": 432
+        },
+        {
+          "variant": "quad",
+          "frame": 629,
+          "seed_sha256": "6becb849b62e4406e8ba942b279094241a0637927efe14f56050a5f8785546f1",
+          "outcome": "matched",
+          "output_sha256": "de71a3e35a3c32b3e7408cf7cfc252e65789ce2ab306d02aa3343b342ecbbcbb",
+          "phases": 189,
+          "rejected_at_frame": 823,
+          "original_only_phases": 243,
+          "original_hit_phases": 9
+        },
+        {
+          "variant": "return_only",
+          "frame": 629,
+          "seed_sha256": "081073848d97d315063a40f8caef131442f2968b1a8e5b3d552173e5f3fcf448",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        },
+        {
+          "variant": "rising",
+          "frame": 629,
+          "seed_sha256": "850083c1ab36c3ccba3f7ab106ae5d30f96297b40fc06b9d472156e2c5eb5f9e",
+          "outcome": "matched",
+          "output_sha256": "00dec4a8ce00d914ab135cb2f3440c3d5e78df54505e1b7abb55b54e6c7ef465",
+          "phases": 432
+        },
+        {
+          "variant": "visibility",
+          "frame": 629,
+          "seed_sha256": "6817ef13393400aa020069b320b3c0b8c43e1bfe8592118ad7ab88ddafff228c",
+          "outcome": "matched",
+          "output_sha256": "a33ca4f9a8fd01701f5a8ad246de2435a0eb10c20f4b70011b8d2bb3f81ae0be",
+          "phases": 432
+        },
+        {
+          "variant": "setup_prefix",
+          "frame": 629,
+          "seed_sha256": "0d975dd63cfa790f4d3bc69e90ad5a55075b3216572b6f99a8357f150ad21e98",
+          "outcome": "matched",
+          "output_sha256": "4643dc623178df309bd9616d5803a117cf4627aa85e42f8c1bec9a9680be7136",
+          "members": 12
+        },
+        {
+          "variant": "setup_tail",
+          "frame": 629,
+          "seed_sha256": "43238610facfd7990e076aa3b191e25143537c9a7f6e1821e0826744b20f47c7",
+          "outcome": "matched",
+          "output_sha256": "f4c490b2354ebbddbbec37b1b4b704b593a08833812a2d56400e1fd25997f071",
+          "phases": 146,
+          "members": 4,
+          "rejected_at_frame": 780,
+          "original_only_phases": 286
+        },
+        {
+          "variant": "setup_message",
+          "frame": 629,
+          "seed_sha256": "ac2f1654f934ae0d6a97fb81d5ab5ef88b0ad0abe969f9ccf1a2f2bc0738be11",
+          "outcome": "matched",
+          "native_vram": 57358,
+          "vram_compared": true
+        },
+        {
+          "variant": "setup_gated_pairs",
+          "frame": 629,
+          "seed_sha256": "fabd6ab13a041fac56dd7c78b6adab7a9aec54f00ea31d49e77bb1b18e39fb74",
+          "outcome": "matched",
+          "allocated": 0
+        },
+        {
+          "variant": "pickup_walks",
+          "frame": 780,
+          "seed_sha256": "03c280feb06818a3e4b39f01d857d88ee4ec371f75242f5650bb2ba8e33329f8",
+          "output_sha256": "59f1024b80b5d2934fc61448d2887016ac5108b5fd1a9729625272e6e0489aeb",
+          "outcome": "matched",
+          "walks": 62,
+          "hits": 2,
+          "releases": 2
+        },
+        {
+          "variant": "probe_walks",
+          "frame": 823,
+          "outcome": "matched",
+          "probe-hit": {
+            "seed_sha256": "1abef633834e7d1bba4e9d3d0a961fe8fc00e8a2f14ac5958a06bac5c822da16",
+            "output_sha256": "f5167cddafcb6d337dcd695482a362db78f82adb348ab0b5479eb129d39a92a0",
+            "walks": 9
+          },
+          "delivered": {
+            "seed_sha256": "959392dc82b74086116e25a7509a6ed970bc1fbff50c9bc062a08a61497af1d1",
+            "output_sha256": "a8944cd4b74158c84f975378f0dad58529bd177ee223169057466f0596218d91",
+            "walks": 59
+          },
+          "ingredient": {
+            "seed_sha256": "cfa8331b980b269c58f452ad54119145903e945de2cd5026912c9b316bb12de0",
+            "output_sha256": "1ce6b3173c77dd82352332fe545851674448a6b4b80adcb12da8fa1d7d0643e3",
+            "walks": 1
+          },
+          "scheduled": {
+            "seed_sha256": "5660ed1d24c94a109f73e951be01ce1d6e2a22fb818ad0a94773a829018f82a6",
+            "output_sha256": "82f3c0ed4de5044fdec31ac83b8f226c7f33df1e86ca5a1e3d85da4d07c1b188",
+            "walks": 213
+          },
+          "hits": 9,
+          "deliveries": 1,
+          "releases": 1,
+          "callbacks": 1,
+          "table_walks": 213
+        },
+        {
+          "variant": "world_pool",
+          "frame": 629,
+          "seed_sha256": "ce966da7287c5606b735eee1a4e7b64d9df35def9637f00c3c37e598a7840246",
+          "outcome": "matched",
+          "output_sha256": "1de1770251f057d02da25b666d530bafc56d6c0ff5c394fcf6b619eb6ba80dbe",
+          "phases": 432,
+          "loops": 432,
+          "first_loop": 634,
+          "last_loop": 1065,
+          "releases": 31,
+          "updates": 5732,
+          "sounds": 3,
+          "clears": 1,
+          "pickup_hits": 2,
+          "emitter_walks": 128,
+          "emitter_random_calls": 62,
+          "deliveries": 1,
+          "probe_hits": 9,
+          "ingredients": 1,
+          "spawns": {
+            "3": 32,
+            "11": 1
+          },
+          "owner_positions": 128,
+          "external_random_calls": [
+            {
+              "frame": 634,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 797,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 850,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1000,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1053,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            }
+          ],
+          "external_message_updates": [
+            {
+              "frame": 634,
+              "control": 0,
+              "before": [
+                1,
+                100,
+                0
+              ],
+              "after": [
+                0,
+                100,
+                12
+              ]
+            },
+            {
+              "frame": 754,
+              "control": 0,
+              "before": [
+                0,
+                100,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            },
+            {
+              "frame": 854,
+              "control": 0,
+              "before": [
+                3,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                1,
+                12
+              ]
+            },
+            {
+              "frame": 874,
+              "control": 0,
+              "before": [
+                0,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            }
+          ],
+          "conversions": [
+            {
+              "frame": 780,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 54
+            },
+            {
+              "frame": 823,
+              "slot": 53,
+              "cause": "7910",
+              "by": 63
+            },
+            {
+              "frame": 853,
+              "slot": 67,
+              "cause": "7B22",
+              "by": 47
+            },
+            {
+              "frame": 980,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 55
+            }
+          ],
+          "first_ingredient_frame": 853,
+          "exchanges": [],
+          "write_audit": {
+            "complete_frames": 432,
+            "incomplete_frames": [],
+            "writes": {
+              "random": 268,
+              "ingredient_tail": 2
+            },
+            "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+          }
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-4am47z5y/report.json",
+      "reference_report_sha256": "71c0449a9dd8c21e361869a88b69b2e7c64386c19183dda5f63bd71fd7447e9c",
+      "endpoint": {
+        "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      }
+    },
+    {
+      "path": "local/generated/pair-initializer-capture/run-lembk6f5/report.json",
+      "sha256": "2342d27de0b546f1257515e13493dcc81e1baac0e89b55e226764e74848bf557",
+      "preset": "sanitize",
+      "end": 1066,
+      "comparison": [
+        {
+          "variant": "return_only",
+          "frame": 156,
+          "seed_sha256": "2d7bcf780c098c2e1b5e0a042a2f904a603592b80914f834fdfa999e9c4239a7",
+          "outcome": "matched",
+          "output_sha256": "e8e25812a9fb8de90615706098292e43a4cd466868bb1d7cdb6ce74cb9513c5d",
+          "phases": 0
+        },
+        {
+          "variant": "visibility",
+          "frame": 156,
+          "seed_sha256": "5470bb7fd8e7fa2b1ff35205e9b1abbec30fd4a4cb1a75e93770ced48e7db209",
+          "outcome": "matched",
+          "output_sha256": "8e3e5b165f61c5bc0b3889f5cbdd4b4bfae25a835f3013952e8ac097d857a1a1",
+          "phases": 0
+        },
+        {
+          "variant": "dormant_b4",
+          "frame": 629,
+          "seed_sha256": "bd98cb20de0d088ac2f217edfe12c6ed723dfc5c1313ac89a287e589fd1474bb",
+          "outcome": "matched",
+          "output_sha256": "561b02e861544a4270c5dea88ac45926295b5410777405b99fd7ef17afbc27f3",
+          "phases": 219,
+          "converted_at_frame": 853,
+          "original_only_phases": 213
+        },
+        {
+          "variant": "dormant_b8",
+          "frame": 629,
+          "seed_sha256": "f3c9b98fd6eca07e8ac4af5b5696888f8d78e1fe2f8ce9fbf9953d12c8f64730",
+          "outcome": "matched",
+          "output_sha256": "e8752f1e9ceda735cd634e56bd9f8ebc76cc49c8ce01762d24edc0dca7fdb594",
+          "phases": 432
+        },
+        {
+          "variant": "quad",
+          "frame": 629,
+          "seed_sha256": "6becb849b62e4406e8ba942b279094241a0637927efe14f56050a5f8785546f1",
+          "outcome": "matched",
+          "output_sha256": "de71a3e35a3c32b3e7408cf7cfc252e65789ce2ab306d02aa3343b342ecbbcbb",
+          "phases": 189,
+          "rejected_at_frame": 823,
+          "original_only_phases": 243,
+          "original_hit_phases": 9
+        },
+        {
+          "variant": "return_only",
+          "frame": 629,
+          "seed_sha256": "081073848d97d315063a40f8caef131442f2968b1a8e5b3d552173e5f3fcf448",
+          "outcome": "matched",
+          "output_sha256": "14d36dd50a3c08780c18a7c3d21deea211139dfada29a62b9831389103aa9d9c",
+          "phases": 432
+        },
+        {
+          "variant": "rising",
+          "frame": 629,
+          "seed_sha256": "850083c1ab36c3ccba3f7ab106ae5d30f96297b40fc06b9d472156e2c5eb5f9e",
+          "outcome": "matched",
+          "output_sha256": "00dec4a8ce00d914ab135cb2f3440c3d5e78df54505e1b7abb55b54e6c7ef465",
+          "phases": 432
+        },
+        {
+          "variant": "visibility",
+          "frame": 629,
+          "seed_sha256": "6817ef13393400aa020069b320b3c0b8c43e1bfe8592118ad7ab88ddafff228c",
+          "outcome": "matched",
+          "output_sha256": "a33ca4f9a8fd01701f5a8ad246de2435a0eb10c20f4b70011b8d2bb3f81ae0be",
+          "phases": 432
+        },
+        {
+          "variant": "setup_prefix",
+          "frame": 629,
+          "seed_sha256": "0d975dd63cfa790f4d3bc69e90ad5a55075b3216572b6f99a8357f150ad21e98",
+          "outcome": "matched",
+          "output_sha256": "4643dc623178df309bd9616d5803a117cf4627aa85e42f8c1bec9a9680be7136",
+          "members": 12
+        },
+        {
+          "variant": "setup_tail",
+          "frame": 629,
+          "seed_sha256": "43238610facfd7990e076aa3b191e25143537c9a7f6e1821e0826744b20f47c7",
+          "outcome": "matched",
+          "output_sha256": "f4c490b2354ebbddbbec37b1b4b704b593a08833812a2d56400e1fd25997f071",
+          "phases": 146,
+          "members": 4,
+          "rejected_at_frame": 780,
+          "original_only_phases": 286
+        },
+        {
+          "variant": "setup_message",
+          "frame": 629,
+          "seed_sha256": "ac2f1654f934ae0d6a97fb81d5ab5ef88b0ad0abe969f9ccf1a2f2bc0738be11",
+          "outcome": "matched",
+          "native_vram": 57358,
+          "vram_compared": true
+        },
+        {
+          "variant": "setup_gated_pairs",
+          "frame": 629,
+          "seed_sha256": "fabd6ab13a041fac56dd7c78b6adab7a9aec54f00ea31d49e77bb1b18e39fb74",
+          "outcome": "matched",
+          "allocated": 0
+        },
+        {
+          "variant": "pickup_walks",
+          "frame": 780,
+          "seed_sha256": "03c280feb06818a3e4b39f01d857d88ee4ec371f75242f5650bb2ba8e33329f8",
+          "output_sha256": "59f1024b80b5d2934fc61448d2887016ac5108b5fd1a9729625272e6e0489aeb",
+          "outcome": "matched",
+          "walks": 62,
+          "hits": 2,
+          "releases": 2
+        },
+        {
+          "variant": "probe_walks",
+          "frame": 823,
+          "outcome": "matched",
+          "probe-hit": {
+            "seed_sha256": "1abef633834e7d1bba4e9d3d0a961fe8fc00e8a2f14ac5958a06bac5c822da16",
+            "output_sha256": "f5167cddafcb6d337dcd695482a362db78f82adb348ab0b5479eb129d39a92a0",
+            "walks": 9
+          },
+          "delivered": {
+            "seed_sha256": "959392dc82b74086116e25a7509a6ed970bc1fbff50c9bc062a08a61497af1d1",
+            "output_sha256": "a8944cd4b74158c84f975378f0dad58529bd177ee223169057466f0596218d91",
+            "walks": 59
+          },
+          "ingredient": {
+            "seed_sha256": "cfa8331b980b269c58f452ad54119145903e945de2cd5026912c9b316bb12de0",
+            "output_sha256": "1ce6b3173c77dd82352332fe545851674448a6b4b80adcb12da8fa1d7d0643e3",
+            "walks": 1
+          },
+          "scheduled": {
+            "seed_sha256": "5660ed1d24c94a109f73e951be01ce1d6e2a22fb818ad0a94773a829018f82a6",
+            "output_sha256": "82f3c0ed4de5044fdec31ac83b8f226c7f33df1e86ca5a1e3d85da4d07c1b188",
+            "walks": 213
+          },
+          "hits": 9,
+          "deliveries": 1,
+          "releases": 1,
+          "callbacks": 1,
+          "table_walks": 213
+        },
+        {
+          "variant": "world_pool",
+          "frame": 629,
+          "seed_sha256": "ce966da7287c5606b735eee1a4e7b64d9df35def9637f00c3c37e598a7840246",
+          "outcome": "matched",
+          "output_sha256": "1de1770251f057d02da25b666d530bafc56d6c0ff5c394fcf6b619eb6ba80dbe",
+          "phases": 432,
+          "loops": 432,
+          "first_loop": 634,
+          "last_loop": 1065,
+          "releases": 31,
+          "updates": 5732,
+          "sounds": 3,
+          "clears": 1,
+          "pickup_hits": 2,
+          "emitter_walks": 128,
+          "emitter_random_calls": 62,
+          "deliveries": 1,
+          "probe_hits": 9,
+          "ingredients": 1,
+          "spawns": {
+            "3": 32,
+            "11": 1
+          },
+          "owner_positions": 128,
+          "external_random_calls": [
+            {
+              "frame": 634,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 797,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 850,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1000,
+              "caller": "10A00",
+              "object": "FFFF32C2"
+            },
+            {
+              "frame": 1053,
+              "caller": "109E4",
+              "object": "FFFF32C2"
+            }
+          ],
+          "external_message_updates": [
+            {
+              "frame": 634,
+              "control": 0,
+              "before": [
+                1,
+                100,
+                0
+              ],
+              "after": [
+                0,
+                100,
+                12
+              ]
+            },
+            {
+              "frame": 754,
+              "control": 0,
+              "before": [
+                0,
+                100,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            },
+            {
+              "frame": 854,
+              "control": 0,
+              "before": [
+                3,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                1,
+                12
+              ]
+            },
+            {
+              "frame": 874,
+              "control": 0,
+              "before": [
+                0,
+                1,
+                12
+              ],
+              "after": [
+                0,
+                0,
+                12
+              ]
+            }
+          ],
+          "conversions": [
+            {
+              "frame": 780,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 54
+            },
+            {
+              "frame": 823,
+              "slot": 53,
+              "cause": "7910",
+              "by": 63
+            },
+            {
+              "frame": 853,
+              "slot": 67,
+              "cause": "7B22",
+              "by": 47
+            },
+            {
+              "frame": 980,
+              "slot": 53,
+              "cause": "6D22",
+              "by": 55
+            }
+          ],
+          "first_ingredient_frame": 853,
+          "exchanges": [],
+          "write_audit": {
+            "complete_frames": 432,
+            "incomplete_frames": [],
+            "writes": {
+              "random": 268,
+              "ingredient_tail": 2
+            },
+            "scope": "Writes the trace keeps: E918 state and FF31BC..FF31BF. Pool slots, records and identities are compared walk by walk."
+          }
+        }
+      ],
+      "reference_report": "local/generated/pair-initializer-capture/run-4am47z5y/report.json",
+      "reference_report_sha256": "71c0449a9dd8c21e361869a88b69b2e7c64386c19183dda5f63bd71fd7447e9c",
+      "endpoint": {
+        "hooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "unhooked": "3f66b79fb7ec9a5381fdd50c16522122e9dd6807cb064686509882692144bc32",
+        "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+      }
+    }
+  ],
+  "regression_comparisons": {
+    "completion-compare": [
+      {
+        "path": "local/generated/completion-comparison/run-aybjtjn8/report.json",
+        "sha256": "ca0b30d15b711b27cd78d569f5bc58617366c3f3377ba5ba7fc28bca97247c7f",
+        "preset": "debug",
+        "cases": 14734,
+        "new_instructions_visited": 248,
+        "successful_instructions_visited": 479
+      },
+      {
+        "path": "local/generated/completion-comparison/run-g5hnym3a/report.json",
+        "sha256": "8728b943d7cdf7c16e8ca37a45572f7884b1ed77a705c36c91570bbc8ba07aac",
+        "preset": "release",
+        "cases": 14734,
+        "new_instructions_visited": 248,
+        "successful_instructions_visited": 479
+      },
+      {
+        "path": "local/generated/completion-comparison/run-el16grb_/report.json",
+        "sha256": "17903e4992842e47259c830800bef32d0b5b5f4d4aafe0fa1af5712774a370c0",
+        "preset": "sanitize",
+        "cases": 14734,
+        "new_instructions_visited": 248,
+        "successful_instructions_visited": 479
+      }
+    ],
+    "spell-compare": [
+      {
+        "path": "local/generated/spell-comparison/run-p9_z1__6/report.json",
+        "sha256": "0b77e39ce043f12c2f4ab33b17a88f2475856ff05ec7d5238135d1008656bc94",
+        "preset": "debug",
+        "cases": 8330,
+        "new_instructions_visited": 69,
+        "successful_instructions_visited": 244
+      },
+      {
+        "path": "local/generated/spell-comparison/run-5afc592z/report.json",
+        "sha256": "bd6d07635a08f85999691be71cfac4ab1db3ae1567d6520a392d7ef305f62b28",
+        "preset": "release",
+        "cases": 8330,
+        "new_instructions_visited": 69,
+        "successful_instructions_visited": 244
+      },
+      {
+        "path": "local/generated/spell-comparison/run-9ntlos02/report.json",
+        "sha256": "86d12e6202bbaf07e6457dbc94f428afda71f6accdf3a12716ead5ccac436a30",
+        "preset": "sanitize",
+        "cases": 8330,
+        "new_instructions_visited": 69,
+        "successful_instructions_visited": 244
+      }
+    ],
+    "ingredient-compare": [
+      {
+        "path": "local/generated/ingredient-comparison/run-_zev_sm3/report.json",
+        "sha256": "817d0179557ca22b772e96d2433905b0d4ac922c31a3ba3d4df312556b5a45f0",
+        "preset": "debug",
+        "cases": 4172,
+        "new_instructions_visited": 29,
+        "successful_instructions_visited": 178
+      },
+      {
+        "path": "local/generated/ingredient-comparison/run-8f8an_3c/report.json",
+        "sha256": "2bb85997d3ec279430b3adce16c489a550b8e0a9420998bfb1f1d0527d7289c0",
+        "preset": "release",
+        "cases": 4172,
+        "new_instructions_visited": 29,
+        "successful_instructions_visited": 178
+      },
+      {
+        "path": "local/generated/ingredient-comparison/run-_dq2ohtk/report.json",
+        "sha256": "7be04c53f4594eee0254e4b57d73f5da1c95d417be72e4833e0445ed43cfbcc8",
+        "preset": "sanitize",
+        "cases": 4172,
+        "new_instructions_visited": 29,
+        "successful_instructions_visited": 178
+      }
+    ],
+    "delivery-compare": [
+      {
+        "path": "local/generated/delivery-comparison/run-qt0yf17n/report.json",
+        "sha256": "40d0c5d928ca82631e82929ba44922e384482df94d599c4fed005c56a5df034c",
+        "preset": "debug",
+        "cases": 8557,
+        "new_instructions_visited": 40,
+        "successful_instructions_visited": 206
+      },
+      {
+        "path": "local/generated/delivery-comparison/run-m6w7cif5/report.json",
+        "sha256": "bb9702b0eb902355754c299482de2ac9d4b19ce4d969ba57631426eddf0242e1",
+        "preset": "release",
+        "cases": 8557,
+        "new_instructions_visited": 40,
+        "successful_instructions_visited": 206
+      },
+      {
+        "path": "local/generated/delivery-comparison/run-58cxg5hr/report.json",
+        "sha256": "3660c72bf8bc4d70a397c7ca2a095c341a24c5db2f8fb6b1a5fc4075d009ba01",
+        "preset": "sanitize",
+        "cases": 8557,
+        "new_instructions_visited": 40,
+        "successful_instructions_visited": 206
+      }
+    ],
+    "pickup-hit-compare": [
+      {
+        "path": "local/generated/pickup-hit-comparison/run-uursrd0p/report.json",
+        "sha256": "fd405ed4e514358b73dc579b00f0613b13533874be858d2c5aedf39dd926f515",
+        "preset": "debug",
+        "cases": 6576,
+        "new_instructions_visited": 115,
+        "successful_instructions_visited": 244
+      },
+      {
+        "path": "local/generated/pickup-hit-comparison/run-7ya17nkp/report.json",
+        "sha256": "0811591163f786f10f755662d5af4cdc4b99cb333ead9c6d2f1f9ffb33e2b7a8",
+        "preset": "release",
+        "cases": 6576,
+        "new_instructions_visited": 115,
+        "successful_instructions_visited": 244
+      },
+      {
+        "path": "local/generated/pickup-hit-comparison/run-8ecpvdi3/report.json",
+        "sha256": "3d6db451094a439c3f263238a28785f88c8532dea70dc19524698dfd17aeeca9",
+        "preset": "sanitize",
+        "cases": 6576,
+        "new_instructions_visited": 115,
+        "successful_instructions_visited": 244
+      }
+    ],
+    "return-only-compare": [
+      {
+        "path": "local/generated/return-only-comparison/run-qdyep2dm/report.json",
+        "sha256": "bacc2ce596b6062369accf9e65df6788ab03a5f9bb031eaf4ed5ceeb2bccca2d",
+        "preset": "debug",
+        "cases": 286848,
+        "new_instructions_visited": 0,
+        "successful_instructions_visited": 42
+      },
+      {
+        "path": "local/generated/return-only-comparison/run-n_mxu89r/report.json",
+        "sha256": "049366aeab663e6b302fe31f394f3779cfd00aa3cb44538a3808acacfe0529b5",
+        "preset": "release",
+        "cases": 286848,
+        "new_instructions_visited": 0,
+        "successful_instructions_visited": 42
+      },
+      {
+        "path": "local/generated/return-only-comparison/run-rkjh9nz6/report.json",
+        "sha256": "363d4b5a9c4454545150f527750905defc4a75a1a859b5c99e42ff5562a7c552",
+        "preset": "sanitize",
+        "cases": 286848,
+        "new_instructions_visited": 0,
+        "successful_instructions_visited": 42
+      }
+    ],
+    "collision-compare": [
+      {
+        "path": "local/generated/collision-comparison/run-vrfw9xrl/report.json",
+        "sha256": "3953cfb733f1780309882a821d8fdc3686dc7f1b83df3c00b82d75f9994d150b",
+        "preset": "debug",
+        "cases": 478345,
+        "new_instructions_visited": 28
+      },
+      {
+        "path": "local/generated/collision-comparison/run-fl8mh6tz/report.json",
+        "sha256": "8162b83100a18b1552502682b5569d387647efdaa6666c178d59cd7e4e770799",
+        "preset": "release",
+        "cases": 478345,
+        "new_instructions_visited": 28
+      },
+      {
+        "path": "local/generated/collision-comparison/run-23xwetvb/report.json",
+        "sha256": "d0db63fdf7ba286acf2b764eff2bc0f157ceb3dab330eb44ce87e8cb425c724e",
+        "preset": "sanitize",
+        "cases": 478345,
+        "new_instructions_visited": 28
+      }
+    ],
+    "table-motion-compare": [
+      {
+        "path": "local/generated/table-motion-comparison/run-_x4h58zw/report.json",
+        "sha256": "96ee084daa094ebf2eb69124cad8797d17138813f2b21da8c6b2ade2de041eb2",
+        "preset": "debug",
+        "cases": 406634,
+        "new_instructions_visited": 19
+      },
+      {
+        "path": "local/generated/table-motion-comparison/run-ihqeg31r/report.json",
+        "sha256": "ffa330fe3260fba376ab6e6d010714385845c79e05db9ee6edb265abe297f7ed",
+        "preset": "release",
+        "cases": 406634,
+        "new_instructions_visited": 19
+      },
+      {
+        "path": "local/generated/table-motion-comparison/run-l6p1atng/report.json",
+        "sha256": "ca132fd92d7f61beb47834a78be068a27e2968f5c5b02f43e182fa560a85f42b",
+        "preset": "sanitize",
+        "cases": 406634,
+        "new_instructions_visited": 19
+      }
+    ]
+  },
+  "regression_fixtures": {
+    "mixed": [
+      {
+        "path": "local/generated/mixed-session/run-eta8jrig/report.json",
+        "sha256": "3e8af5e5d26f0f8b08f2e1011a239e6d686179c8a10ba98333461afdde5ae461",
+        "preset": "debug",
+        "start": 1066,
+        "end": 1100,
+        "comparison": {
+          "calls": 34,
+          "physical_rows": 34,
+          "per_call_environment_feeds": 0,
+          "initial_slots": 68,
+          "pool_events": 633,
+          "anchor_slot": 58,
+          "sound_requests": 2,
+          "banner_requests": 34,
+          "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+        },
+        "reference_report": "local/generated/mixed-session/run-xgotjwzi/report.json",
+        "reference_report_sha256": "3907ff37e1497d4907b479b5603f656fbfb8473082760fc82846332156a285a9",
+        "endpoint": {
+          "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/mixed-session/run-fw1c2yj9/report.json",
+        "sha256": "58a94b6ee4ea3c0588630bd3eeea8487b91ee966b02191197f7cafa1310ff8bc",
+        "preset": "release",
+        "start": 1066,
+        "end": 1100,
+        "comparison": {
+          "calls": 34,
+          "physical_rows": 34,
+          "per_call_environment_feeds": 0,
+          "initial_slots": 68,
+          "pool_events": 633,
+          "anchor_slot": 58,
+          "sound_requests": 2,
+          "banner_requests": 34,
+          "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+        },
+        "reference_report": "local/generated/mixed-session/run-xgotjwzi/report.json",
+        "reference_report_sha256": "3907ff37e1497d4907b479b5603f656fbfb8473082760fc82846332156a285a9",
+        "endpoint": {
+          "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/mixed-session/run-fblpqokg/report.json",
+        "sha256": "0d307066b9ee201097a0809444cb0bdd762503e99928d7371a117254cc764939",
+        "preset": "sanitize",
+        "start": 1066,
+        "end": 1100,
+        "comparison": {
+          "calls": 34,
+          "physical_rows": 34,
+          "per_call_environment_feeds": 0,
+          "initial_slots": 68,
+          "pool_events": 633,
+          "anchor_slot": 58,
+          "sound_requests": 2,
+          "banner_requests": 34,
+          "output_sha256": "c6167d3ae56ed8f1b6b18ec594311a40e564268009d64daff6b06206884176b2"
+        },
+        "reference_report": "local/generated/mixed-session/run-xgotjwzi/report.json",
+        "reference_report_sha256": "3907ff37e1497d4907b479b5603f656fbfb8473082760fc82846332156a285a9",
+        "endpoint": {
+          "hooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "unhooked": "c79b97c64537d20919e793da7bef31948b2e7781777dd0a6a26724507bb7b8ff",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      }
+    ],
+    "effect": [
+      {
+        "path": "local/generated/effect-session/run-l2crb7by/report.json",
+        "sha256": "f8390c7a7867b8f0f793ade55a8ba9743116fa36fa276698b721f733674ae140",
+        "preset": "debug",
+        "start": 700,
+        "end": 1090,
+        "comparison": {
+          "calls": 390,
+          "seed_fields": 36,
+          "physical_rows": 390,
+          "per_call_environment_feeds": 0,
+          "effect_calls": 12,
+          "spawns": 1,
+          "releases": 1,
+          "native_capacity": 1,
+          "sound_requests": 12,
+          "banner_requests": 390,
+          "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+        },
+        "reference_report": "local/generated/effect-session/run-drqsas4w/report.json",
+        "reference_report_sha256": "6d0f7e1033f27232828a8cf38765f38bd2a511c67b231a60b4d18b788273ce5e",
+        "endpoint": {
+          "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/effect-session/run-7m9r44dh/report.json",
+        "sha256": "57f1badd996da5d1ab2cac409e85153213692c497316e18cf05d6c25ae53f4ac",
+        "preset": "release",
+        "start": 700,
+        "end": 1090,
+        "comparison": {
+          "calls": 390,
+          "seed_fields": 36,
+          "physical_rows": 390,
+          "per_call_environment_feeds": 0,
+          "effect_calls": 12,
+          "spawns": 1,
+          "releases": 1,
+          "native_capacity": 1,
+          "sound_requests": 12,
+          "banner_requests": 390,
+          "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+        },
+        "reference_report": "local/generated/effect-session/run-drqsas4w/report.json",
+        "reference_report_sha256": "6d0f7e1033f27232828a8cf38765f38bd2a511c67b231a60b4d18b788273ce5e",
+        "endpoint": {
+          "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      },
+      {
+        "path": "local/generated/effect-session/run-qf7w1mas/report.json",
+        "sha256": "8c2b64d608c110309824dc9403232d1553fc11116b36537419db90504d975363",
+        "preset": "sanitize",
+        "start": 700,
+        "end": 1090,
+        "comparison": {
+          "calls": 390,
+          "seed_fields": 36,
+          "physical_rows": 390,
+          "per_call_environment_feeds": 0,
+          "effect_calls": 12,
+          "spawns": 1,
+          "releases": 1,
+          "native_capacity": 1,
+          "sound_requests": 12,
+          "banner_requests": 390,
+          "output_sha256": "8c738e9a85ad89630327f17f9a973add730f96a7ee29555ce55267a51558577b"
+        },
+        "reference_report": "local/generated/effect-session/run-drqsas4w/report.json",
+        "reference_report_sha256": "6d0f7e1033f27232828a8cf38765f38bd2a511c67b231a60b4d18b788273ce5e",
+        "endpoint": {
+          "hooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "unhooked": "1839b7f2e597b9b923408a465d637b291e23cf8da3698934896dd45bc750cbe9",
+          "scope": "genesis-covered-state-v1; exposed registers, listed domains, frame/lag counters and logical held buttons; excludes hidden CPU/device/host state"
+        }
+      }
+    ],
+    "session-early": [
+      {
+        "path": "local/generated/session-comparison/run-gc_55rzv/report.json",
+        "sha256": "80a5f76a69947bfb8860153b6698f520917ffee123f012ef1077b1b8711200ef",
+        "preset": "debug",
+        "start": 700,
+        "end": 1067,
+        "comparison": {
+          "calls": 367,
+          "seed_fields": 35,
+          "button_rows": 367,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "ba92d3030b033d90cfb53feba321d9b06ac8a64644a458c8128b3bb2ab0182c1",
+          "sound_requests": 12,
+          "banner_invocations": 367,
+          "handlers": {
+            "0xa1be": 23,
+            "0xa408": 31,
+            "0xaaea": 66,
+            "0xab04": 144,
+            "0xa6c8": 86,
+            "0xa546": 42,
+            "0xa246": 1,
+            "0xa88e": 47
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-tqqdfop6/report.json",
+        "reference_report_sha256": "b43075c0a0610315e65f03a88389a2aebaf83f25e03203e435d495bbaaee3df3"
+      },
+      {
+        "path": "local/generated/session-comparison/run-emk12poh/report.json",
+        "sha256": "7a0e6faa436479adcfca239c44b126334c07d96274db26e00b8fa041b54d31bb",
+        "preset": "release",
+        "start": 700,
+        "end": 1067,
+        "comparison": {
+          "calls": 367,
+          "seed_fields": 35,
+          "button_rows": 367,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "ba92d3030b033d90cfb53feba321d9b06ac8a64644a458c8128b3bb2ab0182c1",
+          "sound_requests": 12,
+          "banner_invocations": 367,
+          "handlers": {
+            "0xa1be": 23,
+            "0xa408": 31,
+            "0xaaea": 66,
+            "0xab04": 144,
+            "0xa6c8": 86,
+            "0xa546": 42,
+            "0xa246": 1,
+            "0xa88e": 47
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-tqqdfop6/report.json",
+        "reference_report_sha256": "b43075c0a0610315e65f03a88389a2aebaf83f25e03203e435d495bbaaee3df3"
+      },
+      {
+        "path": "local/generated/session-comparison/run-l0gwy119/report.json",
+        "sha256": "427fcfc43748404f0530bc41385975727091c092680a73d4e6abc317848e1686",
+        "preset": "sanitize",
+        "start": 700,
+        "end": 1067,
+        "comparison": {
+          "calls": 367,
+          "seed_fields": 35,
+          "button_rows": 367,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "ba92d3030b033d90cfb53feba321d9b06ac8a64644a458c8128b3bb2ab0182c1",
+          "sound_requests": 12,
+          "banner_invocations": 367,
+          "handlers": {
+            "0xa1be": 23,
+            "0xa408": 31,
+            "0xaaea": 66,
+            "0xab04": 144,
+            "0xa6c8": 86,
+            "0xa546": 42,
+            "0xa246": 1,
+            "0xa88e": 47
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-tqqdfop6/report.json",
+        "reference_report_sha256": "b43075c0a0610315e65f03a88389a2aebaf83f25e03203e435d495bbaaee3df3"
+      }
+    ],
+    "session-late": [
+      {
+        "path": "local/generated/session-comparison/run-7u2im8_t/report.json",
+        "sha256": "121c74b8dcbb93d3b93b4e7a41a7d3fe0f689deb14fe72d2d133e558a3cf3282",
+        "preset": "debug",
+        "start": 3100,
+        "end": 3200,
+        "comparison": {
+          "calls": 100,
+          "seed_fields": 32,
+          "button_rows": 100,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+          "sound_requests": 4,
+          "banner_invocations": 0,
+          "handlers": {
+            "0xa408": 25,
+            "0xaaea": 22,
+            "0xab04": 56,
+            "0xa4ec": 15,
+            "0xa546": 7
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-dvu2efo5/report.json",
+        "reference_report_sha256": "dd909c4c9b1bc524817b0cd69dc02ae380bcea1ba51ff39c621d6d267aba66ab"
+      },
+      {
+        "path": "local/generated/session-comparison/run-mv6qir7b/report.json",
+        "sha256": "f8bc55edbbd32f28469d62acaee5a882f868c9eae97cd7b3a191a35db5e9dc00",
+        "preset": "release",
+        "start": 3100,
+        "end": 3200,
+        "comparison": {
+          "calls": 100,
+          "seed_fields": 32,
+          "button_rows": 100,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+          "sound_requests": 4,
+          "banner_invocations": 0,
+          "handlers": {
+            "0xa408": 25,
+            "0xaaea": 22,
+            "0xab04": 56,
+            "0xa4ec": 15,
+            "0xa546": 7
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-dvu2efo5/report.json",
+        "reference_report_sha256": "dd909c4c9b1bc524817b0cd69dc02ae380bcea1ba51ff39c621d6d267aba66ab"
+      },
+      {
+        "path": "local/generated/session-comparison/run-t63xd1vf/report.json",
+        "sha256": "d165bc2d8e51da893807676379de8d19714ff7c97cf917eb9f95dd0aa3d6b7af",
+        "preset": "sanitize",
+        "start": 3100,
+        "end": 3200,
+        "comparison": {
+          "calls": 100,
+          "seed_fields": 32,
+          "button_rows": 100,
+          "per_call_environment_feeds": 0,
+          "output_sha256": "a905ffb5327afbaea35a345d510674a50f01f81452065be474f390710835672f",
+          "sound_requests": 4,
+          "banner_invocations": 0,
+          "handlers": {
+            "0xa408": 25,
+            "0xaaea": 22,
+            "0xab04": 56,
+            "0xa4ec": 15,
+            "0xa546": 7
+          }
+        },
+        "reference_report": "local/generated/session-movie/run-dvu2efo5/report.json",
+        "reference_report_sha256": "dd909c4c9b1bc524817b0cd69dc02ae380bcea1ba51ff39c621d6d267aba66ab"
+      }
+    ]
+  },
+  "native_builds": [
+    {
+      "path": "build/debug/provenance.json",
+      "sha256": "6d4b51ce60e5facf9fb4e5bbce563e70a0effb74d1441322e5da576d222422f8",
+      "preset": "debug",
+      "session": "a71b0d453afd968a5d567be2581d7d037582587174300d3322ca74b54e007f59",
+      "collision": "58e65117e8b913d879cf4850e0d0ae9412e5b8217bb56467cd39b7506f4da4c1"
+    },
+    {
+      "path": "build/release/provenance.json",
+      "sha256": "f62a85c603c75bb36e0f6e124dd3dc00fc58ef9485bd6ce05340ede881fe8562",
+      "preset": "release",
+      "session": "126d820f5ef0e41072c1d9e43fc3b7291e1dbde386c1f87ee478cc2b271e46f2",
+      "collision": "9b9e83c84cba13640c4e4b6f70ec6284f9b635ec8e90507fa2fbfa4166522d03"
+    },
+    {
+      "path": "build/sanitize/provenance.json",
+      "sha256": "38b97e537dd0ff2521a89c2687a1ce3ac7a5890744216af04c5f30480c5ccb47",
+      "preset": "sanitize",
+      "session": "66aaa4cbd812b90dcaaf08ba5ab1e2314dbd203a96dd2b6dd2761ce5d1d96b19",
+      "collision": "1e025a10bb6cbc0b8f45e35a438f2f432c254776e3c2d83fc2f559f5be4d223a"
+    }
+  ],
+  "tests": [
+    {
+      "preset": "debug",
+      "python": 239,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/scene-change-research/final/test-debug.log",
+        "sha256": "697613f925d2a61ee73c4060f7f6b32d33de71345ed99a9308e4cb22cffc5743"
+      }
+    },
+    {
+      "preset": "release",
+      "python": 239,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/scene-change-research/final/test-release.log",
+        "sha256": "eedd87d1ec8908ee08b7773a6d64e2b4c8e30bd6670c8772ec33869121e47776"
+      }
+    },
+    {
+      "preset": "sanitize",
+      "python": 239,
+      "python_skips": 0,
+      "ctest": 46,
+      "passed": true,
+      "log": {
+        "path": "local/generated/scene-change-research/final/test-sanitize.log",
+        "sha256": "eacc1c4b0c2caaadd0ee534b3870e060bf2d19a4fb923978eab69d29d26ef037"
+      }
+    }
+  ],
+  "coverage": {
+    "new_bounded_native_mappings": 5,
+    "new_partial_native_mappings": 3,
+    "new_mapped_fragments": 5,
+    "research_only_callees": [
+      "1720C",
+      "1737E",
+      "446C",
+      "17284"
+    ],
+    "bounded_simulation_mappings": 161,
+    "partial_simulation_mappings": 13,
+    "indexed_functions": 183,
+    "new_classified_bytes": 692,
+    "promoted_static_bytes": 274,
+    "classified_bytes": 32855,
+    "unclassified_bytes": 1015721,
+    "new_executed_instructions": 190,
+    "cumulative_executed_union": 2838,
+    "scope": "Seventeen code ranges (966 bytes, 190 instructions) in re/scene_change_step.json; 274 bytes (54 instructions) were static-only movement fragments (FIND-0011)."
+  },
+  "failures": [
+    {
+      "step": "research trace",
+      "what": "the first attribution trace asked for the whole pool in every event; the worker caps an event at 4,096 bytes",
+      "resolution": "the pool comes from per-frame RAM boundaries, each event keeps only the free-stack head"
+    },
+    {
+      "step": "restricted comparison",
+      "what": "F940's actor pointers and 9880's +08..+0F control words were first undeclared writes; 16EA4's FF0F16 clear was first missing from the native scene change",
+      "resolution": "the pointers are compared, +08..+0F declared research-only, FF0F16 modeled (HubSceneEntry::acceleration_gate) and its fragment added to the corpus"
+    },
+    {
+      "step": "unit test",
+      "what": "the first scene-change unit test built a pool with unlisted free slots",
+      "resolution": "test fixture corrected"
+    },
+    {
+      "step": "offline joined comparison",
+      "what": "the scene evidence first also matched the level's own 1532 banner calls",
+      "resolution": "restricted to 1562's 63E2; then the joined native run matched"
+    },
+    {
+      "step": "session 054 notes",
+      "what": "FIND-0051, RESULTS and the session note quoted hub-door counts from a run before the authored P1 tracking rows were fixed (445 entries, 413 openings, 181,421 walks)",
+      "resolution": "corrected to the recorded runs' 448 entries, 410 openings and 181,385 walks, with a correction marker in the session note"
+    }
+  ],
+  "not_rerun": [
+    "corpora of untouched routines (actor, movement, terrain, transition, tally families, trail, private, banner, input, palette)",
+    "whole-movie survey",
+    "SDL3 availability"
+  ],
+  "remaining": [
+    "what follows the hub (0x4A4 onward) and the second level",
+    "native map/terrain loading at scene changes",
+    "two-player scene changes and P2 in a session",
+    "the message producer, HUD and renderer",
+    "audio and the SDL3 shell"
+  ],
+  "preservation": {
+    "ok": true,
+    "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+    "movie_sha256": "c1db675318d4e8b1527f8161fa4b782fe96f1ce4e47f173b66ae782a01b327fd",
+    "recording_sha256": "89494c6128fff29b948325fe13d69944c7dbbea382c4a82dc3a0f14c1cab3fb9",
+    "worker_sha256": "ea7c47e7dee31fdce11c5cda0bd319f00a0c28c416a6f4aa0287507af0d72414",
+    "manifest_sha256": "f5c93576f6f560a9c185dcbedcac1c4786547e9ee9116785d16f1f29fb4b0650",
+    "runtime_binaries": 104,
+    "source_files_verified": 59,
+    "external_status_unchanged": false,
+    "external_status_difference": {
+      "lines_before": 310,
+      "lines_after": 344,
+      "paths_newer_than_baseline": 84,
+      "note": "Changed outside Tools/GenesisDebug by work that is not this project's (paths not recorded); this pass writes nothing in that tree and the GenesisDebug worker verifies unchanged."
+    },
+    "owned_workers_running": 0
+  }
+}

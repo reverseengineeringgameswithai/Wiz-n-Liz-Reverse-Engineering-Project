@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "address_space": "rom_file_offset",
+  "rom_sha256": "d65718df893f16cc5114b2d94944f5005d0ec2e471b74dd6dcee371bed11a161",
+  "regions": [
+    {
+      "id": "table_motion",
+      "start": 31368,
+      "end_exclusive": 31446,
+      "sha256": "dfc28d1551910b15a10ba4cac61e4c0c4a2f91ee01fa608dba137af13e867f7d",
+      "instruction_count": 19,
+      "execution_compared": true
+    }
+  ],
+  "transfers": [
+    {
+      "pc": 31384,
+      "target": 31440
+    },
+    {
+      "pc": 31402,
+      "target": 31410
+    },
+    {
+      "pc": 31426,
+      "target": 31440
+    },
+    {
+      "pc": 31440,
+      "target": 31378
+    }
+  ],
+  "data": [
+    {
+      "id": "vertical_motion",
+      "start": 31320,
+      "end_exclusive": 31368,
+      "sha256": "0e2aaab37cb0ff67cffc26c626c7cf7e94ee9abcb759e533d64d4d3e2d629a88"
+    }
+  ],
+  "writers": [
+    {
+      "id": "callback_reset_fragment",
+      "start": 31302,
+      "end_exclusive": 31320,
+      "instruction_count": 3,
+      "sha256": "37e9eadb01096cf5ac37517a5483ad0469bd8d68830fc0bcb4377528ef943c77",
+      "native": false
+    },
+    {
+      "id": "gated_increment_prefix",
+      "start": 31944,
+      "end_exclusive": 31978,
+      "instruction_count": 6,
+      "sha256": "683b5f10d4e7202b189d0333697c9bbc9b4954e502fd33431fbe06ab5b59432f",
+      "native": false
+    }
+  ],
+  "dependencies": [
+    "presentation_step",
+    "mixed_session"
+  ],
+  "contract": "Complete 7A88 table motion with DBRA count+1, full-word toggle, logical 24-word cursor, wrapped Y/X/countdown/negation, bounded work and active/presentation/fixed RTS service. Invoked callback79B6 rejects. FF31BC writers audited as research fragments only; callback, initializers and producer scheduling are unsupported."
+}
