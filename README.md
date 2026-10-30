@@ -1,5 +1,9 @@
 # WizNLizPC
 
+> [!WARNING]
+> **Disclaimer:** Every step of this project was done with AI. Some things may
+> be inaccurate or false.
+
 Local reverse engineering and incremental native reconstruction of Wiz 'N' Liz.
 **No playable native game exists yet.** Working components include protected ROM
 inspection, static reset analysis, conservative sega2asm integration, and a
@@ -158,3 +162,11 @@ extracted proprietary content, bulk disassembly or builds belong in Git.
 Third-party provenance is recorded in `third_party/manifest.lock.json`; those
 licenses grant no rights to game content. The only publication is the scrubbed
 [public mirror](vault/02_Workflow/PUBLIC_MIRROR.md) of committed files.
+
+## License
+
+The project's own code, tools, tests, evidence records and notes are released
+under the [MIT License](LICENSE); one optional comparison harness is
+GPL-3.0-or-later. Wiz 'N' Liz itself is not covered: no ROM or game content is
+included, and you need your own copy. See [NOTICE.md](NOTICE.md) for details
+and [CONTRIBUTING.md](CONTRIBUTING.md) before sending changes.

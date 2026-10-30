@@ -18,7 +18,8 @@ no remote and its private history is never pushed.
 - Every file committed at the exported revision: vault notes (including the
   brief's modding requirements), `re/` evidence, `src/`, `tests/`, `tools/`,
   `third_party/` manifests and the build files. No mod exists yet; nothing is
-  held back by subject.
+  held back by subject. Licensing: [[06_Decisions/ADR-0002-project-license]]
+  (MIT; `LICENSE`, `NOTICE.md`, `CONTRIBUTING.md`).
 - Nothing Git ignores: never `Original_Game/`, `local/` (extracted assets,
   disassembly, captures, recordings), builds or Obsidian workspace churn.
 - Fresh history in the mirror, one commit per sync, authored by the

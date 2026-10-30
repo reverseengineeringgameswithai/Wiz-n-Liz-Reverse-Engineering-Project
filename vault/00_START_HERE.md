@@ -78,4 +78,5 @@ into that commit; record session ID, starting commit and intended commit subject
 - [[03_Reverse_Engineering/ROM_IDENTITY]]
 - [[05_Validation/RESULTS]]
 - [[06_Decisions/ADR-0001-presentation-shell]]
+- [[06_Decisions/ADR-0002-project-license]]
 - [[09_References/SOURCES]]
