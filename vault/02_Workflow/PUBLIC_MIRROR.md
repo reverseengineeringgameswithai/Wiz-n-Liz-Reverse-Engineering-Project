@@ -34,8 +34,19 @@ content), any file whose SHA-256 equals the ROM's, and files over 2 MiB.
 
 The mirror working tree is the ignored `local/public-mirror/`, a separate
 repository with its own `origin`, branch `main` and local mirror identity.
-Sync only from a reviewed, committed checkpoint, and push only when the user
-asks:
+**Standing authorization (2026-10-29):** the user asked that this GitHub
+repository be used going forward and that agents push whenever needed. After
+every reviewed, committed checkpoint, sync and push as the last step of the
+pass, once the export's checks pass; never push uncommitted or mid-review work.
+This repository stays the working copy: its tools write home-directory paths
+into evidence, and the export is what removes them.
+
+Never force-push. A rejected push means someone changed GitHub directly (a web
+edit or a merged pull request): fetch it, bring the change into this repository
+as a reviewed commit, then sync again, because an export replaces the whole
+mirror tree and would otherwise revert it.
+
+Sync and push:
 
 ```sh
 python3 -B tools/public_mirror.py local/public-mirror --commit "Sync: <checkpoint subject>"

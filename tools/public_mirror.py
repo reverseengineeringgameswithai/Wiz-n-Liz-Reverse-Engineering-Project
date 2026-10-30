@@ -3,8 +3,8 @@
 The mirror carries the reverse engineering project exactly as committed at a
 revision, minus everything Git already excludes (ROM, `local/`, builds) and the
 local author's identity: home-directory paths become `~` and the configured Git
-name/email become placeholders. Private history is never copied. Pushing stays
-a separate, explicit step; see vault note `02_Workflow/PUBLIC_MIRROR`.
+name/email become placeholders. Private history is never copied. Pushing is a
+separate step after each checkpoint; see vault note `02_Workflow/PUBLIC_MIRROR`.
 """
 
 from __future__ import annotations

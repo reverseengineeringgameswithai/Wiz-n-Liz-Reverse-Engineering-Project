@@ -10,7 +10,8 @@ untracked paths and in-progress merge/rebase/cherry-pick. Record pre-existing
 changes. Initialize only in the project directory when no repository exists.
 Use a local task branch when useful. Never change remotes or push without
 permission. This repository has no remote; the only authorized publication is
-the separate scrubbed [[02_Workflow/PUBLIC_MIRROR]]. Preserve all original
+the separate scrubbed [[02_Workflow/PUBLIC_MIRROR]], pushed after each reviewed
+checkpoint under the user's standing authorization. Preserve all original
 input and user work.
 
 No `git reset --hard`, `git clean -fd`, `git clean -fdx`, `git add .`, `git add -A`,

@@ -22,6 +22,7 @@ Follow [[00_START_HERE]]; this checklist is an execution aid, not another policy
       limitations and intended commit subject.
 - [ ] Stage explicit owned paths; inspect staged diff and protected-content checks.
 - [ ] Commit when safe/configured; do not include another person's staged work.
+- [ ] Sync and push the committed checkpoint to [[02_Workflow/PUBLIC_MIRROR]].
 - [ ] Verify final Git status and stop temporary processes.
 - [ ] Report completed work, evidence/tests/skips, native playability, reference
       dependencies, commits/tree state, notes and the exact next task.
