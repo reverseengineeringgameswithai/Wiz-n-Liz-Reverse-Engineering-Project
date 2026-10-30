@@ -13,7 +13,7 @@ loader, corroborated pixel/color interpretation and deterministic local atlas.
 Read the real entry points, status, next actions, session004, task and related
 technical notes before edits. Repo root `~/WizNLizPC`; starting branch
 `work/rnc-loader`, commit `2d77bfd`. Tree/index clean, no unfinished Git operation
-or pre-existing changes. Created `work/native-pattern-bank`. Local author [author]
+or pre-existing changes. Created `work/native-pattern-bank`. Local author name
 and the previously supplied email were already configured; no global changes.
 Checkpoint subject: `Load structured graphics banks and render verified native atlases`.
 

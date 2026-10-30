@@ -5,6 +5,8 @@ import hashlib
 import json
 import subprocess
 
+from identity_guard import scan_index
+
 ROOT = Path(__file__).resolve().parents[1]
 PROTECTED = ("Original_Game/", "local/", "build/", "dist/", ".venv/",
              "vault/.obsidian/plugins/", "vault/.obsidian/cache/", "vault/.trash/")
@@ -38,4 +40,6 @@ def check_hygiene(root: Path = ROOT) -> dict:
         result = subprocess.run(["git", "-C", str(root), "check-ignore", "-q", "--no-index", name])
         if result.returncode != 1:
             errors.append(f"source unexpectedly ignored or ignore check failed: {name}")
+    for name in scan_index(root):
+        errors.append(f"blocked identity term (the user's name, a handle or the home path) in {name}")
     return {"indexed_files_checked": len(indexed), "ok": not errors, "errors": errors}

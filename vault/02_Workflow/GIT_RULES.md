@@ -20,6 +20,12 @@ Inspect the staged diff before committing. If unrelated content is staged,
 isolate the workflow safely or record the commit blocker; never include it or
 disturb the user's index. Do not invent identity or alter global Git config.
 
+Never write the user's name or personal handles in tracked files, commit
+messages or branch names, nor the absolute home path (use repository-relative
+paths or `~`). The blocked terms are `git config --get-all mirror.forbid`.
+`tools/identity_guard.py --install` adds pre-commit and commit-msg hooks that
+refuse them, and `check-hygiene` fails on them; fix the text, never bypass.
+
 Track source, synthetic tests, recipes, metadata, meaningful notes, schemas and
 dependency manifests. Keep ROMs, rebuilt ROMs, bulk disassembly/assets/traces/
 states, tool downloads, environments, caches, builds and personal Obsidian churn

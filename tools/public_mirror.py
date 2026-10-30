@@ -22,6 +22,8 @@ import subprocess
 import sys
 import tarfile
 
+from identity_guard import forbidden
+
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 2 * 1024 * 1024
 
@@ -48,9 +50,7 @@ def identity(root: Path, home: Path) -> dict[str, str]:
     if name := config(root, "user.name"):
         terms[name] = "[author]"
     terms.setdefault(home.name, "[author]")
-    forbidden = subprocess.run(["git", "-C", str(root), "config", "--get-all", "mirror.forbid"],
-                               capture_output=True, text=True).stdout.split("\n")
-    for term in filter(None, map(str.strip, forbidden)):
+    for term in forbidden(root):
         terms.setdefault(term, "[redacted]")
     return terms
 

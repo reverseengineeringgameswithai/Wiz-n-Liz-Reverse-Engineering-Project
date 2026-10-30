@@ -13,3 +13,9 @@ After each reviewed commit, sync and push the scrubbed public mirror as
 `vault/02_Workflow/PUBLIC_MIRROR.md` describes. The user's name, handles and
 email must never reach it: never bypass its export, hook, credential gate or
 GitHub audit.
+
+Never write the user's name or personal handles anywhere: files, notes,
+commit messages, branch names or replies. Call them "the user". Write paths
+relative to the repository or with `~`, never the absolute home path. The
+identity guard (`tools/identity_guard.py`, its Git hooks and `check-hygiene`)
+enforces this; fix the text, never bypass it.
