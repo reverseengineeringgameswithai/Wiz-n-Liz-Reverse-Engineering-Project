@@ -8,3 +8,8 @@ Work in bounded, tested passes. Preserve the original ROM and pre-existing
 user changes. Update the Obsidian vault and review an explicitly staged
 checkpoint before committing. The canonical workflow lives in the vault;
 do not duplicate or silently replace it here.
+
+After each reviewed commit, sync and push the scrubbed public mirror as
+`vault/02_Workflow/PUBLIC_MIRROR.md` describes. The user's name, handles and
+email must never reach it: never bypass its export, hook, credential gate or
+GitHub audit.
