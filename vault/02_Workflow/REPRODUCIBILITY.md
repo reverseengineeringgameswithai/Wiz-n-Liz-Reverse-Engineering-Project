@@ -225,6 +225,27 @@ hashes and boundary coverage remain under ignored
 `local/generated/airborne-comparison/`. Repeated calls stop
 visibly at unimplemented grounded identities and are not game frames.
 
+## Local storage
+
+Comparison and capture commands write a new `run-*` directory each time, and
+reruns of a deterministic capture or corpus are byte-identical. Tracked notes
+and evidence cite many runs by path, so runs are not deleted to save space.
+Instead, identical files share storage:
+
+```sh
+python3 tools/dedupe_local.py           # report only
+python3 tools/dedupe_local.py --apply   # share extents of identical files
+```
+
+On btrfs the kernel's FIDEDUPERANGE ioctl compares both ranges itself and then
+shares extents copy-on-write. Every path, inode, permission and content stays
+the same and mtimes are checked; nothing is deleted. Files already sharing
+their extents are skipped, so a rerun is cheap and a report with no
+`reclaimable_bytes` confirms an earlier `--apply`. Run it after passes that add
+large captures. `du` still counts every copy; free space (`df`) shows the
+saving. Filesystems without extent sharing report each pair as a failure and
+change nothing. See [[08_Sessions/2026-11-01-059-local-storage]].
+
 ## Independent Genesis capture
 
 `project.py genesis-compare FIXTURE --preset debug` consumes an actual GPGX

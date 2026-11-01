@@ -20,8 +20,10 @@ change): the user authorized a public GitHub mirror of the committed project
 with fresh history and their identity scrubbed; see
 [[02_Workflow/PUBLIC_MIRROR]]. Side pass
 [[08_Sessions/2026-10-29-058-licensing]] licensed the project under MIT
-([[06_Decisions/ADR-0002-project-license]]). Session 056 remains the native
-handoff.
+([[06_Decisions/ADR-0002-project-license]]). Side pass
+[[08_Sessions/2026-11-01-059-local-storage]] reclaimed disk space by making
+identical files in ignored `local/` share storage, deleting nothing
+(`tools/dedupe_local.py`). Session 056 remains the native handoff.
 
 Session [[08_Sessions/2026-10-23-055-scene-change]]: **the first level, the
 scene change and the scene after it run natively as one run (frames 634..1758)
